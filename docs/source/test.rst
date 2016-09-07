@@ -1,4 +1,4 @@
-License
+Test File
 =======
 
-License text goes here
+This is only a test
