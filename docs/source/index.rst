@@ -24,5 +24,6 @@ Contents
 
    license
    help
+   test
 
 
