@@ -3,12 +3,12 @@ Quick Start
 
 This docuemntation is for the following groups
 
-Developers
-^^^^^^^^^^
+Developer Documentation
+^^^^^^^^^^^^^^^^^^^^^^^
 
 More help text goes here
 
-End Users
-^^^^^^^^^
+End User Documentation
+^^^^^^^^^^^^^^^^^^^^^^
 
 More help text goes here
