@@ -6,7 +6,7 @@
 Introduction to PEER for OSS documentation by Joey, Robert and Tom!
 ===================================================================
 
-This is intro content for documentation.<br>
+This is intro content for documentation.::
 This is another line.
 
 Here is another line by Robert...
