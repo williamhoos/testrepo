@@ -6,7 +6,8 @@
 Welcome to PEER for OSS documentation!
 ======================================
 
-This is intro content for documentation
+This is intro content for documentation.
+This is another line.
 
 Another simple header
 =====================
