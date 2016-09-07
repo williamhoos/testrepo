@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Introduction to PEER for OSS documentation by Joey!
-===========================================
+===================================================
 
 This is intro content for documentation.
 This is another line.
