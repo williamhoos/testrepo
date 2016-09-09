@@ -3,10 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Introduction to PEER for OSS documentation by Joey, Robert and Tom!
-===================================================================
+Introduction to PEER for OSS documentation
+==========================================
 
-| This is intro content for documentation.
+| This document provides documentation for all three of the subsystems that collectively make up the Platform for Engaging Everyone Responsibly (PEER).  It is divided into the three major sections of the PEER system:
+
+* :ref:`Participant`
+* :ref:`Administrator`
+* :ref:`Researcher`
+
+.. _Participant:
+
+Participant Workflows
+~~~~~~~~~~~~~~~~~~~~~
+
 | This is another line.
 | Here is another line by Robert...
 |
