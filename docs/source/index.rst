@@ -25,6 +25,15 @@ Administrator Workflows
 
 This is a paragraph is all about administrator.
 
+
+
+.. _Researcher:
+
+Researcher Workflows
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is a paragraph is all about research.
+
 Another simple header
 =====================
 
