@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Documenting the Migration of PEER to Open Source Software
-=========================================================
+Hello World!
+PEER for Open Source Software
+=============================
 
 This document provides documentation regarding the subsystems that collectively make up the Platform for Engaging Everyone Responsibly (PEER), including the elements that are provided through API calls to Private Access Connect and PrivacyLayer, two independent services that are licensed from Private Access.  The documentation is divided into the three major sections of the PEER system, and in turn to the subsystems and individual components for the following community facing components:
 
@@ -44,15 +45,16 @@ This is a paragraph is all about administrator.
 .. _Researcher:
 
 Researcher Workflows
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
     :width: 67%
     :alt: Researcher Overview Illustration
     
 This is a paragraph is all about research.
 
+
 Proposing changes to PEER
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Improving PEER's code, documentation and tests are ongoing tasks.  While these are never going to be "finished", thanks to the efforts of PEER's founders and the support of several early adopter organizations and sponsors, 4-month intensive effort was dedicated to creating a baseline representation immediately prior to PEER being migrated from closed to open source software.  This effort permitted the artifacts of approximately five years of continuous development sprints to be scrubbed, functional test suites to be developed and documentation to be created. 
 
@@ -63,12 +65,6 @@ As an integral part of this effort, a number of potential development activities
 
 Full Table of Contents
 ----------------------
-
- .. toctree::
-    :numbered:
-
-    setup
-    help
 
 
 Contents
