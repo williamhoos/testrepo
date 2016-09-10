@@ -42,6 +42,7 @@ Researcher Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
     :height: 400 px
+    :scale: 80 %
     :alt: Researcher Overview Illustration
     :align: left
 This is a paragraph is all about research.
