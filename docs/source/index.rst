@@ -60,11 +60,8 @@ Improving PEER's code, documentation and tests are ongoing tasks.  While these a
 As an integral part of this effort, a number of potential development activities were identified as possible areas for future enhancement, and these are identified throughout the documentation.  
 
 
- .. _contents:
-
 Full Table of Contents
-----------------------
-
+~~~~~~~~~~~~~~~~~~~~~~
 
 Contents
 ^^^^^^^^
