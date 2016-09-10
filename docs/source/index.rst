@@ -6,9 +6,6 @@
 Introduction to PEER for OSS documentation
 ==========================================
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+Flowcharts+-+Sign-up+(or+Sign-In)+-+2016-0908.jpg
-    :width: 50%
-    :alt: my-picture1
 
 This document provides documentation for all three of the subsystems that collectively make up the Platform for Engaging Everyone Responsibly (PEER).  It is divided into the three major sections of the PEER system:
 
@@ -17,13 +14,13 @@ This document provides documentation for all three of the subsystems that collec
 * :ref:`Researcher`
 
 .. _Participant:
-
 Participant Workflows
 ~~~~~~~~~~~~~~~~~~~~~
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
+    :alt: Participant Overview
 
 
 .. _Administrator:
-
 Administrator Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
 
