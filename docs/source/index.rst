@@ -54,15 +54,6 @@ This is a paragraph is all about research.
 
 
 
-#####################
-Another simple header - uses pound (#), with overline
-#####################
-
-Another simple header - uses pound (#), underline only
-#####################
-
-
-
 *********************
 Another simple header - uses astrisks (*), with overline
 *********************
@@ -105,21 +96,16 @@ Improving PEER's code, documentation and tests are ongoing tasks.  While these a
 As an integral part of this effort, a number of potential development activities were identified as possible areas for future enhancement, and these are identified throughout the documentation.  
 
 
-Here is some text...
-
-    print 'Some code block'
-    >> Some code block
-
-.. _contents:
+ .. _contents:
 
 Full Table of Contents
 ----------------------
 
-.. toctree::
-   :numbered:
+ .. toctree::
+    :numbered:
 
-   setup
-   help
+    setup
+    help
 
 
 Contents
