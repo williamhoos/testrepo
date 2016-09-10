@@ -20,7 +20,15 @@ Participant Workflows
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
     :alt: Participant Overview Illustration
 
-The Participant portion of PEER is comprised of 9 major sub-components, which are illustrated above and described in the sections that follow.  
+The Participant portion of PEER is comprised of 9 major sub-components, illustrated above and described in the following sub-sections.
+
+======================
+Participant Engagement 
+======================
+
+PEER is designed to support sponsors in employing various forms of engagement.
+
+
 
 .. _Administrator:
 
@@ -44,12 +52,6 @@ Researcher Workflows
     
 This is a paragraph is all about research.
 
-=====================
-Another simple header - uses equals (=), with overline
-=====================
-
-Another simple header - uses equals (=), underline only
-=====================
 
 
 
