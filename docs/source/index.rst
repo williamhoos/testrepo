@@ -39,7 +39,7 @@ This is a paragraph is all about administrator.
 Researcher Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
-    :height: 50 pt
+    :width: 50%
     :alt: Researcher Overview Illustration
     :align: left
     
