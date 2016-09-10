@@ -28,7 +28,7 @@ The Participant portion of PEER is comprised of 9 major sub-components, which ar
 Administrator Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Administrator+Overview.png
-    :scale: 50
+    :scale: 50%
     :alt: Administrator Overview Illustration
     
 This is a paragraph is all about administrator.
@@ -41,7 +41,6 @@ Researcher Workflows
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
     :width: 50%
     :alt: Researcher Overview Illustration
-    :align: left
     
 This is a paragraph is all about research.
 
