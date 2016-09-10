@@ -51,12 +51,16 @@ Another simple header - uses equals (=), with overline
 Another simple header - uses equals (=), underline only
 =====================
 
+
+
 #####################
 Another simple header - uses pound (#), with overline
 #####################
 
 Another simple header - uses pound (#), underline only
 #####################
+
+
 
 *********************
 Another simple header - uses astrisks (*), with overline
@@ -65,6 +69,8 @@ Another simple header - uses astrisks (*), with overline
 Another simple header - uses astrisks (*), underline only
 *********************
 
+
+
 ---------------------
 Another simple header - uses minus (-), with overline
 ---------------------
@@ -72,12 +78,16 @@ Another simple header - uses minus (-), with overline
 Another simple header - uses minus (-), underline only
 ---------------------
 
+
+
 ^^^^^^^^^^^^^^^^^^^^^
 Another simple header - uses carrot (^), with overline
 ^^^^^^^^^^^^^^^^^^^^^
 
 Another simple header - uses carrot (^), underline only
 ^^^^^^^^^^^^^^^^^^^^^
+
+
 
 """""""""""""""""""""
 Another simple header - uses quote ("), with overline
