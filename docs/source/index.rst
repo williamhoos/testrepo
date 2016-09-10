@@ -51,6 +51,37 @@ Researcher Workflows
     
 This is a paragraph is all about research.
 
+Proposing changes to PEER
+-------------------------
+
+Improving PEER's code, documentation and tests are ongoing tasks.  While these are never going to be "finished", thanks to the efforts of PEER's founders and the support of several early adopter organizations and sponsors, 4-month intensive effort was dedicated to creating a baseline representation immediately prior to PEER being migrated from closed to open source software.  This effort permitted the artifacts of approximately five years of continuous development sprints to be scrubbed, functional test suites to be developed and documentation to be created. 
+
+As an integral part of this effort, a number of potential development activities were identified as possible areas for future enhancement, and these are identified throughout the documentation.  
+
+
+ .. _contents:
+
+Full Table of Contents
+----------------------
+
+ .. toctree::
+    :numbered:
+
+    setup
+    help
+
+
+Contents
+^^^^^^^^
+
+.. toctree::
+   :maxdepth: 3
+
+   quickstart
+   license
+   help
+   test
+
 
 
 
@@ -87,36 +118,5 @@ Another simple header - uses quote ("), with overline
 
 Another simple header - uses quote ("), underline only
 """""""""""""""""""""
-
-Proposing changes to PEER
--------------------------
-
-Improving PEER's code, documentation and tests are ongoing tasks.  While these are never going to be "finished", thanks to the efforts of PEER's founders and the support of several early adopter organizations and sponsors, 4-month intensive effort was dedicated to creating a baseline representation immediately prior to PEER being migrated from closed to open source software.  This effort permitted the artifacts of approximately five years of continuous development sprints to be scrubbed, functional test suites to be developed and documentation to be created. 
-
-As an integral part of this effort, a number of potential development activities were identified as possible areas for future enhancement, and these are identified throughout the documentation.  
-
-
- .. _contents:
-
-Full Table of Contents
-----------------------
-
- .. toctree::
-    :numbered:
-
-    setup
-    help
-
-
-Contents
-^^^^^^^^
-
-.. toctree::
-   :maxdepth: 3
-
-   quickstart
-   license
-   help
-   test
 
 
