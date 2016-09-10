@@ -19,7 +19,7 @@ Participant Workflows
 ~~~~~~~~~~~~~~~~~~~~~
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
     :alt: Participant Overview Illustration
-    :height: 400 pt
+    :scale: 50 %
 
 The Participant portion of PEER is comprised of 9 major sub-components, which are illustrated above and described in the sections that follow.  
 
