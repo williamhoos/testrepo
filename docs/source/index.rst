@@ -3,29 +3,35 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Introduction to PEER for OSS documentation
-==========================================
+Migration of PEER to OSS - Technical Documentation
+==================================================
 
 
-This document provides documentation for all three of the subsystems that collectively make up the Platform for Engaging Everyone Responsibly (PEER).  It is divided into the three major sections of the PEER system:
+This document provides documentation regarding the subsystems that collectively make up the Platform for Engaging Everyone Responsibly (PEER).  It is divided into the three major sections of the PEER system, and in turn to the subsystems and individual components for the following system facing components:
 
 * :ref:`Participant`
 * :ref:`Administrator`
 * :ref:`Researcher`
 
 .. _Participant:
+
 Participant Workflows
 ~~~~~~~~~~~~~~~~~~~~~
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
-    :alt: Participant Overview
+    :alt: Participant Overview Illustration
 
+The Participant portion of PEER is comprised of 9 major sub-components, which are illustrated above and described in the sections that follow.  
 
 .. _Administrator:
+
+
 Administrator Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Administrator+Overview.png
+    :alt: Administrator Overview Illustration
+    
 This is a paragraph is all about administrator.
-
 
 
 .. _Researcher:
@@ -33,10 +39,53 @@ This is a paragraph is all about administrator.
 Researcher Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
+    :alt: Researcher Overview Illustration
+    
 This is a paragraph is all about research.
 
-Another simple header
 =====================
+Another simple header - uses equals (=), with overline
+=====================
+
+Another simple header - uses equals (=), underline only
+=====================
+
+#####################
+Another simple header - uses pound (#), with overline
+#####################
+
+Another simple header - uses pound (#), underline only
+#####################
+
+*********************
+Another simple header - uses astrisks (*), with overline
+*********************
+
+Another simple header - uses astrisks (*), underline only
+*********************
+
+---------------------
+Another simple header - uses minus (-), with overline
+---------------------
+
+Another simple header - uses minus (-), underline only
+---------------------
+
+^^^^^^^^^^^^^^^^^^^^^
+Another simple header - uses carrot (^), with overline
+^^^^^^^^^^^^^^^^^^^^^
+
+Another simple header - uses carrot (^), underline only
+^^^^^^^^^^^^^^^^^^^^^
+
+"""""""""""""""""""""
+Another simple header - uses quote ("), with overline
+"""""""""""""""""""""
+
+Another simple header - uses quote ("), underline only
+"""""""""""""""""""""
+
 
 Here is some text...
 
