@@ -1,3 +1,6 @@
+Overview
+========
+
 This document provides a guide to the subsystems that collectively make up the Platform for Engaging Everyone Responsibly (PEER), including resources that are provided through API calls with Private Access Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
 
 It is **recommended** that this documentation be read in the order listed.  Accordingly, if you elect to skip around within the documentation, be aware that it is written assuming that the preceding sections have been read so you may find it necessary to backtrack to fill in missing concepts and terminology.
