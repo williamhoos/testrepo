@@ -80,7 +80,7 @@ Participant data
 In addition to sharing access to their information with third-parties, participants are able to use PEER to retrieve, edit and/or supplement information aoubt heseves..  
 
 
-.. _Administrator:
+.. _Administrators:
 
 Administrator Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,7 +91,7 @@ Administrator Workflows
 This is a paragraph is all about administrator.
 
 
-.. _Researcher:
+.. _Researchers:
 
 Researcher Workflows
 ~~~~~~~~~~~~~~~~~~~~
