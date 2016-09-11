@@ -122,6 +122,7 @@ Contents
 .. toctree::
    :maxdepth: 3
 
+   overview
    quickstart
    license
    help
