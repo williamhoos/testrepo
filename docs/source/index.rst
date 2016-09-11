@@ -20,6 +20,7 @@ The documentation is divided into the three major functional aspects of the PEER
 
 Participants
 ~~~~~~~~~~~~
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
     :alt: Participant Overview Illustration
 
@@ -84,6 +85,7 @@ In addition to sharing access to their information with third-parties, participa
 
 Administrator Workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Administrator+Overview.png
     :width: 89%
     :alt: Administrator Overview Illustration
@@ -95,6 +97,7 @@ This is a paragraph is all about administrator.
 
 Researcher Workflows
 ~~~~~~~~~~~~~~~~~~~~
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
     :width: 67%
     :alt: Researcher Overview Illustration
