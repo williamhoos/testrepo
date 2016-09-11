@@ -1,6 +1,3 @@
-PEER for Open Source Documentation
-==================================
-
 This document provides a guide to the subsystems that collectively make up the Platform for Engaging Everyone Responsibly (PEER), including resources that are provided through API calls with Private Access Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
 
 It is **recommended** that this documentation be read in the order listed.  Accordingly, if you elect to skip around within the documentation, be aware that it is written assuming that the preceding sections have been read so you may find it necessary to backtrack to fill in missing concepts and terminology.
@@ -13,17 +10,16 @@ The documentation is divided into the three major functional aspects of the PEER
 
 .. _Participants:
 
-Participants
-~~~~~~~~~~~~
+Participant workflows
+~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
     :alt: Participant Overview Illustration
 
 The Participant portion of PEER is directed to end-users who supply information on behalf of themselves or persons for whom they are authorized to act.  This section of PEER is comprised of 9 major subsystem workflows, illustrated above and described in the following sections. 
 
-======================
 Participant engagement 
-======================
+^^^^^^^^^^^^^^^^^^^^^^
 
 PEER is designed to support sponsors in employing various forms of engagement, including both passive (such as badges placed on an affiliate's website) and active means (such as targeted emails).  Unless a participant indicates a wish to be excluded from the use of cookies, PEER administrators who are authorized by the participant can use one of several major tracking systems to assess the effectiveness of their outreach activities.
 
@@ -78,7 +74,7 @@ In addition to sharing access to their information with third-parties, participa
 
 .. _Administrators:
 
-Administrator Workflows
+Administrator workflows
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Administrator+Overview.png
@@ -90,7 +86,7 @@ This is a paragraph is all about administrator.
 
 .. _Researchers:
 
-Researcher Workflows
+Researcher workflows
 ~~~~~~~~~~~~~~~~~~~~
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
