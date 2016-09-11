@@ -21,8 +21,9 @@ Participant workflows
 
 The Participant portion of PEER is directed to end-users who supply information on behalf of themselves or persons for whom they are authorized to act.  This section of PEER is comprised of 9 major subsystem workflows, illustrated above and described in the following sections. 
 
+======================
 Participant engagement 
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 PEER is designed to support sponsors in employing various forms of engagement, including both passive (such as badges placed on an affiliate's website) and active means (such as targeted emails).  Unless a participant indicates a wish to be excluded from the use of cookies, PEER administrators who are authorized by the participant can use one of several major tracking systems to assess the effectiveness of their outreach activities.
 
