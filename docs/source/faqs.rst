@@ -1,5 +1,5 @@
-Help
-=======
+FAQs
+====
 
 Help text goes here
 
