@@ -9,13 +9,11 @@ It is **recommended** that this documentation be read in the order listed.  Acco
 
 The documentation is divided into the three major functional aspects of the PEER system, and in turn to the subsystems and individual components addressed to the following user groups:
 
-* :ref:`Participants`
+| * :ref:`Participants`
 
+| * :ref:`Administrators`
 
-* :ref:`Administrators`
-
-
-* :ref:`Researchers`
+| * :ref:`Researchers`
 
 .. _Participants:
 
