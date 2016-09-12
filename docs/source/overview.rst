@@ -11,7 +11,9 @@ The documentation is divided into the three major functional aspects of the PEER
 
 * :ref:`Participants`
 
+
 * :ref:`Administrators`
+
 
 * :ref:`Researchers`
 
