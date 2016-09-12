@@ -24,12 +24,16 @@ Participant engagement
 Sign-up or sign-in
 ~~~~~~~~~~~~~~~~~~
 
+The sign-up (or sign-in) portion of PEER is provided through leveraging Private Access Connect to provide one-to-many and single sign-on (SSO) functionality that is participant centered in orientation and integrated with each participant's authorizations, proxies,  data sharing and privacy preferences.  
+
+As shown in the illustration below, the sign-up workflow (for first-time users) consists of 8 steps, and the sign-in workflow (for returning users) consists of just 3, each leveraging 3 shared resource workflows:  
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png
     :alt: Sign-up or Sign-in Workflow Illustration
 
-The sign-up (or sign-in) portion of PEER is provided through leveraging Private Access Connect to provide one-to-many functionality that is participant centered in orientation and to take into account each participant's data sharing and privacy preferences.  As shown in the above illustration the sign-up workflow (for first-time users) consists of 8 steps, and the sign-in workflow (for returning users) consists of just 3.  
+In both cases, these processes begin at the conclusion of the participant enagement workflow, with selection of the appropriate workfow sequence.  The sign-up sequence ends when the new participant activates his or her account, immediately before beginning the authorization and proxy settings workflows.  The sign-in process ends when the returning user enters his or her password (or this step is automated based on the user's direction) and they are taken to their Dashboard activities page.
 
-These processes begin at the conclusion of the participant enagement workflow, and end with the beginning of the Autorization and proxy settings workflows in the case of new users, and with returning the user to their Dashboard activities page in the case of returning users.  As shown above, these processes leverage 3 shared resources, which along with the foregoing 11 subsystems are described in the following sections: 
+The foregoing subsystems are described in the following sections: 
 
 ==========================
 Sign-up (First-time users) 
