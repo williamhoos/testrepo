@@ -20,8 +20,6 @@ The documentation is divided into the three major functional aspects of the PEER
 Participant workflows
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. _Participant Overview Illustration:
-
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
     :alt: Participant Overview Illustration
 
