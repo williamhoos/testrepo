@@ -22,7 +22,7 @@ Participant workflows
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
     :alt: Participant Overview Illustration
-
+| 
 The Participant portion of PEER is directed to end-users who supply information on behalf of themselves or persons for whom they are authorized to act.  This section of PEER is comprised of 9 major subsystem workflows, illustrated above and summarized in the following sections. 
 
 ======================
@@ -88,7 +88,7 @@ Administrator workflows
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Administrator+Overview.png
     :width: 89%
     :alt: Administrator Overview Illustration
-    
+| 
 Organizations (or individuals) who operate a PEER registry are called "PEER sponsors". If a PEER sponsor is part of a hosted network (such as the Genetic Alliance's PEER system), they may be required to comply with that authority's requirements as a condition to receiving rights to use the network, various trademarks and/or copyrighted materials in conjunction with their use of PEER.  
 
 Once approved, PEER sponsors administer the display and operation of one or more portals from an administrative user account. The administrator section of PEER is comprised of 8 major subsystem workflows, illustrated above and summarized in the following sections. 
@@ -150,7 +150,7 @@ Researcher workflows
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
     :width: 67%
     :alt: Researcher Overview Illustration
-    
+| 
 Individuals who seek to access data submitted by PEER participants are called "researchers".  Once approved, researchers may access information from one or more PEER portals from a researcher account. The researcher workflows section of PEER is comprised of 6 major subsystem workflows, illustrated above and summarized in the following sections.
 
 ==================
