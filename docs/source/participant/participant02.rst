@@ -5,10 +5,12 @@
 Sign-up (First-time users) 
 ==========================
 
-The process for first-time users includes the following additional 7 steps:
+The process for first-time users is comprised of the following 8 steps:
 
 Register or login selection
 ***************************
+
+
 
 Enter new user email
 ********************
@@ -49,7 +51,7 @@ Site key protected password entry
 *********************************
 
 
-. _Sign-in Utlities:
+.. _Sign-in Utlities:
 
 =========================================
 Shared utililities for sign-up or Sign-in
