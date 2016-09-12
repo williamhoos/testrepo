@@ -3,13 +3,7 @@ Participant Workflows
 
 This section of the document focuses on the subsystems that are directed to end-users who supply information on behalf of themselves or persons for whom they are authorized to act (referred to as "participants").  This description includes the PEER open source code, as well as specialized resources that are provided through API calls with Private Access Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
 
-As described in the :ref:`Overview`, the participant portion of PEER is comprised of the following 14 major subsystems workflows, and in turn to the individual components encompassed within it. These 9 subsystems are:
-
-* :ref:`Engagement`
-
-* :ref:`Sign-up`
-
-* :ref:`Authorization`
+As described in the :ref:`Overview`, the participant portion of PEER is comprised of 9 major subsystems, and in turn to the individual components encompassed within each. In the order encountered by a participant, these subsystems address:
 
 .. _Engagement:
 
