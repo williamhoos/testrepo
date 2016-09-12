@@ -8,7 +8,7 @@ Sign-up (First-time users)
 The process for first-time users includes the following additional 7 steps:
 
 Enter new user email
-~~~~~~~~~~~~~~~~~~~~
+********************
 
 
 
