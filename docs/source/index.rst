@@ -22,14 +22,14 @@ Contents
 Full Table of Contents
 ======================
 
- .. toctree::
-    :maxdepth: 3
+.. toctree::
+   :maxdepth: 3
 
    Overview
    Quickstart
-   Participant workflows
-   Administrator workflows
-   Researcher workflows
+   Participant
+   Administrator
+   Researcher
    License
    FAQs
    Changelog
