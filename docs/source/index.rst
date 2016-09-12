@@ -22,8 +22,8 @@ Contents
 Full Table of Contents
 ======================
 
-.. toctree::
-   :maxdepth: 3
+ .. toctree::
+    :maxdepth: 3
 
    Overview
    Quickstart
