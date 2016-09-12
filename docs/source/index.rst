@@ -16,9 +16,6 @@ As an integral part of this effort, a number of potential development activities
  
 
 
-Contents
-^^^^^^^^
-
 .. toctree::
    :maxdepth: 3
    :numbered:
