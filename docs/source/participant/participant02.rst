@@ -1,5 +1,3 @@
-Participant Workflows (continued)
-=================================
 
 .. _Initial Sign-up:
 
