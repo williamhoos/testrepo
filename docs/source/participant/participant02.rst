@@ -51,9 +51,9 @@ Site key protected password entry
 
 . _Sign-in Utlities:
 
-====================+++++++++++++++======
+=========================================
 Shared utililities for sign-up or Sign-in
-==========================+++++++++++++++
+=========================================
 
 Remember me toggle function
 ***************************
