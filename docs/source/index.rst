@@ -23,7 +23,7 @@ As an integral part of this effort, a number of potential development activities
 
    overview
    quickstart
-   participant
+   participant/*
    administrator
    researcher
    license
