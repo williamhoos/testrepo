@@ -16,6 +16,8 @@ The documentation is divided into the three major functional aspects of the PEER
 Participant workflows
 ~~~~~~~~~~~~~~~~~~~~~
 
+.. _Participant Overview Illustration:
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
     :alt: Participant Overview Illustration
 
@@ -147,7 +149,7 @@ Researcher workflows
     :width: 67%
     :alt: Researcher Overview Illustration
     
-Individuals who seek to access data submitted by PEER participants are called "researchers".  Once approved, researchers may access information from one or more PEER portals from a researcher account. The researcher workflows section of PEER is comprised of 6 major subsystem workflows, illustrated above and summarized in the following sections. 
+Individuals who seek to access data submitted by PEER participants are called "researchers".  Once approved, researchers may access information from one or more PEER portals from a researcher account. The researcher workflows section of PEER is comprised of 6 major subsystem workflows, illustrated above and summarized in the following sections.   Data accessible by researchers comes from :ref: `Participant Overview Illustration`
 
 ==================
 Sign-up or sign-in 
