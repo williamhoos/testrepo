@@ -22,6 +22,7 @@ Contents
 .. toctree::
    :maxdepth: 3
    :numbered:
+   :caption: Table of Contents
 
    overview
    quickstart
