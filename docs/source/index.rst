@@ -22,11 +22,11 @@ Contents
 .. toctree::
    :maxdepth: 3
 
-   Overview
-   Quickstart
-   Participant
-   Administrator
-   Researcher
-   License
-   FAQs
-   Changelog
+   overview
+   quickstart
+   participant
+   administrator
+   researcher
+   license
+   faqs
+   changelog
