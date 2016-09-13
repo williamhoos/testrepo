@@ -16,7 +16,7 @@ As an integral part of this effort, a number of potential development activities
  
 .. Warning:: Critical items to be addressed before the PEER code is migrated to open source. Should each include a link to a corresponding Pivotal Tracker story or shall we try to use `issue`_ in GitHub instead?
 
-.. Tip:: Non-essential items that we would like to address before the PEER code is migrated to open source.  May includes a link to a Pivotal Tracker story in some cases.
+.. Tip:: Non-essential items that we would like to address before the PEER code is migrated to open source.  May includes a link to either a Pivotal Tracker story or GitHub Issues in some cases.
 
 .. Note::  Future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for project opportunities.  We might want to consider using an approach similar to the `Apache Foundation <http://community.apache.org/contributors/index.html>`.
 
