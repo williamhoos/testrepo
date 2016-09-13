@@ -31,7 +31,7 @@ The foregoing subsystems are described in detail in the :ref:`Initial Sign-up` o
 
 .. _Authorization:
 
-Authorization and Proxy Settings
+Authorization & Proxy Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 [ This section coming ]
