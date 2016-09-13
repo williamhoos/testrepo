@@ -27,4 +27,58 @@ As shown in the illustration below, the sign-up workflow (for first-time users) 
 | 
 Sign-up or sign-in begins at the conclusion of the participant enagement workflow, with selection of the appropriate sequence for the user. The sign-up sequence ends when the newly-enrolled participant activates his or her account, which takes place immediately before beginning the authorization and proxy settings process workflows.  The sign-in process ends when the returning user enters his or her password (or this step is automated based on the user election), at which point the user is taken to their main Dashboard page.
 
-The foregoing subsystems are described in detail in :ref:`Sign-up or Sign-in Workflow` section. 
+The foregoing subsystems are described in detail in the :ref:`Sign-up` or :ref:`Sign-in` workflow section. 
+
+.. _Authorization:
+
+Authorization and Proxy Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[ This section coming ]
+
+
+.. _Privacy:
+
+Privacy Settings
+~~~~~~~~~~~~~~~~
+
+[ This section coming ]
+
+
+.. _Dashboard
+
+Dashboard Activities
+~~~~~~~~~~~~~~~~~~~~
+
+[ This section coming ]
+
+
+.. _Surveys:
+
+Taking Surveys
+~~~~~~~~~~~~~~
+
+[ This section coming ]
+
+.. _eConsent:
+
+Enrolling in Studies (eConsent)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[ Future feature in planning ]
+
+
+.. _Utilities
+
+Other Utilities
+~~~~~~~~~~~~~~~
+
+[ This section coming ]
+
+.. _Participant Data
+
+Participant Data
+~~~~~~~~~~~~~~~~
+
+[ This section coming ]
+
