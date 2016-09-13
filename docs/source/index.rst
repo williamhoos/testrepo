@@ -24,6 +24,7 @@ As an integral part of this effort, a number of potential development activities
 .. toctree::
    :maxdepth: 2
    :glob:
+   :numbered:
    :caption: Table of Contents
 
    overview
@@ -32,6 +33,7 @@ As an integral part of this effort, a number of potential development activities
    sign_up
    sign_in
    sign_utilities
+   taking surveys
    administrator
    researcher
    license
