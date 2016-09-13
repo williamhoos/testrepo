@@ -11,6 +11,9 @@ As indicated by the :ref:`Sign-up or sign-in` workflow description, the sign-up 
 
         from mock import Mock as MagicMock
 
+.. warning:: This feature is in a beta state.
+             Please file an `issue`_ if you find anything wrong.
+
 Workflows for these functions are described below:
 
 .. _Remember me toggle
