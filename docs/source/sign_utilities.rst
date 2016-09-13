@@ -31,12 +31,14 @@ Accessible from various pages during the sign-up or sign-in workflow, users are 
 Recover lost credentials
 ************************
 
+From links nvarious pages, users are forced to get to the botom of theoioioi 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
     :width: 91%
     :alt: Recover Lost Credentials Workflow
 |
+.. Warning:: Verify that the email message content is apporpriate andc omplete.
 
-.. _Reset password
+.. Tip:: Include a more intuitive way for the user to get back to the point where he or she can amploy the user credenitials. 
 
 Reset password function
 ***********************
