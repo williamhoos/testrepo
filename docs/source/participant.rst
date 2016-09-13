@@ -31,7 +31,7 @@ The foregoing subsystems are described in detail in the :ref:`Initial Sign-up` o
 
 .. _Authorization:
 
-Authorization & Proxy Settings
+Authorization & proxy settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 [ This section coming ]
@@ -39,7 +39,7 @@ Authorization & Proxy Settings
 
 .. _Privacy:
 
-Privacy Settings
+Privacy settings
 ~~~~~~~~~~~~~~~~
 
 [ This section coming ]
@@ -47,7 +47,7 @@ Privacy Settings
 
 .. _Dashboard
 
-Dashboard Activities
+Dashboard activities
 ~~~~~~~~~~~~~~~~~~~~
 
 [ This section coming ]
@@ -55,14 +55,14 @@ Dashboard Activities
 
 .. _Surveys:
 
-Taking Surveys
+Taking surveys
 ~~~~~~~~~~~~~~
 
 [ This section coming ]
 
 .. _eConsent:
 
-Enrolling in Studies (eConsent)
+Enrolling in studies (eConsent)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 [ Future feature in planning ]
@@ -70,14 +70,14 @@ Enrolling in Studies (eConsent)
 
 .. _Utilities
 
-Other Utilities
+Other utilities
 ~~~~~~~~~~~~~~~
 
 [ This section coming ]
 
-.. _Participant Data
+.. _Participant data
 
-Participant Data
+Participant data
 ~~~~~~~~~~~~~~~~
 
 [ This section coming ]
