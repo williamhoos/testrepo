@@ -84,7 +84,7 @@ Activate account
 Sign-in (Existing users) 
 ========================
 
-The process for returning users 
+The process for returning users to sign-in to PEER consists of 3 steps, which depending on a participant's use of the :ref:`Remember me utility` function permits them to skip these steps to the extent the user's hardware is the same as when the credential was previously saved.
 
 Register or login selection
 ***************************
@@ -102,12 +102,13 @@ Existing user verification
 
 .. _Site key protected password entry
 
-Site key protected password entry
+Site key-protected password entry
 *********************************
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Site+key+protected+password+entry.png
     :alt: Site Key Protected Password Entry Workflow
 
-
+| 
+| 
 
 .. _Sign-in Utlities:
 
@@ -115,7 +116,7 @@ Site key protected password entry
 Shared utililities
 ==================
 
-The sign-up and sign-in processes 
+The sign-up and sign-in processes share 3 utility functions to toggle on/off a remember user function, and to recover lost credentials.  Workflows for these functions are described below:
 
 .. _Remember me toggle
 
