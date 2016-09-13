@@ -4,7 +4,7 @@
 Sign-up (First-time users) 
 ==========================
 
-The process for first-time users is comprised of the following 8 steps:
+As indicated in the left arm of the :ref:`Sign-up or sign-in` workflow description, the registration process for first-time PEER users is comprised of the following 8 steps:
 
 .. _Register or login:
 
