@@ -35,7 +35,7 @@ PEER is designed to support sponsors in employing various forms of engagement, i
 Sign-up or sign-in 
 ==================
 
-All first-time visitors to PEER are required to sign-up and returning users sign-in using their assigned credentials.  This is accomplished using Private Access Connect, an OpenID Connect service (which uses OAuth 2.0 standards), to provide single sign-on (SSO) capabilities.    
+All first-time visitors to PEER are required to sign-up and returning users sign-in using their assigned credentials.  This is accomplished using Private Access Connect, an OpenID Connect service (which uses OAuth 2.0 standards), to provide single sign-on (SSO) capabilities.   For more information, refer to the :ref:`Sign-up or sign-in` description.
 
 ================================
 Authorization and proxy settings 
