@@ -6,12 +6,9 @@ Shared utililities
 
 As indicated by the :ref:`Sign-up or sign-in` workflow description, the sign-up and sign-in processes share 3 utility functions to toggle on/off a remember user function and recover lost credentials.  
 
-.. Note:: The library ``unittest.mock`` was introduced on python 3.3. On earlier versions install the ``mock`` library
-    from PyPI with (ie ``pip install mock``) and replace the above import::
+.. Note:: Where ideas about future extensions and/or modifications have been suggested for varoius PEER components, these are noted for consideration by anyone with an interest in enhancing PEER's functionality. To learn more about writing modules for PEER, see Developer suggestions.::
 
-        from mock import Mock as MagicMock
-
-.. warning:: This feature is in a beta state.
+.. warning:: Where we have observed bugs or areas that should be cleaned up prior to the PEER code being migrated to open source, these are noted for use by the development team.  Where a Pivotal Tracker story has been created for such items, these notes include a link to that story.
              Please file an `issue`_ if you find anything wrong.
 
 Workflows for these functions are described below:
