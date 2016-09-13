@@ -21,7 +21,7 @@ You can mock out the imports for these modules in your ``conf.py`` with the foll
 
 Of course, replacing `MOCK_MODULES` with the modules that you want to mock out.
 
-.. Ideas:: The library ``unittest.mock`` was introduced on python 3.3. On earlier versions install the ``mock`` library
+.. Tip:: The library ``unittest.mock`` was introduced on python 3.3. On earlier versions install the ``mock`` library
     from PyPI with (ie ``pip install mock``) and replace the above import::
 
         from mock import Mock as MagicMock
