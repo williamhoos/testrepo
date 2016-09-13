@@ -6,10 +6,12 @@ Shared utililities
 
 As indicated by the :ref:`Sign-up or sign-in` workflow description, the sign-up and sign-in processes share 3 utility functions to toggle on/off a remember user function and recover lost credentials.  
 
-.. Note:: Where ideas about future extensions and/or modifications have been suggested for varoius PEER components, these are noted for consideration by anyone with an interest in enhancing PEER's functionality. To learn more about writing modules for PEER, see Developer suggestions.::
+.. Warning:: Critical items that need to be addressed before the PEER code is migrated to open source.  Should always include a link to a corresponding Pivotal Tracker story. Please file an `issue`_ if you find anything wrong.
 
-.. warning:: Where we have observed bugs or areas that should be cleaned up prior to the PEER code being migrated to open source, these are noted for use by the development team.  Where a Pivotal Tracker story has been created for such items, these notes include a link to that story.
-             Please file an `issue`_ if you find anything wrong.
+.. Tip:: Non-essential items that we would like to address before the PEER code is migrated to open source.  May includes a link to a Pivotal Tracker story in some cases.
+
+.. Note::  Future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for project opportunities.  To learn more about creating new modules for PEER, read Developer suggestions.
+
 
 Workflows for these functions are described below:
 
