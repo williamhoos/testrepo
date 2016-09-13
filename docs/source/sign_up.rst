@@ -69,7 +69,7 @@ Send confirmation email
     :alt: Send Confirmation Email Workflow
 |
 
-.. _Set activate account
+.. _Activate account
 
 Activate account
 ****************
