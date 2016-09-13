@@ -17,11 +17,11 @@ Remember me toggle function
     :width: 82%
     :alt: Remember Me Toggle Workflow
 |
-.. Warning:: Critical items to be addressed before the PEER code is migrated to open source. Should each include a link to a corresponding Pivotal Tracker story or shall we try to use `issue`_ in GitHub instead?
+.. Warning:: Verify the "Remember Me" option works (and confirm it *only* works) when a returning seeking to access from a previously used hardware device?
 
-.. Tip:: Non-essential items that we would like to address before the PEER code is migrated to open source.  May includes a link to a Pivotal Tracker story in some cases.
+.. Tip:: Add an option for Users to select "Remember Me" for their Site Key and Password from the Activate Account page.
 
-.. Note::  Future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for project opportunities.  To learn more about creating new modules for PEER, read Developer suggestions.
+.. Note:: Add active monitoring intellegence to identify suspicious user activity.
 
 
 .. _Recover lost credentials
