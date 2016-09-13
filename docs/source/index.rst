@@ -14,11 +14,11 @@ Improving PEER's code, documentation and tests are ongoing tasks.  While these a
 
 As an integral part of this effort, a number of potential development activities were identified as possible areas for future enhancement, and these are identified throughout the documentation as follows:
  
-.. Important:: Critical item that needs to be addressed before the PEER code is migrated to open source, and that references a Pivotal Tracker story or open item in GitHub Issues.
+.. Attention:: Critical item that needs to be addressed before the PEER code is migrated to open source, and that references a Pivotal Tracker story or open item in GitHub Issues.
 
-.. Note::  Potential Enhancement - Non-essential item that may be addressed before the PEER code is migrated to open source, or that will be moved to "Suggested Features" at that time.  
+.. Note::  Non-essential enhancement that may be incorporated before the PEER code is migrated to open source, or that will be moved to being a "Hint" at that time.  
 
-.. Hint:: Suggested Feature - Future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for project opportunities.
+.. Hint:: Suggested future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for project opportunities.
 
 
 .. toctree::
