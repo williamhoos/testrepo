@@ -14,11 +14,11 @@ Improving PEER's code, documentation and tests are ongoing tasks.  While these a
 
 As an integral part of this effort, a number of potential development activities were identified as possible areas for future enhancement, and these are identified throughout the documentation as follows:
  
-.. Warning:: Critical items to be addressed before the PEER code is migrated to open source. Should each include a link to a corresponding Pivotal Tracker story or shall we try to use `issue`_ in GitHub instead?
+.. Warning:: Critical items needing to be addressed before the PEER code is migrated to open source. Each will include a link to a Pivotal Tracker story or an open issue in GitHub Issues.
 
-.. Tip:: Non-essential items that we would like to address before the PEER code is migrated to open source.  May includes a link to either a Pivotal Tracker story or GitHub Issues in some cases.
+.. Tip:: Other items that we would like to address before the PEER code is migrated to open source, but that are not considered to be essential. 
 
-.. Note::  Future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for project opportunities.  We might want to consider using an approach similar to the `Apache Foundation <http://community.apache.org/contributors/index.html>`.
+.. Note:: Future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for project opportunities, possibly with a link to a welcome message similar to the `Apache Foundation <http://community.apache.org/contributors/index.html>`.
 
 
 .. toctree::
