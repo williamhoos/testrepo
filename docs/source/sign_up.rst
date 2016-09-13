@@ -11,30 +11,25 @@ As indicated in the left arm of the :ref:`Sign-up or sign-in workflow` descripti
 Register or login selection
 ***************************
 
+At the conclusion of the initial engagement flow, first-time users arrive at sign-up or sign-in screen.  Here, new users begin the registration process by clicking into the "First Time User" entry field. 
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
     :alt: Register Workflow
 | 
 
 .. Attention:: Adjust the UI so that the two entry boxes are equal in height
 
-.. Attention:: Verify proper placement of all MixPanel and Google Analytics cookies
-
 .. Note:: Try to ensure that analytics take into account all engagement means that have brought prospects to this page
-
-.. Note:: Try to adjust page for mobile-responsive design
 
 .. Hint:: Consider creating a simplified UI in which only one box appears on the page (for sign-up) and let’s someone who is a returning user click to sign-in link (unless the system recognize their hardware, in which case the page would display only a sign-in field with a link for sign-up so that it remains an equally simple screen view)  
 
-.. Hint:: Consider substituting server-side tracking for the existing (cookie-based) user tracking tools 
-
-.. Hint:: Consider making the system more accommodating of screen readers (ie, for visually-impaired users) 
-
-.. Hint:: Consider provding for foreign language translations of all screens
 
 .. _Enter new email:
 
 Enter new user email
 ********************
+
+
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+New+User+Email.png  
     :alt: Enter New User Email Workflow
