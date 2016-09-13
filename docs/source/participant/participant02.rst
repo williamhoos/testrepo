@@ -97,7 +97,7 @@ Register or login selection
 Existing user verification
 **************************
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png 
-    :height: 69%
+    :width: 69%
     :alt: Existing User Verification Workflow
 |
 
@@ -125,7 +125,7 @@ Remember me toggle function
 ***************************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
-    :height: 82%
+    :width: 82%
     :alt: Remember Me Toggle Workflow
 |
 
@@ -135,7 +135,7 @@ Recover lost credentials function
 *********************************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
-    :height: 91%
+    :width: 91%
     :alt: Recover Lost Credentials Workflow
 |
 
@@ -145,6 +145,6 @@ Reset password function
 ***********************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Reset+Password.png
-    :height: 96%
+    :width: 96%
     :alt: Reset Password Workflow
 |
