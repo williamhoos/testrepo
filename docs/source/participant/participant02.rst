@@ -115,12 +115,14 @@ Site key protected password entry
 Shared utililities
 ==================
 
+The sign-up and sign-in processes 
+
 .. _Remember me toggle
 
 Remember me toggle function
 ***************************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
     :alt: Remember Me Toggle Workflow
 |
 
@@ -135,8 +137,8 @@ Recover lost credentials function
 
 .. _Reset password
 
-Reset psassword function
-************************
+Reset password function
+***********************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Reset+Password.png
     :alt: Reset Password Workflow
