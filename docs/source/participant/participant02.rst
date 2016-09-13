@@ -96,7 +96,8 @@ Register or login selection
 
 Existing user verification
 **************************
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png 
+
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png
     :width: 69%
     :alt: Existing User Verification Workflow
 |
