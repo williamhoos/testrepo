@@ -24,7 +24,7 @@ Existing user verification
 
 .. _Site key protected password entry
 
-Site key-protected password entry
-*********************************
+Protected password entry
+************************
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Site+key+protected+password+entry.png
     :alt: Site Key Protected Password Entry Workflow
