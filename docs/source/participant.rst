@@ -13,7 +13,7 @@ Participant engagement
 [ This section coming ]
 
 
-.. _Sign-up:
+.. _Sign-up or sign-in:
 
 Sign-up or sign-in
 ~~~~~~~~~~~~~~~~~~
