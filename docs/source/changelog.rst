@@ -11,3 +11,8 @@ Changelog
 ~~~~~~~~~~
 
 * Added :ref:`Overview` section to documentation
+
+2016-09-10
+~~~~~~~~~~
+
+* Completed all 14 :ref:`sign-up or sign-in` workflows
