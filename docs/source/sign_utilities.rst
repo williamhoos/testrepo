@@ -19,7 +19,7 @@ Accessible from various pages during the sign-up or sign-in workflow, users are 
     :width: 82%
     :alt: Remember Me Toggle Workflow
 |
-.. Warning:: Verify that the "Remember Me" option works (and confirm it **only** works) when a returning user seeks access from a previously used hardware device?
+.. Warning:: Verify that the "Remember Me" option works (and confirm it **only** works) when a returning user seeks access from a previously used hardware device.
 
 .. Tip:: Add an option for Users to select "Remember Me" for their Site Key and Password directly from the Activate Account page.
 
