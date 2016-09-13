@@ -4,7 +4,7 @@
 Shared utililities
 ==================
 
-The sign-up and sign-in processes share 3 utility functions to toggle on/off a remember user function, and to recover lost credentials.  Workflows for these functions are described below:
+As indicated by the :ref:`Sign-up or sign-in` workflow description, the sign-up and sign-in processes share 3 utility functions to toggle on/off a remember user function and recover lost credentials.  Workflows for these functions are described below:
 
 .. _Remember me toggle
 
@@ -18,8 +18,8 @@ Remember me toggle function
 
 .. _Recover lost credentials
 
-Recover lost credentials function
-*********************************
+Recover lost credentials
+************************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
     :width: 91%
