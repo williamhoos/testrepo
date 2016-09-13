@@ -29,6 +29,17 @@ Sign-up or sign-in begins at the conclusion of the participant enagement workflo
 
 The foregoing subsystems are described in detail in the :ref:`Initial Sign-up` or :ref:`Existing Sign-in` workflow section. 
 
+.. Attention:: Verify proper placement of all MixPanel and Google Analytics cookies
+
+.. Note:: Try to adjust page for mobile-responsive design
+
+.. Hint:: Consider substituting server-side tracking for the existing (cookie-based) user tracking tools 
+
+.. Hint:: Consider making the system more accommodating of screen readers (ie, for visually-impaired users) 
+
+.. Hint:: Consider provding for foreign language translations of all screens
+
+
 .. _Authorization:
 
 Authorization & proxy settings
