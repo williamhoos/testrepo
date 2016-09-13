@@ -15,6 +15,22 @@ Register or login selection
     :alt: Register Workflow
 | 
 
+.. Attention:: Adjust the UI so that the two entry boxes are equal in height
+
+.. Attention:: Verify proper placement of all MixPanel and Google Analytics cookies
+
+.. Note:: Try to ensure that analytics take into account all engagement means that have brought prospects to this page
+
+.. Note:: Try to adjust page for mobile-responsive design
+
+.. Hint:: Consider creating a simplified UI in which only one box appears on the page (for sign-up) and let’s someone who is a returning user click to sign-in link (unless the system recognize their hardware, in which case the page would display only a sign-in field with a link for sign-up so that it remains an equally simple screen view)  
+
+.. Hint:: Consider substituting server-side tracking for the existing (cookie-based) user tracking tools 
+
+.. Hint:: Consider making the system more accommodating of screen readers (ie, for visually-impaired users) 
+
+.. Hint:: Consider provding for foreign language translations of all screens
+
 .. _Enter new email:
 
 Enter new user email
@@ -23,6 +39,16 @@ Enter new user email
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+New+User+Email.png  
     :alt: Enter New User Email Workflow
 | 
+
+.. Attention:: Verify that the flow works for all Proxy and Pre-Registered use cases
+
+.. Hint:: Consider incorporating the option for using Text Messaging in lieu of email
+
+.. Hint:: Consider replacing the current email-based notifications system with System Tray Notifier-based notifications
+
+.. Hint:: Consider adding error-checking algorithm to current the minimum age affirmation
+
+.. Hint:: Consider providing a cleaner UI for error messages (see Pluralsight website as an example) 
 
 .. _Create Username
 
@@ -33,6 +59,12 @@ Create username and password
     :alt: Create Username Workflow
 |
 
+.. Attention:: Verify in testing proper display and content of error messages for password entry
+
+.. Note:: Try to add an auto-populate function to pre-populate the Username field with the user's email address entry (ie, as a default username selection)
+
+.. Hint:: Consider replacing the current email-based notifications system with System Tray Notifier-based notifications
+
 .. _Set Security questions
 
 Set security questions
@@ -41,6 +73,12 @@ Set security questions
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+security+questions.png
     :alt: Set Security Questions Workflow
 |
+
+.. Hint:: Consider revising the Challenge Questions feature to display *only* the available items (ie, by removing from the pull-down list any questions that are already being use)
+
+.. Hint:: Consider allowing the user to enter their own (free-text) questions (ie, in addition to the pre-generated questions)
+
+.. Hint:: Consider replacing (or supplementing) the use of Challenge Questions with multi-factor authentication process using an SMS message sent to the users mobile phone, Google Authenticator or other
 
 .. _Create site key
 
@@ -51,6 +89,8 @@ Create site key
     :alt: Create Site Key Workflow
 |
 
+.. Hint:: Consider discontinuing the use of site keys
+
 .. _EULA approval
 
 EULA approval
@@ -59,6 +99,16 @@ EULA approval
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/EULA+approval.png
     :alt: EULA approval Workflow
 |
+
+.. Attention:: Add the "Remote Entry Supplement" language to the Privacy Policy and/or Terms of Service disclosures
+
+.. Attention:: Update all of the user agreements to refelct open source software
+
+.. Note:: Try to simplify / shorten the language in all of the user agreements
+
+.. Hint:: Consider replacing the "No Pending Request" notice with an opportunity to revise/correct the email address to be used for registration
+
+.. Hint:: Consider developing an automated follow-up process that is triggered when a prospective new user does not timely confirm acceptance of the EULA
 
 .. _Send confirmation email
 
@@ -69,6 +119,12 @@ Send confirmation email
     :alt: Send Confirmation Email Workflow
 |
 
+.. Hint:: Consider refactoring the Confirmation Email process to postpone it until after some activity has taken place by User
+
+.. Hint:: Consider replacing (or supplementing) the "No Pending Request" notice with a revise/corrected email flow to commence a new registration process based on entry of a different email address than initially submitted
+
+.. Hint:: Consider 
+
 .. _Activate account
 
 Activate account
@@ -77,3 +133,7 @@ Activate account
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+account.png
     :alt: Account Activate Workflow
 |
+
+.. Note:: Try to add a Remmber Me Toggle link to this page to provide new users with the option to skip the Site Key and Password entry requirement when the hardware is recognized 
+
+.. Hint:: Consider adding an automated process to send appropriated follow-up reminder messages when an excessive amount of elapsed time has transpired without the user activating his or her account
