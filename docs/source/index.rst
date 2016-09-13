@@ -16,6 +16,14 @@ As an integral part of this effort, a number of potential development activities
  
 .. Warning:: Critical Items - Issue that needs to be addressed before the PEER code is migrated to open source, and that reference a Pivotal Tracker story or open item in GitHub Issues.
 
+.. Attention:: Critical Items - Issue that needs to be addressed before the PEER code is migrated to open source, and that reference a Pivotal Tracker story or open item in GitHub Issues.
+
+.. Caution:: Critical Items - Issue that needs to be addressed before the PEER code is migrated to open source, and that reference a Pivotal Tracker story or open item in GitHub Issues.
+
+.. Error:: Critical Items - Issue that needs to be addressed before the PEER code is migrated to open source, and that reference a Pivotal Tracker story or open item in GitHub Issues.
+
+.. Important:: Critical Items - Issue that needs to be addressed before the PEER code is migrated to open source, and that reference a Pivotal Tracker story or open item in GitHub Issues.
+
 .. Tip::  Potential Enhancement - Non-essential item that may be addressed before the PEER code is migrated to open source, or that will be moved to "Suggested Features" at that time.  
 
 .. Note:: Suggested Feature - Future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for project opportunities.
