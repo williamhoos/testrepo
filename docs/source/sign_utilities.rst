@@ -13,6 +13,8 @@ Workflows for these functions are described below:
 Remember me toggle function
 ***************************
 
+Accessible from various pages during the sign-up or sign-in workflow, users are given an option to toggle on/off the instruction to remember one or more of their credentials (i.e., passwork, username, site key_lll
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
     :width: 82%
     :alt: Remember Me Toggle Workflow
