@@ -13,7 +13,7 @@ Workflows for these functions are described below:
 Remember me toggle function
 ***************************
 
-Accessible from various pages during the sign-up or sign-in workflow, users are given an option to toggle on/off the instruction to remember one or more of their credentials, and the system will recognize their login by recalling their hardware)
+Accessible from various pages during the sign-up or sign-in workflow, users are given an option to toggle on/off a feature that will remember one or more of their authentication credentials based on recognizing their hardware.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
     :width: 82%
