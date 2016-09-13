@@ -4,7 +4,7 @@
 Sign-in (Existing users) 
 ========================
 
-The process for returning users to sign-in to PEER consists of 3 steps (or fewer as reflected in the following workflows, depending on a participant's use of the :ref:`Remember me utility` in a prior session, which permit them to skip one or more of these steps to the extent the user's hardware is the same as when the credential was previously saved).  These steps are:
+As indicated in the right arm of the :ref:`Sign-up or sign-in workflow` description, the login process for existing PEER users consists of 3 steps (or even fewer as reflected in the following workflows, depending on a participant's use of the :ref:`Remember me utility` in a prior session, which enables users to skip one or more of these authentication steps to the extent the user is employing the same hardware as he or she was using when the credential was last saved). These steps are:
 
 Register or login selection
 ***************************
