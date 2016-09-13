@@ -12,7 +12,7 @@ The process for first-time users is comprised of the following 8 steps:
 Register or login selection
 ***************************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
     :alt: Register Workflow
 | 
 
@@ -21,7 +21,7 @@ Register or login selection
 Enter new user email
 ********************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+New+User+Email.png  
     :alt: Enter New User Email Workflow
 | 
 
@@ -30,7 +30,7 @@ Enter new user email
 Create username and password
 ****************************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+Username.png
     :alt: Create Username Workflow
 |
 
@@ -39,7 +39,7 @@ Create username and password
 Set security questions
 **********************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+security+questions.png
     :alt: Set Security Questions Workflow
 |
 
@@ -48,7 +48,7 @@ Set security questions
 Create site key
 ***************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+site+key.png
     :alt: Create Site Key Workflow
 |
 
@@ -57,16 +57,16 @@ Create site key
 EULA approval
 *************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/EULA+approval.png
     :alt: EULA approval Workflow
 |
 
-.. _Set Send confirmation email
+.. _Send confirmation email
 
 Send confirmation email
 ***********************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Send+confirmation+email.png
     :alt: Send Confirmation Email Workflow
 |
 
@@ -75,7 +75,7 @@ Send confirmation email
 Activate account
 ****************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+account.png
     :alt: Account Activate Workflow
 |
 .. _Existing Sign-in:
@@ -88,7 +88,7 @@ The process for returning users
 
 Register or login selection
 ***************************
-.. image::  
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png 
     :alt: Login Workflow
 |
 
@@ -96,7 +96,7 @@ Register or login selection
 
 Existing user verification
 **************************
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png 
     :alt: Existing User Verification Workflow
 |
 
@@ -104,7 +104,7 @@ Existing user verification
 
 Site key protected password entry
 *********************************
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Site+key+protected+password+entry.png
     :alt: Site Key Protected Password Entry Workflow
 
 
@@ -129,7 +129,7 @@ Remember me toggle function
 Recover lost credentials function
 *********************************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
     :alt: Recover Lost Credentials Workflow
 |
 
@@ -138,6 +138,6 @@ Recover lost credentials function
 Reset psassword function
 ************************
 
-.. image::  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Reset+Password.png
     :alt: Reset Password Workflow
 |
