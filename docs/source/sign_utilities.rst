@@ -19,11 +19,11 @@ Accessible from various pages during the sign-up or sign-in workflow, users are 
     :width: 82%
     :alt: Remember Me Toggle Workflow
 |
-.. Attention:: Verify that the "Remember Me" option works (and confirm it **only** works) when a returning user seeks access from a previously used hardware device.
+.. Attention:: Verify the "Remember Me" option works (and confirm it **only** works) when a returning user seeks access from a previously used hardware device.
 
-.. Note:: Add an option for Users to select "Remember Me" for their Site Key and Password directly from the :ref:`Activate Account` page.
+.. Note:: Try to add an option for Users to select the "Remember Me" option directly from the :ref:`Activate Account` page.
 
-.. Hint:: Add active monitoring intellegence to identify suspicious user activity.
+.. Hint:: Consider adding active monitoring intellegence to identify suspicious user activity.
 
 
 .. _Recover lost credentials
@@ -37,9 +37,9 @@ From links on various pages, users are able to request reninders of lost access 
     :width: 91%
     :alt: Recover Lost Credentials Workflow
 |
-.. Attention:: Verify that the overlapping nature of these do not result in creating a security vulnerability.
+.. Attention:: Verify that the overlapping nature of these does not result in creating a security vulnerability.
 
-.. Hint:: Include a more intuitive way for the user to get back to the point where he or she can amploy the restored credenitials. 
+.. Hint:: Consider including a more intuitive way for the user to get back to the point where he or she can employ the restored credenitials. 
 
 Reset password function
 ***********************
@@ -52,6 +52,6 @@ Users are able to reset their password.
 |
 .. Attention:: Verify that the reset password token has a responsible expiry term.
 
-.. Attention:: The password activity screens do not appear on the correct DAO website URL.
+.. Attention:: The password activity screens do not currently appear on the correct DAO website URL.
 
-.. Hint:: Add anti-fraud protections associated with this procedure that are similar to Goole and Anazon.
+.. Hint:: Consider adding anti-fraud protections associated with this procedure that are similar to Google and Amazon.
