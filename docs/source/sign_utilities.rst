@@ -6,7 +6,7 @@ Shared utililities
 
 As indicated by the :ref:`Sign-up or sign-in` workflow description, the sign-up and sign-in processes share 3 utility functions to toggle on/off a remember user function and recover lost credentials.  
 
-.. Warning:: Critical items that need to be addressed before the PEER code is migrated to open source.  Should always include a link to a corresponding Pivotal Tracker story. Please file an `issue`_ if you find anything wrong.
+.. Warning:: Critical items to be addressed before the PEER code is migrated to open source. Each will include a link to a corresponding Pivotal Tracker story or is filed an `issue`_ in GitHub.
 
 .. Tip:: Non-essential items that we would like to address before the PEER code is migrated to open source.  May includes a link to a Pivotal Tracker story in some cases.
 
