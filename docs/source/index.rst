@@ -25,11 +25,11 @@ As an integral part of this effort, a number of potential development activities
    overview
    quickstart
    participant
+      sign_in
+      sign_up
+      sign_utilities
    administrator
    researcher
-   sign_in
-   sign_up
-   sign_utilities
    license
    faqs
    changelog
