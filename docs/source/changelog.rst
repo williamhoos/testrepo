@@ -5,7 +5,7 @@ Changelog
 ~~~~~~~~~~
 
 * Added :ref:`sign-up or sign-in` section
-* Added :ref:`sign-up`, :ref:`sign-in` and :ref:`sign-in utilities` sections
+* Added :ref:`iniitial sign-up`, :ref:`existing sign-in` and :ref:`sign-in utilities` sections
 
 2016-09-11
 ~~~~~~~~~~
