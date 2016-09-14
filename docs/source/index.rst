@@ -16,6 +16,8 @@ As an integral part of this effort, a number of potential development activities
  
 .. Attention:: Critical item that will be addressed before the PEER code is migrated to open source, and that references a Pivotal Tracker story or open item in GitHub Issues.
 
+.. Attention:: bllaa.
+
 .. Note::  Non-essential enhancement that, time/budget allowing, may be incorporated before the PEER code is migrated to open source, or that will be changed to a "Hint" at that time.  
 
 .. Hint:: Suggested future extensions and/or modifications for consideration by anyone interested in enhancing PEER's functionality, and looking for future project opportunities.
