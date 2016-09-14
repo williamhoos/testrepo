@@ -29,7 +29,7 @@ At the conclusion of the initial engagement flow, first-time users arrive at sig
 Enter new user email
 ********************
 
-The first-time user must enter a valid email address and affirm that they meet the minimum age requirements in order to proceed with registration process.
+
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+New+User+Email.png  
     :alt: Enter New User Email Workflow
@@ -37,21 +37,18 @@ The first-time user must enter a valid email address and affirm that they meet t
 
 .. Attention:: Verify that the flow works for all Proxy and Pre-Registered use cases
 
-.. Note:: Consider adding error-checking algorithm to current the minimum age affirmation
-
 .. Hint:: Consider incorporating the option for using Text Messaging in lieu of email
 
 .. Hint:: Consider replacing the current email-based notifications system with System Tray Notifier-based notifications
 
-.. Hint:: Consider providing a cleaner UI for error messages (see Pluralsight website as an example) 
+.. Hint:: Consider adding error-checking algorithm to current the minimum age affirmation
 
+.. Hint:: Consider providing a cleaner UI for error messages (see Pluralsight website as an example) 
 
 .. _Create Username
 
 Create username and password
 ****************************
-
-After clicking on the "Sign Up" button, the system opens the "Create Username and Password" screen, which prompts the user to enter a username (which may be his or her email address or a different name); and to enter and confirm a password meeting the system's minimm criteria.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+Username.png
     :alt: Create Username Workflow
@@ -68,8 +65,6 @@ After clicking on the "Sign Up" button, the system opens the "Create Username an
 Set security questions
 **********************
 
-Once these are accepted, the "Create Security Questions" screen opens, and the user is prompted to select and provide answers to three Challenge Questions.
-
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+security+questions.png
     :alt: Set Security Questions Workflow
 |
@@ -84,8 +79,6 @@ Once these are accepted, the "Create Security Questions" screen opens, and the u
 
 Create site key
 ***************
-
-Upon completing the three Challenge Answers, the system opens the "Create Site Key" screen.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+site+key.png
     :alt: Create Site Key Workflow
