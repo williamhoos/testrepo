@@ -91,7 +91,7 @@ Create site key
 
 Upon completing the three Challenge Answers, the system opens the "Create Site Key" screen.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+site+key.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+Site+Key.png
     :width: 77.9%
     :alt: Create Site Key Workflow
 |
@@ -139,7 +139,7 @@ Send confirmation email
 Activate account
 ****************
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+account.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+Account.png
     :width: 96.8%
     :alt: Account Activate Workflow
 |
