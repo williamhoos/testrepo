@@ -73,7 +73,7 @@ Set security questions
 
 Once these are accepted, the "Create Security Questions" screen opens, and the user is prompted to select and provide answers to three Challenge Questions.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+security+questions.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+Security+Questions.png
     :width: 91.2%
     :alt: Set Security Questions Workflow
 |
