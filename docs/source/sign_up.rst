@@ -92,7 +92,7 @@ Create site key
 Upon completing the three Challenge Answers, the system opens the "Create Site Key" screen.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+Site+Key.png
-    :width: 85%
+    :width: 100%
     :alt: Create Site Key Workflow
 |
 
