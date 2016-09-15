@@ -8,9 +8,8 @@ As indicated in the right arm of the :ref:`Sign-up or sign-in` workflow descript
 
 Register or login selection
 ***************************
-.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
-    :width: 94.9%
-    :alt: Login Workflow
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+login+selection.png
+     :alt: Login Workflow
 |
 
 .. _Existing user verification
@@ -18,8 +17,7 @@ Register or login selection
 Existing user verification
 **************************
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png
-    :width: 69%
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+user+verification.png
     :alt: Existing User Verification Workflow
 |
 
