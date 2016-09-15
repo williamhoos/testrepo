@@ -13,7 +13,7 @@ Register or login selection
 
 At the conclusion of the initial engagement flow, first-time users arrive at sign-up or sign-in screen.  Here, new users begin the registration process by clicking into the "First Time User" entry field. 
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+login+selection.png
       :alt: Register Workflow
 | 
 
@@ -31,7 +31,7 @@ Enter new user email
 
 The first-time user must enter a valid email address and affirm that they meet the minimum age requirements in order to proceed with registration process.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+New+User+Email.png  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+new+user+email.png  
     :alt: Enter New User Email Workflow
 | 
 
@@ -53,7 +53,7 @@ Create username and password
 
 After clicking on the "Sign Up" button, the system opens the "Create Username and Password" screen, which prompts the user to enter a username (which may be his or her email address or a different name); and to enter and confirm a password meeting the system's minimm criteria.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+Username.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+username.png
     :alt: Create Username Workflow
 |
 
@@ -70,7 +70,7 @@ Set security questions
 
 Once these are accepted, the "Create Security Questions" screen opens, and the user is prompted to select and provide answers to three Challenge Questions.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+Security+Questions.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+security+questions.png
     :alt: Set Security Questions Workflow
 |
 
@@ -87,7 +87,7 @@ Create site key
 
 Upon completing the three Challenge Answers, the system opens the "Create Site Key" screen.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+Site+Key.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+site+key.png
     :alt: Create Site Key Workflow
 |
 
@@ -132,7 +132,7 @@ Send confirmation email
 Activate account
 ****************
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+Account.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+account.png
     :alt: Account Activate Workflow
 |
 
