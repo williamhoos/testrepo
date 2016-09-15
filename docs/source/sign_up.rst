@@ -104,7 +104,7 @@ EULA approval
 *************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/EULA+approval.png
-    :width: 72.2%
+    :width: 91.9%
     :alt: EULA approval Workflow
 |
 
