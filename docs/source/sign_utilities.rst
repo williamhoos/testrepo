@@ -16,7 +16,6 @@ Remember me toggle function
 Accessible from various pages during the sign-up or sign-in workflow, users are given an option to toggle on/off a feature that will remember one or more of their authentication credentials based on recognizing their hardware.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
-    :width: 82%
     :alt: Remember Me Toggle Workflow
 |
 .. Attention:: Verify the "Remember Me" option works (and confirm it **only** works) when a returning user seeks access from a previously used hardware device.
@@ -33,8 +32,7 @@ Recover lost credentials
 
 From links on various pages, users are able to request reninders of lost access credentials (username, site key challenge questions responses and password). 
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Remember+Me.png
-    :width: 91%
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Lost+credentials+recovery.png
     :alt: Recover Lost Credentials Workflow
 |
 .. Attention:: Verify that the overlapping nature of these does not result in creating a security vulnerability.
@@ -46,8 +44,7 @@ Reset password function
 
 Users are able to reset their password.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Reset+Password.png
-    :width: 96%
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Reset+password.png
     :alt: Reset Password Workflow
 |
 .. Attention:: Verify that the reset password token has a responsible expiry term.
