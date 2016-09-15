@@ -32,7 +32,7 @@ Enter new user email
 The first-time user must enter a valid email address and affirm that they meet the minimum age requirements in order to proceed with registration process.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+New+User+Email.png  
-    :width: 94.9%
+    :width: 50%
     :alt: Enter New User Email Workflow
 | 
 
