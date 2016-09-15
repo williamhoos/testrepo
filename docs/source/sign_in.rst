@@ -8,7 +8,8 @@ As indicated in the right arm of the :ref:`Sign-up or sign-in` workflow descript
 
 Register or login selection
 ***************************
-.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.pdf 
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
+    :width: 94.9%
     :alt: Login Workflow
 |
 
