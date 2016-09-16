@@ -4,14 +4,14 @@
 Sign-up (First-time users) 
 ==========================
 
-As indicated in the left arm of the :ref:`Sign-up or sign-in workflow` description, the registration process for first-time PEER users is comprised of the following 8 steps:
+As indicated in the left arm of the :ref:`Sign-up or sign-in drawing` illustration, the registration process for first-time PEER users is comprised of the following 8 steps:
 
 .. _Register or login:
 
 Register or login selection
 ***************************
 
-At the conclusion of the initial engagement flow, first-time users arrive at sign-up or sign-in screen.  Here, new users begin the registration process by clicking into the "First Time User" entry field. 
+At the conclusion of the initial engagement flow, first-time users arrive at a page from which they can either sign-up (if a new user) or sign-in (if a returning user).  Here, new users begin the registration process by clicking into the "First Time User" entry field, and following the workflow sequence shown below: 
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+login+selection.png
       :alt: Register Workflow
@@ -21,7 +21,7 @@ At the conclusion of the initial engagement flow, first-time users arrive at sig
 
 .. Note:: Try to ensure that analytics take into account all engagement means that have brought prospects to this page
 
-.. Hint:: Consider creating a simplified UI in which only one box appears on the page (for sign-up) and let’s someone who is a returning user click to sign-in link (unless the system recognize their hardware, in which case the page would display only a sign-in field with a link for sign-up so that it remains an equally simple screen view)  
+.. Hint:: Consider creating a simplified UI in which only one box appears on the page (for sign-up) and let’s someone who is a returning user click o a sign-in link (unless the system recognizes their hardware, in which case the page would display only a sign-in field with a link for sign-up so that it remains an equally simple screen view for all users)  
 
 
 .. _Enter new email:
