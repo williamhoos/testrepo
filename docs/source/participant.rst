@@ -18,14 +18,16 @@ Participant engagement
 Sign-up or sign-in
 ~~~~~~~~~~~~~~~~~~
 
-The sign-up (or sign-in) portion of PEER is provided through leveraging Private Access Connect to provide one-to-many and single sign-on (SSO) functionality that is participant centered in orientation and integrated with each participant's authorizations, proxies,  data sharing and privacy preferences.  
+The sign-up (or sign-in) portion of PEER is provided through leveraging Private Access Connect to provide one-to-many and single sign-on (SSO) functionality that is participant centered in its orientation and integrated with each participant's authorizations, proxies, data sharing and privacy preferences, notifications and accounting of disclosures (audit) reports.  
 
-As shown in the illustration below, the sign-up workflow (for first-time users) consists of 8 steps, and the sign-in workflow (for returning users) consists of just 3, each leveraging 3 shared utility resources:  
+As shown in the illustration below, the sign-up workflow (for first-time users) consists of 8 steps, and the sign-in workflow (for returning users) consists of just 3, each leveraging 4 shared utility resources:  
+
+.. _Sign-up or sign-in drawing
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png 
     :alt: Sign-up or Sign-in Workflow Illustration
-| 
-Sign-up or sign-in begins at the conclusion of the participant enagement workflow, with selection of the appropriate sequence for the user. The sign-up sequence ends when the newly-enrolled participant activates his or her account, which takes place immediately before beginning the authorization and proxy settings process workflows.  The sign-in process ends when the returning user enters his or her password (or this step is automated based on the user election), at which point the user is taken to their main Dashboard page.
+
+The sign-up or sign-in workflow begins at the conclusion of the participant enagement processes, with selection of the appropriate sequence for the particular user. The sign-up sequence ends when a newly-enrolled participant activates his or her account, which occurs immediately before beginning the authorization and proxy settings workflow.  The sign-in process ends when a returning user enters his or her password from a site-key protected page (or this step is automated based on the user's previous election), at which point the user is taken to their main Dashboard page.
 
 The foregoing subsystems are described in detail in the :ref:`Initial Sign-up` or :ref:`Existing Sign-in` workflow section. 
 
@@ -45,8 +47,12 @@ The foregoing subsystems are described in detail in the :ref:`Initial Sign-up` o
 Authorization & proxy settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[ This section coming ]
+For many first-time PEER users, the authorizations and proxy settings process begins immediately after the new user activates his or her PEER account.  If the organization that is the sponsor for the protal is willing to serve as a proxy *and* has created defualt authorization settings, then PEER will give the user (or their legally authorized representative) an opportunity to review and accept or amend these settings before proceeding. 
 
+.. _Authorization & proxy drawing
+
+.. image::  
+    :alt: Authorization & proxy settings Workflow Illustration
 
 .. _Privacy:
 
@@ -69,7 +75,9 @@ Dashboard activities
 Taking surveys
 ~~~~~~~~~~~~~~
 
-The suveys protions of PEER uses a set of tools called "PEER Survey Tools" or PST for short.  As shown in the illustration below, PST includes a library of existing questions, tools to edit or create new questions, and controls concerning how these questions are presented to participants.  :  
+The surveys portion of PEER uses a survey creation and management system called "PEER Survey Tools" or PST for short.  As shown in the illustration below, PST includes a library of existing questions, tools to customize these questions or create new ones, as well as controls for how these questions are presented to participants. 
+
+.. _taking surveys drawing
 
 .. image::  
     :alt: PEER Survey Tools (PST) Workflow Illustration
