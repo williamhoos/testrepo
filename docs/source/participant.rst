@@ -51,7 +51,7 @@ For many first-time PEER users, the authorizations and proxy settings process be
 
 .. _Authorization & proxy drawing
 
-.. image::  
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Authorization+and+proxy+workflow.png
     :alt: Authorization & proxy settings Workflow Illustration
 
 .. _Privacy:
