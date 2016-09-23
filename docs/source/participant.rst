@@ -95,7 +95,22 @@ Confirmation Email for Someone Else Account
     :alt: Confirmation email for someone else account Illustration
 
 
+Select Date Function
 
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Select+date+function.png
+    :alt: Select date Illustration 
+
+
+New Profile Menu
+
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+profile+menu.png
+    :alt: New profile menu Illustration 
+
+
+Update Password Function
+
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Update+password.png
+    :alt: Update password Illustration 
 
 
 .. _Privacy:
