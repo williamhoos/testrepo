@@ -69,7 +69,7 @@ For many first-time PEER users, the authorizations and proxy settings process be
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+contact+information.png
     :alt: Enter contact information Illustration
 
--- _Add new profile drawings
+.. _Add new profile drawings
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+1.png
     :alt: Add new profile 1 Illustration
@@ -80,6 +80,11 @@ For many first-time PEER users, the authorizations and proxy settings process be
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+3.png
     :alt: Add new profile 3 Illustration
 
+Confirmation Email for Someone Else Account
+
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Confirmation+email+for+someone+else
+.png
+    :alt: Confirmation email for someone else account Illustration
 
 
 
