@@ -54,6 +54,37 @@ For many first-time PEER users, the authorizations and proxy settings process be
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Authorization+and+proxy+workflow.png
     :alt: Authorization & proxy settings Workflow Illustration
 
+.. _Default settings drawing
+
+    image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Accept+default+settings.png
+     :alt:  Accept default settings Illustration
+
+.. _Customize settings drawing
+
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Customize+settings.png
+    :alt: Customize settings Illustration
+
+.. _Enter contact information drawing
+
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+contact+information.png
+    :alt: Enter contact information Illustration
+
+-- _Add new profile drawings
+
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+1.png
+    :alt: Add new profile 1 Illustration
+
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+2.png
+    :alt: Add new profile 2 Illustration
+
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+3.png
+    :alt: Add new profile 3 Illustration
+
+
+
+
+
+
 .. _Privacy:
 
 Privacy settings
