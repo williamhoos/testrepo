@@ -5,6 +5,12 @@ Changelog
 ~~~~~~~~~~
 
 * Added :ref:`data` section
+* Moved :ref:`authorization` discussion to a new, dedicated section
+
+2016-09-23
+~~~~~~~~~~
+
+* Added :ref:`authorization` section
 
 2016-09-12
 ~~~~~~~~~~
