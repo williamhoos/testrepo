@@ -22,7 +22,10 @@ The documentation is divided into the data workflow, and the three major functio
 Data perspective
 ~~~~~~~~~~~~~~~~
 
-As its name indicates, PEER is designed to engage any participant to share his or her information as broadly or as narrowly as he or she wishes, and to change the degree to which his or her information may be discovered and used as circumstances change.  This is achieved through three distinct "actor" workflows.  The Data perspective focuses on the system from the point of view of the data, including how it is introduced into the system and its flow to the point that it is either consumed, retained, or leaves it.  
+As its name indicates, PEER is designed to engage any participant to share his or her information as broadly or as narrowly as he or she wishes, and to change the degree to which his or her information may be discovered and used as circumstances change.  This is achieved through three distinct "actor" workflows, each of whose interactions with the system are summarized in the sections that follow.  
+
+The Data perspective focuses on the system from the point of view of the data it contains, including how these data elements are initially introduced into the system and their respective flow, transformation and/or retention through the point that such data is consumed (i.e., used by the system, viewed, exported or discarded) according to explicit rules.
+
 
 .. _Participants:
 
