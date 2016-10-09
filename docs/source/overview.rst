@@ -27,6 +27,7 @@ As its name indicates, PEER is designed to engage any participant to share his o
 The Data perspective focuses on the system from the point of view of the data it contains, including how these data elements are initially introduced into the system and their respective flow, transformation and/or retention through the point that such data is consumed (i.e., used by the system, viewed, exported or discarded) according to explicit rules.
 
 
+
 .. _Participants:
 
 Participant perspective
@@ -53,7 +54,7 @@ All first-time visitors to PEER are required to sign-up and returning users sign
 Authorization and proxy settings 
 ================================
 
-PEER enables properly authorized individuals or groups to act on behalf of others.  Depending on the types of authority that are entailed and the relationship between the parties, such authorization may take place through legal attestation, express authorization, and/or creation of a legal power of attorney.
+PEER enables properly authorized individuals or groups to act on behalf of others.  Depending on the types of authority that are entailed and the relationship between the parties, such authorization may take place through legal attestation, express authorization, and/or creation of a legal power of attorney.  For more information, refer to the :ref:`Sign-up or sign-in` description.
 
 ================
 Privacy settings 
