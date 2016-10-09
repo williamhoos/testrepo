@@ -7,7 +7,9 @@ This document provides a guide to the subsystems that collectively make up the P
 
 It is **recommended** that this documentation be read in the order listed.  Accordingly, if you elect to skip around within the documentation, be aware that it is written assuming that the preceding sections have been read so you may find it necessary to backtrack to fill in missing concepts and terminology.
 
-The documentation is divided into the three major functional aspects of the PEER system, and in turn to the subsystems and individual components addressed to the following user groups:
+The documentation is divided into the data workflow, and the three major functional aspects of the PEER system that influence or generate the content of the data workfow, as well as the subsystems and individual components addressed in each of the three user groups:
+
+* :ref: `Data`
 
 * :ref:`Participants`
 
@@ -15,15 +17,22 @@ The documentation is divided into the three major functional aspects of the PEER
 
 * :ref:`Researchers`
 
+.. _Data:
+
+Data perspective
+~~~~~~~~~~~~~~~~
+
+As its name indicates, PEER is designed to engage any participant to share his or her information as broadly or as narrowly as he or she wishes, and to change the degree to which his or her information may be discovered and used as circumstances change.  This is achieved through three distinct "actor" workflows.  The Data perspective focuses on the system from the point of view of the data, including how it is introduced into the system and its flow to the point that it is either consumed, retained, or leaves it.  
+
 .. _Participants:
 
-Participant workflows
-~~~~~~~~~~~~~~~~~~~~~
+Participant perspective
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Participant+Overview.png
     :alt: Participant Overview Illustration
 | 
-The Participant portion of PEER is directed to end-users who supply information on behalf of themselves or persons for whom they are authorized to act.  This section of PEER is comprised of 9 major subsystem workflows, illustrated above and summarized in the following sections. 
+The Participant perspective focuses on the experience of the system from the point of view of end-users who supply information on behalf of themselves or persons for whom they are authorized to act.  This section of PEER is comprised of 9 major subsystem workflows, illustrated above and summarized in the following sections. 
 
 ======================
 Participant engagement 
@@ -82,17 +91,16 @@ In addition to sharing access to their information with third-parties, participa
 
 .. _Administrators:
 
-
-Administrator workflows
-~~~~~~~~~~~~~~~~~~~~~~~
+Administrator perspective
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Administrator+Overview.png
     :width: 89%
     :alt: Administrator Overview Illustration
 | 
-Organizations (or individuals) who operate a PEER registry are called "PEER sponsors". If a PEER sponsor is part of a hosted network (such as the Genetic Alliance's PEER system), they may be required to comply with that authority's requirements as a condition to receiving rights to use the network, various trademarks and/or copyrighted materials in conjunction with their use of PEER.  
+Organizations (or individuals) who operate a PEER registry are called "PEER sponsors". If a PEER sponsor is part of a hosted network (such as Genetic Alliance's SaaS-based PEER service), they may be required to comply with that authority's requirements as a condition to receiving rights to use the network, various trademarks and/or copyrighted materials in conjunction with their use of PEER.  
 
-Once approved, PEER sponsors administer the display and operation of one or more portals from an administrative user account. The administrator section of PEER is comprised of 8 major subsystem workflows, illustrated above and summarized in the following sections. 
+Once approved, PEER sponsors administer the display and operation of one or more portals from an administrative user account. The Administrator perspective focuses on the experience of the system from the point of view of these sponsors who design and configure the operation and content of their registry to achieve their goals and to serve their members and the individuals they invite to register as end-users.  The Administrator perspective of PEER is comprised of 8 major subsystem workflows, illustrated above and summarized in the following sections. 
 
 ==================
 Sign-up or sign-in 
@@ -145,14 +153,16 @@ In addition to information accessible to adminstrative personnel through a thrid
 
 .. _Researchers:
 
-Researcher workflows
-~~~~~~~~~~~~~~~~~~~~
+Researcher perspective
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Researcher+Overview.png
     :width: 67%
     :alt: Researcher Overview Illustration
 | 
-Individuals who seek to access data submitted by PEER participants are called "researchers".  Once approved, researchers may access information from one or more PEER portals from a researcher account. The researcher workflows section of PEER is comprised of 6 major subsystem workflows, illustrated above and summarized in the following sections.
+Individuals who seek to access data submitted by PEER participants are called "researchers". Once authenticated, researchers may discover and access information to which they are authorized.   
+
+Once approved, researchers find and access information from a researcher account. The Researcher perspective focuses on the experience of the system from the point of view of these researchers who query and acquire information to the extent they are authorized by the data sharing settings established by or on behalf of participants.  The Reseracher perspective of PEER is comprised of 6 major subsystem workflows, illustrated above and summarized in the following sections.
 
 ==================
 Sign-up or sign-in 
