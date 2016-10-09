@@ -9,7 +9,7 @@ It is **recommended** that this documentation be read in the order listed.  Acco
 
 The documentation is divided into the data workflow, and the three major functional aspects of the PEER system that influence or generate the content of the data workfow, as well as the subsystems and individual components addressed in each of the three user groups:
 
-* :ref: `Data`
+* :ref:`Participants`
 
 * :ref:`Participants`
 
