@@ -54,7 +54,7 @@ All first-time visitors to PEER are required to sign-up and returning users sign
 Authorization and proxy settings 
 ================================
 
-PEER enables properly authorized individuals or groups to act on behalf of others.  Depending on the types of authority that are entailed and the relationship between the parties, such authorization may take place through legal attestation, express authorization, and/or creation of a legal power of attorney.  For more information, refer to the :ref:`Sign-up or sign-in` description.
+PEER enables properly authorized individuals or groups to act on behalf of others.  Depending on the types of authority that are entailed and the relationship between the parties, such authorization may take place through legal attestation, express authorization, and/or creation of a legal power of attorney.  For more information, refer to the :ref:`Authorization` description.
 
 ================
 Privacy settings 
