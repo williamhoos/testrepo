@@ -65,17 +65,19 @@ An image of the Data table, which as of October 2016 comprises approximately 106
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/PEER+survey+data+table.png
      :alt: PEER survey data table    
      
-Propeties
-=========
+Properties
+==========
 
 As indicated, the table contains a total of 18 columns, each of which has a number of properties, including the key shown to the left of the numbered columns, which indicates that the values contained are also indexed and the results cached in order to make it more efficient to query.  The gold key designates the Primary Key for the index, and each of the green keys indicate other properties that are included in the data index.  
 
 Other properties include the "**Unsigned**" column, which when checked indicates that the data field can only contain positive numerical values, and when unchecked indicates that it can contain negative numerical values. The "**Allow Null**" column, which when checked indicates that the data field is permitted to contain a null value, and when unchecked requires that some value be stored in the field.  And the **Default**" column indicates the value the SQL server will use when data is entered into the table that does not designate another value for that field.
 
+Contents
+========
+
 The primary data contained in the table is described below:  
 
 #.  The **id** is auto-incremented, and contains an integer of up to 20 characters.  In operation, the mySQL server assigns a unique ID value automatically whenever a new record is inserted into the database.  As of October 2016, there are over 2 million records that have been entered into the beta database, and ____ million records in the production database. 
-
 
 #.  The **survey_id** designates the survey to which the answer pertains. 
 
