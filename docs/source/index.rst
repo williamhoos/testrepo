@@ -29,10 +29,10 @@ As an integral part of this effort, a number of potential development activities
    overview
    quickstart
    participant
-   authorization & proxy
    sign_up
    sign_in
    sign_utilities
+   authorization & proxy
    surveys
    administrator
    researcher
