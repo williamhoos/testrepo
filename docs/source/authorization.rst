@@ -75,21 +75,25 @@ Once all of the required data fields have been completed by the user, the system
 Add New Profile (3 of 3)
 ************************
 
-The third diagram illustrates the additional steps that are required to create an "another person" profile when such other person is ***not*** a direct blood relative (*i.e.*, a child or parent), or the account holder's spouse.  In all other cases, counsel has opined that self-attestation - even under the stated threat of civil penalty and/or criminal prosecution in the event of mis-representation may apply - is insufficient, and that a written confirmation is needed from the individual.                                   
+The third diagram illustrates the additional steps that are required to create an "another person" profile when such other person is **not** a direct blood relative (*i.e.*, a child or parent), or the account holder's spouse.  In all other cases, counsel has opined that self-attestation is insufficient - despite the express threat that civil penalties and/or criminal prosecution my apply in the event of mis-representation.    
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+3.png
     :alt: Add new profile 3 Illustration
 |
+.. Note:: After the system informs the account holder that his or her request to create a new account for this person has been sent, it would be preferable to return the account holder to the Kendo table for creating another user.  
 
-Confirmation Email for Someone Else Account
-*******************************************
+Confirm Someone Else Account
+****************************
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Confirmation+email+for+someone+else.png
     :alt: Confirmation email for someone else account Illustration
 |
+.. Hint:: Ideally, logic and appropriate message content would be added to enable the system to follow-up automatically in the event the other person does not timely respond to the initial invitiation.    
 
 Select Date Function
 ********************
+
+The following date selection utility function is provided to enable the account holder to select a date of birth, the date of death, the expected date of delivery in the profile creation workflow.  This function is also used in selecting a date in response to survey questions that require entry of a date when something took place (*e.g.*, the date of diagnosis, surgery, commencing treatment, etc.)
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Select+date+function.png
     :alt: Select date Illustration 
@@ -98,9 +102,12 @@ Select Date Function
 New Profile Menu
 ****************
 
+The forgoing description of profile creation commences from 
+
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+profile+menu.png
     :alt: New profile menu Illustration 
 |
+.. Attention:: The Data Table needs to be bifurcated between the data elements that are approrpriately held by Private Access (such as the foregoing PII) and the data that that should be maintained by PEER. After being bifurcated, the Data Table on the PEER side should 
 
 Update Password Function
 ************************
