@@ -68,9 +68,11 @@ An image of the Data table, which as of October 2016 comprises approximately 106
 Properties
 ==========
 
-As indicated, the table contains a total of 18 columns, each of which has a number of properties, including the key shown to the left of the numbered columns, which indicates that the values contained are also indexed and the results cached in order to make it more efficient to query.  The gold key designates the Primary Key for the index, and each of the green keys indicate other properties that are included in the data index.  
+As indicated, the table contains a total of 18 columns, each of which has a number of properties including (as indicated by the key shown to the left of the numbered columns) that these values are indexed and the results cached to make the data more efficient to query.  The gold key designates the Primary Key for the index, and each of the green keys indicate other properties that are included in the data index.  
 
-Other properties include the "**Unsigned**" column, which when checked indicates that the data field can only contain positive numerical values, and when unchecked indicates that it can contain negative numerical values. The "**Allow Null**" column, which when checked indicates that the data field is permitted to contain a null value, and when unchecked requires that some value be stored in the field.  And the **Default**" column indicates the value the SQL server will use when data is entered into the table that does not designate another value for that field.
+Other properties include the "**Unsigned**" column, which when checked indicates that the data field can only contain positive numerical values, and when unchecked indicates that it can contain negative numerical values. The "**Allow Null**" column, which when checked indicates that the data field is permitted to contain a null value, and when unchecked requires that some value be stored in the field.   
+
+The **Default**" column indicates the value the SQL server will use when data is entered into the table that does not designate another value for that field.
 
 Contents
 ========
@@ -79,10 +81,9 @@ The primary data contained in the table is described below:
 
 #.  The **id** is auto-incremented, and contains an integer of up to 20 characters.  In operation, the mySQL server assigns a unique ID value automatically whenever a new record is inserted into the database.  As of October 2016, there are over 2 million records that have been entered into the beta database, and ____ million records in the production database. 
 
-#.  The **survey_id** designates the survey to which the answer pertains. 
+#.  The **survey_id** designates the survey to which the answer pertains. Within PEER, surveys are comprised of one or more topics, which are referred to in the Data table as a "segment" (*see* :ref:`segment_id`). In turn, topics are comprised of one or more instruments, which are referred to in the Data table as a "group" (*see* :ref:`group_id`).  And in turn, instruments are comprised of one or more questions, which are referred to in the Data table as a "questions" (*see* :ref:`question_id`).
 
-
-#.  The **session_id** indicates the session the user was in when the answer was provided.
+#.  The **session_id** indicates the session the user was in when the answer to a question was provided by the participant.
 
 #.  The **date_added** indicates the date and time when the question was answered.
 
@@ -90,9 +91,9 @@ The primary data contained in the table is described below:
 
 #.  The **user_id** indicates the participant profile that provided the answer.
 
-#.  The **variable_date** indicates the data when a question was answered, but which excludes the time of the answer.  This data was used in an earlier release of PEER but is not presentely being used.
+#.  The **variable_date** indicates the date (but not the time) when a question was answered.  This data is a subset of :ref: `date_answered`and was used in an earlier release of PEER, but is not presentely being used.
 
-#.  The **question_id** indicates the question that was being answered, and is recorded as a zero (0) for an introduction or conclusion, where no question was posed although the survey presented information.
+#.  The **question_id** indicates the question that was being answered.  Each question is assigned a unique ID number, and is recorded as a zero (0) for an introduction or conclusion, in which cases no question is posed despite the survey presenting information.  Groups of PEER questions form "instruments", which are referred to in the Data table as "groups" (see :ref:`group_id`)
 
 #.  The **variable_value** indicates 
 
@@ -100,9 +101,9 @@ The primary data contained in the table is described below:
 
 #.  The **unit_of_measure** indicates
 
-#.  The **group_id** indicates the instrument in PEER
+#.  The **group_id** indicates the instrument within which one or more survey questions appear, and to which such response (*i.e.*, the :ref:`variable_data` pertains.  
 
-#.  The **segment_id** indicates the topic in PEER.
+#.  The **segment_id** indicates the topic within whin PEER.
 
 #.  The **skipped** column records when the user clicked on the "skip" button rather than respond to a question
 
