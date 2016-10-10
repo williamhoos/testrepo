@@ -43,7 +43,7 @@ Whether a sponsor has provided participants with an opportunity to elect the spo
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+contact+information.png
     :alt: Enter contact information Illustration
-|
+
 While a number of other optional data fields are provided, as shown above, only the First Name, Last Name and Postal Code are treated as required fields.  Along with the individual's email address that was validated as part of the Sign-up flow, these 4 items of Personally Identifying Information (or PII) and any other optional PII elements are maintained by Private Access and not accessible to the organizational sponsor or any other party unless expressly permitted by the individual's privacy and data sharing preferences. 
 
 .. Attention:: The Data Table needs to be bifurcated between the data elements that are approrpriately held by Private Access (such as the foregoing PII) and the data that that should be maintained by PEER. After being bifurcated, the Data Table on the PEER side should expressly designate the PII and non-PII data elements, and optionally should only receive the non-PII data.  For example, whereas the full zip code is treated as PII, the first three digits of the zip code may be included as non-PII.  
@@ -104,7 +104,7 @@ The following date selection utility function is provided to enable the account 
 New Profile Menu
 ****************
 
-The following workflow refers to the "hamburger menu" (*i.e.*, the menu that appears as three horizontal lines) in the upper right hand corner of the PEER iFrame.  Once an initial profile has been created, the menu will integrate the First Name of that profile and the optional picture.  However, until the first profile has been created, the system will display the phrase "New profile" in the name field in conjunction with a generic silhouette image.  The following block flow diagram describes the functions avalaible from this rolling over, and/or clicking on the hamburger menu icon:
+The following workflow refers to the "hamburger menu" (*i.e.*, the menu that appears as three horizontal lines) in the upper right hand corner of the PEER iFrame.  Once an initial profile has been created, the menu will integrate the First Name of that profile and the optional picture.  However, until the first profile has been created, the system will display the phrase "New profile" in the name field in conjunction with a generic silhouette image.  The following block flow diagram describes the functions avalaible from rolling over, and/or clicking on this menu icon:
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+profile+menu.png
     :alt: New profile menu Illustration 
