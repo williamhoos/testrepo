@@ -54,7 +54,7 @@ Depending on the portal sponsor's administrative settings, first-time PEER users
 
 As indicated, where the portal sponsor's Default Settings include a willingness to serve as a proxy *and* has created defualt authorization settings in this regard, PEER will give the user (or their legally authorized representative) an opportunity to review and accept, or amend, these settings before proceeding.  Alternatively, where this option is not offered by the PEER sponsor, the individual will be shown a welcome screen and asked to enter contact information and create a profile.
 
-These systems and related subsystems are described in detail in the :ref:`Authorization` workflow section. 
+These systems and related subsystems are described in detail in the :ref:`Authorization & Proxy` workflow section. 
 
 .. Hint:: Consider providing users the opportunity to substitute a custom message for the "Welcome" message.
 
