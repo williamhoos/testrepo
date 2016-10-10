@@ -6,7 +6,7 @@ Authorization & Proxy Settings
 
 As indicated in the summary of the :ref:`Authorization` workflow, depending on whether the organization through whom a participant registered is willing to serve as a proxy, an individual user has several ways to designate the person(s) and/or group(s) to whom he or she authorizes to act on their behalf.  
 
-As indicated, the PEER sponsor's General Settings (summarized in the shaded box) include a willingness to serve as a proxy *and* include defualt authorization settings in this regard, these are reflected in the "We're here for you" screen that is displayed to the user.  Where the portal sponsor has indicated a willingness or desire to serve as a proxy for participants, the participant is provided an opportunity to accept these default setttings, or to customize them before getting started:
+As indicated, the PEER sponsor's General Settings (summarized in the shaded box) include a willingness to serve as a proxy *and* the sponsor's defualt authorization settings.  These selections are reflected in the "We're here for you" screen that is displayed to the user; and to the extent the portal sponsor has indicated a willingness or desire to serve as a proxy for participants, the account holder is provided an opportunity to accept these default setttings, or to customize them before getting started:
 
 Accept default settings
 ***********************
@@ -27,36 +27,55 @@ Such customization is illustrated by the following workflow drawing:
 Customize these settings
 ************************
 
+As shown, where a default preference is provided, the account holder is provided an opportunity to modify any or all of the sponsor's default settings, and thereby to designate more or less broad authority to act on the participant's behalf, and a message to verify that such changes were intentional:
+
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Customize+settings.png
     :alt: Customize settings Illustration
 |
-
+.. Note:: It could help to reduce the number of steps involved in registering as a new user if the organization's default privacy preference settings could also be approved or customized as part of hte foregoing (*i.e.*, rather than waiting for a future step).
 
 .. _Contact info:
 
 Enter Contact Information
 *************************
 
+Whether a sponsor has provided participants with an opportunity to elect the sponsor as a proxy or not, the next step involves submitting contact information for the account holder.  This is illustrated in the following worflow:
+
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+contact+information.png
     :alt: Enter contact information Illustration
 |
+While a number of other optional data fields are provided, as shown above, only the First Name, Last Name and Postal Code are treated as required fields.  Along with the individual's email address that was validated as part of the Sign-up flow, these 4 items of Personally Identifying Information (or PII) and any other optional PII elements are maintained by Private Access and not accessible to the organizational sponsor or any other party unless expressly permitted by the individual's privacy and data sharing preferences. 
+
+.. Attention:: The Data Table needs to be bifurcated between the data elements that are approrpriately held by Private Access (such as the foregoing PII) and the data that that should be maintained by PEER. After being bifurcated, the Data Table on the PEER side should expressly designate the PII and non-PII data elements, and optionally should only receive the non-PII data.  For example, whereas the full zip code is treated as PII, the first three digits of the zip code may be included as non-PII.  Similarly, whereas the date of birth is treated as PII, the age for anyone under 92 may be included as non-PII.
 
 Add New Profile (1 of 3)
 ************************
 
+Below is the first of three diagrams illustrating the process of creating a new profile within PEER.  Such new profiles may be created for the account holder himself or herself (*i.e.*, a "myself account"), or on behalf of a child, spouse, parent, or "someone else".  Such designations are provided for several reasons.  These reasons include the ability for each question about the profile to be stated in the appropriate person (*i.e.*, "I am..." or "Are you...?" for the myself account).  In addition, the relationship directly influences the right of an individual to create an account for another person, and the process for either self-attesting to having the appropriate authority or sending a link to the affected person to confirm their authorization for the account holder to act on their behalf.
+
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+1.png
     :alt: Add new profile 1 Illustration
 |
-    
+In the event of a myself account, the system pre-populates the profile's first and last name, and postal code from the contact information entries.  The portion of this diagram that is shaded in grey indicates a portion of the overall workflow that is the same for each type of profile, although these fields start out as blank except in the case of the "myself account profile".  In each case, another element of PII - namely the individual's date of birth - is requested as a required entry.
+
+.. Note:: Currently, there is no error checking to validate that the account holder is at least 18 years old, and/or to provide that minor children set up their own accounts upon reaching the age of majority.  Both of these protections would be desireable to add in the future.
+
 Add New Profile (2 of 3)
 ************************
+
+The second of the three diagrams addressing the process of creating a new profile within PEER indicates the additional data that is required for creating a child, spouse or parent profile.  As shown, in each of these cases, the account holder is prompted to indicate wheteher the profile holder is commonly referred to as "he" or "she", and whether the individual is for a person who is living, deceased or not yet born (*i.e.*, pre-natal).  For profiles on behalf of deceased persons, the system also requests a date of death. These selections enable the system to employ the correct personal pronoun and tense for each inquiry respecting the individual (*i.e.*, "He is..." or "Before passing away, was she...?"). 
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+2.png
     :alt: Add new profile 2 Illustration
 |
-    
+.. Note:: Currently, the system is employing the gender at birth question response as a "global variable".  This logic should be revised to infer such response from the profile setting unless over-ridden by the response to the gender at birth question reveals an edge case, and that logic should be taken into account in curating surveys.
+
+Once all of the required data fields have been completed by the user, the system opens the main dashboard page.  
+
 Add New Profile (3 of 3)
 ************************
+
+The third diagram illustrates the additional steps that are required to create an "another person" profile when such other person is ***not*** a direct blood relative (*i.e.*, a child or parent), or the account holder's spouse.  In all other cases, counsel has opined that self-attestation - even under the stated threat of civil penalty and/or criminal prosecution in the event of mis-representation may apply - is insufficient, and that a written confirmation is needed from the individual.                                   
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Add+new+profile+3.png
     :alt: Add new profile 3 Illustration
