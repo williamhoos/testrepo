@@ -44,7 +44,7 @@ The foregoing subsystems are described in detail in the :ref:`Initial Sign-up` o
 
 .. _Authorization:
 
-Authorization & proxy settings
+Authorization and proxy settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Depending on the portal sponsor's administrative settings, first-time PEER users (or existing PEER users who are visiting the sponsor's portal for the first time) may be provided an opportunity immediately after signing into the account for the first time to authorize the sponsor to act on his or her behalf.  
