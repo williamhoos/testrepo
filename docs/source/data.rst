@@ -85,7 +85,7 @@ As indicated, the table contains a total of 18 columns, each of which is briefly
 
 #.  The **unit_of_measure** indicates
 
-3.  The **group_id** indicates the instrument in PEER
+#.  The **group_id** indicates the instrument in PEER
 
 #.  The **segment_id** indicates the topic in PEER.
 
