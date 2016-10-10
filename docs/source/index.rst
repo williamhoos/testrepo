@@ -29,7 +29,7 @@ As an integral part of this effort, a number of potential development activities
    overview
    quickstart
    participant
-   authorization & proxy
+   authorization
    sign_up
    sign_in
    sign_utilities
