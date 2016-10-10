@@ -46,7 +46,7 @@ Whether a sponsor has provided participants with an opportunity to elect the spo
 |
 While a number of other optional data fields are provided, as shown above, only the First Name, Last Name and Postal Code are treated as required fields.  Along with the individual's email address that was validated as part of the Sign-up flow, these 4 items of Personally Identifying Information (or PII) and any other optional PII elements are maintained by Private Access and not accessible to the organizational sponsor or any other party unless expressly permitted by the individual's privacy and data sharing preferences. 
 
-.. Attention:: The Data Table needs to be bifurcated between the data elements that are approrpriately held by Private Access (such as the foregoing PII) and the data that that should be maintained by PEER. After being bifurcated, the Data Table on the PEER side should expressly designate the PII and non-PII data elements, and optionally should only receive the non-PII data.  For example, whereas the full zip code is treated as PII, the first three digits of the zip code may be included as non-PII.  Similarly, whereas the date of birth is treated as PII, the age for anyone under 92 may be included as non-PII.
+.. Attention:: The Data Table needs to be bifurcated between the data elements that are approrpriately held by Private Access (such as the foregoing PII) and the data that that should be maintained by PEER. After being bifurcated, the Data Table on the PEER side should expressly designate the PII and non-PII data elements, and optionally should only receive the non-PII data.  For example, whereas the full zip code is treated as PII, the first three digits of the zip code may be included as non-PII.  
 
 Add New Profile (1 of 3)
 ************************
@@ -57,6 +57,8 @@ Below is the first of three diagrams illustrating the process of creating a new 
     :alt: Add new profile 1 Illustration
 |
 In the event of a myself account, the system pre-populates the profile's first and last name, and postal code from the contact information entries.  The portion of this diagram that is shaded in grey indicates a portion of the overall workflow that is the same for each type of profile, although these fields start out as blank except in the case of the "myself account profile".  In each case, another element of PII - namely the individual's date of birth - is requested as a required entry.
+
+.. Attention:: The date of birth is another element that must be addressed in bifurcating the Data Table between the elements that are approrpriately held by Private Access and the data that that should be maintained by PEER.  The birth date may require additional processing along the lines of the foregoing discussion regarding postal code, wherein Private Access may retain full PII for the zip code whereas PEER may hold non-PII employing an abridged postal code based on HIPAA de-identification regulations.  In the case of birth date, Private Access may hold the actual date, which will be treated as PII, whereas PEER will hold the age in years or state "Over 92" for anyone over that age, which would not be treated as PII.  In this case, however, the API would be needed to address auto-calculations based on changes requiring the actual date of birth to calculate age changes.
 
 .. Note:: Currently, there is no error checking to validate that the account holder is at least 18 years old, and/or to provide that minor children set up their own accounts upon reaching the age of majority.  Both of these protections would be desireable to add in the future.
 
@@ -102,15 +104,17 @@ The following date selection utility function is provided to enable the account 
 New Profile Menu
 ****************
 
-The forgoing description of profile creation commences from 
+The following workflow refers to the "hamburger menu" (*i.e.*, the menu that appears as three horizontal lines) in the upper right hand corner of the PEER iFrame.  Once an initial profile has been created, the menu will integrate the First Name of that profile and the optional picture.  However, until the first profile has been created, the system will display the phrase "New profile" in the name field in conjunction with a generic silhouette image.  The following block flow diagram describes the functions avalaible from this rolling over, and/or clicking on the hamburger menu icon:
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+profile+menu.png
     :alt: New profile menu Illustration 
 |
-.. Attention:: The Data Table needs to be bifurcated between the data elements that are approrpriately held by Private Access (such as the foregoing PII) and the data that that should be maintained by PEER. After being bifurcated, the Data Table on the PEER side should 
+As shown, from the menu, the user is provided the option to select any of five utilities, including to (1) review and/or edit Account details; (2) review and revise the challenge question/answer pairs or site key and phrase seleced initially; (3) review and/or edit additional settings affecting the account; (4) displaying the audit log; (5) create a new profile, and (6) logout of the system. 
 
 Update Password Function
 ************************
+
+The following diagram illustrates the workflow for creating or unpdating a password.  
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Update+password.png
     :alt: Update password Illustration 
