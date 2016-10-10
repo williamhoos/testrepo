@@ -20,7 +20,7 @@ The following illustration summarizes the overall architecture of the system wit
      :alt: Overall system architecture from the perspective of data it contains
 |
 
-.. _Existing user verification
+.. _survey database:
 
 PEER survey database
 ********************
@@ -81,7 +81,7 @@ The primary data contained in the table is described below:
 
 #.  The **id** is auto-incremented, and contains an integer of up to 20 characters.  In operation, the mySQL server assigns a unique ID value automatically whenever a new record is inserted into the database.  As of October 2016, there are over 2 million records that have been entered into the beta database, and ____ million records in the production database. 
 
-#.  The **survey_id** designates the survey to which the answer pertains. Within PEER, surveys are comprised of one or more topics, which are referred to in the Data table as a "segment" (*see* :ref:`segment_id`). In turn, topics are comprised of one or more instruments, which are referred to in the Data table as a "group" (*see* :ref:`group_id`).  And in turn, instruments are comprised of one or more questions, which are referred to in the Data table as a "questions" (*see* :ref:`question_id`).
+#.  The **survey_id** designates the survey to which the answer pertains. Within PEER, surveys are comprised of one or more topics, which are referred to in the Data table as a *"segment"*. In turn, topics are comprised of one or more instruments, which are referred to in the Data table as a *"group"*.  And in turn, instruments are comprised of one or more questions, which are referred to in the Data table as a *"question"*.
 
 #.  The **session_id** indicates the session the user was in when the answer to a question was provided by the participant.
 
@@ -91,29 +91,19 @@ The primary data contained in the table is described below:
 
 #.  The **user_id** indicates the participant profile that provided the answer.
 
-#.  The **variable_date** indicates the date (but not the time) when a question was answered.  This data is a subset of :ref: `date_answered`and was used in an earlier release of PEER, but is not presentely being used.
+#.  The **variable_date** indicates the date (but not the time) when a question was answered.  This data is a subset of the *date_added* field, and was used in an earlier release of PEER, but is not presentely being used.
 
-.. _question id:
-
-#.  The **question_id** indicates the question that was being answered.  Each question is assigned a unique ID number, and is recorded as a zero (0) for an introduction or conclusion, in which cases no question is posed despite the survey presenting information.  Groups of PEER questions form "instruments", which are referred to in the Data table as "groups" (see :ref:`group id`)
-
-.. _variable value:
+#.  The **question_id** indicates the question that was being answered.  Each question is assigned a unique ID number, and is recorded as a zero (0) for an introduction or conclusion, in which cases no question is posed despite the survey presenting information.  Groups of PEER questions form *"instruments"*, which are referred to in the Data table as *"groups"*
 
 #.  The **variable_value** indicates 
-
-.. _response value:
 
 #.  The **response_value** indicates
 
 #.  The **unit_of_measure** indicates
 
-.. _group id:
+#.  The **group_id** indicates the instrument within which a group of one or more survey questions is presented, and to which such response (*i.e.*, reflected by the *variable_value*) pertains.  
 
-#.  The **group_id** indicates the instrument within which one or more survey questions appear, and to which such response (*i.e.*, the :ref:`variable value` pertains.  
-
-.. _segment id:
-
-#.  The **segment_id** indicates the topic within whin PEER.
+#.  The **segment_id** indicates the topic within which a group of one or more instruments (each referenced by a unique *group_id*) is presented
 
 #.  The **skipped** column records when the user clicked on the "skip" button rather than respond to a question
 
