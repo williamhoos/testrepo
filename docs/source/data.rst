@@ -93,15 +93,25 @@ The primary data contained in the table is described below:
 
 #.  The **variable_date** indicates the date (but not the time) when a question was answered.  This data is a subset of :ref: `date_answered`and was used in an earlier release of PEER, but is not presentely being used.
 
-#.  The **question_id** indicates the question that was being answered.  Each question is assigned a unique ID number, and is recorded as a zero (0) for an introduction or conclusion, in which cases no question is posed despite the survey presenting information.  Groups of PEER questions form "instruments", which are referred to in the Data table as "groups" (see :ref:`group_id`)
+.. _question id:
+
+#.  The **question_id** indicates the question that was being answered.  Each question is assigned a unique ID number, and is recorded as a zero (0) for an introduction or conclusion, in which cases no question is posed despite the survey presenting information.  Groups of PEER questions form "instruments", which are referred to in the Data table as "groups" (see :ref:`group id`)
+
+.. _variable value:
 
 #.  The **variable_value** indicates 
+
+.. _response value:
 
 #.  The **response_value** indicates
 
 #.  The **unit_of_measure** indicates
 
-#.  The **group_id** indicates the instrument within which one or more survey questions appear, and to which such response (*i.e.*, the :ref:`variable_data` pertains.  
+.. _group id:
+
+#.  The **group_id** indicates the instrument within which one or more survey questions appear, and to which such response (*i.e.*, the :ref:`variable value` pertains.  
+
+.. _segment id:
 
 #.  The **segment_id** indicates the topic within whin PEER.
 
