@@ -67,10 +67,10 @@ Other properties include the "**Unsigned**" column, which when checked indicates
 
 The primary data contained in the table is described below:  
 
-#.  The **id** column is auto-incremented, and contains an integer of up to 20 characters.  In operation, the mySQL server assigns a unique ID value automatically whenever a new record is inserted into the database.  As of October 2016, there are over 2 million records that have been entered into the beta database, and ____ million records in the production database. 
-
+#.  The **id** is auto-incremented, and contains an integer of up to 20 characters.  In operation, the mySQL server assigns a unique ID value automatically whenever a new record is inserted into the database.  As of October 2016, there are over 2 million records that have been entered into the beta database, and ____ million records in the production database. 
+|
 #.  The **survey_id** designates the survey to which the answer pertains. 
-
+|
 #.  The **session_id** indicates the session the user was in when the answer was provided.
 
 #.  The **date_added** indicates the date and time when the question was answered.
