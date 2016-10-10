@@ -5,7 +5,7 @@ Changelog
 ~~~~~~~~~~
 
 * Added :ref:`data` section
-* Moved :ref:`authorization` discussion to a new, dedicated section
+* Moved portions of :ref:`authorization` discussion to a new :ref:`authorization & proxy` dedicated section
 
 2016-09-23
 ~~~~~~~~~~
