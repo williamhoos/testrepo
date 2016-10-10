@@ -45,13 +45,18 @@ The foregoing subsystems are described in detail in the :ref:`Initial Sign-up` o
 .. _Authorization:
 
 Authorization & proxy settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For many first-time PEER users, the authorizations and proxy settings process begins immediately after the new user activates his or her PEER account.  If the portal sponsor is willing to serve as a proxy *and* has created defualt authorization settings, then PEER will give the user (or their legally authorized representative) an opportunity to review and accept or amend these settings before proceeding. Alternatively, participants can always add to or modify the list of parties whom they authorize to act on their behalf.
+Depending on the portal sponsor's administrative settings, first-time PEER users (or existing PEER users who are visiting the sponsor's portal for the first time) may be provided an opportunity immediately after signing into the account for the first time to authorize the sponsor to act on his or her behalf.  
 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Authorization+and+proxy+workflow.png
     :alt: Authorization & proxy settings Workflow Illustration
 
+As indicated, where the portal sponsor's Default Settings include a willingness to serve as a proxy *and* has created defualt authorization settings in this regard, PEER will give the user (or their legally authorized representative) an opportunity to review and accept, or amend, these settings before proceeding.  Alternatively, where this option is not offered by the PEER sponsor, the individual will be shown a welcome screen and asked to enter contact information and create a profile.
+
+These systems and related subsystems are described in detail in the :ref:`Authorization` workflow section. 
+
+.. Hint:: Consider providing users the opportunity to substitute a custom message for the "Welcome" message.
 
 .. _Privacy:
 
