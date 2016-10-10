@@ -1,7 +1,7 @@
 .. _Authorization & Proxy:
 
 ==============================
-Authorization & Proxy Settings 
+Authorization & proxy settings 
 ==============================
 
 As indicated in the summary of the :ref:`Authorization` workflow, depending on whether the organization through whom a participant registered is willing to serve as a proxy, an individual user has several ways to designate the person(s) and/or group(s) to whom he or she authorizes to act on their behalf.  
