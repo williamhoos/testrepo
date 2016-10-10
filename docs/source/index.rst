@@ -32,7 +32,7 @@ As an integral part of this effort, a number of potential development activities
    sign_up
    sign_in
    sign_utilities
-   Authorization & Proxy
+   authorization_&_proxy
    surveys
    administrator
    researcher
