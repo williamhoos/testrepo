@@ -4,7 +4,7 @@
 Authorization & Proxy Settings 
 ==============================
 
-As indicated in the summary of the :ref:`Authorization` workflow, depending on whether the organization through whom a participant registered is willing to serve as a proxy, an individual user has several ways to designate the person(s) and/or group(s) to whom he or she authorizes to act on their behalf.  These steps are summarized below:
+As indicated in the summary of the :ref:`Authorization` workflow, depending on whether the organization through whom a participant registered is willing to serve as a proxy, an individual user has several ways to designate the person(s) and/or group(s) to whom he or she authorizes to act on their behalf.  This could take place immediately following creation of a new account (or for an existing user, immediately after signing into anothr organization's PEER portal for the first time).  In those cases, where the portal sponsor has indicated a willingness or desire to serve as a proxy for participants, the participant is provided an opportunity to accept the default setttings, as follows:
 
 Accept default settings, if desired
 ***********************************
@@ -12,6 +12,7 @@ Accept default settings, if desired
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Accept+default+settings.png
     :alt: Accept default settings Illustration
 |
+Alternatively, the account holder is provided an opportunity to customize the extent of his or her delegation of authority to the proposed proxy.  Such customization is illustrated by the following workflow drawing:
 
 Customize these settings, if desired
 ************************************
@@ -19,6 +20,7 @@ Customize these settings, if desired
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Customize+settings.png
     :alt: Customize settings Illustration
 |
+
 
 Enter Contact Information
 *************************
