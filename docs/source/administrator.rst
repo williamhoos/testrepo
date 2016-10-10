@@ -1,2 +1,2 @@
-Administrator Workflows
-=======================
+Administrator perspective
+=========================
