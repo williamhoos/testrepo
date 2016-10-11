@@ -8,8 +8,8 @@ As indicated in the left arm of the :ref:`Sign-up or sign-in drawing` illustrati
 
 .. _Register or login:
 
-Register or login selection
-***************************
+AA: Register or login selection
+*******************************
 
 At the conclusion of the initial engagement flow, first-time users arrive at a page from which they can either sign-up (if a new user) or sign-in (if a returning user).  Here, new users begin the registration process by clicking into the "First Time User" entry field, and following the workflow sequence shown below: 
 
@@ -26,8 +26,8 @@ At the conclusion of the initial engagement flow, first-time users arrive at a p
 
 .. _Enter new email:
 
-Enter new user email
-********************
+AB: Enter new user email
+************************
 
 The first-time user must enter a valid email address and affirm that they meet the minimum age requirements in order to proceed with registration process.
 
@@ -48,8 +48,8 @@ The first-time user must enter a valid email address and affirm that they meet t
 
 .. _Create Username
 
-Create username and password
-****************************
+AC: Create username and password
+********************************
 
 After clicking on the "Sign Up" button, the system opens the "Create Username and Password" screen, which prompts the user to enter a username (which may be his or her email address or a different name); and to enter and confirm a password meeting the system's minimm criteria.
 
@@ -65,8 +65,8 @@ After clicking on the "Sign Up" button, the system opens the "Create Username an
 
 .. _Set Security questions
 
-Set security questions
-**********************
+AD: Set security questions
+**************************
 
 Once these are accepted, the "Create Security Questions" screen opens, and the user is prompted to select and provide answers to three Challenge Questions.
 
@@ -82,8 +82,8 @@ Once these are accepted, the "Create Security Questions" screen opens, and the u
 
 .. _Create site key
 
-Create site key
-***************
+AE: Create site key
+*******************
 
 Upon completing the three Challenge Answers, the system opens the "Create Site Key" screen.
 
@@ -95,8 +95,8 @@ Upon completing the three Challenge Answers, the system opens the "Create Site K
 
 .. _EULA approval
 
-EULA approval
-*************
+AF: EULA approval
+*****************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/EULA+approval.png
     :alt: EULA approval Workflow
@@ -114,8 +114,8 @@ EULA approval
 
 .. _Send confirmation email
 
-Send confirmation email
-***********************
+AG: Send confirmation email
+***************************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Send+confirmation+email.png
     :alt: Send Confirmation Email Workflow
@@ -132,8 +132,8 @@ Send confirmation email
 
 .. _Activate account
 
-Activate account
-****************
+AH: Activate account
+********************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+account.png
     :alt: Account Activate Workflow
