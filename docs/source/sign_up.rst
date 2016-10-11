@@ -121,11 +121,14 @@ Send confirmation email
     :alt: Send Confirmation Email Workflow
 |
 
+.. Note:: Verify how well the system is able to accommodate a new registrant having initially entered an incorrect email address, and then correcting it when resending the message (for example, verify that this use case is correctly treated in the participant PII and notification databases?) 
+
+.. Note:: Try to assess ways to reduce the number of non-received / un-responded confirmation emails through refactoring the foregoing process (such as through use of a text message) or adding logic for sending automated reminder messages. 
+
 .. Hint:: Consider refactoring the Confirmation Email process to postpone it until after some activity has taken place by User
 
 .. Hint:: Consider replacing (or supplementing) the "No Pending Request" notice with a revise/corrected email flow to commence a new registration process based on entry of a different email address than initially submitted
 
-.. Hint:: Consider 
 
 .. _Activate account
 
