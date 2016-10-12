@@ -49,6 +49,15 @@ Here is an example response::
  }
 
 
+API Endpoints
+-------------
+
+Feel free to use cURL and python to look at formatted json examples. You can also look at them in your browser, if it handles returned json.
+
+::
+
+    curl http://readthedocs.org/api/v1/project/pip/?format=json | python -m json.tool
+
 Doc Search
 ----------
 
@@ -106,3 +115,12 @@ Doc Search
         }
 
  
+
+Root
+----
+.. http:get::  /api/v1/
+
+    Retrieve a list of resources.
+   
+   .. sourcecode:: js
+  
