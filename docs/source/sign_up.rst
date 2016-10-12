@@ -23,7 +23,9 @@ At the conclusion of the initial engagement flow, first-time users arrive at a p
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+login+selection.png
       :alt: Register Workflow
 | 
-The content of the sign-up screen (001) is based on two API calls that are made by PEER to PA Connect, an OpenID Connect service that is used for single-sign on and identity provisioning in conjunction with Private Access' PrivacyLayer service.  PA Connect employs the OAuth 2.0 open standard. For more information about OpenID Connect, see `connect2id explained <http://connect2id.com/learn/openid-connect>`_. 
+As indicated by the two-headed arrows in the above illustration, the workflow includes several APIs to third-party services.  
+
+The content of the sign-up screen (001) employs two API calls that are made by PEER to PA Connect, an OpenID Connect service that is used for single-sign on and identity provisioning in conjunction with Private Access' PrivacyLayer service.  PA Connect employs the OAuth 2.0 open standard. For more information about OpenID Connect, see `*connect2id explained* <http://connect2id.com/learn/openid-connect>`_.  These APIs (and others that are employed by PEER are described in the API documentation section, where they are referenced to the identifier shown in the corresponding illustration or text description of the system.
 
 .. Attention:: Adjust the UI so that the two entry boxes are equal in height
 
@@ -37,15 +39,15 @@ The content of the sign-up screen (001) is based on two API calls that are made 
 02: Enter new user email
 ************************
 
-The first-time user must enter a valid email address and affirm that they meet the minimum age requirements in order to proceed with registration process.
+Each first-time user must enter a valid email address and affirm that they meet the minimum age requirements in order to proceed with registration process. 
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+new+user+email.png  
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Enter+New+User+Email.png
     :alt: Enter New User Email Workflow
 | 
 
-.. Attention:: Verify that the flow works for all Proxy and Pre-Registered use cases
+.. Attention:: Verify that the flow works for all Proxy and Pre-Registered user cases
 
-.. Note:: Consider adding error-checking algorithm to current the minimum age affirmation
+.. Note:: Consider adding an error-checking algorithm to verify the minimum age affirmation when the user creates a profile
 
 .. Hint:: Consider incorporating the option for using Text Messaging in lieu of email
 
@@ -56,37 +58,37 @@ The first-time user must enter a valid email address and affirm that they meet t
 
 .. _Create Username
 
-AC: Create username and password
+03: Create username and password
 ********************************
 
-After clicking on the "Sign Up" button, the system opens the "Create Username and Password" screen, which prompts the user to enter a username (which may be his or her email address or a different name); and to enter and confirm a password meeting the system's minimm criteria.
+After clicking on the "Sign Up" button, the system opens the "Create Username and Password" screen, which prompts the user to enter a username (which may be his or her email address, or a different name); and to enter and confirm a password meeting the system's minimm criteria.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+username.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+Username.png
     :alt: Create Username Workflow
 |
 
-.. Attention:: Verify in testing proper display and content of error messages for password entry
+.. Attention:: Verify in testing proper display and content of error messages for password entry, and articulate any APIs that are used to avoid duplicate registrations.
 
-.. Note:: Try to add an auto-populate function to pre-populate the Username field with the user's email address entry (ie, as a default username selection)
+.. Note:: Time permitting before releasing as OSS, consider adding an auto-populate function to pre-populate the Username field with the user's email address entry (ie, as a default username selection)
 
 .. Hint:: Consider replacing the current email-based notifications system with System Tray Notifier-based notifications
 
 .. _Set Security questions
 
-AD: Set security questions
+04: Set security questions
 **************************
 
 Once these are accepted, the "Create Security Questions" screen opens, and the user is prompted to select and provide answers to three Challenge Questions.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+security+questions.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+Security+Questions.png
     :alt: Set Security Questions Workflow
 |
 
-.. Hint:: Consider revising the Challenge Questions feature to display *only* the available items (ie, by removing from the pull-down list any questions that are already being use)
+.. Hint:: Consider revising the Challenge Questions feature to display *only* the remaining available items (ie, by removing from the pull-down list any questions that are already being used)
 
-.. Hint:: Consider allowing the user to enter their own (free-text) questions (ie, in addition to the pre-generated questions)
+.. Hint:: Consider allowing the user to enter his or her own (free-text) questions (ie, in addition to the pre-generated questions)
 
-.. Hint:: Consider replacing (or supplementing) the use of Challenge Questions with multi-factor authentication process using an SMS message sent to the users mobile phone, Google Authenticator or other
+.. Hint:: Consider replacing (or supplementing) the use of Challenge Questions with multi-factor authentication process using a text message sent to the users mobile phone, Google Authenticator or other similar service
 
 .. _Create site key
 
