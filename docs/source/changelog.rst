@@ -4,7 +4,7 @@ Changelog
 2016-10-11
 ~~~~~~~~~~
 
-* Created :ref:`api_docs` section and began to format it in anticipation of including results of code reviews
+* Created :ref:`api documentation` section and began to create a standard taxonomy and move some of the proceeds of our code reviews in to it
 
 2016-10-10
 ~~~~~~~~~~
