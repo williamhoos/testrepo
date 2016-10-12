@@ -8,7 +8,7 @@ The sign-up workflow (for first-time users) is comprised of steps 01 - 08, and w
 
 .. _Sign-up drawing
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png
     :alt: Sign-up Workflow Illustration
     
 Each of these steps or utility functions is described below:
@@ -20,7 +20,7 @@ Each of these steps or utility functions is described below:
 
 At the conclusion of the initial engagement flow, first-time users arrive at a page from which they can either sign-up (if a new user) or sign-in (if a returning user).  Here, new users begin the registration process by clicking into the "First Time User" entry field, and following the workflow sequence shown below: 
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+login+selection.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up.png
       :alt: Register Workflow
 
 As indicated by the two-headed arrows in the above illustration, the workflow includes several APIs to third-party services.  
