@@ -49,11 +49,32 @@ Here is an example response::
  }
 
 
-API Endpoints
--------------
+.. _Sign-up and sign-in APIs
 
-Feel free to use cURL and python to look at formatted json examples. You can also look at them in your browser, if it handles returned json.
+Sign-up and sign-in functions
+*****************************
 
-::
+Enter challenge question
+------------------------
 
-    curl http://readthedocs.org/api/v1/project/pip/?format=json | python -m json.tool
+GET:: **API:/question**
+
+**Reference**
+
+See :ref:`PA 04 API` (Existing User Verification: Step 090)
+
+**Use:**
+
+This API is invoked when the user clicks on the sign-in button after entering responses to the challenge questions.  The API call passes the user’s answers back to the PA Connect server, which responds with an instruction to the application client to display an error message (092) or the screen (091) for submittal of the user’s password.
+
+**Source files::**
+
+ OpenID/trunk/private-access-server/ private-access-openid-server/src/main/java/com/privateaccess/openid/connect/controller/LoginController.java
+
+ OpenID/trunk/private-access-server/private-access-openid-server/src/main/java/com/privateaccess/openid/connect/model/UserLoginChallenge.java
+
+
+**Databases:**  dbPPMS_D, dbPPMS_D_Demo
+
+**Tables:** user_login_challenge
+
