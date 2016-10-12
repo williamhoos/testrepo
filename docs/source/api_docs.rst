@@ -256,13 +256,12 @@ This API is invoked when the user clicks on the sign-in button after entering re
     * dbPPMS_D_Demo.user_login_challenge
 
 
-
-.. TEMPLATE FOR FUTURE USE - COPY / DO NOT REMOVE ...
+.. seealso:: TEMPLATE FOR FUTURE USE - COPY / DO NOT REMOVE
 
 .. _TBD API:
 
-Name (symbol)
--------------
+Future template (symbol)
+------------------------
 
 **API:/**
 
