@@ -18,16 +18,16 @@ In addition, depending on a participant's use of the :ref:`Remember me utility` 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
      :alt: Login Workflow
 |
-As indicated, a third API call to PA Connect is used to 
-.. _Existing user verification
-
+As indicated, a third API call to PA Connect is used 
 
 .. Attention:: Steps 083 and 084 are not correctly portrayed in the above workflow diagram.  The diagram needs to be revised to reflect the actual steps for an existing user who has elected to have the system remember his or her user name and computer hardware, and the available permutations of these selections.
 
 .. Attention:: Verify that the remember computer hardware feature is properly functioning in all currently supported browser and hardware versions.  
 
 
-08: Existing user verification
+.. _Existing user verification
+
+09: Existing user verification
 ******************************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png
@@ -36,7 +36,7 @@ As indicated, a third API call to PA Connect is used to
 
 .. _Site key protected password entry
 
-09: Protected password entry
+10: Protected password entry
 ****************************
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Site-Key+Protected+Password+Entry.png
     :alt: Site Key Protected Password Entry Workflow
