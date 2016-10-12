@@ -33,13 +33,17 @@ As indicated, there are three API calls to the PA Connect service that are made 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png
     :alt: Existing User Verification Workflow
 |
+The API call that is made at step 090 is described at :ref:`PA-04 API`.
 
 .. Attention:: Steps 083 and 084 are not correctly portrayed in the above workflow diagram.  The diagram needs to be revised to reflect the actual steps for an existing user who has elected to have the system remember his or her user name and computer hardware, and the available permutations of these selections.
 
-.. _Site key protected password entry:
+
+.. _Password entry:
 
 10: Protected password entry
 ****************************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Site-Key+Protected+Password+Entry.png
     :alt: Site Key Protected Password Entry Workflow
+
+The API call that is made to PA Connect at step 104 is described at :ref:`PA-05 API`.
