@@ -15,7 +15,7 @@ In addition, depending on a participant's use of the :ref:`Remember me utility` 
 
 01: Register or login selection
 *******************************
-.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+login+selection.png
+.. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
      :alt: Login Workflow
 |
 
