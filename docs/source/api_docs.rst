@@ -76,6 +76,34 @@ Here is an example response::
 Sign-up and sign-in functions
 *****************************
 
+
+Doc Search
+----------
+
+.. http:get:: /api/v2/docsearch/
+
+    :string project: **Required**. The slug of a project. 
+    :string version: **Required**. The slug of the version for this project.
+    :string q: **Required**. The search query
+
+    You can search a specific set of documentation using our doc search endpoint.
+    It returns data in the format of Elastic Search,
+    which requires a bit of traversing to use.
+
+
+Login
+-----
+API: /login
+Source Files:  
+OpenID/trunk/private-access-server/ private-access-openid-server/src/main/java/com/privateaccess/openid/connect/controller/LoginController.java
+ OpenID/trunk/private-access-server/private-access-openid-server/src/main/java/com/privateaccess/openid/connect/model/UserAccount.java
+Database: dbPPMS_D, dbPPMS_D_Demo
+Tables: user_account
+When the user enters their username and clicks the “Sign in” button this API call is made in order to pass the username that was entered by the user into the input box, along with any parameters (such as the Remember Me toggle).
+
+
+
+
 Enter challenge question:  (**API:/question**)
 ----------------------------------------------
 
