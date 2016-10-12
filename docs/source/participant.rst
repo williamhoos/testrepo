@@ -24,7 +24,7 @@ As shown in the illustration below, the sign-up workflow (for first-time users) 
 
 .. _Sign-up or sign-in drawing
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+Sign-up+or+Sign-in+Workflow.png
     :alt: Sign-up or Sign-in Workflow Illustration
 
 The sign-up or sign-in workflow begins at the conclusion of the participant enagement processes, with selection of the appropriate sequence for the particular user. 
