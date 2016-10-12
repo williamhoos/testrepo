@@ -80,7 +80,7 @@ After clicking on the "Sign Up" button, the system opens the "Create Username an
 04: Set security questions
 **************************
 
-Once these are accepted, the "Create Security Questions" screen opens, and the user is prompted to select and provide answers to three Challenge Questions.
+Once the new user has selected a Username and Password, the *Create Security Questions* screen opens, and the user is prompted to select and provide answers to three challenge questions.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Set+Security+Questions.png
     :alt: Set Security Questions Workflow
@@ -94,12 +94,12 @@ Once these are accepted, the "Create Security Questions" screen opens, and the u
 
 .. _Create site key
 
-AE: Create site key
+05: Create site key
 *******************
 
-Upon completing the three Challenge Answers, the system opens the "Create Site Key" screen.
+Upon completing the three challenge answers, the system opens the "*Create Site Key*" screen, which assists the user to select a site key and enter a phrase or caption.  Site keys help protect against phishing attacks, by presenting the credentials to the user before requesting entry of his or her password.
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+site+key.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Create+Site+Key.png
     :alt: Create Site Key Workflow
 |
 
@@ -107,10 +107,10 @@ Upon completing the three Challenge Answers, the system opens the "Create Site K
 
 .. _EULA approval
 
-AF: EULA approval
+06: EULA approval
 *****************
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/EULA+approval.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/EULA+Approval.png
     :alt: EULA approval Workflow
 |
 
@@ -126,10 +126,10 @@ AF: EULA approval
 
 .. _Send confirmation email
 
-AG: Send confirmation email
+07: Send confirmation email
 ***************************
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Send+confirmation+email.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Send+Confirmation+Email.png
     :alt: Send Confirmation Email Workflow
 |
 
@@ -144,7 +144,7 @@ AG: Send confirmation email
 
 .. _Activate account
 
-AH: Activate account
+08: Activate account
 ********************
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+account.png
