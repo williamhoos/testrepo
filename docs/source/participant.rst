@@ -27,9 +27,13 @@ As shown in the illustration below, the sign-up workflow (for first-time users) 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+Sign-in.png
     :alt: Sign-up or Sign-in Workflow Illustration
 
-The sign-up or sign-in workflow begins at the conclusion of the participant enagement processes, with selection of the appropriate sequence for the particular user. The sign-up sequence ends when a newly-enrolled participant activates his or her account, which occurs immediately before beginning the authorization and proxy settings workflow.  The sign-in process ends when a returning user enters his or her password from a site-key protected page (or this step is automated based on the user's previous election), at which point the user is taken to their main Dashboard page.
+The sign-up or sign-in workflow begins at the conclusion of the participant enagement processes, with selection of the appropriate sequence for the particular user. 
 
-The foregoing subsystems are described in detail in the :ref:`Initial Sign-up` or :ref:`Existing Sign-in` workflow section. 
+The sign-up sequence (comprised of steps 01 - 08 above) ends when a newly-enrolled participant activates his or her account, which occurs immediately before beginning the authorization and proxy settings workflow.  The abbreviated sign-in process (comprised of steps 01, 09 and 10) ends when a returning user enters his or her password from a site-key protected page, at which point the user is taken to his or her main dashboard in PEER.
+
+The foregoing subsystems and related APIs and data tables are described in detail in the :ref:`Initial Sign-up` or :ref:`Existing Sign-in` workflow sections. 
+
+.. Attention:: Before proceeding to OSS license, verify that all Private Access Connect components are removed from PEER and functions occur only through on demand APIs and scheduled data synchronization, if needed. 
 
 .. Attention:: Verify proper placement of all MixPanel and Google Analytics cookies
 
