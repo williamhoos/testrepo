@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2016-10-12
+~~~~~~~~~~
+
+* Created a standard template for :ref:`api documentation` and updated the descriptions through :ref:`PA-05 API` to illustrate different levels of coverage to solicit suggestions on which elements may be missing, or are viewed as being overkill 
+
 2016-10-11
 ~~~~~~~~~~
 
