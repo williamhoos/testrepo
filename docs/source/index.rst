@@ -27,7 +27,6 @@ As an integral part of this effort, a number of potential development activities
    :caption: Table of Contents
 
    overview
-   quickstart
    data
    participant
    sign_up
