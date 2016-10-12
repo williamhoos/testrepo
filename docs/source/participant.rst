@@ -111,5 +111,5 @@ Other utilities
 Participant data
 ~~~~~~~~~~~~~~~~
 
-[ This section coming ]
+[ This section coming ].
 
