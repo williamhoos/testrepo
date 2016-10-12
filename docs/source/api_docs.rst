@@ -89,13 +89,13 @@ None
 
 **Form parameters:**
 
-    user – string (required) - user name or email address for the user wishing to login
-    rememberMe – string (optional) - indicates whether the user has invoked (or disabled) the option in this login
-    authorizedURL – string (optional) - indicates whether to bypass the enter username screen because the user came from a new account verification email link
-    model - ModelMap (required) - Spring framework that is used by the application to model data objects
-    request - HttpServletRequest (required) - the object passed to the processLogin method, including any query parameters
-    response - HttpServletResponse (required) - the object returned to the client browser
-    session - HttpSession (required) - stores the session information (username, user id) for later screens/methods to utilize
+    * user – string (required) - user name or email address for the user wishing to login
+    * rememberMe – string (optional) - indicates whether the user has invoked (or disabled) the option in this login
+    * authorizedURL – string (optional) - indicates whether to bypass the enter username screen because the user came from a new account verification email link
+    * model - ModelMap (required) - Spring framework that is used by the application to model data objects
+    * request - HttpServletRequest (required) - the object passed to the processLogin method, including any query parameters
+    * response - HttpServletResponse (required) - the object returned to the client browser
+    * session - HttpSession (required) - stores the session information (username, user id) for later screens/methods to utilize
 
 .. Note:: We should elaborate on the use of the Spring Framework ModelMap class.
 
