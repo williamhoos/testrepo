@@ -180,43 +180,22 @@ Login (PA-03)
 
 *Input parameters*
 
-+--------------+--------------------------+-----------+----------------------+
-| Parameter    | Type                     | Required? | Use or Other Comment |
-|              |                          |           |                      |
-+==============+==========================+===========+======================+
-| rememberMe   | String                   | Y         | Yes or Null          |
-+--------------+--------------------------+-----------+----------------------+
-| model        | ModelMap                 | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| request      | HttpServletRequest       | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| response     | HttpServletResponse      | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| session      | HttpSession              | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| userAccount  | UserAccount              | Y         |                      | 
-+--------------+--------------------------+-----------+----------------------+
-| userSiteKey  | UserSiteKey              | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| list         | List<UserLoginChallenge> | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
+    * **rememberMe** – string (required) - permits a value of Yes or Null 
+    * **model** - ModelMap (required) 
+    * **request** - HttpServletRequest (required)
+    * **response** - HttpServletResponse (required)
+    * **session** - HttpSession (required)
+    * **userAccount** - UserAccount (required)
+    * **userSiteKey** - UserSiteKey (required)
+    * **list** - List<UserLoginChallenge> (required)
 
-*Response string*
+*Valid Responses*
 
-+----------------+------------------------------------------------------------+
-| Valid Response | Use or Other Comment                                       |
-|                |                                                            |
-+================+============================================================+
-| URL            | If the userAccount object has not been verified, redirects |
-|                | the browser to the Complete Verification screen            |
-+----------------+------------------------------------------------------------+
-| Login error    | If the account has not set challenge questions             |
-+----------------+------------------------------------------------------------+
-| Login error    | If the user name or account does not exist                 |
-+----------------+------------------------------------------------------------+
-| Null           | Calls the next API call (API:/question)                    |
-+----------------+------------------------------------------------------------+
-
+    * **URL** (string) - If the userAccount object has not been verified, this response redirects the browser to the "complete verification" instruction screen that informs the user to verify his or her registration by clicking on the link in the system-generated email message, and enables them to send a new message if the earlier one was lost or not received
+    * **Login error** (string) - If the account has not set challenge questions 
+    * **Login error** (string) - If the user name or account does not exist
+    * **Null** (string) - Calls the next API call (API:/question)
+    
 .. Hint:: We may wish to create two or more specific error messages that will inform the user of the reasons for the error rather than a generic error message that covers multiple issues.
 
 **Example call**::
@@ -256,7 +235,8 @@ This API is invoked when the user clicks on the sign-in button after entering re
     * dbPPMS_D_Demo.user_login_challenge
 
 
-.. seealso:: TEMPLATE FOR FUTURE USE - COPY / DO NOT REMOVE
+
+**BELOW IS AN API TEMPLATE FOR FUTURE USE - COPY / DO NOT REMOVE**
 
 .. _TBD API:
 
@@ -281,7 +261,7 @@ Future template (symbol)
 **Data accessed from:** 
 
     * database.table 
-    * 
+    * database.table
 
 **Request Headers:**
 
@@ -295,8 +275,6 @@ Future template (symbol)
 
     * ** ** – string (required) - description of purpose
     * ** ** – string (optional) - other comments 
-
-.. Note:: We should elaborate on the use of the Spring Framework ModelMap class.
 
 **Status codes:** n/a
 
@@ -312,12 +290,6 @@ Future template (symbol)
     * ** ** – response - description of use
     * ** ** – response - other comments 
 
-.. Attention:: Necessary before OSS begins.
-
-.. Note:: Nice to have before OSS community joins.
-
-.. Hint:: Future suggestions, if any.
-
 **Example call**::
 
  Example request here
@@ -325,3 +297,9 @@ Future template (symbol)
 **Example result**::
 
  Example response here
+
+.. Attention:: Necessary before OSS begins.
+
+.. Note:: Nice to have before OSS community joins.
+
+.. Hint:: Future suggestions, if any.
