@@ -1,8 +1,8 @@
 .. _Sign-in Utlities:
 
-==================
-Shared utililities
-==================
+================
+Shared utilities
+================
 
 As indicated by the :ref:`Sign-up or sign-in` workflow description, the sign-up and sign-in processes share 3 utility functions to toggle on/off a remember user function and recover lost credentials.  
 
