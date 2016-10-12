@@ -147,9 +147,10 @@ Upon completing the three challenge answers, the system opens the "*Create Site 
 08: Activate account
 ********************
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+Account.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+Activate+Account.png
     :alt: Account Activate Workflow
 |
+The API calls that are made to PA Connect at steps 74 and 76 are described at :ref:`PA-04 API` and :ref:`PA-05 API`, respectively.
 
 .. Note:: Try to add a Remmber Me Toggle link to this page to provide new users with the option to skip the Site Key and Password entry requirement when the hardware is recognized 
 
