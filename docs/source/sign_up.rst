@@ -8,7 +8,7 @@ The sign-up workflow (for first-time users) is comprised of steps 01 - 08, and w
 
 .. _Sign-up drawing
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+Sign-up+or+Sign-in+Workflow.png
     :alt: Sign-up Workflow Illustration
     
 Each of these steps or utility functions is described below:
