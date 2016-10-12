@@ -54,19 +54,21 @@ Here is an example response::
 Sign-up and sign-in functions
 *****************************
 
+.. _PA-03 API:
 
-Login
------
+Login (PA-03)
+-------------
 
-**/login**
+**API:/login**
 
 **Reference**
 
-See PA-03 at step 007 of :ref:`Login selection`
+    * Invoked at step 007 of :ref:`Login selection`
+    * Invoked at step 074 of :ref:`Activate account`
 
 **Purpose or Use:**
 
-   This API is invoked when a user enters their username or an email address in the Returning User field and clicks on the “Sign in” button.  The API passes to the PA Connect service the name or email address that was entered by the user, along with any parameters (such as whether the Remember Me option was toggled on or off by the user before he or she clicked on "Sign in").
+   This API is invoked when a user enters their username or an email address into the returning user field and clicks on the “Sign in” button during the login process or clicks on the link in the verification email that is sent to a new user (and that when clicked signals the application to skip the sign-in and challenge questions screens, and proceed directly to the password entry screen).  The API passes to the PA Connect service the name or email address that was entered by the user (or conveyed by employing the single-use token in the verification email), along with any parameters (such as whether the Remember Me option was toggled on or off by the user before he or she clicked on the "Sign in" button).
 
 **Source files:**
   
@@ -90,7 +92,7 @@ See PA-03 at step 007 of :ref:`Login selection`
 **Form parameters:**
 
     * **user** – string (required) - user name or email address for the user wishing to login
-    * **rememberMe** – string (optional) - indicates whether the user has invoked (or disabled) the Remember Me option in connection with this login
+    * **rememberMe** – string (optional) - indicates whether the user has invoked (or disabled) the Remember Me option in connection with this login (and that will in turn affect his or her future login experience)
     * **authorizedURL** – string (optional) - indicates whether to bypass the enter username screen because the user came from a new account verification email link
     * **model** - ModelMap (required) - Spring framework that is used by the application to model data objects
     * **request** - HttpServletRequest (required) - the object passed to the processLogin method, including any query parameters
