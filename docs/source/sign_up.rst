@@ -6,7 +6,7 @@ Sign-up (First-time users)
 
 The sign-up workflow (for first-time users) is comprised of steps 01 - 08, and where needed, the four shared utility resources:  
 
-.. _Sign-up drawing
+.. _Sign-up drawing:
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+Sign-up+or+Sign-in+Workflow.png
     :alt: Sign-up Workflow Illustration
@@ -58,7 +58,7 @@ Each first-time user must enter a valid email address and affirm that they meet 
 .. Hint:: Consider providing a cleaner UI for error messages (see Pluralsight website as an example) 
 
 
-.. _Create Username
+.. _Create Username:
 
 03: Create username and password
 ********************************
@@ -75,7 +75,7 @@ After clicking on the "Sign Up" button, the system opens the "Create Username an
 
 .. Hint:: Consider replacing the current email-based notifications system with System Tray Notifier-based notifications
 
-.. _Set Security questions
+.. _Set Security questions:
 
 04: Set security questions
 **************************
@@ -92,7 +92,7 @@ Once the new user has selected a Username and Password, the *Create Security Que
 
 .. Hint:: Consider replacing (or supplementing) the use of Challenge Questions with multi-factor authentication process using a text message sent to the users mobile phone, Google Authenticator or other similar service
 
-.. _Create site key
+.. _Create site key:
 
 05: Create site key
 *******************
@@ -105,7 +105,7 @@ Upon completing the three challenge answers, the system opens the "*Create Site 
 
 .. Hint:: Consider discontinuing the use of site keys
 
-.. _EULA approval
+.. _EULA approval:
 
 06: EULA approval
 *****************
@@ -124,7 +124,7 @@ Upon completing the three challenge answers, the system opens the "*Create Site 
 
 .. Hint:: Consider developing an automated follow-up process that is triggered when a prospective new user does not timely confirm acceptance of the EULA
 
-.. _Send confirmation email
+.. _Send confirmation email:
 
 07: Send confirmation email
 ***************************
@@ -142,7 +142,7 @@ Upon completing the three challenge answers, the system opens the "*Create Site 
 .. Hint:: Consider replacing (or supplementing) the "No Pending Request" notice with a revise/corrected email flow to commence a new registration process based on entry of a different email address than initially submitted
 
 
-.. _Activate account
+.. _Activate account:
 
 08: Activate account
 ********************
@@ -159,6 +159,6 @@ Upon completing the three challenge answers, the system opens the "*Create Site 
 Related functions
 *****************
 
-Returning users employ an abridged process, which can be simplified even further by permitting the system to remember their username and their hardware.  This flow is described in the :ref: `sign-in` description; and the utility functions that are leveraged by both sign-up and sign-in are described in the :ref: `shared utilities` section that follows.
+Returning users employ an abridged process, which can be simplified even further by permitting the system to remember their username and their hardware.  This flow is described in the :ref:`sign-in` description; and the utility functions that are leveraged by both sign-up and sign-in are described in the :ref:`shared utilities` section that follows.
 
 
