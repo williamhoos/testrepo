@@ -18,8 +18,14 @@ In addition, depending on a participant's use of the :ref:`Remember me utility` 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
      :alt: Login Workflow
 |
-
+As indicated, a third API call to PA Connect is used to 
 .. _Existing user verification
+
+
+.. Attention:: Steps 083 and 084 are not correctly portrayed in the above workflow diagram.  The diagram needs to be revised to reflect the actual steps for an existing user who has elected to have the system remember his or her user name and computer hardware, and the available permutations of these selections.
+
+.. Attention:: Verify that the remember computer hardware feature is properly functioning in all currently supported browser and hardware versions.  
+
 
 08: Existing user verification
 ******************************
