@@ -207,13 +207,12 @@ Login (PA-03)
  Example response here
 
 
-.. _PA-05 API:
+.. _PA-04 API:
 
-Enter challenge question (PA-05)
+Enter challenge question (PA-04)
 --------------------------------
 
 **API:/question**
-
 
 **Reference**
 
@@ -235,6 +234,37 @@ This API is invoked when the user clicks on the sign-in button after entering re
     * dbPPMS_D_Demo.user_login_challenge
 
 
+.. _PA-05 API:
+
+Enter Password (PA-05)
+----------------------
+
+**API:/password**
+
+**References**
+
+    * Invoked at step 076 of :ref:`Activate account` (first time user)
+    * Invoked at step 104 of :ref:`Password entry` (returning user)
+
+**Purpose or Use:**
+
+    After the user enters his or her password and clicks on the “Sign in” button, this API call is made by PEER to pass the user’s password entry to the PA Connect server, which responds with an instruction to the client to either display the appropriate error message or to open the welcome screen (080) if this is the first time the user has visited the registry, or takes them to the main user dashboard (085) and the profile the user was last using in the case of a returning user.
+
+**Source files::**
+
+ OpenID/trunk/private-access-server/ private-access-openid-server/src/main/java/com/privateaccess/openid/connect/controller/LoginController.java
+ 
+ OpenID/trunk/private-access-server/private-access-openid-server/src/main/java/com/privateaccess/openid/connect/model/UserAccount.java
+
+**Data accessed from:**  
+
+    * dbPPMS_D.user_account
+    * dbPPMS_D_Demo.user_account
+
+
+
+
+
 
 **BELOW IS AN API TEMPLATE FOR FUTURE USE - COPY / DO NOT REMOVE**
 
@@ -247,8 +277,8 @@ Future template (symbol)
 
 **References**
 
-    * Invoked at step  of :ref:``
-    * Invoked at step  of :ref:``
+    * Invoked at step XXX of :ref:``
+    * Invoked at step XXX of :ref:``
 
 **Purpose or Use:**
 
