@@ -4,11 +4,18 @@
 Sign-up (First-time users) 
 ==========================
 
-As indicated in the left arm of the :ref:`Sign-up or sign-in drawing` illustration, the registration process for first-time PEER users is comprised of the following 8 steps:
+The sign-up workflow (for first-time users) is comprised of steps 01 - 08, and where needed, the four shared utility resources:  
+
+.. _Sign-up drawing
+
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png
+    :alt: Sign-up Workflow Illustration
+    
+Each of these steps or resource functions is described below:
 
 .. _Register or login:
 
-AA: Register or login selection
+01: Register or login selection
 *******************************
 
 At the conclusion of the initial engagement flow, first-time users arrive at a page from which they can either sign-up (if a new user) or sign-in (if a returning user).  Here, new users begin the registration process by clicking into the "First Time User" entry field, and following the workflow sequence shown below: 
