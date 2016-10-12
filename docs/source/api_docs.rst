@@ -61,7 +61,7 @@ GET:: **API:/question**
 
 **Reference**
 
-See :ref:`PA 04 API` (Existing User Verification: Step 090)
+See :ref:`Existing user verification` (at 090)
 
 **Use:**
 
@@ -69,10 +69,10 @@ This API is invoked when the user clicks on the sign-in button after entering re
 
 **Source files::**
 
- OpenID/trunk/private-access-server/ private-access-openid-server/src/main/java/com/privateaccess/openid/connect/controller/LoginController.java
+ *OpenID/trunk/private-access-server/ private-access-openid-server/src/main/java/com/privateaccess/openid/connect/controller/LoginController.java*
 
- OpenID/trunk/private-access-server/private-access-openid-server/src/main/java/com/privateaccess/openid/connect/model/UserLoginChallenge.java
-
+ *OpenID/trunk/private-access-server/private-access-openid-server/src/main/java/com/privateaccess/openid/connect/model/UserLoginChallenge.java*
+ 
 
 **Databases:**  dbPPMS_D, dbPPMS_D_Demo
 
