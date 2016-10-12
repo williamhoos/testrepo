@@ -33,7 +33,7 @@ At the conclusion of the initial engagement flow, first-time users arrive at a p
 
 .. _Enter new email:
 
-AB: Enter new user email
+02: Enter new user email
 ************************
 
 The first-time user must enter a valid email address and affirm that they meet the minimum age requirements in order to proceed with registration process.
