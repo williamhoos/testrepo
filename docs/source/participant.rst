@@ -24,7 +24,7 @@ As shown in the illustration below, the sign-up workflow (for first-time users) 
 
 .. _Sign-up or sign-in drawing
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png 
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+Sign-in.png
     :alt: Sign-up or Sign-in Workflow Illustration
 
 The sign-up or sign-in workflow begins at the conclusion of the participant enagement processes, with selection of the appropriate sequence for the particular user. The sign-up sequence ends when a newly-enrolled participant activates his or her account, which occurs immediately before beginning the authorization and proxy settings workflow.  The sign-in process ends when a returning user enters his or her password from a site-key protected page (or this step is automated based on the user's previous election), at which point the user is taken to their main Dashboard page.
