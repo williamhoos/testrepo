@@ -33,7 +33,7 @@ The sign-up sequence (comprised of steps 01 - 08 above) ends when a newly-enroll
 
 The foregoing subsystems and related APIs and data tables are described in detail in the :ref:`Initial Sign-up` or :ref:`Existing Sign-in` workflow sections. 
 
-.. Warning:: Before proceeding to OSS license, verify that all Private Access Connect components are removed from PEER and functions occur only through on demand APIs and scheduled data synchronization, if needed. 
+.. Caution:: Before proceeding to OSS license, verify that all Private Access Connect components have been removed from PEER and that the application functions occur only through on-demand APIs and scheduled data synchronization, where necessary. 
 
 .. Attention:: Verify proper placement of all MixPanel and Google Analytics cookies
 
