@@ -8,28 +8,7 @@ This section describes the processes, functions, methods and source files used i
 
 .. Attention::  As stated herein, all source file references are based on the current Subversion source code repository, but will be moved updated as these source files are moved into the GitHub repository as part of the OSS migration initiative. 
  
-Method: Process Login
 
-+--------------+--------------------------+-----------+----------------------+
-| Parameter    | Type                     | Required? | Use or Other Comment |
-|              |                          |           |                      |
-+==============+==========================+===========+======================+
-| rememberMe   | String                   | Y         | Yes or Null          |
-+--------------+--------------------------+-----------+----------------------+
-| model        | ModelMap                 | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| request      | HttpServletRequest       | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| response     | HttpServletResponse      | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| session      | HttpSession              | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| userAccount  | UserAccount              | Y         |                      | 
-+--------------+--------------------------+-----------+----------------------+
-| userSiteKey  | UserSiteKey              | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
-| list         | List<UserLoginChallenge> | Y         |                      |
-+--------------+--------------------------+-----------+----------------------+
 
 .. _Landing page:
 
@@ -77,30 +56,58 @@ Sign-up and sign-in functions
 *****************************
 
 
-Doc Search
-----------
-
-.. http:get:: /api/v2/docsearch/
-
-    :string project: **Required**. The slug of a project. 
-    :string version: **Required**. The slug of the version for this project.
-    :string q: **Required**. The search query
-
-    You can search a specific set of documentation using our doc search endpoint.
-    It returns data in the format of Elastic Search,
-    which requires a bit of traversing to use.
-
-
 Login
 -----
-API: /login
-Source Files:  
-OpenID/trunk/private-access-server/ private-access-openid-server/src/main/java/com/privateaccess/openid/connect/controller/LoginController.java
- OpenID/trunk/private-access-server/private-access-openid-server/src/main/java/com/privateaccess/openid/connect/model/UserAccount.java
-Database: dbPPMS_D, dbPPMS_D_Demo
-Tables: user_account
-When the user enters their username and clicks the “Sign in” button this API call is made in order to pass the username that was entered by the user into the input box, along with any parameters (such as the Remember Me toggle).
 
+**/login**
+
+**Reference**
+
+See PA-03 at step 007 of :ref:`Login selection`
+
+**Purpose or Use:**
+
+This API is invoked when the user enters their username and clicks the “Sign in” button.  The purpose of the API call is in order to pass the username that was entered by the user into the input box, along with any parameters (such as whether the Remember Me option is toggled on or off) to the PA Connect service.
+
+**Source files::**
+  
+ OpenID/trunk/private-access-server/ private-access-openid-server/src/main/java/com/privateaccess/openid/connect/controller  /LoginController.java
+ 
+ OpenID/trunk/private-access-server/private-access-openid-server/src/main/java/com/privateaccess/openid/connect/model/UserAccount.java
+
+**Data accessed from:** 
+
+dbPPMS_D.user_account 
+dbPPMS_D_Demo.user_account
+
+**Method:** processLogin
+
+*Input parameters*
+
++--------------+--------------------------+-----------+----------------------+
+| Parameter    | Type                     | Required? | Use or Other Comment |
+|              |                          |           |                      |
++==============+==========================+===========+======================+
+| rememberMe   | String                   | Y         | Yes or Null          |
++--------------+--------------------------+-----------+----------------------+
+| model        | ModelMap                 | Y         |                      |
++--------------+--------------------------+-----------+----------------------+
+| request      | HttpServletRequest       | Y         |                      |
++--------------+--------------------------+-----------+----------------------+
+| response     | HttpServletResponse      | Y         |                      |
++--------------+--------------------------+-----------+----------------------+
+| session      | HttpSession              | Y         |                      |
++--------------+--------------------------+-----------+----------------------+
+| userAccount  | UserAccount              | Y         |                      | 
++--------------+--------------------------+-----------+----------------------+
+| userSiteKey  | UserSiteKey              | Y         |                      |
++--------------+--------------------------+-----------+----------------------+
+| list         | List<UserLoginChallenge> | Y         |                      |
++--------------+--------------------------+-----------+----------------------+
+
+*Response string*
+
+If the user clicked on the link in an email came from a 
 
 
 
