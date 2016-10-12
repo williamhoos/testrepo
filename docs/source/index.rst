@@ -35,6 +35,7 @@ As an integral part of this effort, a number of potential development activities
    sign_utilities
    authorization
    surveys
+   api_docs
    administrator
    researcher
    license
