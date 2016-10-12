@@ -54,8 +54,8 @@ Here is an example response::
 Sign-up and sign-in functions
 *****************************
 
-Enter challenge question:  **API:/question**
---------------------------------------------
+Enter challenge question:  (**API:/question**)
+----------------------------------------------
 
 **Reference**
 
