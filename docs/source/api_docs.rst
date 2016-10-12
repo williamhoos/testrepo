@@ -9,7 +9,7 @@ This section describes the processes, functions, methods and source files used i
 .. Attention::  As stated herein, all source file references are based on the current Subversion source code repository, but will be moved updated as these source files are moved into the GitHub repository as part of the OSS migration initiative. 
  
 
-.. _Landing page
+.. _Landing page:
 
 Landing page
 ************
@@ -49,15 +49,13 @@ Here is an example response::
  }
 
 
-.. _Sign-up and sign-in APIs
+.. _Sign-up and sign-in APIs:
 
 Sign-up and sign-in functions
 *****************************
 
-Enter challenge question:
-------------------------
-
-**API:/question**
+Enter challenge question:  **API:/question**
+--------------------------------------------
 
 **Reference**
 
