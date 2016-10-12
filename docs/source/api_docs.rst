@@ -66,7 +66,7 @@ See PA-03 at step 007 of :ref:`Login selection`
 
 **Purpose or Use:**
 
-This API is invoked when the user enters their username and clicks the “Sign in” button.  The purpose of the API call is in order to pass the username that was entered by the user into the input box, along with any parameters (such as whether the Remember Me option is toggled on or off) to the PA Connect service.
+   This API is invoked when a user enters their username or an email address in the Returning User field and clicks on the “Sign in” button.  The API passes to the PA Connect service the name or email address that was entered by the user, along with any parameters (such as whether the Remember Me option was toggled on or off by the user before he or she clicked on "Sign in").
 
 **Source files:**
   
@@ -90,7 +90,7 @@ This API is invoked when the user enters their username and clicks the “Sign i
 **Form parameters:**
 
     * **user** – string (required) - user name or email address for the user wishing to login
-    * **rememberMe** – string (optional) - indicates whether the user has invoked (or disabled) the option in this login
+    * **rememberMe** – string (optional) - indicates whether the user has invoked (or disabled) the Remember Me option in connection with this login
     * **authorizedURL** – string (optional) - indicates whether to bypass the enter username screen because the user came from a new account verification email link
     * **model** - ModelMap (required) - Spring framework that is used by the application to model data objects
     * **request** - HttpServletRequest (required) - the object passed to the processLogin method, including any query parameters
@@ -98,13 +98,6 @@ This API is invoked when the user enters their username and clicks the “Sign i
     * **session** - HttpSession (required) - stores the session information (username, user id) for later screens/methods to utilize
 
 .. Note:: We should elaborate on the use of the Spring Framework ModelMap class.
-
-.. tabularcolumns:: |l|l|l|
- user
- string
- required
-
-user name or email address for the user wishing to login 
 
 **Status codes:** n/a
 
