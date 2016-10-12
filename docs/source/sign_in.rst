@@ -29,7 +29,7 @@ As indicated, a third API call to PA Connect is used
 
 09: Existing user verification
 ******************************
-.. _PA 04 API
+.. _PA 04 API:
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png
     :alt: Existing User Verification Workflow
 |
