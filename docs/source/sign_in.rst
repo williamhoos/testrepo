@@ -20,9 +20,7 @@ In addition, depending on a participant's use of the :ref:`Remember me utility` 
 .. image::  https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+Login+Selection.png
      :alt: Login Workflow
 |
-As indicated, there are three API calls to the PA Connect service that are made during the login process.  :ref:`PA-03 API` includes a full description of that API.  
-
-.. Attention:: Steps 083 and 084 are not correctly portrayed in the above workflow diagram.  The diagram needs to be revised to reflect the actual steps for an existing user who has elected to have the system remember his or her user name and computer hardware, and the available permutations of these selections.
+As indicated, there are three API calls to the PA Connect service that are made during the login process.  These are described at :ref:`PA-01 API`, :ref:`PA-02 API` and :ref:`PA-03 API`.  
 
 .. Attention:: Verify that the remember computer hardware feature is properly functioning in all currently supported browser and hardware versions.  
 
@@ -35,6 +33,8 @@ As indicated, there are three API calls to the PA Connect service that are made 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png
     :alt: Existing User Verification Workflow
 |
+
+.. Attention:: Steps 083 and 084 are not correctly portrayed in the above workflow diagram.  The diagram needs to be revised to reflect the actual steps for an existing user who has elected to have the system remember his or her user name and computer hardware, and the available permutations of these selections.
 
 .. _Site key protected password entry:
 
