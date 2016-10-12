@@ -6,9 +6,8 @@ API documentation
 
 This section describes the processes, functions, methods and source files used in those portions of the workflow diagrams that rely upon APIs in performing the defined flow.  
 
-.. Attention::  As stated herein, all source file references are based on the current Subversion source code repository, but will be moved updated as these source files are moved into the GitHub repository as part of the OSS migration initiative. 
+.. Attention::  As stated herein, all source file references are based on the current Subversion source code repository, but will need to be updated as the source files are moved into the GitHub repository as part of the OSS migration initiative. 
  
-
 
 .. _Landing page:
 
@@ -69,7 +68,7 @@ See PA-03 at step 007 of :ref:`Login selection`
 
 This API is invoked when the user enters their username and clicks the “Sign in” button.  The purpose of the API call is in order to pass the username that was entered by the user into the input box, along with any parameters (such as whether the Remember Me option is toggled on or off) to the PA Connect service.
 
-**Source files::**
+**Source files:**
   
  OpenID/trunk/private-access-server/ private-access-openid-server/src/main/java/com/privateaccess/openid/connect/controller  /LoginController.java
  
@@ -79,6 +78,28 @@ This API is invoked when the user enters their username and clicks the “Sign i
 
 dbPPMS_D.user_account 
 dbPPMS_D_Demo.user_account
+
+**Request Headers:**
+
+Authorization – oAuth token
+
+**Query parameters:**
+
+None
+
+**Form parameters:**
+
+    user – string (required) - user name or email address for the user wishing to login
+    rememberMe – string (optional) - indicates whether the user has invoked (or disabled) the option in this login
+    authorizedURL – string (optional) - indicates whether to bypass the enter username screen because the user came from a new account verification email link
+    model - ModelMap (required) - Spring framework that is used by the application to model data objects
+    request - HttpServletRequest (required) - the object passed to the processLogin method, including any query parameters
+    response - HttpServletResponse (required) - the object returned to the client browser
+    session - HttpSession (required) - stores the session information (username, user id) for later screens/methods to utilize
+
+.. Note:: We should elaborate on the use of the Spring Framework ModelMap class.
+
+**Status codes:**    
 
 **Method:** processLogin
 
@@ -121,9 +142,15 @@ dbPPMS_D_Demo.user_account
 | Null           | Calls the next API call (API:/question)                    |
 +----------------+------------------------------------------------------------+
 
-
 .. Hint:: We may wish to create two or more specific error messages that will inform the user of the reasons for the error rather than a generic error message that covers multiple issues.
 
+**Example call**::
+
+ Example request here
+
+**Example result**::
+
+ Example response here
 
 
 Enter challenge question:  (**API:/question**)
