@@ -107,7 +107,22 @@ dbPPMS_D_Demo.user_account
 
 *Response string*
 
-If the user clicked on the link in an email came from a 
++----------------+------------------------------------------------------------+
+| Valid Response | Use or Other Comment                                       |
+|                |                                                            |
++================+============================================================+
+| URL            | If the userAccount object has not been verified, redirects |
+|                | the browser to the Complete Verification screen            |
++----------------+------------------------------------------------------------+
+| Login error    | If the account has not set challenge questions             |
++----------------+------------------------------------------------------------+
+| Login error    | If the user name or account does not exist                 |
++----------------+------------------------------------------------------------+
+| Null           | Calls the next API call (API:/question)                    |
++----------------+------------------------------------------------------------+
+
+
+.. Hint:: We may wish to create two or more specific error messages that will inform the user of the reasons for the error rather than a generic error message that covers multiple issues.
 
 
 
