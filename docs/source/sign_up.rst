@@ -11,7 +11,7 @@ The sign-up workflow (for first-time users) is comprised of steps 01 - 08, and w
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png
     :alt: Sign-up Workflow Illustration
     
-Each of these steps or resource functions is described below:
+Each of these steps or utility functions is described below:
 
 .. _Register or login:
 
@@ -23,6 +23,7 @@ At the conclusion of the initial engagement flow, first-time users arrive at a p
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Register+or+login+selection.png
       :alt: Register Workflow
 | 
+The content of the sign-up screen (001) is based on two API calls that are made by PEER to PA Connect, an OpenID Connect service that is used for single-sign on and identity provisioning in conjunction with Private Access' PrivacyLayer service.  PA Connect employs the OAuth 2.0 open standard. For more information about OpenID Connect, see `connect2id explained <http://connect2id.com/learn/openid-connect>.` 
 
 .. Attention:: Adjust the UI so that the two entry boxes are equal in height
 
