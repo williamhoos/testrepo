@@ -147,10 +147,18 @@ Upon completing the three challenge answers, the system opens the "*Create Site 
 08: Activate account
 ********************
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+account.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Activate+Account.png
     :alt: Account Activate Workflow
 |
 
 .. Note:: Try to add a Remmber Me Toggle link to this page to provide new users with the option to skip the Site Key and Password entry requirement when the hardware is recognized 
 
 .. Hint:: Consider adding an automated process to send appropriated follow-up reminder messages when an excessive amount of elapsed time has transpired without the user activating his or her account
+
+
+Related functions
+*****************
+
+Returning users employ an abridged process, which can be simplified even further by permitting the system to remember their username and their hardware.  This flow is described in the :ref: `sign-in` description; and the utility functions that are leveraged by both sign-up and sign-in are described in the :ref: `shared utilities` section that follows.
+
+
