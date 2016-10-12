@@ -1,6 +1,17 @@
 Changelog
 =========
 
+2016-10-11
+~~~~~~~~~~
+
+* Created :ref:`api_docs` section and began to format it in anticipation of including results of code reviews
+
+2016-10-10
+~~~~~~~~~~
+
+* Updated :ref:`data` section
+* Revised :ref:`Initial Sign-up`, :ref:`existing sign-in` to begin introducing references to data tables and APIs
+
 2016-10-09
 ~~~~~~~~~~
 
