@@ -54,10 +54,10 @@ Here is an example response::
 Sign-up and sign-in functions
 *****************************
 
-Enter challenge question
+Enter challenge question:
 ------------------------
 
-GET:: **API:/question**
+**API:/question**
 
 **Reference**
 
