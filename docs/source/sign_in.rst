@@ -6,7 +6,7 @@ Sign-in (Existing users)
 
 The login process for existing PEER users consists of just the 3 steps on the right arm of the :ref:`Sign-up or sign-in` workflow shown below (*i.e.*, steps 01, 09 and 10), and if needed, the four shared utility resources:  
 
-.. _Sign-up drawing
+.. _Sign-up drawing:
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Sign-up+or+sign-in.png
     :alt: Sign-in Workflow Illustration
@@ -25,18 +25,19 @@ As indicated, a third API call to PA Connect is used
 .. Attention:: Verify that the remember computer hardware feature is properly functioning in all currently supported browser and hardware versions.  
 
 
-.. _Existing user verification
+.. _Existing user verification:
 
 09: Existing user verification
 ******************************
-.. _PA 04 API:
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Existing+User+Verification.png
     :alt: Existing User Verification Workflow
 |
 
-.. _Site key protected password entry
+.. _Site key protected password entry:
 
 10: Protected password entry
 ****************************
+
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Site-Key+Protected+Password+Entry.png
     :alt: Site Key Protected Password Entry Workflow
