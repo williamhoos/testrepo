@@ -56,4 +56,4 @@ Changelog
 2016-09-05
 ----------
 
-* Work commenced on :ref:`sign-up or sign-in` workflows
+* Work commenced on :ref:`Introduction to PEER OSS` technical documentation project
