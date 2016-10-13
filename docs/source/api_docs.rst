@@ -271,7 +271,7 @@ Enter Password (PA-05)
 .. _TBD API:
 
 Future template (symbol)
-------------------------
+************************
 
 **API:/**
 
