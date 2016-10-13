@@ -25,11 +25,11 @@ At the conclusion of the initial engagement flow, first-time users arrive at a p
 
 As indicated by the two-headed arrows in the above illustration, the workflow includes several APIs to third-party services.  
 
-The content of the sign-up screen (001) employs two API calls that are made by PEER to PA Connect, an OpenID Connect service that is used for single-sign on and identity provisioning in conjunction with Private Access' PrivacyLayer service.  PA Connect employs the OAuth 2.0 open standard. For more information about OpenID Connect, see `connect2id explained <http://connect2id.com/learn/openid-connect>`_.  
+The content of the sign-up screen (001) employs two API calls that are made by PEER to PA Connect, an OpenID Connect service that is used for single-sign on and identity provisioning in conjunction with Private Access' PrivacyLayer service.  PA Connect employs the OAuth 2.0 open standard. For more information about OpenID Connect, see `connect2id explained <http://connect2id.com/learn/openid-connect>`_. 
 
-These APIs (and others that are employed by PEER) are described in the API documentation section, which includes a reference to the identifier shown in the corresponding illustration or text description of the system.
+These APIs are described in the API documentation section at :ref:`PA-01 API` and :ref:`PA-02 API`, respectively.  The API description contains links to other places within PEER where these APIs are employed, and a link that will return the reader to this discussion.
 
-.. Attention:: Adjust the UI so that the two entry boxes are equal in height
+.. Note:: Currently the sign-in and sign-up boxes are misaligned. Try to adjust the UI so that the two entry boxes are equal in height
 
 .. Note:: Try to ensure that analytics take into account all engagement means that have brought prospects to this page
 
