@@ -23,9 +23,9 @@ Get portal info (PEER-01)
 
 **Purpose or Use:**
 
- This API call retrieves portal information that is used by PEER to configure the content and theme of the desired portal based on the URL that is entered in the client's browser.  The information that is returned by the API call is for the portal that is set in the session attribute called *portalInfo*, which corresponds to the portal ID in the URL (*i.e.*, the number 474 in the example shown below)::
+ This API call retrieves portal information that is used by PEER to configure the content and theme of the desired portal based on the URL that is entered in the client's browser.  The information that is returned by the API call is for the portal that is set in the session attribute called **portalInfo**, which corresponds to the portal ID in the URL (*i.e.*, the number 474 in the example shown below):
 
-    https://widget2-beta.peerplatform.org/portal/474
+     https://widget2-beta.peerplatform.org/portal/474
 
 **Source files:**
   
@@ -70,27 +70,28 @@ Get portal info (PEER-01)
 
 .. _PEER-02 API:
 
-Message content templates (PEER-02)
------------------------------------
+Message content (PEER-02)
+-------------------------
 
 **API:/portal/view/template/message**
 
 **Purpose or Use:**
 
-  This API retrieves the various messaging content templates for the specified portal. The messages, which are used in modal popup windows, include the following templates:
-	* successMessage
-	* errorMessage
-	* removeAccountMessage
-	* deleteConfirmModal
-	* deleteAccountModal
-	* deleteAccountDependencyMsgModal
-	* addOrganizationConfirmModal
-	* enableMixpanelConfirmModal
-	* clearSessionConfirmModal
-	* updateAuthorizationModal
-	* changePreferenceModal
-	* timeoutModal
-	* healthErrorModal
+  This API retrieves the various messaging content templates for the specified portal. The messages, which are used in modal pop-up windows, include the following templates:
+  
+    * successMessage
+    * errorMessage
+    * removeAccountMessage
+    * deleteConfirmModal
+    * deleteAccountModal
+    * deleteAccountDependencyMsgModal
+    * addOrganizationConfirmModal
+    * enableMixpanelConfirmModal
+    * clearSessionConfirmModal
+    * updateAuthorizationModal
+    * changePreferenceModal
+    * timeoutModal
+    * healthErrorModal
 
 **Source files:**
   
@@ -108,16 +109,17 @@ Message content templates (PEER-02)
 
 .. _PEER-03 API:
 
-Research opportunity templates (PEER-03)
-----------------------------------------
+Research opportunity (PEER-03)
+------------------------------
 
 **API:/portal/view/template/researchOpportunityDetailsModal**
 
 **Purpose or Use:**
 
   This API call retrieves the various messaging content templates for the specified portal used in modal popup windows related to a research opportunity. These messages are used as part of the dynamic consent flow.  The message templates include the following templates:
-	* ResearchOpportunityDetailsModal
-	* ResearchOpportunityRequiredModal
+  
+    * ResearchOpportunityDetailsModal
+    * ResearchOpportunityRequiredModal
 
 **Source files:**
   
@@ -135,8 +137,8 @@ Research opportunity templates (PEER-03)
 
 .. _PEER-04 API:
 
-Signed-up template content (PEER-04)
-------------------------------------
+Signed-up template (PEER-04)
+----------------------------
 
 **API:/portal/view/template/signedup**
 
