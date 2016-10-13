@@ -11,7 +11,7 @@ The login process for existing PEER users consists of just the 3 steps on the ri
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/New+Sign-up+or+Sign-in+Workflow.png
     :alt: Sign-in Workflow Illustration
     
-In addition, depending on a participant's use of the :ref:`Remember me utility` during a prior session, users are able to skip one or more of these authentication steps to the extent the user is employing the same hardware as he or she was using when the credential was last saved. The three steps for existing PEER users to return to th system are the following:
+In addition, depending on a participant's use of the :ref:`Remember me function` during a prior session, users are able to skip one or more of these authentication steps to the extent the user is employing the same hardware as he or she was using when the credential was last saved. The three steps for existing PEER users to return to the system are the following:
 
 .. _Login selection:
 
