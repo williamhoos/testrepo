@@ -554,7 +554,7 @@ Additional API documentation
 
 .. _TBD API:
 
-API function (TBD)
+API template (TBD)
 ------------------
 
 **API:/**
