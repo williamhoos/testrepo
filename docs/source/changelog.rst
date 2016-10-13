@@ -5,6 +5,7 @@ Changelog
 ~~~~~~~~~~
 
 * Created a standard template for :ref:`api documentation` and updated the descriptions for a number of functions to illustrate different levels of coverage and solicit suggestions regarding which elements may be missing, or are viewed as being overkill 
+* Update the :ref:`Sign-in Utlities` diagrams to facilitate references to data tables and APIs
 
 2016-10-11
 ~~~~~~~~~~
