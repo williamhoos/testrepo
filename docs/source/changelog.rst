@@ -56,4 +56,4 @@ Changelog
 2016-09-05
 ----------
 
-* Work commenced on :ref:`Introduction to PEER OSS` technical documentation project
+* Work commenced on :ref:`Introduction to PEER OSS` initiative as part of the work required to migrate PEER from closed to Open Source Software (OSS).  
