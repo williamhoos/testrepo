@@ -8,6 +8,126 @@ As indicated in the :ref:`Overview` discussion respecting :ref:`Data`, this sect
 
 Where not self-descriptive, this section includes an explanation of each function and/or subroutine that’s involved in this process, including its range of input and output values, any associated program variables and constants, and an explanation for how these are used by the application in handling or manipulating data; and 
 
+**THE FOLLOWING IS DRAFT WORK IN PROCESS FOR INTERNAL REVIEW**
+**NOTE TO READER: Skip to :ref:`survey database` to continue reviewed work**
+
+.. _Data summary:
+
+Summary
+*******
+
+PEER's data layer utilizes the MySQL Server 20XX RDBMS to store data... and...
+
+Data Model
+----------
+
+The data layer will adopt a tradition online transaction processing model. All data models will be normalized minimally to the third normal form.
+
+Table Design
+------------
+
+All tables used within PEER have a surrogate key serving as a primary key.  The surrogate key is used only for internal system purposes - see GUID for external primary keys.
+
+All tables that are exposed via the API will have a GUID field that will be used as a primary key for integrations.  The guid will posses the following properties:
+
+ * Time and Space uniqness. 
+ * Persistent
+ * Stable
+ * Secure
+
+All natural keys have a uniqness constraint enforced.
+
+All foreign key relationships use the surrogate key for reference and will be enforced using a foreign key constraint.
+
+All tables will have the following audit fields: 
+
+ * DateCreated (datetime)
+ * DateUpdated (datetime)
+ * CreatedBy (nvarchar)
+ * UpdatedBy (nvarchar)
+ 
+Data abstraction layers 
+-----------------------
+
+PEER data is presented with multiple levels of abstraction in the data access layer and the data tier, with each layer serving a different purpose.
+
+**Data access clients can never access database tables directly.  All CRUD data operations are performed via views.**
+
+Views
+-----
+
+The following data abstraction layers are implemented:
+
+Views are used as a logical layer for all CRUD operations.  This helps to avoid coupling the data access layer tightly with the physical implementation of the database tables.
+
+There are two types of views
+
+  * **Base views** - A base view initially will be a logical mirror of the physical table.  As adapters to the physical tables, the need will arise to change base views to maintain the same logical view to the data clients in the future.  All changes must be constrained to ensure that base views maintain the integrity of data after CUD (Create Update and Delete) operations.
+  
+  * **Non-base views** - Will be all other views that are not a base view. *i.e.*, aggregate views, compount views, ...etc.  All these views are read only.  No CUD operation should be performed on these views.
+
+Data Objects
+------------
+
+Views will be mapped to data objects.  All data clients beyond the data mediator layer use Data Objects as the primary data exchange format.  This ensures that data clients get no insight to the database schema.  There are multiple benefits to this:
+
+  * Database security in case of security breaches
+  * No coupling between the middle tier and the data tier
+  
+Naming conventions
+------------------
+
+The following table lists the naming conventions used in the data persistence layer. 
+
+The bold part of the rule is a constant.  The part in [Square Brackets] is a pick from a predefined domain of values.  The *Italicized* part is user defined.
+
++=================+==========================================+=======================================+========================================+
+| Type            | Rule                                     | Example                               | Notes                                  |
++=================+==========================================+=======================================+========================================+
+| database        | **db***Application*                      | **db***PPMS* is the database          |                                        |
+|                 |                                          | name for the Privacy Preferences      |                                        |
+|                 |                                          | Management System                     |                                        |
++-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
+| table           | **tbl**[SubSystem]*UserDefined*          | **tbl**PL*PrivacyDirective*           | Tables follow a single naming          |
+|                 | [SubSystem] can be any of the following: |                                       | convention (*e.g.*, PrivacyDirective   |
+|                 |                                          |                                       | for all privacy directive rows         |
+|                 |   * PL - PrivacyLayer                    |                                       |                                        |
+|                 |   * RA - RecordsAgent                    |                                       |                                        |
+|                 |   * RS - RecruitSource                   |                                       |                                        |
+|                 |   * TF - TrialsFinder                    |                                       |                                        |
+|                 |   * Sys - System tables                  |                                       |                                        |
+|                 |   * Sha - Shared tables                  |                                       |                                        |
++-----------------+------------------------------------------+------------------- 
+| base view       | **vew**[SubSustem][UserDefined section   | **vew** PL*PrivacyDirective*          | vewPLPrivacyDirective is the base      |
+|                 | of the table that this view represents]  |                                       | view for tblPLPrivacyDirective         |
++-----------------+------------------------------------------+--------
+| non-base view   | **vew**[SubSystem]*UserDefined*          | **vew** PL*PersonRecordDetail*        |                                        |
+|                 |                                          |                                       |                                        |
++-----------------+------------------------------------------+------------
+| function        | **fnc**[SubSystem]*UserDefined*          | **fnc** Sha*TrimString*               |                                        |
+|                 |                                          |                                       |                                        |
++-----------------+------------------------------------------+------------
+| procedure       | **prc**[SubSystem]*UserDefined*          | **fnc** Sha*ComputeAlertDelay*        |                                        |
+|                 |                                          |                                       |                                        |
++-----------------+
+| primary key:    | **ID**[UserDefined section of the table] | **ID***User*
+| standard tables |                                          |                                       |                                        |
+|                 |                                          |                                       |                                        |
++-----------------+
+| primary key:    | **ID**                                   | **ID**
+| pivot tables    |                                          |                                       | 
+| (many-to-many)  |                                          |                                       |                                        |
++-----------------+
+| foreign key     | **FK***UserDefined*_[PrimaryKey]         | **FK***SessionUser*_IDUser
+|                 |                                          |                                       |  
++-----------------+
+| index           | **TO BE DEFINED**                        | **TBD**
+|                 | Elastic Search???
++-----------------+
+| date columns    | **Date***UserDefined*                    | **Date***Created*, **Date***Modified* |
+|                 |                                          |                                       |  
++-----------------+------------------------------------------+---------------------------------------+-----
+
 
 .. _Architecture
 
@@ -19,6 +139,7 @@ The following illustration summarizes the overall architecture of the system wit
 .. image:: TBD 
      :alt: Overall system architecture from the perspective of data it contains
 |
+**THE SECTIONS ABOVE THIS LINE ARE IN DRAFT FORM FOR INTERNAL REVIEW**
 
 .. _survey database:
 
@@ -26,6 +147,8 @@ PEER survey database
 ********************
 
 Each of the PEER staging, beta and production environments contains a database entitled "**peer_surveys_published**".  This database is generally the same in all three environments, although the table structures and fields contained inside certain tables may be slightly different depending on development work that is taking place at the time, and the progress of migrating that work from staging into the beta, and production environments.  
+
+.. _Data table:
 
 Data table
 ==========
