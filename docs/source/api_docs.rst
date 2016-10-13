@@ -14,24 +14,41 @@ This section describes the processes, functions, methods and source files used i
 Landing page
 ************
 
-This page loads when the client first visits the URL of a specific portal.
+.. _PEER-01 API:
 
-URL: https://widget2.peerplatform.org/portal/[PORTAL_ID]
-API: /portal/getportalinfo
+Get portal info (PEER-01)
+*************************
 
-Source Files: 
+**API:/portal/getportalinfo**
 
-OpenID/trunk/private-access-server/private-access-webportal/src/main/java/com/privateaccess/webportal/controller/LoginController.java
+**Purpose or Use:**
 
-The API call to getportalinfo retrieves portal information configured for the specified portal set in the session attribute called “portalInfo”.  This session attribute is taken from the URL which contains the Portal ID.  An example portal URL is as follows:
+   This API call retrieves portal information that is used by PEER to configure the content and theme of the desired portal based on the URL that is entered in the client's browser.  The information that is returned by the API call is for the portal that is set in the session attribute called *portalInfo*, which corresponds to the portal ID in the URL (*i.e.*, the number 474 in the example shown below)::
 
-https://widget2-beta.peerplatform.org/portal/474
+ https://widget2-beta.peerplatform.org/portal/474
 
-The API will return an APIResponse object (See OpenID/trunk/private-access-server/private-access-webportal/src/main/java/com/privateaccess/webportal/model/APIResponse.java) the data field of which contains the portal information in a PortalInfo object (See OpenID/trunk/private-access-server/private-access-webportal/src/main/java/com/privateaccess/webportal/model /PortalInfo.java)  for the specified Portal ID.
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-webportal/src/main/java/com/privateaccess/webportal/controller/LoginController.java
 
-Here is an example response::
+**Data accessed from:** 
 
- {  
+    * database.table (to come) 
+    * database.table (to come)
+
+**Response objects:**:
+
+   The API will return the following APIResponse object:: 
+
+ OpenID/trunk/private-access-server/private-access-webportal/src/main/java/com/privateaccess/webportal/model/APIResponse.java
+
+   In turn, the data field within the APIResponse object contains the portal information for the specified Portal ID in a PortalInfo object, as follows::
+
+ OpenID/trunk/private-access-server/private-access-webportal/src/main/java/com/privateaccess/webportal/model/PortalInfo.java
+
+**Example result**::
+
+  {  
     "status":"success",
     "message":"success",
     "isSuccess":true,
@@ -46,7 +63,11 @@ Here is an example response::
        "isFresh":null,
        "psid":null
     }
- }
+  }
+
+.. Attention:: Display of the landing page is part of the participant engagement workflow.  The information described above needs to be supplmented with the database.table information that is called by this API.
+
+
 
 
 .. _Sign-up and sign-in APIs:
