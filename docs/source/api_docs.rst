@@ -547,6 +547,7 @@ Enter Password (PA-05)
 
 
 .. BELOW IS AN API TEMPLATE FOR FUTURE USE - COPY / DO NOT REMOVE**
+.. _API template:
 
 Future template
 ***************
