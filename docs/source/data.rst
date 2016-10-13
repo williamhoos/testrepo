@@ -81,7 +81,7 @@ The following table lists the naming conventions used in the data persistence la
 
 The bold part of the rule is a constant.  The part in [Square Brackets] is a pick from a predefined domain of values.  The *Italicized* part is user defined.
 
-+=================+==========================================+=======================================+========================================+
++-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
 | Type            | Rule                                     | Example                               | Notes                                  |
 +=================+==========================================+=======================================+========================================+
 | database        | **db***Application*                      | **db***PPMS* is the database          |                                        |
