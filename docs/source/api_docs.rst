@@ -89,8 +89,8 @@ Set portal information (PA-01)
 
 .. _PA-02 API:
 
-Set portal information (PA-02)
-------------------------------
+Get portal name (PA-02)
+-----------------------
 
 **API: /services/widgetinfo/getPortalName/[PORTAL_ID]**
 
