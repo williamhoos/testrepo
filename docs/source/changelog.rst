@@ -32,7 +32,7 @@ Changelog
 
 * Added :ref:`authorization` section
 
-2016-09-23
+2016-09-15
 ----------
 
 * Work commenced on :ref:`authorization & proxy` workflows
