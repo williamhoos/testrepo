@@ -6,7 +6,7 @@ Taking suveys
 The surveys protions of PEER use a set of tools called "PEER Survey Tools" or PST for short.  As shown in the illustration below, PST includes a library of existing question types, tools to edit or create new questions, and controls concerning how these questions are presented to participants.  
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/PEER+Surveys+List.png
-    :width: 50px
+    :width: 250px
     :align: left
     :alt: PEER Survey Tools (PST) Workflow Illustration 
 
