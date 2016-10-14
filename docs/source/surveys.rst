@@ -1,7 +1,7 @@
 .. _taking surveys:
 
-Taking suveys
-~~~~~~~~~~~~~
+Taking surveys in PEER
+~~~~~~~~~~~~~~~~~~~~~~
 
 The surveys protions of PEER use a set of tools called "PEER Survey Tools" or PST for short.  As shown in the illustration below, PST includes a broad number of question types, tools to edit or create new questions, and controls concerning how these questions are presented to participants.  
 
@@ -9,6 +9,8 @@ The surveys protions of PEER use a set of tools called "PEER Survey Tools" or PS
     :width: 250px
     :align: right
     :alt: PEER Survey Tools (PST) Workflow Illustration 
+
+Using PST, surveys move quickly for the user and a number of questions provide immediate, *compare with others* feedback to hold the participant's interest.  
 
 In addition to the question types, Genetic Alliance has curated several thousand questions that are grouped into Common Data Instruments, or CDIs for short, that employ these question types.  PEER sponsors can curate their surveys from scratch, or pick appropriate question sets from the CDIs developed by Genetic Alliance.
 
