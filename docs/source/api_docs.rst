@@ -19,7 +19,7 @@ Guides
 Edit Guide
 ----------
 
-**API:/private-access-adminportal/services/guide**
+**API:/**
 
 **References**
 
@@ -28,20 +28,16 @@ Edit Guide
 
 **Purpose or Use:**
 
-  This API is invoked when / called by....
+  This API is invoked when an PEER administrative user clicks on the "Edit" button for a guide whose profile they wish to edit.
 
 **Source files:**
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PeerGuideController.java
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlguideDaoImpl.java
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/serivce/PeerGuideService.java
+  Enter all that are applicable
 
 **Data accessed from:** 
 
-    * dbPPMS_D.TblPlguide
-    * dbPPMS_D.TblPlguidePreference
-    * dbPPMS_D_Demo.TblPlguide
-    * dbPPMS_D_Demo.TblPlguidePreference
+    * dbPPMS.TblPlguide
+    * dbPPMS.TblPlguidePreference
 
 **Request Headers:**
 
@@ -49,7 +45,12 @@ Edit Guide
 
 **Query parameters:**
 
-  guideId (Integer)
+  If applicable
+
+**Form parameters:**
+
+    * ** ** – string (required) - description of purpose
+    * ** ** – string (optional) - other comments 
 
 **Status codes:** n/a
 
@@ -66,7 +67,7 @@ Edit Guide
 
 **Example call**::
 
- /private-access-adminportal/services/guide/2
+ Example request here
 
 **Example result**::
 
