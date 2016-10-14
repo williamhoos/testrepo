@@ -7,7 +7,7 @@ Changelog
 * Began a new :ref:`Architecture top` section to provide a high-level descrition of the PEER application, and to call out the methods, source files, and datatables involved in conducting each process
 * Developed illustrations for the :ref:`PEER Architecture` and :ref:`PA Architecture` descriptions of key attributes, and to provide a visual graphic as an overview respecting both PEER and the Private Access services
 * Added summary information respecting the databases used in PEER into the :ref:`data` section
-* Prepared an .. _inventory: https://www.dropbox.com/s/e6r9h7exmt1wzdb/PEER_INVENTORY_OUTLINE_v1.2.xlsx?dl=0 of all PEER components in Excel that can be filtered to explore specific components and the hierarchy of their respective operation
+* Prepared an .. _`comprehensive inventory`: http://tinyurl.com/PEER-Inventory of all PEER components in Excel that can be filtered to explore specific components and the hierarchy of their respective operation
 
 2016-10-12
 ~~~~~~~~~~
