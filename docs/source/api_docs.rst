@@ -28,7 +28,7 @@ Edit Guide
 
 **Purpose or Use:**
 
-  This API is invoked when / called by....
+  This API is invoked when a administrative user clicks on the edit button to edit the profile for a guide who is associated (or to be associated) with his or her portal.  
 
 **Source files:**
   
