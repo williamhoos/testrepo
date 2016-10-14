@@ -8,7 +8,7 @@ This section of the document focuses on the overall architecture of PEER, beginn
 
 .. Note:: In the interest of time, the present documentation generally does not include function calls, nor list the inputs and outputs based on each method.  Future enhancement to the technical documentation should consider adding this inventory.  
 
-This descriptions that follow generally focus on the PEER open source code, and include (for reference purposes) information respecting the resources that are provided through API calls to PA Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
+This descriptions that follow generally focus on the PEER open source code, and include (for reference purposes) information respecting the resources that are provided through API calls to PA Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access for inclusion in Genetic Alliance's SaaS-based version of PEER.
 
 The overall architecture of the PEER application is portayed in the following diagram:
 
@@ -32,10 +32,10 @@ Top Level
 
 As shown above, at the highest level, PEER is comprised of two components, one that comprises all of its administrative functions, and a second for participant portals. These components are complemented by the services that PEER acquires via API from PA Connect and PrivacyLayer.  At the present time, PEER functions from four databases:
 
- * peer_surveys - contains all administrative functions for surveys
- * peer_surveys_published - contains all PST Surveys information
- * dbPPMS - contains (for the production environment) the administrative components of PEER, as well as Private Access' Privacy Preferences Management System (or PPMS)
- * dbPPMS_D - contains (for the beta environment) the administrative components of PEER, as well as the PPMS
+ * **peer_surveys** - contains all administrative functions for surveys
+ * **peer_surveys_published** - contains all PST Surveys information
+ * **dbPPMS** - contains (for the production environment) the administrative components of PEER, as well as Private Access' Privacy Preferences Management System (or PPMS)
+ * **dbPPMS_D** - contains (for the beta environment) the administrative components of PEER, as well as the PPMS
 
 .. Important:: As part of migrating the PEER source code to open source, the PEER and Private Access components will be divided into separate databases so that the data tables that are exclusively used by PEER will be physically separated from the data tables that are used by the Private Access service.  At the conclusion of this work, we anticipate that the dbPPMS and dbPPMS_D will be used exclusively by Private Access (and not included in the OSS), and a third database for the administrative components of PEER and the API calls to Private Access will be reflected in the top level architecture.
 
@@ -46,7 +46,7 @@ The administration component of PEER is used by properly authorized and authenti
 
 As illustrated above, the administration component of PEER is comprised of five functional areas:
 
-  * Poral administration
+  * Portal administration
   * Account management
   * PA / PEER administration
   * Search service
