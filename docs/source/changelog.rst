@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2016-10-13
+~~~~~~~~~~
+
+* Began a new :ref:`Architecture top` section to convey a high-level descrition of the PEER application, and to articulate the methods, source files and datatables involved in composing wach process.
+* Created a site map for graphically presenting a high-level overview respecting both PEER and Private Access seriices. 
+
 2016-10-12
 ~~~~~~~~~~
 
