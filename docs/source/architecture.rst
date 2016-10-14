@@ -30,11 +30,6 @@ The authentication, single sign-on and privacy directives set by individual part
      :alt: High-Level Private Access Services Illustration  
 
 
-.. _Top level:
-
-Top Level
-~~~~~~~~~
-
 As shown above, at the highest level, PEER is comprised of two components, one that comprises all of its administrative functions, and a second for participant portals. These components are complemented by the services that PEER acquires via API from PA Connect and PrivacyLayer.  At the present time, PEER functions from four databases:
 
  * **peer_surveys** - contains all administrative functions for surveys
