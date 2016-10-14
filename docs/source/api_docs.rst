@@ -19,7 +19,7 @@ Guides
 Edit Guide
 ----------
 
-**API:/private-access-adminportal/services/guide**
+**API:/private-access-adminportal/services/guide/[guideId]**
 
 **References**
 
