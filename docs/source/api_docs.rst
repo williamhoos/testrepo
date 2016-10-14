@@ -11,6 +11,71 @@ This section describes the processes, functions, methods and source files used i
 
 .. _Landing page:
 
+Guides
+******
+
+.. _Edit Guide API:
+
+Edit Guide
+----------
+
+**API:/**
+
+**References**
+
+    * Invoked at step XXX of :ref:``
+    * Invoked at step XXX of :ref:``
+
+**Purpose or Use:**
+
+  This API is invoked when / called by....
+
+**Source files:**
+  
+  Enter all that are applicable
+
+**Data accessed from:** 
+
+    * dbPPMS.TblPlguide
+    * dbPPMS.TblPlguidePreference
+
+**Request Headers:**
+
+  Authorization – oAuth token
+
+**Query parameters:**
+
+  If applicable
+
+**Form parameters:**
+
+    * ** ** – string (required) - description of purpose
+    * ** ** – string (optional) - other comments 
+
+**Status codes:** n/a
+
+**Method:** getPeerGuideById
+
+*Input parameters*
+
+    * **GuideId** – integer (required) - description of purpose
+
+*Valid responses*
+
+    * **APIResponse** – response - description of use
+    * ** ** – response - other comments 
+
+**Example call**::
+
+ Example request here
+
+**Example result**::
+
+ Example response here
+
+
+.. _Landing page:
+
 Landing page
 ************
 
