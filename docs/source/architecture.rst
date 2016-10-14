@@ -10,6 +10,11 @@ This section of the document focuses on the overall architecture of PEER, beginn
 
 This descriptions that follow generally focus on the PEER open source code, and include (for reference purposes) information respecting the resources that are provided through API calls to PA Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access for inclusion in Genetic Alliance's SaaS-based version of PEER.
 
+.. _General orientation:
+
+General orientation
+~~~~~~~~~~~~~~~~~~~
+
 The overall architecture of the PEER application is portayed in the following diagram:
 
 .. _PEER Architecture:
