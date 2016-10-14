@@ -19,7 +19,7 @@ Guides
 Edit Guide
 ----------
 
-**API:/**
+**API:/private-access-adminportal/services/guide**
 
 **References**
 
@@ -32,12 +32,16 @@ Edit Guide
 
 **Source files:**
   
-  Enter all that are applicable
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PeerGuideController.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlguideDaoImpl.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/serivce/PeerGuideService.java
 
 **Data accessed from:** 
 
-    * dbPPMS.TblPlguide
-    * dbPPMS.TblPlguidePreference
+    * dbPPMS_D.TblPlguide
+    * dbPPMS_D.TblPlguidePreference
+    * dbPPMS_D_Demo.TblPlguide
+    * dbPPMS_D_Demo.TblPlguidePreference
 
 **Request Headers:**
 
@@ -45,12 +49,7 @@ Edit Guide
 
 **Query parameters:**
 
-  If applicable
-
-**Form parameters:**
-
-    * ** ** – string (required) - description of purpose
-    * ** ** – string (optional) - other comments 
+  guideId (Integer)
 
 **Status codes:** n/a
 
@@ -67,7 +66,7 @@ Edit Guide
 
 **Example call**::
 
- Example request here
+ /private-access-adminportal/services/guide/2
 
 **Example result**::
 
