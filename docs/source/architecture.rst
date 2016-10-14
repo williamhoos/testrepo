@@ -504,7 +504,7 @@ The next five methods are invoked when an administrative user clicks on the Save
 View Portal
 ~~~~~~~~~~~
 
-The following methods are used to get the block of HTML code that, when posted as instructed, will generate the PEER code on a sponsor's website.  
+The following methods are used to get the block of HTML code that, when posted as instructed, will display the fully configured PEER portal on the sponsor's website.  
 
 .. _Method 17:
 
