@@ -37,7 +37,7 @@ As shown above, at the highest level, PEER is comprised of two components, one t
  * **dbPPMS** - contains (for the production environment) the administrative components of PEER, as well as Private Access' Privacy Preferences Management System (or PPMS)
  * **dbPPMS_D** - contains (for the beta environment) the administrative components of PEER, as well as the PPMS
 
-.. Important:: As part of migrating the PEER source code to open source, the PEER and Private Access components will be divided into separate databases so that the data tables that are exclusively used by PEER will be physically separated from the data tables that are used by the Private Access service.  At the conclusion of this work, we anticipate that the dbPPMS and dbPPMS_D will be used exclusively by Private Access (and not included in the OSS), and a third database for the administrative components of PEER and the API calls to Private Access will be reflected in the top level architecture.
+.. Attention:: As part of migrating the PEER source code to open source, the PEER and Private Access components will be divided into separate databases so that the data tables that are exclusively used by PEER will be physically separated from the data tables that are used by the Private Access service.  At the conclusion of this work, we anticipate that the dbPPMS and dbPPMS_D will be used exclusively by Private Access (and not included in the OSS), and a third database for the administrative components of PEER and the API calls to Private Access will be reflected in the top level architecture.
 
 Admin Component
 ~~~~~~~~~~~~~~~
@@ -54,7 +54,7 @@ As illustrated above, the administration component of PEER is comprised of the f
 
 These areas are in turn broken into a number of fourth tier functions illustrated in yellow above, and in some cases even further articulated into fifth (teal colored boxes), sixth (grey shaded boxes) and more granular functions.  In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. 
 
-.. Important:: The sections below define these elements for several of the more involved portions of the architecture.  These are provided for discussion purposes to ascertain whether this is too detailed, insufficiently detailed or just right.
+.. Attention:: The sections below define these elements for several of the more involved portions of the architecture.  These are provided for discussion purposes to ascertain whether this is too detailed, insufficiently detailed or just right.
 
 Portal administration
 ---------------------
@@ -82,14 +82,14 @@ PEER's administrative features can be provisioned into the following four levels
        * Update organization information
        * Delete protals
 
-It also includes the following data access permissions:
+   It also includes the following data access permissions:
 
-       * View aggregate data
-       * View individal data
-       * Edit individals data
-       * Export survey resppnses
-       * View/download contact information
-       * Proxy agent
+         * View aggregate data
+         * View individal data
+         * Edit individals data
+         * Export survey resppnses
+         * View/download contact information
+         * Proxy agent
       
   * **Staff member** - this user(s) is designated rights for any portals that the Administrator has the authority to manage, and may be granted any of the foregoing rights except for the right to delegate rights to other users and the right to edit individual user data
   
@@ -97,63 +97,87 @@ It also includes the following data access permissions:
  
 In all of the foregoing cases, the [PEER or Portal] Super Administrator can either assign portal administration rights to an existing account or approve requests to set up a new account.  Each such account is assigned one or more Portal Administrators who received from individuals requesting to be a Portal Administrator.  
 
-
-**Example result**::Method: 
+**Method:**::
   getPortalUsers
+
+**Purpose or Use:**
   
-Source Files:
+.. Attention:: Need to add a description for the foregoing method call.
+  
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PrivateAccessController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalAdminMappingServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPortalAdminMapping.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
   
-Databse Tables: 
+**Databse tables** 
   dbPPMS_D.tblPortalAdminMapping
+
+.. _Settings :
 
 Settings
 ~~~~~~~~
 
-1 Method: 
+The following 14 method calls are made by PEER in generating the varity of functions under the Settings UI in the PEER Admin.  
+
+.. _General settings:
+
+General settings
+----------------
+
+.. _Method 01:
+
+The first of these methods is invoked upon clicking on the General Settings menu item.  
+
+**Method 01:**
+
   getAllSeekerTemplates
   tblPlseekerTemplateService.getAllSeekerTemplate
   
-Source Files:
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerTemplateController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblPlseekerTemplateServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
 
-Database Tables: 
+**Database taables:**
+
   dbPPMS_D.tblPLSeekerTemplate
-  
-2 Method: 
-  savePortal
-  
-Source Files:
+
+.. _Save general settings:
+
+Saving general settings
+-----------------------
+
+The next five methods are invoked when an administrative user clicks on the Save button at the bottom of the General Settings window in PEER:
+
+.. _Method 02:
+
+**Method 02:**
+
+  **savePortal**
+
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
-
-Database Tables:  
-  dbPPMS_D.tblLandingPages
-  dbPPMS_D.tblWidgetPrivacyDirectives  
-
-4 Method:
-	updateDateForPortalparameters
-	
-Source Files:  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
   
-Database Tables:  
-  dbPPMS_D.tblLandingPages
+**Database taables:**
+  
+  * dbPPMS_D.tblLandingPages
+  * dbPPMS_D.tblWidgetPrivacyDirectives  
 
-3 Method:
-	getAllPortals
+
+.. _Method 03:
+
+**Method 03:**
+
+   **getAllPortals**
 	
-Source Files:  
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPeerAccount.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPeerAccountDaoImpl.java
@@ -161,95 +185,156 @@ Source Files:
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
 
-Database Tables:  
-  dbPPMS_D.tblPeerAccount
-  dbPPMS_D.tblPortalAdminMapping
+**Database taables:**
+  
+  * dbPPMS_D.tblPeerAccount
+  * dbPPMS_D.tblPortalAdminMapping
 
-5 Method:
-	getPortalAssociateOrganizations
 
-Source Files:    
+.. _Method 04:
+
+**Method 04:**
+
+     **updateDateForPortalparameters**
+     
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
+  
+**Database taables:**
+  
+  * dbPPMS_D.tblLandingPages
+
+
+.. _Method 05:
+
+**Method 05:**
+
+     **getPortalAssociateOrganizations**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPeerAccount.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPeerAccountDaoImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/ViewPortalDetails.java
-  
-Database Tables:  
-  dbPPMS_D.tblPeerAccount
-  dbPPMS_D.tblPortalAdminMapping
 
-6 Method:
-  getPendingOrganizationMemberByOrganizationIds
+**Database taables:**
   
-Source Files:    
+  * dbPPMS_D.tblPeerAccount
+  * dbPPMS_D.tblPortalAdminMapping
+
+
+.. _Method 06:
+
+**Method 06:**
+
+     **getPendingOrganizationMemberByOrganizationIds**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/OrganizationMemberController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/OrganizationMemberService.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/OrganizationMemberServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationMemberDaoImpl.java
-  
-Database Tables: 
-  dbPPMS_D.tblShaOrganizationMember
-  dbPPMS_D.tblShaOrganization
 
-7 Method:
-  getWidgetInfoByPortalId
+**Database taables:**
   
-Source Files: 
+  * dbPPMS_D.tblShaOrganizationMember
+  * dbPPMS_D.tblShaOrganization
+
+
+.. _Method 07:
+
+**Method 07:**
+
+     **getWidgetInfoByPortalId**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/WidgetInfoController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetInfoServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetInfo.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetInfoDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetInfoDaoImpl.java
 
-Database Tables: 
-  dbPPMS_D.tblWidgetInfo
-  dbPPMS_D.tblPeerAccount
-  dbPPMS_D.tblWidgetTheme
-  dbPPMS_D.tblWidgetDemo
+**Database taables:**
+  
+  * dbPPMS_D.tblWidgetInfo
+  * dbPPMS_D.tblPeerAccount
+  * dbPPMS_D.tblWidgetTheme
+  * dbPPMS_D.tblWidgetDemo
 
-8 Method:
-  getAllOrganizationName
 
-Source Files:   
+.. _Method 08:
+
+**Method 08:**
+
+     **getAllOrganizationName**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/ShaOrganizationController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganization.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaOrganizationDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
   
-Database Tables: 
-  dbPPMS_D.tblShaOrganization
-  dbPPMS_D.tblShaOrganizationPrivacyDirective
-  dbPPMS_D.tblShaOrganizationPreference
-  dbPPMS_D.tblShaOrganizationType
+**Database taables:**
+  
+  * dbPPMS_D.tblShaOrganization
+  * dbPPMS_D.tblShaOrganizationPrivacyDirective
+  * dbPPMS_D.tblShaOrganizationPreference
+  * dbPPMS_D.tblShaOrganizationType
 
-9 Method:
-  getOrganizationsByLandinPageId
 
-Source Files:       
+.. _Method 09:
+
+**Method 09:**
+
+     **getOrganizationsByLandinPageId**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/LandingPagesRecommendedOrganizationsService.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPagesRecommendedOrganizations.java
 
-Database Tables: 
-  dbPPMS_D.tblLandingPagesRecommendedOrganizations
+**Database taables:**
+  
+  * dbPPMS_D.tblLandingPagesRecommendedOrganizations
 
-10 Method:
-  getPortalPrivacyDirectives
 
-Source Files:       
+.. _Method 10:
+
+**Method 10:**
+
+     **getPortalPrivacyDirectives**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
   
-Database Tables: 
-  dbPPMS_D.tblWidgetPrivacyDirective
-  dbPPMS_D.tblLandingPages
+**Database taables:**
+  
+  * dbPPMS_D.tblWidgetPrivacyDirective
+  * dbPPMS_D.tblLandingPages
 
-11 Method:
-  updateLastModifiedPortal
 
-Source Files:       
+.. _Method 11:
+
+**Method 11:**
+
+     **updateLastModifiedPortal**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
@@ -258,79 +343,115 @@ Source Files:
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetPrivacyDirectiveDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetPrivacyDirectiveDaoImpl.java
 
-Database Tables: 
-  dbPPMS_D.tblWidgetPrivacyDirective
-  dbPPMS_D.tblLandingPages
+**Database taables:**
+  
+  * dbPPMS_D.tblWidgetPrivacyDirective
+  * dbPPMS_D.tblLandingPages
 
-12 Method:
-  getAllSeekerTemplates
 
-Source Files:       
+.. _Method 12:
+
+**Method 12:**
+
+     **getAllSeekerTemplates**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerTemplateController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblPlseekerTemplateService.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblPlseekerTemplateServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlseekerTemplateDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
 
-Database Tables: 
-  dbPPMS_D.tblPLSeekerTemplate
-
-13 Method:
-  getSeekerGroupNames  
+**Database taables:**
   
-Source Files:
+  * dbPPMS_D.tblPLSeekerTemplate
+
+
+.. _Method 13:
+
+**Method 13:**
+
+     **getSeekerGroupNames  **
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerGroupController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/SeekerGroupService.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/SeekerGroupServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblSeekerGroupDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblSeekerGroupDaoImpl.java
 
-Database Tables: 
-  dbPPMS_D.tblSeekerGroup
+**Database taables:**
+  
+  * dbPPMS_D.tblSeekerGroup
 
-14 Method:
-  getAllOrganizationName
 
-Source Files:   
+.. _Method 14:
+
+**Method 14:**
+
+     **getAllOrganizationName**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/ShaOrganizationController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganization.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaOrganizationDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
-  
-15 Method:
-  getPortalPrivacyDirectives  
-  
-Source Files:
+
+
+.. _Method 15:
+
+**Method 15:**
+
+     **getPortalPrivacyDirectives **
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetPrivacyDirectiveType.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetPrivacyDirectiveDao.java
+
+**Database taables:**
   
-Database Tables: 
-  dbPPMS_D.tblWidgetPrivacyDirective  
-  dbPPMS_D.tblWidgetPrivacyDirectiveType
-  
-16 Method:
-  getOrganization
-  
-Source Files:
+  * dbPPMS_D.tblWidgetPrivacyDirective  
+  * dbPPMS_D.tblWidgetPrivacyDirectiveType
+
+
+.. _Method 16:
+
+**Method 16:**
+
+     **getOrganization**
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganization.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaOrganizationDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganizationType.java
   
-Database Tables:
-  dbPPMS_D.tblShaOrganization
-  dbPPMS_D.tblShaOrganizationType
+**Database taables:**
+  
+  * dbPPMS_D.tblShaOrganization
+  * dbPPMS_D.tblShaOrganizationType
+  
 
 View Portal
-===========
-Method:
-  
-1 Method: (Get Code for Website)
-  getWidgetInfoByPortalId    
-  
-Source Files:
+~~~~~~~~~~~
+
+The following methods are used to get the block of HTML code that, when posted as instructed, will generate the PEER code on a sponsor's website.  
+
+.. _Method 17:
+
+**Method 17:**
+
+     **getWidgetInfoByPortalId    **
+	
+**Source files:**
+
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/WidgetInfoController.java  
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetInfo.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetInfoDao.java
@@ -342,9 +463,10 @@ Source Files:
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetDemoService.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetDemoServiceImpl.java
 
-Database Tables: 
-  dbPPMS_D.tblWidgetInfo
-  dbPPMS_D.tblWidgetDemo
+**Database taables:**
+  
+  * dbPPMS_D.tblWidgetInfo
+  * dbPPMS_D.tblWidgetDemo
 
 
 Participant portal
