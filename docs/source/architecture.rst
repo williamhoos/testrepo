@@ -1,11 +1,18 @@
-The overall architecture of PEER is 
+Architecture
+============
+
+This section of the document focuses on the overall architecture of PEER, beginning from a macro level and digging down to the level of the source files and database tables that are presently being used by the application. This description includes the PEER open source code, as well as information respecting the specialized resources that are provided through API calls with Private Access Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
+
+The overall architecture of application is portayed in the following diagram:
+
+
 
 .. _Top level:
 
 Top Level
-=========
+~~~~~~~~~
 
-At the highest level, PEER is comprised of two components (Administration and Participant Portal), and multiple service utilities that it acquires via APIs from Private Access.  At the present time, PEER functions from four databases:
+As shown above, at the highest level, PEER is comprised of two components, one that comprises all of its administrative functions, and a second for participant portals. These components are complemented by the services that PEER acquires via APIs from Private Access, which .  At the present time, PEER functions from four databases:
 
  * peer_surveys - contains all administrative functions for surveys
  * peer_surveys_published - contains all PST Surveys information
