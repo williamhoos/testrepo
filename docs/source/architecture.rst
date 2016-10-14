@@ -39,8 +39,8 @@ As shown above, at the highest level, PEER is comprised of two components, one t
 
 .. Attention:: As part of migrating the PEER source code to open source, the PEER and Private Access components will be divided into separate databases so that the data tables that are exclusively used by PEER will be physically separated from the data tables that are used by the Private Access service.  At the conclusion of this work, we anticipate that the dbPPMS and dbPPMS_D will be used exclusively by Private Access (and not included in the OSS), and a third database for the administrative components of PEER and the API calls to Private Access will be reflected in the top level architecture.
 
-Admin Component
-~~~~~~~~~~~~~~~
+Administrative Component
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The administration component of PEER is used by properly authorized and authenticated users to create and manage participant portals, as well as (to the extent permitted by each participant's privacy preference setttings) to discover, view and export data that is acquired through the operation of such portals.  
 
@@ -70,7 +70,9 @@ Users and permissions
 PEER's administrative features can be provisioned into the following four levels:
 
   * **PEER Super Admin** - this user(s) has access to all of the administrative functions for any portal in the PEER system, and the ability to designated the "Portal Super Admin" user(s).  Notwithstanding his or her having administrative access to any PEER portal, in order to protect the integrity of such portal's data, the PEER Super Admin rights do *not* permit the individual to access end user data without either (a) being explictly designated by the end user as a recipient of their information, or (b) being separately granted administrative, staff or researcher level access by the Portal Super Admin.
-  
+
+.. Attention:: At the conclusion of the migration, we will need to confirm with Genetic Alliance whether they wish for us to remove Private Acccess from having Super Administrative rights over the PEER Admin, and if so the relationship they prefer to replace this as a safety net for Genetic Alliance's personnel
+
   * **Portal Super Admin** - this user(s) has the same administrative rights for their portal(s) as the PEER Super Admin - except that the Portal Super Admin's rights are limited to just their organization's portals. Super Admins can grant rights to other super admin users, staff members and recommended researchers.  This includes the following General Permissions authority:
   
        * General settings
@@ -97,8 +99,10 @@ PEER's administrative features can be provisioned into the following four levels
  
 In all of the foregoing cases, the [PEER or Portal] Super Administrator can either assign portal administration rights to an existing account or approve requests to set up a new account.  Each such account is assigned one or more Portal Administrators who received from individuals requesting to be a Portal Administrator.  
 
-**Method:**::
-  getPortalUsers
+
+**Method:**:
+
+  **getPortalUsers**
 
 **Purpose or Use:**
   
@@ -111,8 +115,10 @@ In all of the foregoing cases, the [PEER or Portal] Super Administrator can eith
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPortalAdminMapping.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
   
-**Databse tables** 
-  dbPPMS_D.tblPortalAdminMapping
+**Database table** 
+
+  * dbPPMS_D.tblPortalAdminMapping
+
 
 .. _Settings :
 
@@ -141,7 +147,7 @@ The first of these methods is invoked upon clicking on the General Settings menu
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblPlseekerTemplateServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
 
-**Database taables:**
+**Database table:**
 
   dbPPMS_D.tblPLSeekerTemplate
 
@@ -164,7 +170,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
   
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblLandingPages
   * dbPPMS_D.tblWidgetPrivacyDirectives  
@@ -185,7 +191,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblPeerAccount
   * dbPPMS_D.tblPortalAdminMapping
@@ -205,7 +211,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
   
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblLandingPages
 
@@ -224,7 +230,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/ViewPortalDetails.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblPeerAccount
   * dbPPMS_D.tblPortalAdminMapping
@@ -243,7 +249,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/OrganizationMemberServiceImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationMemberDaoImpl.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblShaOrganizationMember
   * dbPPMS_D.tblShaOrganization
@@ -263,7 +269,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetInfoDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetInfoDaoImpl.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblWidgetInfo
   * dbPPMS_D.tblPeerAccount
@@ -284,7 +290,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaOrganizationDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
   
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblShaOrganization
   * dbPPMS_D.tblShaOrganizationPrivacyDirective
@@ -303,7 +309,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/LandingPagesRecommendedOrganizationsService.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPagesRecommendedOrganizations.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblLandingPagesRecommendedOrganizations
 
@@ -321,7 +327,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
   
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblWidgetPrivacyDirective
   * dbPPMS_D.tblLandingPages
@@ -343,7 +349,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetPrivacyDirectiveDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetPrivacyDirectiveDaoImpl.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblWidgetPrivacyDirective
   * dbPPMS_D.tblLandingPages
@@ -363,7 +369,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlseekerTemplateDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblPLSeekerTemplate
 
@@ -382,7 +388,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblSeekerGroupDao.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblSeekerGroupDaoImpl.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblSeekerGroup
 
@@ -414,7 +420,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetPrivacyDirectiveType.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetPrivacyDirectiveDao.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblWidgetPrivacyDirective  
   * dbPPMS_D.tblWidgetPrivacyDirectiveType
@@ -433,7 +439,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganizationType.java
   
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblShaOrganization
   * dbPPMS_D.tblShaOrganizationType
@@ -463,19 +469,15 @@ The following methods are used to get the block of HTML code that, when posted a
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetDemoService.java
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetDemoServiceImpl.java
 
-**Database taables:**
+**Database tables:**
   
   * dbPPMS_D.tblWidgetInfo
   * dbPPMS_D.tblWidgetDemo
 
 
 Participant portal
-==================
+~~~~~~~~~~~~~~~~~~
 
 
-
-
-
-.. attention: Remove PA Administrative access as a superior level to the PEER Administrator
 
 Calls the Edit Guide API for the selected guide
