@@ -15,7 +15,7 @@ The overall architecture of application is portayed in the following diagram:
 .. _PEER Architecture:
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/PEER+High-Level+Architecture.png
-    :alt: High-Level PEER Architecture Illustration  
+     :alt: High-Level PEER Architecture Illustration  
     
 .. _Top level:
 
