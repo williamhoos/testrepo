@@ -8,21 +8,22 @@ This section of the document focuses on the overall architecture of PEER, beginn
 
 .. hint:: In the interest of time, the present documentation generally does not include function calls, nor list the inputs and outputs based on each method.  Future enhancement to the technical documentation should consider adding this inventory.  
 
-This descriptions that follow generally focus on the PEER open source code, and include (for reference purposes) information respecting the specialized resources that are provided through API calls to/from the PA Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
+This descriptions that follow generally focus on the PEER open source code, and include (for reference purposes) information respecting the resources that are provided through API calls to PA Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
 
-The overall architecture of application is portayed in the following diagram:
+The overall architecture of the PEER application is portayed in the following diagram:
 
 .. _PEER Architecture:
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/PEER+High-Level+Architecture.png
      :alt: High-Level PEER Architecture Illustration  
-    
+
+
 .. _Top level:
 
 Top Level
 ~~~~~~~~~
 
-As shown above, at the highest level, PEER is comprised of two components, one that comprises all of its administrative functions, and a second for participant portals. These components are complemented by the services that PEER acquires via APIs from Private Access, which .  At the present time, PEER functions from four databases:
+As shown above, at the highest level, PEER is comprised of two components, one that comprises all of its administrative functions, and a second for participant portals. These components are complemented by the services that PEER acquires via API from PA Connect and PrivacyLayer, which respectively provide single-sign on aue.  At the present time, PEER functions from four databases:
 
  * peer_surveys - contains all administrative functions for surveys
  * peer_surveys_published - contains all PST Surveys information
