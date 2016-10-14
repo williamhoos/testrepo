@@ -44,7 +44,7 @@ Admin Component
 
 The administration component of PEER is used by properly authorized and authenticated users to create and manage participant portals, as well as (to the extent permitted by each participant's privacy preference setttings) to discover, view and export data that is acquired through the operation of such portals.  
 
-As illustrated above, the administration component of PEER is comprised of five functional areas:
+As illustrated above, the administration component of PEER is comprised of the five functional areas shown in green in the above illustration. These include:
 
   * Portal administration
   * Account management
@@ -52,29 +52,53 @@ As illustrated above, the administration component of PEER is comprised of five 
   * Search service
   * Data export service
 
+These areas are in turn broken into a number of fourth tier functions illustrated in yellow above, and in some cases even further articulated into fifth (teal colored boxes), sixth (grey shaded boxes) and more granular functions.  In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. 
+
+.. Important:: The sections below define these elements for several of the more involved portions of the architecture.  These are provided for discussion purposes to ascertain whether this is too detailed, insufficiently detailed or just right.
 
 Portal administration
 ---------------------
 
-Portal settings themes etc...
-
-Account administration
+As shown, the portal administration section of the PEER admin contains twelve components that collectively enable the creation, modification and management of the appearance, content, and functional behaviour of the portals under a PEER sponsor's control, as well as the rights of staff members and researchers to access the administrative features and data acquired through the portal (obviously subject to the individuals' privacy and data sharing directives).
 
 
+.. _users and Permissions:
 
 Users and permissions
 ---------------------
 
-Access to the administrative services is provisioned in four tiers:
+PEER's administrative features can be provisioned into the following four levels:
 
-  * PEER Super Admin (has access to all of the administrative functions for any portal in the PEER system)
-  * Portal Super Admin (all rights for their portal(s) only)
-  * Staff members (delegated by the Portal Administrator or PEER Administrator with a subset of rights for any portals that the Administrator has the authority to delegate()
-  * Recommended researchers (delegated by the Portal Administrator or PEER Administrato
+  * **PEER Super Admin** - this user(s) has access to all of the administrative functions for any portal in the PEER system, and the ability to designated the "Portal Super Admin" user(s).  Notwithstanding his or her having administrative access to any PEER portal, in order to protect the integrity of such portal's data, the PEER Super Admin rights do *not* permit the individual to access end user data without either (a) being explictly designated by the end user as a recipient of their information, or (b) being separately granted administrative, staff or researcher level access by the Portal Super Admin.
+  
+  * **Portal Super Admin** - this user(s) has the same administrative rights for their portal(s) as the PEER Super Admin - except that the Portal Super Admin's rights are limited to just their organization's portals. Super Admins can grant rights to other super admin users, staff members and recommended researchers.  This includes the following General Permissions authority:
+  
+       * General settings
+       * Portal code
+       * Theme and landing page
+       * Surveys
+       * Guides
+       * Referral codes
+       * Update organization information
+       * Delete protals
+
+It also includes the following data access permissions:
+
+       * View aggregate data
+       * View individal data
+       * Edit individals data
+       * Export survey resppnses
+       * View/download contact information
+       * Proxy agent
+      
+  * **Staff member** - this user(s) is designated rights for any portals that the Administrator has the authority to manage, and may be granted any of the foregoing rights except for the right to delegate rights to other users and the right to edit individual user data
+  
+  * **Recommended researcher** - this user(s) is designated data access rights for any portals that the Administrator has the authority to manage, but the Super Admin is not able to provision researchers with *any* of the General Permissions, or the right to edit individual data, or designate them as a proxy agent.
  
-by the PEER Administrator, who can either assign portal administration rights to an existing account or approve requests to set up a new account.  Each such account is assigned one or more Portal Administrators who received from individuals requesting to be a Portal Administrator.  to be  credentials assigned 
+In all of the foregoing cases, the [PEER or Portal] Super Administrator can either assign portal administration rights to an existing account or approve requests to set up a new account.  Each such account is assigned one or more Portal Administrators who received from individuals requesting to be a Portal Administrator.  
 
-Method: 
+
+**Example result**::Method: 
   getPortalUsers
   
 Source Files:
