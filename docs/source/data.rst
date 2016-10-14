@@ -8,50 +8,28 @@ As indicated in the :ref:`Overview` discussion respecting :ref:`Data`, this sect
 
 Where not self-descriptive, this section includes an explanation of each function and/or subroutine that’s involved in this process, including its range of input and output values, any associated program variables and constants, and an explanation for how these are used by the application in handling or manipulating data; and 
 
-**THE FOLLOWING IS DRAFT WORK IN PROCESS FOR INTERNAL REVIEW**
-**NOTE TO READER: Skip to :ref:`survey database` to continue reviewed work**
 
 .. _Data summary:
 
 Summary
 *******
 
-PEER's data layer utilizes the MySQL Server 20XX RDBMS to store data... and...
+PEER's data layer utilizes the MySQL Server, Version 5.5.37 RDBMS to store data.
 
 Data Model
 ----------
 
-The data layer will adopt a tradition online transaction processing model. All data models will be normalized minimally to the third normal form.
+The data layer associate with the JAVA components of the application adopt a tradition online transaction processing model. To the extent possible, all data models are normalized minimally to the third normal form.
 
 Table Design
 ------------
 
-All tables used within PEER have a surrogate key serving as a primary key.  The surrogate key is used only for internal system purposes - see GUID for external primary keys.
-
-All tables that are exposed via the API will have a GUID field that will be used as a primary key for integrations.  The guid will posses the following properties:
-
- * Time and Space uniqness. 
- * Persistent
- * Stable
- * Secure
-
-All natural keys have a uniqness constraint enforced.
-
-All foreign key relationships use the surrogate key for reference and will be enforced using a foreign key constraint.
-
-All tables will have the following audit fields: 
-
- * DateCreated (datetime)
- * DateUpdated (datetime)
- * CreatedBy (nvarchar)
- * UpdatedBy (nvarchar)
+For security and efficiency purposes, all tables used within PEER have a surrogate key serving as a primary key, and that is used only for internal system purposes.  
  
 Data abstraction layers 
 -----------------------
 
-PEER data is presented with multiple levels of abstraction in the data access layer and the data tier, with each layer serving a different purpose.
-
-**Data access clients can never access database tables directly.  All CRUD data operations are performed via views.**
+PEER data contained in dbPPMS is presented with multiple levels of abstraction in the data access layer and the data tier, with each layer serving a different purpose.
 
 Views
 -----
@@ -66,10 +44,12 @@ There are two types of views
   
   * **Non-base views** - Will be all other views that are not a base view. *i.e.*, aggregate views, compount views, ...etc.  All these views are read only.  No CUD operation should be performed on these views.
 
+.. Attention::  We need to confirm through the audit that the foregiong description of views is still accurate.
+
 Data Objects
 ------------
 
-Views will be mapped to data objects.  All data clients beyond the data mediator layer use Data Objects as the primary data exchange format.  This ensures that data clients get no insight to the database schema.  There are multiple benefits to this:
+Views into the dbPPMS database are mapped to data objects.  All data clients beyond the data mediator layer use Data Objects as the primary data exchange format.  This ensures that data clients get no insight to the database schema.  There are multiple benefits to this:
 
   * Database security in case of security breaches
   * No coupling between the middle tier and the data tier
@@ -77,69 +57,51 @@ Views will be mapped to data objects.  All data clients beyond the data mediato
 Naming conventions
 ------------------
 
-The following table lists the naming conventions used in the data persistence layer. 
+The following table lists the recommended naming conventions that are generally employed in the data persistence layer. The bold part of the rule is a constant.  The part in [Square Brackets] is a pick from a predefined domain of values.  The *italicized* part is user defined.
 
-The bold part of the rule is a constant.  The part in [Square Brackets] is a pick from a predefined domain of values.  The *Italicized* part is user defined.
-
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| Type            | Rule                                     | Example                               | Notes                                  |
-+=================+==========================================+=======================================+========================================+
-| database        | **db***Application*                      | **db***PPMS* is the database          |                                        |
-|                 |                                          | name for the Privacy Preferences      |                                        |
-|                 |                                          | Management System                     |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| table           | **tbl**[SubSystem]*UserDefined*          | **tbl**PL*PrivacyDirective*           | Tables follow a single naming          |
-|                 | [SubSystem] can be any of the following: |                                       | convention (*e.g.*, PrivacyDirective   |
-|                 |                                          |                                       | for all privacy directive rows         |
-|                 |   * PL - PrivacyLayer                    |                                       |                                        |
-|                 |   * RA - RecordsAgent                    |                                       |                                        |
-|                 |   * RS - RecruitSource                   |                                       |                                        |
-|                 |   * TF - TrialsFinder                    |                                       |                                        |
-|                 |   * Sys - System tables                  |                                       |                                        |
-|                 |   * Sha - Shared tables                  |                                       |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| base view       | **vew**[SubSustem][UserDefined section   | **vew** PL*PrivacyDirective*          | vewPLPrivacyDirective is the base      |
-|                 | of the table that this view represents]  |                                       | view for tblPLPrivacyDirective         |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| non-base view   | **vew**[SubSystem]*UserDefined*          | **vew** PL*PersonRecordDetail*        |                                        |
-|                 |                                          |                                       |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| function        | **fnc**[SubSystem]*UserDefined*          | **fnc** Sha*TrimString*               |                                        |
-|                 |                                          |                                       |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| procedure       | **prc**[SubSystem]*UserDefined*          | **fnc** Sha*ComputeAlertDelay*        |                                        |
-|                 |                                          |                                       |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| primary key:    | **ID**[UserDefined section of the table] | **ID***User*                          |                                        |
-| standard tables |                                          |                                       |                                        |
-|                 |                                          |                                       |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| primary key:    | **ID**                                   | **ID**                                | No need to be specific here since this |
-| pivot tables    |                                          |                                       | ID will usually not be referenced      |
-| (many-to-many)  |                                          |                                       | anywhere other than joins.             |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| foreign key     | **FK***UserDefined*_[PrimaryKey]         | **FK***SessionUser*_IDUser            |                                        |
-|                 |                                          |                                       |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| index           | **TO BE DEFINED**                        | **TBD**                               | Non-unique, Unique and/or Clustered?   |
-|                 | Elastic Search???                        |                                       |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-| date columns    | **Date***UserDefined*                    | **Date***Created*, **Date***Modified* |                                        |
-|                 |                                          |                                       |                                        |
-+-----------------+------------------------------------------+---------------------------------------+----------------------------------------+
-
-
-.. _Architecture
-
-Achitecture
-***********
-
-The following illustration summarizes the overall architecture of the system with respect to data in/data out, including links to which pages, views or fields of the system are used to introduce data elements and the respective flow, transformation and/or retention of such data through the point that the data is consumed (*i.e.*, used by the system, viewed, exported or discarded) according to explicit rules.
-
-.. image:: TBD 
-     :alt: Overall system architecture from the perspective of data it contains
-|
-**THE SECTIONS ABOVE THIS LINE ARE IN DRAFT FORM FOR INTERNAL REVIEW**
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| Type            | Rule                                      | Example                              | Notes                                  |
++=================+===========================================+======================================+========================================+
+| database        | **db** *Application*                      | **db* **PPMS*                        |                                        |
+|                 |                                           |                                      |                                        |
+|                 |                                           |                                      |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| table           | **tbl** [SubSystem] *UserDefined*         | **tbl** PL *PrivacyDirective*        | Tables follow a single naming          |
+|                 | [SubSystem] can be any of the following:  |                                      | convention (*e.g.*, privacyDirective   |
+|                 |                                           |                                      | for all privacy directive rows         |
+|                 |   * PL - PrivacyLayer                     |                                      |                                        |
+|                 |   * Sys - System tables                   |                                      |                                        |
+|                 |   * Sha - Shared tables                   |                                      |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| base view       | **vew** [SubSustem] [UserDefined section  | **vew** PL* PrivacyDirective*        | vewPLPrivacyDirective is the base      |
+|                 | of the table that this view represents]   |                                      | view for tblPLPrivacyDirective         |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| non-base view   | **vew**[SubSystem]*UserDefined*           | **vew** PL* PersonRecordDetail*      |                                        |
+|                 |                                           |                                      |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| function        | **fnc** [SubSystem] *UserDefined*         | **fnc** Sha*TrimString*              |                                        |
+|                 |                                           |                                      |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| procedure       | **prc** [SubSystem] *UserDefined*         | **fnc** Sha*ComputeAlertDelay*       |                                        |
+|                 |                                           |                                      |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| primary key:    | **ID** [UserDefined section of the table] | **ID***User*                         |                                        |
+| standard tables |                                           |                                      |                                        |
+|                 |                                           |                                      |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| primary key:    | **ID**                                    | **ID**                               | No need to be specific here since this |
+| pivot tables    |                                           |                                      | ID will usually not be referenced      |
+| (many-to-many)  |                                           |                                      | anywhere other than joins.             |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| foreign key     | **FK***UserDefined*_[PrimaryKey]          | **FK***SessionUser*_IDUser           |                                        |
+|                 |                                           |                                      |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| index           | Designated data is indexed by Elastic     |                                      |                                        |
+|                 | Search                                    |                                      |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
+| date columns    | **Date** *UserDefined*                    | **Date** *Created*                   |                                        |
+|                 |                                           | **Date** *Modified*                  |                                        |
++-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
 
 .. _survey database:
 
@@ -240,4 +202,4 @@ The primary data contained in the table is described below:
 
 
 
-Slider question anomaly... reported in Pivotal Tracker as *https://www.pivotaltracker.com/story/show/131929961*
+.. Attention:: Slider question anomaly... reported in Pivotal Tracker as *https://www.pivotaltracker.com/story/show/131929961*
