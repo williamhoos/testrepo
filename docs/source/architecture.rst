@@ -1,12 +1,22 @@
+
+.. _Architecture top:
+
 Architecture
 ============
 
-This section of the document focuses on the overall architecture of PEER, beginning from a macro level and digging down to the level of the source files and database tables that are presently being used by the application. This description includes the PEER open source code, as well as information respecting the specialized resources that are provided through API calls with Private Access Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
+This section of the document focuses on the overall architecture of PEER, beginning from a macro level and extending to the depth of the methods, source files and database tables that are presently being used by the application.  
+
+.. hint:: In the interest of time, the present documentation generally does not include function calls, nor list the inputs and outputs based on each method.  Future enhancement to the technical documentation should consider adding this inventory.  
+
+This descriptions that follow generally focus on the PEER open source code, and include (for reference purposes) information respecting the specialized resources that are provided through API calls to/from the PA Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access.
 
 The overall architecture of application is portayed in the following diagram:
 
+.. _PEER Architecture:
 
-
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/PEER+High-Level+Architecture.png
+    :alt: High-Level PEER Architecture Illustration  
+    
 .. _Top level:
 
 Top Level
