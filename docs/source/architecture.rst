@@ -100,7 +100,7 @@ In all of the foregoing cases, the [PEER or Portal] Super Administrator can eith
 .. Note:: At the conclusion of the migration, we will need to confirm with Genetic Alliance whether they wish for us to remove Private Acccess from having Super Administrative rights over the PEER Admin, and if so the relationship they prefer to replace this as a safety net for Genetic Alliance's personnel.
 
 
-**Method:**:
+**Method:**
 
   **getPortalUsers**
 
