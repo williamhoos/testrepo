@@ -29,13 +29,14 @@ As an integral part of this effort, a number of potential development activities
    :caption: Table of Contents
 
    overview
-   data
+   architecture
    participant
    sign_up
    sign_in
    sign_utilities
    authorization
    surveys
+   data
    api_docs
    administrator
    researcher
