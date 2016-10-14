@@ -19,7 +19,7 @@ Guides
 Edit Guide
 ----------
 
-**API:/**
+**API:/private-access-adminportal/services/guide**
 
 **References**
 
@@ -28,16 +28,20 @@ Edit Guide
 
 **Purpose or Use:**
 
-  This API is invoked when an PEER administrative user clicks on the "Edit" button for a guide whose profile they wish to edit.
+  This API is invoked when / called by....
 
 **Source files:**
   
-  Enter all that are applicable
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PeerGuideController.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlguideDaoImpl.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/serivce/PeerGuideService.java
 
 **Data accessed from:** 
 
-    * dbPPMS.TblPlguide
-    * dbPPMS.TblPlguidePreference
+    * dbPPMS_D.TblPlguide
+    * dbPPMS_D.TblPlguidePreference
+    * dbPPMS_D_Demo.TblPlguide
+    * dbPPMS_D_Demo.TblPlguidePreference
 
 **Request Headers:**
 
@@ -45,12 +49,7 @@ Edit Guide
 
 **Query parameters:**
 
-  If applicable
-
-**Form parameters:**
-
-    * ** ** – string (required) - description of purpose
-    * ** ** – string (optional) - other comments 
+  guideId (Integer)
 
 **Status codes:** n/a
 
@@ -67,7 +66,7 @@ Edit Guide
 
 **Example call**::
 
- Example request here
+ /private-access-adminportal/services/guide/2
 
 **Example result**::
 
@@ -113,21 +112,21 @@ Get portal info (PEER-01)
 
 **Example result**::
 
-  {  
-    "status":"success",
-    "message":"success",
-    "isSuccess":true,
-    "data":{  
-       "widgetId":"474",
-       "prepend":"",
-       "referralCode":"",
-       "trialButtonId":"106",
-       "authorizeUrl":"openid_connect_login?portalWidgetId=474",
-       "registrationSuccessUrl":null,
-       "isDemo":false,
-       "isFresh":null,
-       "psid":null
-    }
+  {  
+    "status":"success",
+    "message":"success",
+    "isSuccess":true,
+    "data":{  
+       "widgetId":"474",
+       "prepend":"",
+       "referralCode":"",
+       "trialButtonId":"106",
+       "authorizeUrl":"openid_connect_login?portalWidgetId=474",
+       "registrationSuccessUrl":null,
+       "isDemo":false,
+       "isFresh":null,
+       "psid":null
+    }
   }
 
 .. Attention:: Display of the landing page is part of the participant engagement workflow.  The information described above needs to be supplmented with the database.table information that is called by this API.
@@ -247,21 +246,21 @@ Landing page features (PEER-05)
 
 **Example result**::
 
-  {  
-    "status":"success",
-    "message":"success",
-    "isSuccess":true,
-    "data":[  
-       {  
-          "videoURL":"//www.youtube.com/embed/n6p-v0Ih-fw",
-          "isVideoIncluded":true,
-          "imageURL":"1426091758348_howitworks_feature_image2.jpg",
-          "isGuide":false,
-          "name":"How it works video!",
-          "id":"F_1",
-          "isImageIncluded":true
-       }
-     ]
+  {  
+    "status":"success",
+    "message":"success",
+    "isSuccess":true,
+    "data":[  
+       {  
+          "videoURL":"//www.youtube.com/embed/n6p-v0Ih-fw",
+          "isVideoIncluded":true,
+          "imageURL":"1426091758348_howitworks_feature_image2.jpg",
+          "isGuide":false,
+          "name":"How it works video!",
+          "id":"F_1",
+          "isImageIncluded":true
+       }
+     ]
   }
 
 .. Attention:: Clarify where/how these messages are used by PEER, and where the data in them originates and how it can be changed/updated. If the data is truly from dbPPMS, then we need to look at this as part of bifurcating the PEER and PA services.
@@ -291,106 +290,106 @@ Landing page features (PEER-06)
 
 **Example result**::
 
-  {  
-    "status":"success",
-    "message":"success",
-    "isSuccess":true,
-    "data":{  
-        "idtheme":474,
-        "stretchToBrowser":true,
-        "border":1,
-        "shadow":0,
+  {  
+    "status":"success",
+    "message":"success",
+    "isSuccess":true,
+    "data":{  
+        "idtheme":474,
+        "stretchToBrowser":true,
+        "border":1,
+        "shadow":0,
 	"cornerRadius":15,
-        "theme1color":"FF4DE1",
-        "theme2color":"137DBA",
-        "theme3color":"FFA229",
-        "linkColor":"35FF1F",
-        "linkRollover":"FF5719",
-        "linkClicked":"C24213",
-        "background":"FFFFFF",
-        "borderColor":"C9C9C9",
-        "buttonColor":"FFCB1F",
-        "buttonGradient":"FF722B",
-        "fontColor":"FFFFFF",
-        "guide1":"2",
-        "guide2":"23",
-        "guide3":"24",
-        "fkFeaturedContentType":1,
-        "featuredContentValue":"host_SharonTerry.png",
-        "isLogoIncluded":false,
-        "preHeadLine":"YOUR HEADER HERE",
-        "postHeadLine":"can help!",
-        "preHeadLineColor":"000000",
-        "postHeadLineColor":"000000",
-        "headLineLogo":"tf_logo.png",
-        "introText":"<b>SHARE</b>... Answer as many questions as you would like, and control how and with whom that information is shared. <b>CONNECT</b>... Find out how you compare to others, and let support and helpful resources come to you. <b>DISCOVER</b>... If you wish, let researchers access your information to help spark innovation for all.",
-        "stepsMessage":"It's Easy as 1, 2, 3",
-        "step1func":"Register",
-        "step1copy":"<p class=\"title1\" >Register</p><font size=\"2\"><p class=\"title2\"> (or sign in) </p></font>",
-        "step2func":"TakeExampleSurvey",
-        "step2copy":"<p class=\"title1\" >Enter Health Information</p><font size=\"2\"><p class=\"title2\">Click to sample some questions</p></font>",
-        "step3func":"TakeExampleSurvey",
-        "step3copy":"Let Researchers Find YOU!",
-        "step4func":"none",
-        "step4copy":"None",
-        "footerTitle":"Respecting Your Wishes is Our Priority", 
-        "footerContent":"We protect your privacy according to your preferences. To do this, we use technology from our partner Private Access. Then you can share your health information with whomever you choose, on your own terms.",
-        "askQuestion":"",
-        "signingInTags":"",
-        "sigedInTags":"",
-        "dateCreated":1422572938000,
-        "dateUpdated":1422572938000,
-        "fkIdlandingpage":205,
-        "isPreview":false,
-        "isConditionQuestion":true,
-        "isTagsQuestion":true,
-        "hostList":"F_1",
-        "txtbtnStartNow":"Start Now!",
-        "btnFunc1":"ContinueSurvey",
-        "txtSignedInText1":"Continue Health Survey",
-        "btnFunc2":"AddParticipant",
-        "txtSignedInText2":"Add Family Member",
-        "btnFunc3":"none",
-        "txtSignedInText3":"None",
-        "btnFunc4":"none",
-        "txtSignedInText4":"None",
-        "livingTags":null,
-        "deceasedTags":null,
-        "prenatalFetusTags":null,
-        "prenatalDeceasedFetusTags":null,
-        "spinnerColor":"FF0000",
-        "mixPanelCode":"2db24x1e8115e6ed2adf323b4e7ez22e",
-        "medicalHistory":false,
-        "familyHistory":false,
-        "labResults":false,
-        "molecularProfiling":false,
-        "medicalRecords":false,
-        "isBRCAReport":false,
-        "treatments":false,
-        "txtMedicalHistory":null,
-        "txtFamilyHistory":null,
-        "txtLabResults":null,
-        "txtMolecularProfiling":null,
-        "txtMedicalRecords":null,
-        "txtTreatments":null,
-        "googleAnalyticCode":"UA-123456789-6",
-        "isHealineTextIncluded":true,
-        "isAddStartNowLink":true,
-        "isDemo":false,
-        "useJTIPS":true,
-        "useLandingPage":true,
-        "medicalHistoryName":"Medical History",
-        "familyHistoryName":"Family History",
-        "labResultsName":"Medical History",
-        "molecularProfilingName":"Molecular Profiling",
-        "treatmentsName":"General Health",
-        "medicalRecordsName":"Medical Records",
-        "uploadBRCAReportName":"Upload BRCA Report",
-        "livePortalId":474,
-        "demoPortalId":475
-    }
+        "theme1color":"FF4DE1",
+        "theme2color":"137DBA",
+        "theme3color":"FFA229",
+        "linkColor":"35FF1F",
+        "linkRollover":"FF5719",
+        "linkClicked":"C24213",
+        "background":"FFFFFF",
+        "borderColor":"C9C9C9",
+        "buttonColor":"FFCB1F",
+        "buttonGradient":"FF722B",
+        "fontColor":"FFFFFF",
+        "guide1":"2",
+        "guide2":"23",
+        "guide3":"24",
+        "fkFeaturedContentType":1,
+        "featuredContentValue":"host_SharonTerry.png",
+        "isLogoIncluded":false,
+        "preHeadLine":"YOUR HEADER HERE",
+        "postHeadLine":"can help!",
+        "preHeadLineColor":"000000",
+        "postHeadLineColor":"000000",
+        "headLineLogo":"tf_logo.png",
+        "introText":"<b>SHARE</b>... Answer as many questions as you would like, and control how and with whom that information is shared. <b>CONNECT</b>... Find out how you compare to others, and let support and helpful resources come to you. <b>DISCOVER</b>... If you wish, let researchers access your information to help spark innovation for all.",
+        "stepsMessage":"It's Easy as 1, 2, 3",
+        "step1func":"Register",
+        "step1copy":"<p class=\"title1\" >Register</p><font size=\"2\"><p class=\"title2\"> (or sign in) </p></font>",
+        "step2func":"TakeExampleSurvey",
+        "step2copy":"<p class=\"title1\" >Enter Health Information</p><font size=\"2\"><p class=\"title2\">Click to sample some questions</p></font>",
+        "step3func":"TakeExampleSurvey",
+        "step3copy":"Let Researchers Find YOU!",
+        "step4func":"none",
+        "step4copy":"None",
+        "footerTitle":"Respecting Your Wishes is Our Priority", 
+        "footerContent":"We protect your privacy according to your preferences. To do this, we use technology from our partner Private Access. Then you can share your health information with whomever you choose, on your own terms.",
+        "askQuestion":"",
+        "signingInTags":"",
+        "sigedInTags":"",
+        "dateCreated":1422572938000,
+        "dateUpdated":1422572938000,
+        "fkIdlandingpage":205,
+        "isPreview":false,
+        "isConditionQuestion":true,
+        "isTagsQuestion":true,
+        "hostList":"F_1",
+        "txtbtnStartNow":"Start Now!",
+        "btnFunc1":"ContinueSurvey",
+        "txtSignedInText1":"Continue Health Survey",
+        "btnFunc2":"AddParticipant",
+        "txtSignedInText2":"Add Family Member",
+        "btnFunc3":"none",
+        "txtSignedInText3":"None",
+        "btnFunc4":"none",
+        "txtSignedInText4":"None",
+        "livingTags":null,
+        "deceasedTags":null,
+        "prenatalFetusTags":null,
+        "prenatalDeceasedFetusTags":null,
+        "spinnerColor":"FF0000",
+        "mixPanelCode":"2db24x1e8115e6ed2adf323b4e7ez22e",
+        "medicalHistory":false,
+        "familyHistory":false,
+        "labResults":false,
+        "molecularProfiling":false,
+        "medicalRecords":false,
+        "isBRCAReport":false,
+        "treatments":false,
+        "txtMedicalHistory":null,
+        "txtFamilyHistory":null,
+        "txtLabResults":null,
+        "txtMolecularProfiling":null,
+        "txtMedicalRecords":null,
+        "txtTreatments":null,
+        "googleAnalyticCode":"UA-123456789-6",
+        "isHealineTextIncluded":true,
+        "isAddStartNowLink":true,
+        "isDemo":false,
+        "useJTIPS":true,
+        "useLandingPage":true,
+        "medicalHistoryName":"Medical History",
+        "familyHistoryName":"Family History",
+        "labResultsName":"Medical History",
+        "molecularProfilingName":"Molecular Profiling",
+        "treatmentsName":"General Health",
+        "medicalRecordsName":"Medical Records",
+        "uploadBRCAReportName":"Upload BRCA Report",
+        "livePortalId":474,
+        "demoPortalId":475
+    }
  }
- 
+ 
 .. Attention:: Clarify where/how these messages are used by PEER, and where the data in them originates and how it can be changed/updated. If the data is truly from dbPPMS, then we need to look at this as part of bifurcating the PEER and PA services.  Also, we should clarify in the *Purpose or Use* discussion how this API differs from :ref:`PEER-04` 
 
 
@@ -421,14 +420,14 @@ Set portal information (PA-01)
 
 **Example of JSON input**::
 
- {  
-    "widgetId":"474",
-    "prepend":"",
-    "referralCode":"",
-    "trialButtonId":106,
-    "authorizeUrl":"openid_connect_login?portalWidgetId=474",
-    "isDemo":false,
-    "registrationSuccessUrl":null
+ {  
+    "widgetId":"474",
+    "prepend":"",
+    "referralCode":"",
+    "trialButtonId":106,
+    "authorizeUrl":"openid_connect_login?portalWidgetId=474",
+    "isDemo":false,
+    "registrationSuccessUrl":null
  }
 
 
@@ -461,14 +460,14 @@ Get portal name (PA-02)
 
 **Example of JSON response**::
 
- {  
-    "status":"success",
-    "message":"success",
-    "isSuccess":true,
-    "data":{  
-       "portalFullName":"Portal Full Name",
-       "portalNickName":"Portal Nickname"
-    }
+ {  
+    "status":"success",
+    "message":"success",
+    "isSuccess":true,
+    "data":{  
+       "portalFullName":"Portal Full Name",
+       "portalNickName":"Portal Nickname"
+    }
  }
 
 
