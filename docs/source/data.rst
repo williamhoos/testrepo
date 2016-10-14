@@ -62,7 +62,7 @@ The following table lists the recommended naming conventions that are generally 
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
 | Type            | Rule                                      | Example                              | Notes                                  |
 +=================+===========================================+======================================+========================================+
-| database        | **db** *Application*                      | **db* **PPMS*                        |                                        |
+| database        | **db** *Application*                      | **db** *PPMS*                        |                                        |
 |                 |                                           |                                      |                                        |
 |                 |                                           |                                      |                                        |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
@@ -73,19 +73,19 @@ The following table lists the recommended naming conventions that are generally 
 |                 |   * Sys - System tables                   |                                      |                                        |
 |                 |   * Sha - Shared tables                   |                                      |                                        |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
-| base view       | **vew** [SubSustem] [UserDefined section  | **vew** PL* PrivacyDirective*        | vewPLPrivacyDirective is the base      |
+| base view       | **vew** [SubSustem] [UserDefined section  | **vew** PL *PrivacyDirective*        | vewPLPrivacyDirective is the base      |
 |                 | of the table that this view represents]   |                                      | view for tblPLPrivacyDirective         |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
-| non-base view   | **vew**[SubSystem]*UserDefined*           | **vew** PL* PersonRecordDetail*      |                                        |
+| non-base view   | **vew** [SubSystem] *UserDefined*         | **vew** PL *PersonRecordDetail*      |                                        |
 |                 |                                           |                                      |                                        |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
-| function        | **fnc** [SubSystem] *UserDefined*         | **fnc** Sha*TrimString*              |                                        |
+| function        | **fnc** [SubSystem] *UserDefined*         | **fnc** Sha *TrimString*             |                                        |
 |                 |                                           |                                      |                                        |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
-| procedure       | **prc** [SubSystem] *UserDefined*         | **fnc** Sha*ComputeAlertDelay*       |                                        |
+| procedure       | **prc** [SubSystem] *UserDefined*         | **fnc** Sha *ComputeAlertDelay*      |                                        |
 |                 |                                           |                                      |                                        |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
-| primary key:    | **ID** [UserDefined section of the table] | **ID***User*                         |                                        |
+| primary key:    | **ID** [UserDefined section of the table] | **ID** *User*                        |                                        |
 | standard tables |                                           |                                      |                                        |
 |                 |                                           |                                      |                                        |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
@@ -93,7 +93,7 @@ The following table lists the recommended naming conventions that are generally 
 | pivot tables    |                                           |                                      | ID will usually not be referenced      |
 | (many-to-many)  |                                           |                                      | anywhere other than joins.             |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
-| foreign key     | **FK***UserDefined*_[PrimaryKey]          | **FK***SessionUser*_IDUser           |                                        |
+| foreign key     | **FK** *UserDefined* _[PrimaryKey]        | **FK** *SessionUser* _IDUser         |                                        |
 |                 |                                           |                                      |                                        |
 +-----------------+-------------------------------------------+--------------------------------------+----------------------------------------+
 | index           | Designated data is indexed by Elastic     |                                      |                                        |
