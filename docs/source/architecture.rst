@@ -128,7 +128,9 @@ In all of the foregoing cases, the [PEER or Portal] Super Administrator can eith
 Settings
 ~~~~~~~~
 
-The following 14 method calls are made by PEER in generating the varity of functions under the Settings UI in the PEER Admin.  
+The following 14 method calls are made by PEER in connection with the variety of functions and administrative options that are managed from the Settings screen in the PEER Admin, shown here: 
+
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Methods+1-16.png
 
 .. _General settings:
 
