@@ -57,7 +57,7 @@ Databse Tables:
 Settings
 ========
 
-Method: 
+1 Method: 
   getAllSeekerTemplates
   tblPlseekerTemplateService.getAllSeekerTemplate
   
@@ -69,7 +69,7 @@ Source Files:
 Database Tables: 
   dbPPMS_D.tblPLSeekerTemplate
   
-Method: 
+2 Method: 
   savePortal
   
 Source Files:
@@ -81,7 +81,7 @@ Database Tables:
   dbPPMS_D.tblLandingPages
   dbPPMS_D.tblWidgetPrivacyDirectives  
 
-Method:
+4 Method:
 	updateDateForPortalparameters
 	
 Source Files:  
@@ -94,7 +94,7 @@ Source Files:
 Database Tables:  
   dbPPMS_D.tblLandingPages
 
-Method:
+3 Method:
 	getAllPortals
 	
 Source Files:  
@@ -109,7 +109,7 @@ Database Tables:
   dbPPMS_D.tblPeerAccount
   dbPPMS_D.tblPortalAdminMapping
 
-Method:
+5 Method:
 	getPortalAssociateOrganizations
 
 Source Files:    
@@ -123,8 +123,8 @@ Database Tables:
   dbPPMS_D.tblPeerAccount
   dbPPMS_D.tblPortalAdminMapping
 
-Method:
-  getPortalAssociateOrganizations
+6 Method:
+  getPendingOrganizationMemberByOrganizationIds
   
 Source Files:    
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/OrganizationMemberController.java
@@ -136,7 +136,7 @@ Database Tables:
   dbPPMS_D.tblShaOrganizationMember
   dbPPMS_D.tblShaOrganization
 
-Method:
+7 Method:
   getWidgetInfoByPortalId
   
 Source Files: 
@@ -152,7 +152,7 @@ Database Tables:
   dbPPMS_D.tblWidgetTheme
   dbPPMS_D.tblWidgetDemo
 
-Method:
+8 Method:
   getAllOrganizationName
 
 Source Files:   
@@ -167,7 +167,7 @@ Database Tables:
   dbPPMS_D.tblShaOrganizationPreference
   dbPPMS_D.tblShaOrganizationType
 
-Method:
+9 Method:
   getOrganizationsByLandinPageId
 
 Source Files:       
@@ -177,7 +177,7 @@ Source Files:
 Database Tables: 
   dbPPMS_D.tblLandingPagesRecommendedOrganizations
 
-Method:
+10 Method:
   getPortalPrivacyDirectives
 
 Source Files:       
@@ -190,7 +190,7 @@ Database Tables:
   dbPPMS_D.tblWidgetPrivacyDirective
   dbPPMS_D.tblLandingPages
 
-Method:
+11 Method:
   updateLastModifiedPortal
 
 Source Files:       
@@ -206,7 +206,7 @@ Database Tables:
   dbPPMS_D.tblWidgetPrivacyDirective
   dbPPMS_D.tblLandingPages
 
-Method:
+12 Method:
   getAllSeekerTemplates
 
 Source Files:       
@@ -219,7 +219,7 @@ Source Files:
 Database Tables: 
   dbPPMS_D.tblPLSeekerTemplate
 
-Method:
+13 Method:
   getSeekerGroupNames  
   
 Source Files:
@@ -232,7 +232,16 @@ Source Files:
 Database Tables: 
   dbPPMS_D.tblSeekerGroup
 
-Method:
+14 Method:
+  getAllOrganizationName
+
+Source Files:   
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/ShaOrganizationController.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganization.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaOrganizationDao.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
+  
+15 Method:
   getPortalPrivacyDirectives  
   
 Source Files:
@@ -245,7 +254,24 @@ Database Tables:
   dbPPMS_D.tblWidgetPrivacyDirective  
   dbPPMS_D.tblWidgetPrivacyDirectiveType
   
+16 Method:
+  getOrganization
+  
+Source Files:
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganization.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaOrganizationDao.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganizationType.java
+  
+Database Tables:
+  dbPPMS_D.tblShaOrganization
+  dbPPMS_D.tblShaOrganizationType
+
+View Portal
+===========
 Method:
+  
+1 Method: (Get Code for Website)
   getWidgetInfoByPortalId    
   
 Source Files:
