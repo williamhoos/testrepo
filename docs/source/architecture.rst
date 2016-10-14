@@ -39,12 +39,12 @@ As shown above, at the highest level, PEER is comprised of two components, one t
 
 .. Attention:: As part of migrating the PEER source code to open source, the PEER and Private Access components will be divided into separate databases so that the data tables that are exclusively used by PEER will be physically separated from the data tables that are used by the Private Access service.  At the conclusion of this work, we anticipate that the dbPPMS and dbPPMS_D will be used exclusively by Private Access (and not included in the OSS), and a third database for the administrative components of PEER and the API calls to Private Access will be reflected in the top level architecture.
 
-Administrative Component
+Administrative component
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The administration component of PEER is used by properly authorized and authenticated users to create and manage participant portals, as well as (to the extent permitted by each participant's privacy preference setttings) to discover, view and export data that is acquired through the operation of such portals.  
 
-As illustrated above, the administration component of PEER is comprised of the five functional areas shown in green in the above illustration. These include:
+As illustrated above, the administrative component of PEER is comprised of the five functional areas shown in green in the above illustration. These include:
 
   * Portal administration
   * Account management
@@ -503,7 +503,7 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblShaOrganizationType
   
 
-View Portal
+View portal
 ~~~~~~~~~~~
 
 The following methods are used to get the block of HTML code that, when posted as instructed, will display the fully configured PEER portal on the sponsor's website.  
