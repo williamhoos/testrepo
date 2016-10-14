@@ -542,7 +542,7 @@ The following methods are used to get the block of HTML code that, when posted a
   * dbPPMS_D.tblWidgetDemo
 
 Themes
-======
+~~~~~~
 
 .. _Method XX:
 
@@ -683,7 +683,7 @@ Themes
 
 
 Feature
-=======
+~~~~~~~
 
 .. _Method XX:
 
