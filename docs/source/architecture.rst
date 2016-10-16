@@ -62,16 +62,16 @@ Portal administration
 As shown, the portal administration section of the PEER admin contains twelve components that collectively enable the creation, modification and management of the appearance, content, and functional behaviour of the portals under a PEER sponsor's control, as well as the rights of staff members and researchers to access the administrative features and data acquired through the portal (obviously subject to the individuals' privacy and data sharing directives).
 
 
-.. _users and Permissions:
+.. _Users and Permissions:
 
 Users and permissions
 ---------------------
 
 PEER's administrative features can be provisioned into the following four levels:
 
-  * **PEER Super Admin** - this user(s) has access to all of the administrative functions for any portal in the PEER system, and the ability to designated the "Portal Super Admin" user(s).  Notwithstanding his or her having administrative access to any PEER portal, in order to protect the integrity of such portal's data, the PEER Super Admin rights do *not* permit the individual to access end user data without either (a) being explictly designated by the end user as a recipient of their information, or (b) being separately granted administrative, staff or researcher level access by the Portal Super Admin.
+  * **PEER Super Admin** - this user(s) has access to all of the administrative functions for any portal in the PEER system, and the ability to designate "Portal Super Admin" user(s).  Currently, all PEER Super Admin users are employees of Genetic Alliance. Notwithstanding such users' ability to access any PEER portal for administrative and support purposes, in order to protect the integrity of the user data contributed through these third-parties' portals, the PEER Super Admin rights do *not* permit access to end user data unless such user is (a) explictly authorized by the end user to access their information, or (b) separately granted administrative, staff or researcher level access by the Portal Super Admin.
 
-  * **Portal Super Admin** - this user(s) has the same administrative rights for their portal(s) as the PEER Super Admin - except that the Portal Super Admin's rights are limited to just their organization's portals. Super Admins can grant rights to other super admin users, staff members and recommended researchers.  This includes the following General Permissions authority:
+  * **Portal Super Admin** - this user(s) has the same administrative rights as the PEER Super Admin - except that the Portal Super Admin's rights are limited to just their organization's portals. Super Admins can grant rights to other super admin users, staff members and recommended researchers.  This includes the following General Permissions authority:
   
        * General settings
        * Portal code
@@ -100,7 +100,9 @@ In all of the foregoing cases, the [PEER or Portal] Super Administrator can eith
 .. Note:: At the conclusion of the migration, we will need to confirm with Genetic Alliance whether they wish for us to remove Private Acccess from having Super Administrative rights over the PEER Admin, and if so the relationship they prefer to replace this as a safety net for Genetic Alliance's personnel.
 
 
-**Method:**
+.. _Method UP-01:
+
+**Method UP-01:**
 
   **getPortalUsers**
 
@@ -130,7 +132,7 @@ Settings
 
 The following 14 method calls are made by PEER in connection with the variety of functions and administrative options that are managed from the Settings screen in the PEER Admin, shown here: 
 
-.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Methods+1-16.png
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Methods+SG-01+-+16.png
 
 .. _General settings:
 
