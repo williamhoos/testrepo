@@ -54,7 +54,6 @@ As illustrated above, the administrative component of PEER is comprised of the f
 
 These areas are in turn broken into a number of fourth tier functions illustrated in yellow above, and in some cases even further articulated into fifth (teal colored boxes), sixth (grey shaded boxes) and more granular functions.  In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. 
 
-.. |Attention| replace:: replacement *Test Heading*
 .. Attention:: The sections below define these elements for several of the more involved portions of the architecture.  These are provided for discussion purposes to ascertain whether this is too detailed, insufficiently detailed or just right.
 
 Portal administration
@@ -67,10 +66,6 @@ As shown, the portal administration section of the PEER admin contains twelve co
 
 Users and permissions
 ---------------------
-
-.. |br| raw:: html
-
-   <br />
 
 PEER's administrative features can be provisioned into the following four levels:
 
