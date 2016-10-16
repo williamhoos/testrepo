@@ -137,11 +137,11 @@ The following 14 method calls are made by PEER in connection with the variety of
 General settings
 ----------------
 
-.. _Method 01:
+.. _Method SG-01:
 
-The first of these methods is invoked upon clicking on the General Settings menu item.  
+The first of these methods (SG-01) is invoked upon clicking on the General Settings menu item.  
 
-**Method 01:**
+**Method SG-01:**
 
   **getAllSeekerTemplates**
 | **tblPlseekerTemplateService.getAllSeekerTemplate**
@@ -165,9 +165,9 @@ Saving general settings
 
 The next five methods are invoked when an administrative user clicks on the Save button at the bottom of the General Settings window in PEER:
 
-.. _Method 02:
+.. _Method SG-02:
 
-**Method 02:**
+**Method SG-02:**
 
   **savePortal**
 
@@ -185,9 +185,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblWidgetPrivacyDirectives  
 
 
-.. _Method 03:
+.. _Method SG-03:
 
-**Method 03:**
+**Method SG-03:**
 
    **getAllPortals**
 	
@@ -210,9 +210,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblPortalAdminMapping
 
 
-.. _Method 04:
+.. _Method SG-04:
 
-**Method 04:**
+**Method SG-04:**
 
      **updateDateForPortalparameters**
      
@@ -233,9 +233,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblLandingPages
 
 
-.. _Method 05:
+.. _Method SG-05:
 
-**Method 05:**
+**Method SG-05:**
 
      **getPortalAssociateOrganizations**
 	
@@ -257,9 +257,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblPortalAdminMapping
 
 
-.. _Method 06:
+.. _Method SG-06:
 
-**Method 06:**
+**Method SG-06:**
 
      **getPendingOrganizationMemberByOrganizationIds**
 	
@@ -279,9 +279,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblShaOrganization
 
 
-.. _Method 07:
+.. _Method SG-07:
 
-**Method 07:**
+**Method SG-07:**
 
      **getWidgetInfoByPortalId**
 	
@@ -305,9 +305,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblWidgetDemo
 
 
-.. _Method 08:
+.. _Method SG-08:
 
-**Method 08:**
+**Method SG-08:**
 
      **getAllOrganizationName**
 	
@@ -329,9 +329,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblShaOrganizationType
 
 
-.. _Method 09:
+.. _Method SG-09:
 
-**Method 09:**
+**Method SG-09:**
 
      **getOrganizationsByLandinPageId**
 	
@@ -346,9 +346,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblLandingPagesRecommendedOrganizations
 
 
-.. _Method 10:
+.. _Method SG-10:
 
-**Method 10:**
+**Method SG-10:**
 
      **getPortalPrivacyDirectives**
 	
@@ -368,9 +368,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblLandingPages
 
 
-.. _Method 11:
+.. _Method SG-11:
 
-**Method 11:**
+**Method SG-11:**
 
      **updateLastModifiedPortal**
 	
@@ -396,9 +396,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblLandingPages
 
 
-.. _Method 12:
+.. _Method SG-12:
 
-**Method 12:**
+**Method SG-12:**
 
      **getAllSeekerTemplates**
 	
@@ -419,9 +419,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblPLSeekerTemplate
 
 
-.. _Method 13:
+.. _Method SG-13:
 
-**Method 13:**
+**Method SG-13:**
 
      **getSeekerGroupNames  **
 	
@@ -442,9 +442,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblSeekerGroup
 
 
-.. _Method 14:
+.. _Method SG-14:
 
-**Method 14:**
+**Method SG-14:**
 
      **getAllOrganizationName**
 	
@@ -459,9 +459,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
 
 
-.. _Method 15:
+.. _Method SG-15:
 
-**Method 15:**
+**Method SG-15:**
 
      **getPortalPrivacyDirectives **
 	
@@ -481,9 +481,9 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblWidgetPrivacyDirectiveType
 
 
-.. _Method 16:
+.. _Method SG-16:
 
-**Method 16:**
+**Method SG-16:**
 
      **getOrganization**
 	
@@ -508,9 +508,9 @@ View portal
 
 The following methods are used to get the block of HTML code that, when posted as instructed, will display the fully configured PEER portal on the sponsor's website.  
 
-.. _Method 17:
+.. _Method VW-01:
 
-**Method 17:**
+**Method VW-01:**
 
      **getWidgetInfoByPortalId    **
 	
@@ -544,9 +544,9 @@ The following methods are used to get the block of HTML code that, when posted a
 Themes
 ~~~~~~
 
-.. _Method XX:
+.. _Method TH-01:
 
-**Method XX:**
+**Method TH-01:**
 
      **getWidgetInfoByPortalId**
 	
@@ -574,9 +574,9 @@ Themes
   * dbPPMS_D.tblWidgetDemo
   
   
-.. _Method XX:
+.. _Method TH-02:
 
-**Method XX:**
+**Method TH-02:**
 
      **getWidgetInfoDetails**
 	
@@ -593,9 +593,9 @@ Themes
   * dbPPMS_D.tblWidgetTheme
 
   
-.. _Method XX:
+.. _Method TH-03:
   
-**Method XX:**
+**Method TH-03:**
 
      **getWidgetInfoDetails**
 	
@@ -617,9 +617,9 @@ Themes
   * dbPPMS_D.tblWidgetDemo
 
   
-.. _Method XX:
+.. _Method TH-04:
 
-**Method XX:**
+**Method TH-04:**
 
      **cssUpload**
 	
@@ -654,9 +654,9 @@ Themes
   * dbPPMS_D.tblLandingPages
 
   
-.. _Method XX:
+.. _Method TH-05:
 
-**Method XX:**
+**Method TH-05:**
 
      **updateWidgetInfoDetails**
 	
@@ -685,9 +685,9 @@ Themes
 Feature
 ~~~~~~~
 
-.. _Method XX:
+.. _Method FE-01:
 
-**Method XX:**
+**Method FE-01:**
 
      **getFeatureDetails**
 	
@@ -712,9 +712,9 @@ Feature
   * dbPPMS_D.tblFeature
   * dbPPMS_D.tblFeaturedContentType
   
-.. _Method XX:
+.. _Method FE-02:
 
-**Method XX:**
+**Method FE-02:**
 
      **updateFeatureDetails**
 	
@@ -739,7 +739,6 @@ Feature
 
 Participant portal
 ~~~~~~~~~~~~~~~~~~
-
 
 
 Calls the Edit Guide API for the selected guide
