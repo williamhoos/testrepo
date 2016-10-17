@@ -638,7 +638,7 @@ getExportData()
 	exportSuccessEmail()
 	  Inputs:
 	    int accountId
-		const Mode
+	    String widgetId
 		
 	  Outputs:
 
