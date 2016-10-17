@@ -24,7 +24,7 @@ As an integral part of this effort, a number of potential development activities
 
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 5
    :glob:
    :caption: Table of Contents
 
@@ -42,9 +42,5 @@ As an integral part of this effort, a number of potential development activities
    researcher
    license
    faqs
+   glossary
    changelog
-
-
-.. |Attention| replace:: replacement *Test Heading*
-
-.. |br| raw:: html
