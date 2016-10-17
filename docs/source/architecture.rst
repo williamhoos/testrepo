@@ -46,11 +46,11 @@ The administration component of PEER is used by properly authorized and authenti
 
 As illustrated above, the administrative component of PEER is comprised of the five functional areas shown in green in the above illustration. These include:
 
-  * Portal administration
-  * Account management
-  * PA / PEER administration
-  * Search service
   * Data export service
+  * PA / PEER administration
+  * Account management
+  * Portal administration
+  * Search service
 
 These areas are in turn broken into a number of fourth tier functions illustrated in yellow above, and in some cases even further articulated into fifth (teal colored boxes), sixth (grey shaded boxes) and more granular functions.  In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. 
 
@@ -189,7 +189,7 @@ The following 16 method calls (SG-01 to SG-16) are made by PEER in connection wi
 .. _General settings:
 
 General settings
-^^^^^^^^^^^^^^^^
+""""""""""""""""
 
 .. _Method SG-01:
 
@@ -215,7 +215,7 @@ The first of these methods (SG-01) is invoked upon clicking on the General Setti
 .. _Save general settings:
 
 Saving general settings
-^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""
 
 The next five methods (SG-02 to SG-06) are invoked when an administrative user clicks on the Save button at the bottom of the General Settings window in PEER:
 
@@ -335,7 +335,7 @@ The next five methods (SG-02 to SG-06) are invoked when an administrative user c
 .. _Recommended organizations:
 
 Recommended organizations
-^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""
 
 The following three methods (SG-07 to SG-09) are invoked when an administrative user clicks on the Recommended Organizations menu item.
 
@@ -409,7 +409,7 @@ The following three methods (SG-07 to SG-09) are invoked when an administrative 
 .. _Update Organ Info:
 
 Update Organizational Info
---------------------------
+""""""""""""""""""""""""""
 
 And the final six methods (SG-10 to SG-16) are invoked upon an administrative user clicking on the Update Organization Information item on the Settings sub-menu.
 
@@ -574,18 +574,18 @@ And the final six methods (SG-10 to SG-16) are invoked upon an administrative us
 .. _Statistics :
 
 Statistics
-~~~~~~~~~~
+----------
 
 
 
 Surveys
-~~~~~~~
+-------
 
 
 
 
 Theme
-~~~~~
+-----
 
 The following five methods (TH-01 to TH-05) are invoked when an authorized user selects the Theme menu item from the administrative menu.
 
@@ -730,17 +730,17 @@ The following five methods (TH-01 to TH-05) are invoked when an authorized user 
 .. _Users and Permissions:
 
 Users and permissions
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 PEER's administrative features can be provisioned into the following four levels:
 
 PEER Super Admin 
-----------------
+""""""""""""""""
 
 This user(s) has access to all of the administrative functions for any portal in the PEER system, and the ability to designate "Portal Super Admin" user(s).  Currently, all PEER Super Admin users are employees of Genetic Alliance. Notwithstanding such users' ability to access any PEER portal's administrative and support features as part of Genetic Alliance's role as a steward from PEER, to protect the integrity of the user data contributed through these portals, the PEER Super Admin rights *do *not permit access* to any end user data unless the PEER Super Admin user is (a) explictly authorized by the end user to access their information, or (b) separately granted administrative, staff or researcher level access by the Portal Super Admin.
 
 Portal Super Admin
-------------------
+""""""""""""""""""
 
 This user(s) has the same administrative rights as the PEER Super Admin - *except that* the Portal Super Admin's rights are limited to just their organization's portals. Super Admins can grant rights to other super admin users, staff members and recommended researchers.  This includes the following General Permissions authority:
   
@@ -763,12 +763,12 @@ This user(s) has the same administrative rights as the PEER Super Admin - *excep
          * Proxy agent
       
 Staff member
-------------
+""""""""""""
 
 This user(s) is designated rights for any portals that the Administrator has the authority to manage, and may be granted any of the foregoing rights except for the right to delegate rights to other users and the right to edit individual user data
 
 Recommended researcher
-----------------------
+""""""""""""""""""""""
 
 This user(s) is designated data access rights for any portals that the Administrator has the authority to manage, but the Super Admin is not able to provision researchers with *any* of the General Permissions, or the right to edit individual data, or designate them as a proxy agent.
  
@@ -804,7 +804,7 @@ In all of the foregoing cases, the [PEER or Portal] Super Administrator can eith
 .. _View portal:
 
 View portal
-~~~~~~~~~~~
+-----------
 
 The following method (VW-01) is used to create the block of HTML code that, when posted as instructed on a website page, will display the fully configured PEER portal on the sponsor's website.
 
