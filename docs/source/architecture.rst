@@ -67,6 +67,608 @@ Authorized users (*i.e.*, authenticated persons with the proper administrative a
 
 The following methods (QU-01 and QU-XX) are invoked when an authorized user clicks on the View Results button on the Search Data page illustrated below.
 
+Search Registry Data
+~~~~~~~~~~~~~~~~~~~~
+
+.. _Method XX:
+
+**Method XX:**
+
+     **getAllPortals**
+	
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblUserAccount.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblUserAccountDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblUserAccountDaoImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPeerAccount.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPeerAccountDaoImpl.java
+
+  
+**Database tables:**
+  
+  * dbPPMS_D.user_account
+  * dbPPMS_D.tblLandingPages  
+  * dbPPMS_D.tblPeerAccount
+
+.. _Method XX:
+
+**Method XX:**
+
+     **getrsrequestdetail**
+	
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/ProfileInfoController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/ContactService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/ContactServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/RsProfileInfo.java
+  
+.. _Method XX:
+
+**Method XX:**
+
+     **getAccountAuthorities**
+	
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/permission/AuthorityManager.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/access/AuthorityManager.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/permission/AccountAuthorities.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPortalAdminMapping.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPortalAdminMappingDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblPeerAccount  
+  * dbPPMS_D.tblPortalAdminMapping
+
+.. _Method XX:
+
+**Method XX:**
+
+     **dashBoardAPI.php**
+	
+**Source files:**
+  
+  cron/dashBoardAPI.php
+  includes/functions.php
+  admin/classes/PAPermissions.php
+  
+**Database tables:**
+  
+  * peer_surveys_published.questions  
+  * peer_surveys_published.users
+  * peer_surveys_published.data
+  * peer_surveys_published.surveys
+  * peer_surveys_published.assign_survey
+  * peer_surveys_published.survey_instance_data
+  
+.. _Method XX:
+
+**Method XX:**
+
+     **getProfileDetails**
+	 
+**Inputs:**	 
+	
+  {  
+   **"foreignkeys"**:[  
+   ],
+   **"accessToken"**:null,
+   **"userAccountId"**:"(Integer)"
+  }
+
+**Outputs:**
+  Example of one data element returned from method call
+  
+  {  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":XX,
+   "data":[  
+      {  
+         "foreignKey":"XXX",
+         "participantFirstname":"FIRST_NAME",
+         "participantLastname":"LAST_NAME",
+         "access":"allow",
+         "city":"CITY",
+         "state":"STATE",
+         "country":"COUNTRY_CODE",
+         "surveyStatus":null,
+         "response":null,
+         "subjectId":XXX,
+         "address1":"ADDRESS1",
+         "address2":"ADDRESS2",
+         "address3":"ADDRESS3",
+         "cellPhone":"",
+         "homePhone":"HOME_PHONE",
+         "email":"EMAIL",
+         "idRequest":null,
+         "age":"AGE",
+         "dateCreated":"TIMESTAMP",
+         "profileType":"Child (Living)",
+         "exportAccess":null,
+         "dob":"DOB",
+         "profileZipCode":"PROFILE_ZIPCODE",
+         "accountZipCode":"ACCOUNT_ZIPCODE",
+         "contactFirstName":"CONTACT_FIRST_NAME",
+         "contactLastName":"CONTACT_LAST_NAME",
+         "contactCity":"CONTACT_CITY",
+         "contactState":"CONTACT_STATE",
+         "contactCountry":"CONTACT_COUNTRY_CODE"
+      },
+	  ...
+    ]
+  }
+  
+**Function Calls:**
+  
+  QU-01 ProfileDetailsRequest.getForeignkeys()
+    Inputs:
+	
+	Outputs:
+	  List<String> foreignkeys
+	
+  QU-02 ProfileDetailsRequest.getAccessToken()
+    Inputs:
+	
+	Outputs:
+	  String token
+	
+  QU-03 OIDCAuthenticationToken.getAccessTokenValue()
+    Inputs:
+	
+	Outputs:
+	  String token
+	
+  ProfileDetailsRequest.getUserAccountId()
+    Inputs:
+	
+	Outputs:
+	  Integer userAccountId
+	
+  UserAccountService.findUserAccountById()
+    Inputs:
+	  TblUserAccount useraccount
+	  Integer userAccountId
+	  
+	Outputs:
+	  TblUserAccount useraccount
+  
+	TblUserAccountDao.findById()
+	  Inputs:
+	    TblUserAccount useraccount
+		Integer userAccountId
+		
+	  Outputs:
+	    TblUserAccount
+	
+	TblUserAccount.getIsActive()
+	  Inputs:
+	  
+	  Outputs:
+	    Boolean
+	
+  TblUserAccount.getLoginName()
+    Inputs:
+	
+	Outputs:
+	  String loginname
+	
+  AESCryptoManager.decrypt()
+    Inputs:
+	  String encrypted
+	  
+	Outputs:
+	  String decrypted
+	
+  TblShaSubjetService.getForeignKeIds()
+    Inputs:
+	  Integer widgetId
+	  
+	Outputs:
+	  LIst<String> foreignkeys
+	
+  ProfileFilterService.getDiscoverableFKids()
+    Inputs:
+	  String token
+	  List<String> fullforeignkeys
+	  
+	Outputs:
+	  List<String>  filteredforeignkeys
+
+	
+  TblShaSubjetService.createProfileInfoRequest()
+    Inputs:
+	  List<String> foreignkeys
+	  
+	Outputs:
+	  List<ProfileInfoRequest> request
+
+	
+  ProfileFilterService.getProfileContactDetails()
+    Inputs:
+	  String token
+	  String username
+	  List<ProfileInfoRequest> request
+	  TimeZone timezone
+	  
+	Outputs:
+	  List<SubjectDetail> contacts
+	  
+  ProfileFilterService.getProfileExportDetails()
+    Inputs:
+	  String token
+	  String username
+	  List<ProfileInfoRequest> request
+	  TimeZone timezone
+	 
+	Outputs:
+	  List<SubjectDetails> subjects
+	  
+	getProfileDetails()
+	  Inputs:
+	    String token
+		String username
+		List<ProfileInfoRequest> request
+		const EXPORT
+		Timezone timezone
+	    
+      Outputs:
+	    List<SubjectDetails> subjects
+	
+  TblShaSubjetService.getSubjectDetails()
+    Inputs:
+	  List<SubjectDetails> contactDetails
+	  List<SubjectDetails> exportDetails
+	
+	Outputs:
+	  List<SubjectDetails> subjects
+	  
+	SubjectDetails.getAccess()
+	  Inputs:
+	  
+	  Outputs:
+	    String access
+		
+    SubjectDetails.setExportAccess()
+	  Inputs:
+	    String exportsetting
+		
+	  Outputs:
+	
+	SubjectDetails.setAge()
+	  Inputs:
+	    String age
+		
+	  Outputs:
+	
+	SubjectDetails.setProfileType()
+	  Inputs:
+	    String type
+		
+	  Outputs:
+	  
+	SubjectDetails.getProfileType()
+	  Inputs:
+	  
+	  Outputs:
+	    String profileType [Myself, Child, Parent, *, **]
+	  
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SubjectController.java
+	
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblUserAccount.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblUserAccountDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblUserAccountDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/util/AESCryptoManager.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/ProfileFilterService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/ProfileFilterServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/api/request/ProfileDetailsRequest.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/api/request/FilterRequest.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/UserAccountService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPeerAccount.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPeerAccountDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPeerAccountDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/UserAccountServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblShaSubjetService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblShaSubjetServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaSubjectDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaSubjectDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/PortalDetailsDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/PortalDetailsDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/PLPDSubjectDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/PLPDSubjectDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblAccountSubjectDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblAccountSubjectDaoImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/api/response/SubjectDetails.java
+
+**Database tables:**
+
+  * dbPPMS_D.user_account
+  * dbPPMS_D.tblShaSubject
+  * dbPPMS_D.viewPortalDetails
+  * dbPPMS_D.PLPDSubject
+  * dbPPMS_D.tblShaAccountSubject
+  
+.. _Method XX:
+
+Search Particpant Data
+~~~~~~~~~~~~~~~~~~~~~~
+
+This API saves the values from the search form so that it can be executed again by the cron script when it is time to save the results of this search query for export purposes.  
+
+Here is an example JSON object that is stored in the database table as a result of the following method XX call:
+
+{  
+   "accountId":"14",
+   "contact":"true",
+   "ids":[  
+      "44"
+   ],
+   "widgetId":"PEER-692",
+   "cmd":"all",
+   "fromDate":"Dec 10,2015",
+   "env":"live",
+   "toDate":"Oct 17,2016",
+   "is_dash":"true",
+   "portal_id":"692",
+   "isExportAll":"true",
+   "token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiNGMxY2UwZGUtZWM2Ni00Nzg4LWFlZTQtYjhmYzQ0YTRmY2NlIl0sImlzcyI6Imh0dHBzOlwvXC9jb25uZWN0LnByaXZhdGVhY2Nlc3MuY29tXC8iLCJleHAiOjE0NzY3NDkxNTAsImlhdCI6MTQ3NjcyMDM1MCwianRpIjoiMzMxNzYwY2EtNDI5Yy00NGQzLWI3ZDgtN2JiYzVjNDlkNTljIn0.WxeQ3jU_eqO412J_IF_mL_6UBZm0gpuVIpnfqeNekpjDAIhLroCbxpbQcUHwhEJeU1UpdonMVAuQjUcWms1Nq5SZoR_owUZeu2yBEEwQtd5R0nCOGOnrkeUEd3nCymK8lfa2HqWvKrktcLJmcs0h_u5NcsXrFO76LefEfhpz8X0",
+   "contactExport":"true",
+   "surveyExport":"true",
+   "strTimeZone":"America\/Los_Angeles",
+   "mode":"prod",
+   "selectedPortal":"PEER-692"
+}
+
+**Method XX:**
+
+     **saveExportSurveyData.php**
+
+**Inputs:**	 
+  accountId
+  contact
+  ids[]
+  widgetId
+  cmd
+  fromDate
+  env
+  toDate
+  is_dash
+  portal_id
+  isExportAll
+  token
+  contactExport
+  surveyExport
+  strTimeZone
+  
+.. Note:: Need to modify API to accept JSON structure as input instead of formdata
+  
+**Outputs:**	 
+  Example of element returned from method call
+  
+  {  
+   "message":"Your requested file is in queue. Please check status in My Exports tab.",
+   "isSuccess":true,
+   "insert_id":1076
+  }
+  
+**Source files:**
+  
+  admin/exportcontacts/saveExportSurveyData.php
+  includes/functions.php
+  admin/includes/admin_functions.php
+  
+**Database tables:**
+
+  * peer_surveys_published.my_export
+  
+Export Data CRON
+~~~~~~~~~~~~~~~~
+
+This script executes on a set schedule to export any pending requests.  Here is an example crontab entry (set to run every 5 minutes):
+
+  */5 * * * * /usr/bin/php /path/to/PST/source/admin/exportSurveyData.php > /home/ubuntu/cron/exportSurveyData.log
+  
+**Method XX:**
+
+  **exportSurveyData.php**
+
+**Function Calls:**
+
+getExportData()
+  Inputs:
+    Object exportSettings
+	String loginUrl
+  
+  Outputs:
+ 
+   getSurveyDetailsFromId()
+     Inputs:
+	   int surveyId
+	   Object mysqli
+	 
+	 Outputs:
+	   Array<Object> surveyDetails
+	   
+    getSurveyUsers()
+      Inputs:
+	    int surveyId
+		String widgetId
+		String dateRange
+	  
+	  Outputs:
+	    Array<Object> users
+		
+	getForeignKeyFromUserIds()
+	  Inputs:
+	    Array userIds
+	  
+	  Outputs:
+	    Array<String>
+		
+	getExportDetailsFromApi()
+	  Inputs:
+	    Object requestData
+		Array<String> foreignkeys
+		Integer portalId
+	 	 
+	  Outputs:
+	    Object exportDetails
+		
+    getAllowForeignKeys()
+	  Inputs:
+	    Object exportDetails
+	  
+	  Outputs:
+	    Object filteredExportDetails
+		
+	getUserIdsFromForeignKeys()
+	  Inputs:
+	    Array<String> foreignKeys
+	  
+	  Outputs:
+	    Array<int> userIds
+		
+	getPortalSurveys()
+	  Inputs:
+	    int portalId
+	  
+	  Outputs:
+	    Array<Object> surveys
+		
+    getSurveyDetailsFromId()
+	  Inputs:
+	    Array<Object> surveys
+		Object mysqli
+	  
+	  Outputs:
+	    Array<Object> surveys
+		
+	getResponseMetatagsExport()
+	  Inputs:
+	    String questionType
+		Array<Object> responses
+		Object mysqli
+		Array<Object> choices
+		int questionId
+	  
+	  Outputs:
+	    Object metatags
+		
+	getContacts()
+	  Inputs:
+	    Object exportDetails
+		
+	  Outputs:
+	    Array<Object> contactDetails
+		
+	getSurveyInstances()
+	  Inputs:
+	    Array<String> foreignKeys
+		String whereClause
+		int portalId
+	  
+	  Outputs:
+	    Array<Object> instanceDetails
+		
+    s3ExportSave()
+	  Inputs:
+	    String filepath
+		String filename
+		String mode
+		int exportId
+		Object mysqli
+	  
+	  Outputs:
+	  
+	exportSuccessEmail()
+	  Inputs:
+	    int accountId
+		const Mode
+		
+	  Outputs:
+
+**Source files:**
+  
+  admin/exportSurveyData.php
+  includes/functions.php
+  Classes/xlsxwriter.class.php
+  includes/dbcon.php
+  
+**Database tables:**
+
+  * peer_surveys_published.my_export
+  * peer_surveys_published.surveys
+  * peer_surveys_published.data
+  * peer_surveys_published.users
+  * peer_surveys_published.questions
+  * peer_surveys_published.responses
+  * peer_surveys_published.choices
+  * peer_surveys_published.question_group
+  * peer_surveys_published.segment_group
+  * peer_surveys_published.survey_sections
+  * peer_surveys_published.dynamic_questions
+  * peer_surveys_published.meta_tags
+  * peer_surveys_published.file_upload
+  
+Search Survey Data
+~~~~~~~~~~~~~~~~~~
+
 .. _Export data:
 
 Export data
