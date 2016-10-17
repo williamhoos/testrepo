@@ -1,6 +1,17 @@
 Changelog
 =========
 
+2016-10-17 
+~~~~~~~~~~
+
+* Revised order of presentation :ref:`Architecture top` description to follow same order as the visual graphics.
+
+
+2016-10-15
+~~~~~~~~~~
+
+* Added methods call descriptions for :ref:`Features`, :ref:`theme` and :ref:`View portal` subsections. 
+
 2016-10-13
 ~~~~~~~~~~
 
