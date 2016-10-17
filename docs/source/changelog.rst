@@ -4,7 +4,7 @@ Changelog
 2016-10-17 
 ~~~~~~~~~~
 
-* Revised order of presentation :ref:`Architecture top` description to follow same order as the visual graphics.
+* Revised order of presentation :ref:`Architecture top` description to follow the order of the visual graphics.
 
 
 2016-10-15
