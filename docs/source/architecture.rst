@@ -40,7 +40,7 @@ As shown above, at the highest level, PEER is comprised of two components, one t
 .. Attention:: As part of migrating the PEER source code to open source, the PEER and Private Access components will be divided into separate databases so that the data tables that are exclusively used by PEER will be physically separated from the data tables that are used by the Private Access service.  At the conclusion of this work, we anticipate that the dbPPMS and dbPPMS_D will be used exclusively by Private Access (and not included in the OSS), and a third database for the administrative components of PEER and the API calls to Private Access will be reflected in the top level architecture.
 
 Administrative component
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
 
 The administration component of PEER is used by properly authorized and authenticated users to create and manage participant portals, as well as (to the extent permitted by each participant's privacy preference setttings) to discover, view and export data that is acquired through the operation of such portals.  
 
@@ -54,7 +54,18 @@ As illustrated above, the administrative component of PEER is comprised of the f
 
 These areas are in turn broken into a number of fourth tier functions illustrated in yellow above, and in some cases even further articulated into fifth (teal colored boxes), sixth (grey shaded boxes) and more granular functions.  In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. 
 
-.. Attention:: The sections below define these elements for several of the more involved portions of the architecture.  These are provided for discussion purposes to ascertain whether this is too detailed, insufficiently detailed or just right.
+
+Data export service
+~~~~~~~~~~~~~~~~~~~
+
+
+PA/PEER admin
+~~~~~~~~~~~~~
+
+
+Account management
+~~~~~~~~~~~~~~~~~~
+
 
 Portal administration
 ~~~~~~~~~~~~~~~~~~~~~
@@ -830,10 +841,24 @@ The following method (VW-01) is used to create the block of HTML code that, when
   * dbPPMS_D.tblWidgetInfo
   * dbPPMS_D.tblWidgetDemo
 
+Search service
+~~~~~~~~~~~~~~
 
 
-Participant portal
+Participant portal component
+============================
+
+Account management
 ~~~~~~~~~~~~~~~~~~
+
+Profile management
+~~~~~~~~~~~~~~~~~~
+
+PST surveys
+~~~~~~~~~~~
+
+Peer survey tools (PST) based surveys....
+
 
 
 Calls the Edit Guide API for the selected guide
