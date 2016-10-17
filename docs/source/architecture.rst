@@ -280,6 +280,10 @@ The next five methods (SG-02 to SG-06) are invoked when an administrative user c
   * dbPPMS_D.tblShaOrganizationMember
   * dbPPMS_D.tblShaOrganization
 
+.. _Recommended organizations:
+
+Recommended organizations
+-------------------------
 
 The following three methods (SG-07 to SG-09) are invoked when an administrative user clicks on the Recommended Organizations menu item.
 
@@ -349,6 +353,11 @@ The following three methods (SG-07 to SG-09) are invoked when an administrative 
   
   * dbPPMS_D.tblLandingPagesRecommendedOrganizations
 
+
+.. _Update Organ Info:
+
+Update Organizational Info
+--------------------------
 
 And the final six methods (SG-10 to SG-16) are invoked upon an administrative user clicking on the Update Organization Information item on the Settings sub-menu.
 
@@ -747,6 +756,11 @@ The following methods (FE-01 and FE-02) are invoked when an authorized user sele
   
   * dbPPMS_D.tblFeature
   
+
+Surveys
+-------
+
+
 
 Participant portal
 ~~~~~~~~~~~~~~~~~~
