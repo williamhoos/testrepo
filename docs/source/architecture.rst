@@ -56,19 +56,19 @@ These areas are in turn broken into a number of fourth tier functions illustrate
 
 
 Data export service
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 
 PA/PEER admin
-^^^^^^^^^^^^^
+-------------
 
 
 Account management
-~~~~~~~~~~~~~~~~~~
+------------------
 
 
 Portal administration
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 As shown, the portal administration section of the PEER admin contains twelve components that collectively enable the creation, modification and management of the appearance, content, and functional behaviour of the portals under a PEER sponsor's control, as well as the rights of staff members and researchers to access the administrative features and data acquired through the portal (obviously subject to the individuals' privacy and data sharing directives).
 
@@ -77,7 +77,7 @@ As shown, the portal administration section of the PEER admin contains twelve co
 .. _Dashboard Messages:
 
 Dashboard Messages
-------------------
+^^^^^^^^^^^^^^^^^^
 
 
 
@@ -85,7 +85,7 @@ Dashboard Messages
 .. _Export Data:
 
 Export Data
------------
+^^^^^^^^^^^
 
 
 
@@ -94,7 +94,7 @@ Export Data
 .. _Features :
 
 Features
---------
+^^^^^^^^
 
 The following methods (FE-01 and FE-02) are invoked when an authorized user selects the Features menu item on the administrative menu.
 
@@ -154,7 +154,7 @@ The following methods (FE-01 and FE-02) are invoked when an authorized user sele
 .. _Guides :
 
 Guides
-------
+^^^^^^
 
 
 
@@ -162,7 +162,7 @@ Guides
 .. _Referral Codes:
 
 Referral Codes
---------------
+^^^^^^^^^^^^^^
 
 
 
@@ -170,7 +170,7 @@ Referral Codes
 .. _Remove Portal:
 
 Remove Portal
--------------
+^^^^^^^^^^^^^
 
 
 
@@ -180,7 +180,7 @@ Remove Portal
 .. _Settings :
 
 Settings
---------
+^^^^^^^^
 
 The following 16 method calls (SG-01 to SG-16) are made by PEER in connection with the variety of functions and administrative options that are managed from the Settings screen in the PEER Admin, shown here: 
 
@@ -574,18 +574,18 @@ And the final six methods (SG-10 to SG-16) are invoked upon an administrative us
 .. _Statistics :
 
 Statistics
-----------
+^^^^^^^^^^
 
 
 
 Surveys
--------
+^^^^^^^
 
 
 
 
 Theme
------
+^^^^^
 
 The following five methods (TH-01 to TH-05) are invoked when an authorized user selects the Theme menu item from the administrative menu.
 
@@ -730,7 +730,7 @@ The following five methods (TH-01 to TH-05) are invoked when an authorized user 
 .. _Users and Permissions:
 
 Users and permissions
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 PEER's administrative features can be provisioned into the following four levels:
 
@@ -804,7 +804,7 @@ In all of the foregoing cases, the [PEER or Portal] Super Administrator can eith
 .. _View portal:
 
 View portal
------------
+^^^^^^^^^^^
 
 The following method (VW-01) is used to create the block of HTML code that, when posted as instructed on a website page, will display the fully configured PEER portal on the sponsor's website.
 
@@ -842,20 +842,20 @@ The following method (VW-01) is used to create the block of HTML code that, when
   * dbPPMS_D.tblWidgetDemo
 
 Search service
-~~~~~~~~~~~~~~
+--------------
 
 
 Participant portal component
 ============================
 
 Account management
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Profile management
-~~~~~~~~~~~~~~~~~~
+------------------
 
 PST surveys
-~~~~~~~~~~~
+-----------
 
 Peer survey tools (PST) based surveys....
 
