@@ -41,7 +41,7 @@ As shown above, at the highest level, PEER is comprised of two components, one t
 
 .. _PEER Admin:
 
-PEER Admin component
+PEER admin component
 ********************
 
 The administration component of PEER is used by properly authorized and authenticated users to create and manage participant portals, as well as (to the extent permitted by each participant's privacy preference setttings) to discover, view and export data that is acquired through the operation of such portals.  
@@ -183,6 +183,8 @@ The following methods (FE-01 and FE-02) are invoked when an authorized user sele
 Guides
 ------
 
+
+Calls the Edit Guide API for the selected guide
 
 
 
@@ -888,11 +890,124 @@ Profile management
 PST surveys
 ===========
 
-Peer survey tools (PST) based surveys....
+PEER survey tools (PST) based surveys....
 
 
+.. _PA connect:
+
+PA Connect component
+********************
+
+The identity and authorization component of Private Access is referred to as the "PA Connect" service.  
+
+As illustrated above, this service component of Private Access is comprised of two functional areas:
+
+  * Profile
+  * Account services
+
+These areas are in turn broken into a number of fourth tier functions illustrated in yellow in the above :ref:`PA Architecture`, and further articulated into the following fifth (teal colored boxes) functions.  In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. 
+
+Organization
+============
+
+.. _Profile info:
+
+Profile
+-------
+
+Profile information
+^^^^^^^^^^^^^^^^^^^
+
+Notifications
+^^^^^^^^^^^^^
+
+Privacy settings
+^^^^^^^^^^^^^^^^
+
+Proxy authorizations
+^^^^^^^^^^^^^^^^^^^^
 
 
+User accounts
+=============
+
+Account services
+----------------
+
+Account details
+^^^^^^^^^^^^^^^
+
+Additional settings
+^^^^^^^^^^^^^^^^^^^
+
+Audit log
+^^^^^^^^^
+
+Challenge questions
+^^^^^^^^^^^^^^^^^^^
+
+Update password
+^^^^^^^^^^^^^^^
+
+.. _PrivacyLayer :
+
+PrivacyLayer component
+**********************
+
+The privacy directives component of Private Access is referred to as the "PrivacyLayer" (R) service.  
+
+As illustrated above, this service component of Private Access is also comprised of two functional areas:
+
+  * PrivacyLayer services
+  * Privacy directives
+
+PrivacyLayer service
+====================
+
+PD filter services
+------------------
+
+Filter contact service
+^^^^^^^^^^^^^^^^^^^^^^
+
+Filter discover service
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Filter export service
+^^^^^^^^^^^^^^^^^^^^^
 
 
-Calls the Edit Guide API for the selected guide
+Privacy directives
+==================
+
+Organization
+------------
+
+Researcher
+----------
+
+Subject
+-------
+
+Data element
+------------
+
+This component was implemented as part of the data segmentation project undertaken to demonstrate the use of PrivacyLayer in conjunction with whole genome sequence data.
+
+Privacy directive settings
+--------------------------
+
+Privacy directives (PDs) are...
+
+Find/analyze
+^^^^^^^^^^^^
+
+View
+^^^^
+
+Export/link
+^^^^^^^^^^^
+
+Contact 
+^^^^^^^
+
