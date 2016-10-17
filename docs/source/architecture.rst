@@ -41,26 +41,37 @@ As shown above, at the highest level, PEER is comprised of two components, one t
 
 .. _PEER Admin:
 
-PEER admin component
+PEER Admin component
 ********************
 
 The administration component of PEER is used by properly authorized and authenticated users to create and manage participant portals, as well as (to the extent permitted by each participant's privacy preference setttings) to discover, view and export data that is acquired through the operation of such portals.  
 
 As illustrated above, the administrative component of PEER is comprised of the five functional areas shown in green in the above illustration. These include:
 
-  * Data export service
-  * PA / PEER administration
+  * Query data 
+  * Export data 
+  * Super admin functions
   * Account management
-  * Portal administration
-  * Search service
+  * Portal management
 
 These areas are in turn broken into a number of fourth tier functions illustrated in yellow above, and in some cases even further articulated into fifth (teal colored boxes), sixth (grey shaded boxes) and more granular functions.  In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. 
 
+.. _Query data:
 
-.. _Data export:
+Query data
+==========
 
-Data export service
-===================
+Authorized users (*i.e.*, authenticated persons with the proper administrative and/or researcher privileges) are able to initiate inquiries of PEER data and receive search results based on the permission level that is either pre-authorized or expressly consented by the PEER participant to whom the data search results pertain.  Such queries are presently initiated from the Search Data menu on the administrative dashboard, and is limited to a single PEER portal.
+
+.. Note:: One of the roadmap items for PEER that we may wish to enable before opening the PEER code to the open source community is cross-portal search.  A search UI has been developed and all of the foundational elements are in place to enable this, but the budget for the implementation has not existed. 
+
+The following methods (QU-01 and QU-XX) are invoked when an authorized user clicks on the View Results button on the Search Data page illustrated below.
+
+.. _Export data:
+
+Export data
+===========
+
 
 
 
