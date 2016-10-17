@@ -70,7 +70,7 @@ Users and permissions
 PEER's administrative features can be provisioned into the following four levels:
 
   * **PEER Super Admin** - this user(s) has access to all of the administrative functions for any portal in the PEER system, and the ability to designate "Portal Super Admin" user(s).  Currently, all PEER Super Admin users are employees of Genetic Alliance. Notwithstanding such users' ability to access any PEER portal's administrative and support features as part of Genetic Alliance's role as a steward from PEER, to protect the integrity of the user data contributed through these portals, the PEER Super Admin rights *do *not permit access* to any end user data unless the PEER Super Admin user is (a) explictly authorized by the end user to access their information, or (b) separately granted administrative, staff or researcher level access by the Portal Super Admin.
-<br />
+
   * **Portal Super Admin** - this user(s) has the same administrative rights as the PEER Super Admin - *except that* the Portal Super Admin's rights are limited to just their organization's portals. Super Admins can grant rights to other super admin users, staff members and recommended researchers.  This includes the following General Permissions authority:
   
        * General settings
@@ -130,7 +130,7 @@ In all of the foregoing cases, the [PEER or Portal] Super Administrator can eith
 Settings
 ~~~~~~~~
 
-The following 14 method calls are made by PEER in connection with the variety of functions and administrative options that are managed from the Settings screen in the PEER Admin, shown here: 
+The following 16 method calls (SG-01 to SG-16) are made by PEER in connection with the variety of functions and administrative options that are managed from the Settings screen in the PEER Admin, shown here: 
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Methods+SG-01+-+16.png
 
@@ -165,7 +165,7 @@ The first of these methods (SG-01) is invoked upon clicking on the General Setti
 Saving general settings
 -----------------------
 
-The next five methods are invoked when an administrative user clicks on the Save button at the bottom of the General Settings window in PEER:
+The next five methods (SG-02 to SG-06) are invoked when an administrative user clicks on the Save button at the bottom of the General Settings window in PEER:
 
 .. _Method SG-02:
 
@@ -281,6 +281,8 @@ The next five methods are invoked when an administrative user clicks on the Save
   * dbPPMS_D.tblShaOrganization
 
 
+The following three methods (SG-07 to SG-09) are invoked when an administrative user clicks on the Recommended Organizations menu item.
+
 .. _Method SG-07:
 
 **Method SG-07:**
@@ -347,6 +349,8 @@ The next five methods are invoked when an administrative user clicks on the Save
   
   * dbPPMS_D.tblLandingPagesRecommendedOrganizations
 
+
+And the final six methods (SG-10 to SG-16) are invoked upon an administrative user clicking on the Update Organization Information item on the Settings sub-menu.
 
 .. _Method SG-10:
 
@@ -508,7 +512,7 @@ The next five methods are invoked when an administrative user clicks on the Save
 View portal
 ~~~~~~~~~~~
 
-The following methods are used to get the block of HTML code that, when posted as instructed, will display the fully configured PEER portal on the sponsor's website.  
+The following method (VW-01) is used to create the block of HTML code that, when posted as instructed on a website page, will display the fully configured PEER portal on the sponsor's website.
 
 .. _Method VW-01:
 
@@ -543,8 +547,11 @@ The following methods are used to get the block of HTML code that, when posted a
   * dbPPMS_D.tblWidgetInfo
   * dbPPMS_D.tblWidgetDemo
 
+
 Themes
 ~~~~~~
+
+The following five methods (TH-01 to TH-05) are invoked when an authorized user selects the Theme menu item from the administrative menu.
 
 .. _Method TH-01:
 
@@ -686,6 +693,8 @@ Themes
 
 Feature
 ~~~~~~~
+
+The following methods (FE-01 and FE-02) are invoked when an authorized user selects the Features menu item on the administrative menu.
 
 .. _Method FE-01:
 
