@@ -154,7 +154,7 @@ The following methods (FE-01 and FE-02) are invoked when an authorized user sele
 .. _Guides :
 
 Guides
-~~~~~~
+------
 
 
 
@@ -162,7 +162,7 @@ Guides
 .. _Referral Codes:
 
 Referral Codes
-~~~~~~~~~~~~~~
+--------------
 
 
 
@@ -170,7 +170,7 @@ Referral Codes
 .. _Remove Portal:
 
 Remove Portal
-~~~~~~~~~~~~~
+-------------
 
 
 
@@ -180,7 +180,7 @@ Remove Portal
 .. _Settings :
 
 Settings
-~~~~~~~~
+--------
 
 The following 16 method calls (SG-01 to SG-16) are made by PEER in connection with the variety of functions and administrative options that are managed from the Settings screen in the PEER Admin, shown here: 
 
@@ -189,7 +189,7 @@ The following 16 method calls (SG-01 to SG-16) are made by PEER in connection wi
 .. _General settings:
 
 General settings
-----------------
+^^^^^^^^^^^^^^^^
 
 .. _Method SG-01:
 
@@ -215,7 +215,7 @@ The first of these methods (SG-01) is invoked upon clicking on the General Setti
 .. _Save general settings:
 
 Saving general settings
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The next five methods (SG-02 to SG-06) are invoked when an administrative user clicks on the Save button at the bottom of the General Settings window in PEER:
 
@@ -335,7 +335,7 @@ The next five methods (SG-02 to SG-06) are invoked when an administrative user c
 .. _Recommended organizations:
 
 Recommended organizations
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following three methods (SG-07 to SG-09) are invoked when an administrative user clicks on the Recommended Organizations menu item.
 
