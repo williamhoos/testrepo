@@ -57,72 +57,113 @@ These areas are in turn broken into a number of fourth tier functions illustrate
 .. Attention:: The sections below define these elements for several of the more involved portions of the architecture.  These are provided for discussion purposes to ascertain whether this is too detailed, insufficiently detailed or just right.
 
 Portal administration
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 As shown, the portal administration section of the PEER admin contains twelve components that collectively enable the creation, modification and management of the appearance, content, and functional behaviour of the portals under a PEER sponsor's control, as well as the rights of staff members and researchers to access the administrative features and data acquired through the portal (obviously subject to the individuals' privacy and data sharing directives).
 
 
-.. _Users and Permissions:
 
-Users and permissions
----------------------
+.. _Dashboard Messages:
 
-PEER's administrative features can be provisioned into the following four levels:
-
-  * **PEER Super Admin** - this user(s) has access to all of the administrative functions for any portal in the PEER system, and the ability to designate "Portal Super Admin" user(s).  Currently, all PEER Super Admin users are employees of Genetic Alliance. Notwithstanding such users' ability to access any PEER portal's administrative and support features as part of Genetic Alliance's role as a steward from PEER, to protect the integrity of the user data contributed through these portals, the PEER Super Admin rights *do *not permit access* to any end user data unless the PEER Super Admin user is (a) explictly authorized by the end user to access their information, or (b) separately granted administrative, staff or researcher level access by the Portal Super Admin.
-
-  * **Portal Super Admin** - this user(s) has the same administrative rights as the PEER Super Admin - *except that* the Portal Super Admin's rights are limited to just their organization's portals. Super Admins can grant rights to other super admin users, staff members and recommended researchers.  This includes the following General Permissions authority:
-  
-       * General settings
-       * Portal code
-       * Theme and landing page
-       * Surveys
-       * Guides
-       * Referral codes
-       * Update organization information
-       * Delete protals
-
-   It also includes the following data access permissions:
-
-         * View aggregate data
-         * View individal data
-         * Edit individals data
-         * Export survey resppnses
-         * View/download contact information
-         * Proxy agent
-      
-  * **Staff member** - this user(s) is designated rights for any portals that the Administrator has the authority to manage, and may be granted any of the foregoing rights except for the right to delegate rights to other users and the right to edit individual user data
-
-  * **Recommended researcher** - this user(s) is designated data access rights for any portals that the Administrator has the authority to manage, but the Super Admin is not able to provision researchers with *any* of the General Permissions, or the right to edit individual data, or designate them as a proxy agent.
- 
-In all of the foregoing cases, the [PEER or Portal] Super Administrator can either assign portal administration rights to an existing account or approve requests to set up a new account.  
-
-.. Note:: At the conclusion of the migration, we will need to confirm with Genetic Alliance whether they wish for us to remove Private Acccess from having Super Administrative rights over the PEER Admin, and if so the relationship they prefer to replace this as a safety net for Genetic Alliance's personnel.
+Dashboard Messages
+~~~~~~~~~~~~~~~~~~
 
 
-.. _Method UP-01:
 
-**Method UP-01:**
 
-  **getPortalUsers**
+.. _Export Data:
 
-**Purpose or Use:**
-  
-.. Attention:: Need to add a description for the foregoing method.
-  
+Export Data
+~~~~~~~~~~~
+
+
+
+
+
+.. _Features :
+
+Features
+~~~~~~~~
+
+The following methods (FE-01 and FE-02) are invoked when an authorized user selects the Features menu item on the administrative menu.
+
+.. _Method FE-01:
+
+**Method FE-01:**
+
+     **getFeatureDetails**
+	
 **Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/FeatureController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/FeatureService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/FeatureServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeaturedContentType.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeature.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblFeatureDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblFeatureDaoImpl.java
 
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PrivateAccessController.java
+**Database tables:**
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalAdminMappingServiceImpl.java
+  * dbPPMS_D.tblFeature
+  * dbPPMS_D.tblFeaturedContentType
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPortalAdminMapping.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
-  
-**Database table** 
+.. _Method FE-02:
 
-  * dbPPMS_D.tblPortalAdminMapping
+**Method FE-02:**
+
+     **updateFeatureDetails**
+	
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/FeatureController.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/FeatureService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/FeatureServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeature.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblFeatureDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblFeatureDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblFeature
+
+
+
+.. _Guides :
+
+Guides
+~~~~~~
+
+
+
+
+.. _Referral Codes:
+
+Referral Codes
+~~~~~~~~~~~~~~
+
+
+
+
+.. _Remove Portal:
+
+Remove Portal
+~~~~~~~~~~~~~
+
+
+
+
 
 
 .. _Settings :
@@ -516,49 +557,24 @@ And the final six methods (SG-10 to SG-16) are invoked upon an administrative us
   
   * dbPPMS_D.tblShaOrganization
   * dbPPMS_D.tblShaOrganizationType
-  
-
-View portal
-~~~~~~~~~~~
-
-The following method (VW-01) is used to create the block of HTML code that, when posted as instructed on a website page, will display the fully configured PEER portal on the sponsor's website.
-
-.. _Method VW-01:
-
-**Method VW-01:**
-
-     **getWidgetInfoByPortalId    **
-	
-**Source files:**
-
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/WidgetInfoController.java  
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetInfo.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetInfoDao.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetInfoDaoImpl.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetDemoDao.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetDemoDaoImpl.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetInfoService.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetInfoServiceImpl.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetDemoService.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetDemoServiceImpl.java
-
-**Database tables:**
-  
-  * dbPPMS_D.tblWidgetInfo
-  * dbPPMS_D.tblWidgetDemo
 
 
-Themes
-~~~~~~
+
+.. _Statistics :
+
+Statistics
+~~~~~~~~~~
+
+
+
+Surveys
+~~~~~~~
+
+
+
+
+Theme
+~~~~~
 
 The following five methods (TH-01 to TH-05) are invoked when an authorized user selects the Theme menu item from the administrative menu.
 
@@ -700,65 +716,119 @@ The following five methods (TH-01 to TH-05) are invoked when an authorized user 
   * dbPPMS_D.tblWidgetDemo
 
 
-Feature
-~~~~~~~
+.. _Users and Permissions:
 
-The following methods (FE-01 and FE-02) are invoked when an authorized user selects the Features menu item on the administrative menu.
+Users and permissions
+~~~~~~~~~~~~~~~~~~~~~
 
-.. _Method FE-01:
+PEER's administrative features can be provisioned into the following four levels:
 
-**Method FE-01:**
+PEER Super Admin 
+----------------
 
-     **getFeatureDetails**
+This user(s) has access to all of the administrative functions for any portal in the PEER system, and the ability to designate "Portal Super Admin" user(s).  Currently, all PEER Super Admin users are employees of Genetic Alliance. Notwithstanding such users' ability to access any PEER portal's administrative and support features as part of Genetic Alliance's role as a steward from PEER, to protect the integrity of the user data contributed through these portals, the PEER Super Admin rights *do *not permit access* to any end user data unless the PEER Super Admin user is (a) explictly authorized by the end user to access their information, or (b) separately granted administrative, staff or researcher level access by the Portal Super Admin.
+
+Portal Super Admin
+------------------
+
+This user(s) has the same administrative rights as the PEER Super Admin - *except that* the Portal Super Admin's rights are limited to just their organization's portals. Super Admins can grant rights to other super admin users, staff members and recommended researchers.  This includes the following General Permissions authority:
+  
+       * General settings
+       * Portal code
+       * Theme and landing page
+       * Surveys
+       * Guides
+       * Referral codes
+       * Update organization information
+       * Delete protals
+
+   It also includes the following data access permissions:
+
+         * View aggregate data
+         * View individal data
+         * Edit individals data
+         * Export survey resppnses
+         * View/download contact information
+         * Proxy agent
+      
+Staff member
+------------
+
+This user(s) is designated rights for any portals that the Administrator has the authority to manage, and may be granted any of the foregoing rights except for the right to delegate rights to other users and the right to edit individual user data
+
+Recommended researcher
+----------------------
+
+This user(s) is designated data access rights for any portals that the Administrator has the authority to manage, but the Super Admin is not able to provision researchers with *any* of the General Permissions, or the right to edit individual data, or designate them as a proxy agent.
+ 
+In all of the foregoing cases, the [PEER or Portal] Super Administrator can either assign portal administration rights to an existing account or approve requests to set up a new account.  
+
+.. Note:: At the conclusion of the migration, we will need to confirm with Genetic Alliance whether they wish for us to remove Private Acccess from having Super Administrative rights over the PEER Admin, and if so the relationship they prefer to replace this as a safety net for Genetic Alliance's personnel.
+
+.. _Method UP-01:
+
+**Method UP-01:**
+
+  **getPortalUsers**
+
+**Purpose or Use:**
+  
+.. Attention:: Need to add a description for the foregoing method.
+  
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PrivateAccessController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalAdminMappingServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPortalAdminMapping.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
+  
+**Database table** 
+
+  * dbPPMS_D.tblPortalAdminMapping
+
+
+.. _View portal:
+
+View portal
+~~~~~~~~~~~
+
+The following method (VW-01) is used to create the block of HTML code that, when posted as instructed on a website page, will display the fully configured PEER portal on the sponsor's website.
+
+.. _Method VW-01:
+
+**Method VW-01:**
+
+     **getWidgetInfoByPortalId    **
 	
 **Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/WidgetInfoController.java  
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/FeatureController.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetInfo.java
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/FeatureService.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetInfoDao.java
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/FeatureServiceImpl.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetInfoDaoImpl.java
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeaturedContentType.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetDemoDao.java
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeature.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetDemoDaoImpl.java
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblFeatureDao.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetInfoService.java
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblFeatureDaoImpl.java
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetInfoServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetDemoService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetDemoServiceImpl.java
 
 **Database tables:**
   
-  * dbPPMS_D.tblFeature
-  * dbPPMS_D.tblFeaturedContentType
-  
-.. _Method FE-02:
-
-**Method FE-02:**
-
-     **updateFeatureDetails**
-	
-**Source files:**
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/FeatureController.java
-
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/FeatureService.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/FeatureServiceImpl.java
-
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeature.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblFeatureDao.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblFeatureDaoImpl.java
-
-**Database tables:**
-  
-  * dbPPMS_D.tblFeature
-  
-
-Surveys
--------
+  * dbPPMS_D.tblWidgetInfo
+  * dbPPMS_D.tblWidgetDemo
 
 
 
