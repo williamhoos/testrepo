@@ -951,10 +951,10 @@ Update password
 
 .. _PrivacyLayer :
 
-PrivacyLayer component
-**********************
+PrivacyLayer service
+*********************
 
-The privacy directives component of Private Access is referred to as the "PrivacyLayer" (R) service.  
+The consumer-centric access controls component of PEER are based on an API call seeking privacy directives from Private Access' PrivacyLayer (R) service.  
 
 As illustrated above, this service component of Private Access is also comprised of two functional areas:
 
