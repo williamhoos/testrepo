@@ -77,7 +77,7 @@ As shown, the portal administration section of the PEER admin contains twelve co
 .. _Dashboard Messages:
 
 Dashboard Messages
-~~~~~~~~~~~~~~~~~~
+------------------
 
 
 
@@ -85,7 +85,7 @@ Dashboard Messages
 .. _Export Data:
 
 Export Data
-~~~~~~~~~~~
+-----------
 
 
 
@@ -94,7 +94,7 @@ Export Data
 .. _Features :
 
 Features
-~~~~~~~~
+--------
 
 The following methods (FE-01 and FE-02) are invoked when an authorized user selects the Features menu item on the administrative menu.
 
