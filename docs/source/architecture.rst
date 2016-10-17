@@ -62,10 +62,30 @@ These areas are in turn broken into a number of fourth tier functions illustrate
 Data export service
 ===================
 
+
+
 .. _PA-PEER admin:
 
 PA/PEER administration
 ======================
+
+Add organization
+----------------
+
+PA admins
+---------
+
+PA content
+----------
+
+PEER admins
+-----------
+
+Update organization
+-------------------
+
+
+
 
 .. _Account management:
 
