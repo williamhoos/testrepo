@@ -895,12 +895,12 @@ PEER survey tools (PST) based surveys....
 
 .. _PA connect:
 
-PA Connect component
-********************
+PA Connect service
+*******************
 
-The identity and authorization component of Private Access is referred to as the "PA Connect" service.  
+The identity and authorization component of PEER is administered through an API call to Private Access' oAuth 2.0-based PA Connect service.  
 
-As illustrated above, this service component of Private Access is comprised of two functional areas:
+As in the illustrated above :ref:`PA Architecture` diagram, this service component of Private Access is comprised of two functional areas:
 
   * Profile
   * Account services
