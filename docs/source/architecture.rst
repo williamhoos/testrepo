@@ -2,7 +2,7 @@
 .. _Architecture top:
 
 Architecture
-============
+************
 
 This section of the document focuses on the overall architecture of PEER, beginning from a macro level and extending to the depth of the methods, source files and database tables that are presently being used by the application.  
 
@@ -13,7 +13,7 @@ This descriptions that follow generally focus on the PEER open source code, and 
 .. _General orientation:
 
 General orientation
-~~~~~~~~~~~~~~~~~~~
+===================
 
 The overall architecture of the PEER application is portayed in the following diagram:
 
