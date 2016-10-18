@@ -606,8 +606,22 @@ Enter Password (PA-05)
     * dbPPMS_D_Demo.user_account
 
 
+.. _Admin-related APIs:
 
+Administration-related APIs
+***************************
 
+**API:/private-access-adminportal/services/portal/getallportals**
+
+**Purpose or Use:**
+
+ This API is called by logging into PEER as an administrative user.  The API and corresponding method retrieves a list of all portals to which the administrator has access, which in turn populates the "My Portals" sub-menu to display this list of portals from which the user may select the one of interest.
+
+**Related methods call:**
+
+ *See* :ref:`AH-01` to view the related method and source files for this API
+ 
+.. Attention:: As noted in the architecture section, this API and a second one call the same method, which may be confusing to new developer, and therefore should be disambiguated during code cleanup.
 
 
 .. BELOW IS AN API TEMPLATE FOR FUTURE USE - COPY / DO NOT REMOVE**
