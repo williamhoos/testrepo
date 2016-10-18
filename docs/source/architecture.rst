@@ -324,7 +324,7 @@ SD-10:  TblUserAccountDao.findById()
      :align: right
      :alt: userAccount object model 
 
-The function in SD-10 also appears to retrieve all of the user account data from the database, but simply employing a different service.  A copy of the data values that are returned in the data model used by JAVA appears in the image at right
+The function in SD-10 also appears to retrieve all of the user account data from the database, but by employing a different service.  A copy of the data values that are returned in the data model used by JAVA appears in the image at right.  As noted below, each of the values shown in the data model map to the database columns in the userAccount database, and are stored by PEER in an encrypted form.
 
 **Inputs**
 
@@ -336,14 +336,14 @@ The function in SD-10 also appears to retrieve all of the user account data from
   TblUserAccount  
 
 
-.. Attention:: It appears from the JAVA code that the function call in SD-10 is requesting the same data as the function call in SD-08 and SD-09.  As part of the code clean-up, we should verify this is done for a meaningful purpose, and not as an accident or a redundant step in the process.  
+SD-11: TblUserAccount.getIsActive()
+"""""""""""""""""""""""""""""""""""  
 
-SD-11:  TblUserAccount.getIsActive()
-""""""""""""""""""""""""""""""""""""    
-
-This function checks to see whether the account is active or not.  PEER does not contain a function to "inactivate a user account" and so it is likely that new accounts are treated as "inactive" until the user has fully completed the confirmation step by returning the token contained in the confirmation email message that is sent to him or her immediately after accepting the EULA.  
+This function checks to see whether the account is active or not.  PEER does not presently contain a user function to "inactivate a user account" and so we hypothesie that new accounts are treated as "inactive" until the user has fully completed the confirmation step by returning the token contained in the confirmation email message that is sent to him or her immediately after accepting the EULA.  
 
 .. Attention:: As part of the data integrity work, we need to verify that the foregoing interpretation is correct with respect to inactive accounts, and/or correct this desciption accordingly.
+
+.. Attention:: It appears from the JAVA code that the function call in SD-10 is requesting the same data as the function call in SD-08 and SD-09.  As part of the code clean-up, we should verify this is done for a meaningful purpose, and not as an accident or a redundant step in the process.  
 
 **Inputs**
 
@@ -351,202 +351,218 @@ This function checks to see whether the account is active or not.  PEER does not
  
 **Outputs**
 
-  Boolean (Y/N)
-	
-TblUserAccount.getLoginName()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+  Boolean
 
-This function
 
-Inputs
-""""""
+SD-12: TblUserAccount.getLoginName()
+""""""""""""""""""""""""""""""""""""
+
+This function retrieves the user name of the accounts returned by SD-10.
+
+**Inputs** 
+
   n/a
  
-Outputs
-"""""""	
+**Outputs**
 
   String loginname
-	
-AESCryptoManager.decrypt()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
 
-This function
 
-Inputs
-""""""
+SD-13:  AESCryptoManager.decrypt()
+""""""""""""""""""""""""""""""""""
+
+This function decypts the encrypted data returned in the foreging fuctions.
+
+**Inputs**
+
   String encrypted
 	  
-	Outputs:
-	  String decrypted
-	
-  TblShaSubjetService.getForeignKeIds()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+**Outputs**
 
-This function
+  String decrypted
 
-Inputs
-""""""
+.. Hint::  At the present time, it appears that all of the PEER account data is encrypted and decrypted using the same encryption algorithm and key.  In the past, however, for security purposes each participant account employed its own unique encryption key.  We may want to relook at the logic behind the two approaches and implement the preferable one.
+
+
+SD-14:  TblShaSubjetService.getForeignKeIds()
+"""""""""""""""""""""""""""""""""""""""""""""   
+
+This function retrieves all of the Foreign Keys for the subjects returned by SD-10.  As noted by reference to the foregoing :ref:`User account object model` illustration, the account data does *not* include the Foreign Key for the user to whom such data pertains.  This approach was taken in order to provide a measure of security in addition to encrypting all of the information. 
+
+**Inputs**
+
   Integer widgetId
 	  
-	Outputs:
-	  LIst<String> foreignkeys
+**Outputs**
+
+  LIst<String> foreignkeys
 	
-ProfileFilterService.getDiscoverableFKids()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+SD-15:  ProfileFilterService.getDiscoverableFKids()
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 
-This function
+This function begins to filter the foregoing results by limiting the full list of foreign keys returned in SD-14 to just those foreign keys for which this data seeker has access rights.
 
-Inputs
-""""""
-   String token
-	  List<String> fullforeignkeys
+**Inputs**
+
+ * String token
+ * List<String> fullforeignkeys
 	  
-	Outputs:
-	  List<String>  filteredforeignkeys
+**Outputs**
+
+  List<String>  filteredforeignkeys
 
 	
-  TblShaSubjetService.createProfileInfoRequest()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+SD-16: TblShaSubjetService.createProfileInfoRequest()
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 
-This function
+This function creates a new profile request object (*i.e.*, a container) for any profiles that the present data seeker is entitled to discover, and populates the object with just the foreign key for each such profile.
 
-Inputs
-""""""
+**Inputs**
 
   List<String> foreignkeys
 	  
-	Outputs:
-	  List<ProfileInfoRequest> request
+**Outputs**
 
-	
-ProfileFilterService.getProfileContactDetails()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
-
-This function
-
-Inputs
-""""""
-  String token
-  String username
   List<ProfileInfoRequest> request
-  TimeZone timezone
+
+.. Attention:: It appears that the function call in SD-16 is creating a new profile request object (*i.e.*, a container) for any profiles that the data seeker is entitled to discover by making another database call for the same data as the function call in SD-15 and SD-09.  As part of the code clean-up, we should verify this is done for a meaningful purpose, and not as an accident or a redundant step in the process that could be eliminated or done more efficiently from data that has already been retrieved.
+
+
+SD-17:  ProfileFilterService.getProfileContactDetails()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""  
+
+This function retrieves a list of discoverable profiles with contact details by passing the profile request object created by function SD-16 as a parameter in this contact details call for use in requesting the contact details.
+
+**Inputs**
+
+ * String token
+ * String username
+ * List<ProfileInfoRequest> request
+ * TimeZone timezone
 	  
-	Outputs:
-	  List<SubjectDetail> contacts
-	  
-ProfileFilterService.getProfileExportDetails()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+**Outputs**
 
-This function
-
-Inputs
-""""""
-
-  String token
-  String username
-  List<ProfileInfoRequest> request
-  TimeZone timezone
+  List<SubjectDetail> contacts
 	 
-Outputs:
-"""""""	  
+.. Attention:: Verify that the approach being employed of passing the profile request object created in SD-16 into the profile contact details call in SD-17 is indeed the correct direction for passing the object, and that the function is not inadvertently reversed (*i.e.*, that it shouldn't be passed in the other direction) 
+
+	  
+SD-18:  ProfileFilterService.getProfileExportDetails()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function call does essentially the same thing as SD-17, but in this case for export details.  SD-18 retrieves a list of discoverable profiles with export rights by passing the profile request object created by function SD-16 as a parameter in this export details call for use in requesting the export of participant data.
+
+**Inputs**
+
+ * String token
+ * String username
+ * List<ProfileInfoRequest> request
+ * TimeZone timezone
+	 
+**Outputs**
 
   List<SubjectDetails> subjects
-	  
-getProfileDetails()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+
+SD-19: getProfileDetails()
+""""""""""""""""""""""""""   
 
 This function
 
-Inputs
-""""""
-  String token
-  String username
-  List<ProfileInfoRequest> request
-  const EXPORT
-  Timezone timezone
+**Inputs**
+
+ * String token
+ * String username
+ * List<ProfileInfoRequest> request
+ * const EXPORT
+ * Timezone timezone
+
+**Outputs**
 	    
-Outputs:
-"""""""	    
   List<SubjectDetails> subjects
-	
-TblShaSubjetService.getSubjectDetails()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
 
-This function
 
-Inputs
-""""""
-  List<SubjectDetails> contactDetails
-  List<SubjectDetails> exportDetails
+SD-20: TblShaSubjetService.getSubjectDetails()
+""""""""""""""""""""""""""""""""""""""""""""""   
+
+This function takes the paramaters created for contact information and export in the SD-17 and SD-18, respectively, and sets the export properties with respect to the contact details so that it can render the export file with the appropriate setting in each cell of the export table.  Application of SD-20 enables the values for age, type of profile, and contact details to appear in the export or will fill those cells in the export table with one or two asterisks (*) when those values cannot be exported to the data seeeker.
+
+**Inputs**
+
+ * List<SubjectDetails> contactDetails
+ * List<SubjectDetails> exportDetails
 	
-Outputs:
-"""""""	
+**Outputs**
+	
   List<SubjectDetails> subjects
 	  
 
-SubjectDetails.getAccess()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+SD-21: SubjectDetails.getAccess()
+"""""""""""""""""""""""""""""""""    
 
 This function
 
-Inputs
-""""""
+**Inputs**
+
   n/a
  
-Outputs
-"""""""
+**Outputs**
+
   String access
 		
 		
-SubjectDetails.setExportAccess()
+SD-22:  SubjectDetails.setExportAccess()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
 
-This function
+Where the right to export data is not allowed, this function sets the value for any prohibited data field that cannot be exporteed to "Not allowed".   
 
-Inputs
-""""""
-String exportsetting
+**Inputs**
+
+  String exportsetting
 		
-	  Outputs:
-	
+**Outputs**
 
-SubjectDetails.setAge()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+
+SD-23:  SubjectDetails.setAge()
+"""""""""""""""""""""""""""""""    
 
 This function
 
-Inputs
-""""""	  
-String age
+**Inputs**
+
+  String age
 		
-Outputs:
+**Outputs**
 	
-SubjectDetails.setProfileType()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+   	
 
-This function
+SD-24:  SubjectDetails.setProfileType()
+"""""""""""""""""""""""""""""""""""""""    
 
-Inputs
-""""""
+This function sets the property for the account type to the reported property type (*e.g.*, Myself, Child, Parent, etc)
+
+**Inputs**
+
   String type
 		
-Outputs:
-"""""""	  
-	
-	
-SubjectDetails.getProfileType()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+**Outputs:**  
+ 
+  	
+SD-25: SubjectDetails.getProfileType()
+""""""""""""""""""""""""""""""""""""""    
 
 This function
 
-Inputs
-""""""
+**Inputs**
+
   n/a
  
-Outputs
-"""""""	  
-String profileType [*e.g.*, Myself, Child, Parent, etc)
+**Outputs**
 
+  String profileType [*e.g.*, Myself, Child, Parent, etc)
+
+NOTE:  Currently at around 32:33 into the 10-17 video recording.
 
 
 **Source files:**
@@ -608,7 +624,8 @@ String profileType [*e.g.*, Myself, Child, Parent, etc)
   * dbPPMS_D.viewPortalDetails
   * dbPPMS_D.PLPDSubject
   * dbPPMS_D.tblShaAccountSubject
-  
+
+
 .. _Method XX:
 
 Search Particpant Data
