@@ -53,18 +53,24 @@ As illustrated above, the administrative component of PEER is comprised of the f
   * Account management
   * Portal management
 
-These areas are in turn broken into a number of fourth tier functions illustrated in yellow above, and in some cases even further articulated into fifth (teal colored boxes), sixth (grey shaded boxes) and more granular functions.  In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. 
+These areas are in turn broken into a number of fourth tier functions (illustrated by the yellow colored boxes above), and in some cases even further articulated into fifth (teal colored boxes), sixth (grey shaded boxes) and more granular functions (not shown on illustration, but discussed in the written description below).  
+
+In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. In addition, the documentation provided for those PEER components that directly handle account data, profile data or survey data responses includes a description of the functions called by the methods and the inputs and/or output these use or provide.
 
 .. _Query data:
 
-Query data
-==========
+Search data
+===========
 
-Authorized users (*i.e.*, authenticated persons with the proper administrative and/or researcher privileges) are able to initiate inquiries of PEER data and receive search results based on the permission level that is either pre-authorized or expressly consented by the PEER participant to whom the data search results pertain.  Such queries are presently initiated from the Search Data menu on the administrative dashboard, and is limited to a single PEER portal.
+Any authorized PEER user (*i.e.*, any authenticated persons with the proper administrative and/or researcher privileges) is able to initiate search queries respecting PEER data.  Together with the individual who is the subject of the data (or alternatively who is the authorized agent on the subject's behalf) when searching for his or her own information, these users making inquiries of PEER data are collectively referred to as "data seekers".  
 
-.. Note:: One of the roadmap items for PEER that we may wish to enable before opening the PEER code to the open source community is cross-portal search.  A search UI has been developed and all of the foundational elements are in place to enable this, but the budget for the implementation has not existed. 
+One of the ways in which PEER is unique is because it enforces a privacy policy that a data seeker is only able to attain search results for the data he or she has been pre-authorized or is expressly consented to receive.  PEER is programmed to enforce this participant-in-control policy, and in the master version of the PEER code, receives access mediation advice based on an automated service call made via API to the PrivacyLayer service (for more information, *see* :ref:`PrivacyLayer`).  
 
-The following methods (QU-01 and QU-XX) are invoked when an authorized user clicks on the View Results button on the Search Data page illustrated below.
+Search inquiries are presently initiated from the Search Data menu, which is located on the administrative dashboard, and is limited to a single PEER portal.
+
+.. Note:: One of the roadmap items for PEER that it would be desireable to enable before opening the PEER code to the open source community is cross-portal search.  A search UI has been developed and all of the foundational elements are in place to enable this, but the budget for the implementation of this feature has not existed. 
+
+The following methods (SD-01 and SD-XX) are invoked when an authorized user clicks on the View Results button on the Search Data page illustrated below.
 
 Search Registry Data
 ~~~~~~~~~~~~~~~~~~~~
