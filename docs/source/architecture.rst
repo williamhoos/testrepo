@@ -1027,6 +1027,8 @@ An example is provided below of the JSON data that is sent to the foregoing meth
 
 **Outputs**::
 
+An example is provided below of the JSON data that is received from the foregoing method call::
+
 	{  
 	   "message":"success",
 	   "isSuccess":true,
@@ -1085,8 +1087,6 @@ An example is provided below of the JSON data that is sent to the foregoing meth
 		  ]
 	   }
 	}
-
-An example is provided below of the JSON data that is received from the foregoing method call::
 
 Related Function Calls
 ^^^^^^^^^^^^^^^^^^^^^^
