@@ -57,27 +57,15 @@ These areas are in turn broken into a number of fourth tier functions (illustrat
 
 In order to assist future developers wishing to extend and/or modify PEER's features, the documentation below defines the methods, source files and database tables that are employed in providing these functions. In addition, the documentation provided for those PEER components that directly handle account data, profile data or survey data responses includes a description of the functions called by the methods and the inputs and/or output these use or provide.
 
-.. _Query data:
 
-Search data
-===========
+Administative home
+==================
 
-Any authorized PEER user (*i.e.*, any authenticated persons with the proper administrative and/or researcher privileges) is able to initiate search queries respecting PEER data.  Together with the individual who is the subject of the data (or alternatively who is the authorized agent on the subject's behalf) when searching for his or her own information, these users making inquiries of PEER data are collectively referred to as "data seekers".  
+Upon logging into PEER as an administrative user or researcher, the :ref:`Admin-related APIs` calls the following method, which in turn retrieves a list of the portals to which the administrator has access.  This populates the "My Portals" sub-menu with a list of these portals from which the user may select the portal of interest.
 
-One of the ways in which PEER is unique is because it enforces a privacy policy that a data seeker is only able to attain search results for the data he or she has been pre-authorized or is expressly consented to receive.  PEER is programmed to enforce this participant-in-control policy, and in the master version of the PEER code, receives access mediation advice based on an automated service call made via API to the PrivacyLayer service (for more information, *see* :ref:`PrivacyLayer`).  
+.. _Method AH-01:
 
-Search inquiries are presently initiated from the Search Data menu, which is located on the administrative dashboard, and is limited to a single PEER portal.
-
-.. Note:: One of the roadmap items for PEER that it would be desireable to enable before opening the PEER code to the open source community is cross-portal search.  A search UI has been developed and all of the foundational elements are in place to enable this, but the budget for the implementation of this feature has not existed. 
-
-The following methods (SD-01 and SD-XX) are invoked when an authorized user clicks on the View Results button on the Search Data page illustrated below.
-
-Search Registry Data
-~~~~~~~~~~~~~~~~~~~~
-
-.. _Method XX:
-
-**Method XX:**
+**Method AH-01:**
 
      **getAllPortals**
 	
@@ -100,7 +88,6 @@ Search Registry Data
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPeerAccount.java
   
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPeerAccountDaoImpl.java
-
   
 **Database tables:**
   
@@ -108,9 +95,37 @@ Search Registry Data
   * dbPPMS_D.tblLandingPages  
   * dbPPMS_D.tblPeerAccount
 
-.. _Method XX:
+.. Attention:: Opening the administrative home page calls the getAllPortals method from the API /private-access-adminportal/services/portal/getallportals.  The same method call is used for Search Registry Data (see below). This should be disambiguated during code cleanup.
 
-**Method XX:**
+.. _Search data:
+
+Search data
+===========
+
+Any authorized PEER user (*i.e.*, any authenticated persons with the proper administrative and/or researcher privileges) is able to initiate search queries respecting PEER data.  Together with the individual who is the subject of the data (or alternatively who is the authorized agent on the subject's behalf) when searching for his or her own information, these users making inquiries of PEER data are collectively referred to as "data seekers".  
+
+One of the ways in which PEER is unique is because it enforces a privacy policy that a data seeker is only able to attain search results for the data he or she has been pre-authorized or is expressly consented to receive.  PEER is programmed to enforce this participant-in-control policy, and in the master version of the PEER code, receives access mediation advice based on an automated service call made via API to the PrivacyLayer service (for more information, *see* :ref:`PrivacyLayer`).  
+
+Search inquiries are presently initiated from the Search Data menu, which is located on the administrative dashboard, and is limited to a single PEER portal.
+
+.. Note:: One of the roadmap items for PEER that it would be desireable to enable before opening the PEER code to the open source community is cross-portal search.  A search UI has been developed and all of the foundational elements are in place to enable this, but the budget for the implementation of this feature has not existed. 
+
+The following methods and corresponding function calls (SD-01 and SD-XX) are invoked when an authorized user clicks on the View Results button on the Search Data page illustrated below.
+
+.. _Search data illustration:
+
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Methods+SD-01+-+05.png
+     :alt: Administrative Screen for Searching PEER Data 
+
+
+Search Registry Data
+--------------------
+
+Clicking on the Search Registry Data menum item invokes three API calls and corresponding method calls, SD-01 to SD-03, as follows: 
+
+.. _Method SD-01:
+
+**Method SD-01:**
 
      **getrsrequestdetail**
 	
@@ -124,40 +139,31 @@ Search Registry Data
   
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/RsProfileInfo.java
   
-.. _Method XX:
 
-**Method XX:**
+.. _Method SD-02:
 
-     **getAccountAuthorities**
-	
+**Method SD-02:**
+
+     **getAllPortals**
+
 **Source files:**
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
-
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+  TBD
   
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
-
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/permission/AuthorityManager.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/access/AuthorityManager.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/permission/AccountAuthorities.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPortalAdminMapping.java
-  
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPortalAdminMappingDao.java
-
-  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
-
 **Database tables:**
-  
-  * dbPPMS_D.tblPeerAccount  
-  * dbPPMS_D.tblPortalAdminMapping
 
-.. _Method XX:
+  TBD
 
-**Method XX:**
+.. Attention:: Clicking on the Search Registry Data menu presently calls the getAllPortals method, but from a different API (/private-access-adminportal/services/profile/getStudyTrialList/8293) than the getAllPortals method for the administrative home page (see above). This should be disambiguated during code cleanup.
+
+.. Note::  The page title for "Search Participant Data" results (after clicking on View Participants button) improperly displays the title "Search Survey Data". The grey on grey font color and background color used in the pull-down menu for the selection of type of search is difficult to read, and should also be modified during the clean up project. 
+
+
+.. _Method SD-03:
+
+**Method SD-03:**
+
+Once a PEER portal is selected by use of the pulldown menu in the Search Survey Data screen Calls this to get a list of surveys for the selected portal
 
      **dashBoardAPI.php**
 	
@@ -176,136 +182,215 @@ Search Registry Data
   * peer_surveys_published.assign_survey
   * peer_surveys_published.survey_instance_data
   
-.. _Method XX:
 
-**Method XX:**
+.. _Method SD-04:
+
+**Method SD-04:**
 
      **getProfileDetails**
-	 
-**Inputs:**	 
+
+**Inputs**::	 
 	
-  {  
-   **"foreignkeys"**:[  
-   ],
-   **"accessToken"**:null,
-   **"userAccountId"**:"(Integer)"
-  }
+   {  
+    **"foreignkeys"**:[  
+    ],
+    **"accessToken"**:null,
+    **"userAccountId"**:"(Integer)"
+   }
 
 **Outputs:**
-  Example of one data element returned from method call
   
-  {  
-   "status":"success",
-   "message":"success",
-   "isSuccess":true,
-   "count":XX,
-   "data":[  
-      {  
-         "foreignKey":"XXX",
-         "participantFirstname":"FIRST_NAME",
-         "participantLastname":"LAST_NAME",
-         "access":"allow",
-         "city":"CITY",
-         "state":"STATE",
-         "country":"COUNTRY_CODE",
-         "surveyStatus":null,
-         "response":null,
-         "subjectId":XXX,
-         "address1":"ADDRESS1",
-         "address2":"ADDRESS2",
-         "address3":"ADDRESS3",
-         "cellPhone":"",
-         "homePhone":"HOME_PHONE",
-         "email":"EMAIL",
-         "idRequest":null,
-         "age":"AGE",
-         "dateCreated":"TIMESTAMP",
-         "profileType":"Child (Living)",
-         "exportAccess":null,
-         "dob":"DOB",
-         "profileZipCode":"PROFILE_ZIPCODE",
-         "accountZipCode":"ACCOUNT_ZIPCODE",
-         "contactFirstName":"CONTACT_FIRST_NAME",
-         "contactLastName":"CONTACT_LAST_NAME",
-         "contactCity":"CONTACT_CITY",
-         "contactState":"CONTACT_STATE",
-         "contactCountry":"CONTACT_COUNTRY_CODE"
-      },
+An example is provided below of one data element that is returned from the foregoing method call::
+  
+   {  
+    "status":"success",
+    "message":"success",
+    "isSuccess":true,
+    "count":XX,
+    "data":[  
+       {  
+          "foreignKey":"########",
+          "participantFirstname":"FIRST_NAME",
+          "participantLastname":"LAST_NAME",
+          "access":"allow",
+          "city":"CITY",
+          "state":"STATE",
+          "country":"COUNTRY_CODE",
+          "surveyStatus":null,
+          "response":null,
+          "subjectId":########,
+          "address1":"ADDRESS1",
+          "address2":"ADDRESS2",
+          "address3":"ADDRESS3",
+          "cellPhone":"",
+          "homePhone":"HOME_PHONE",
+          "email":"EMAIL",
+          "idRequest":null,
+          "age":"AGE",
+          "dateCreated":"TIMESTAMP",
+          "profileType":"Child (Living)",
+          "exportAccess":null,
+          "dob":"DOB",
+          "profileZipCode":"PROFILE_ZIPCODE",
+          "accountZipCode":"ACCOUNT_ZIPCODE",
+          "contactFirstName":"CONTACT_FIRST_NAME",
+          "contactLastName":"CONTACT_LAST_NAME",
+          "contactCity":"CONTACT_CITY",
+          "contactState":"CONTACT_STATE",
+          "contactCountry":"CONTACT_COUNTRY_CODE"
+       },
 	  ...
-    ]
-  }
-  
+     ]
+   }
+
+
 **Function Calls:**
   
-  QU-01 ProfileDetailsRequest.getForeignkeys()
-    Inputs:
+**SD-05:**  ProfileDetailsRequest.getForeignkeys()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This function extracts any foreign keys that the administrator provides as part of his or her query. This list will constrain the results to focus only on these individual participants
+    
+Inputs
+""""""
+  n/a
+ 
+Outputs
+"""""""
+  List <String> foreignkeys
 	
-	Outputs:
-	  List<String> foreignkeys
-	
-  QU-02 ProfileDetailsRequest.getAccessToken()
-    Inputs:
-	
-	Outputs:
+
+**SD-06:** ProfileDetailsRequest.getAccessToken() 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  n/a
+ 
+Outputs
+"""""""
 	  String token
 	
   QU-03 OIDCAuthenticationToken.getAccessTokenValue()
-    Inputs:
-	
-	Outputs:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  n/a
+ 
+Outputs
+"""""""
 	  String token
 	
   ProfileDetailsRequest.getUserAccountId()
-    Inputs:
-	
-	Outputs:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  n/a
+ 
+Outputs
+"""""""
 	  Integer userAccountId
 	
-  UserAccountService.findUserAccountById()
-    Inputs:
-	  TblUserAccount useraccount
-	  Integer userAccountId
+
+UserAccountService.findUserAccountById()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  TblUserAccount useraccount
+  Integer userAccountId
 	  
-	Outputs:
-	  TblUserAccount useraccount
+Outputs
+"""""""
+ TblUserAccount useraccount
   
-	TblUserAccountDao.findById()
-	  Inputs:
-	    TblUserAccount useraccount
-		Integer userAccountId
+
+TblUserAccountDao.findById()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+
+  TblUserAccount useraccount
+  Integer userAccountId
 		
-	  Outputs:
-	    TblUserAccount
+Outputs
+"""""""
+
+  TblUserAccount
 	
-	TblUserAccount.getIsActive()
-	  Inputs:
-	  
-	  Outputs:
-	    Boolean
+
+TblUserAccount.getIsActive()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  n/a
+ 
+Outputs
+"""""""
+  Boolean
 	
-  TblUserAccount.getLoginName()
-    Inputs:
+TblUserAccount.getLoginName()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  n/a
+ 
+Outputs
+"""""""	
+
+  String loginname
 	
-	Outputs:
-	  String loginname
-	
-  AESCryptoManager.decrypt()
-    Inputs:
-	  String encrypted
+AESCryptoManager.decrypt()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  String encrypted
 	  
 	Outputs:
 	  String decrypted
 	
   TblShaSubjetService.getForeignKeIds()
-    Inputs:
-	  Integer widgetId
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  Integer widgetId
 	  
 	Outputs:
 	  LIst<String> foreignkeys
 	
-  ProfileFilterService.getDiscoverableFKids()
-    Inputs:
-	  String token
+ProfileFilterService.getDiscoverableFKids()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+   String token
 	  List<String> fullforeignkeys
 	  
 	Outputs:
@@ -313,82 +398,149 @@ Search Registry Data
 
 	
   TblShaSubjetService.createProfileInfoRequest()
-    Inputs:
-	  List<String> foreignkeys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+
+  List<String> foreignkeys
 	  
 	Outputs:
 	  List<ProfileInfoRequest> request
 
 	
-  ProfileFilterService.getProfileContactDetails()
-    Inputs:
-	  String token
-	  String username
-	  List<ProfileInfoRequest> request
-	  TimeZone timezone
+ProfileFilterService.getProfileContactDetails()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  String token
+  String username
+  List<ProfileInfoRequest> request
+  TimeZone timezone
 	  
 	Outputs:
 	  List<SubjectDetail> contacts
 	  
-  ProfileFilterService.getProfileExportDetails()
-    Inputs:
-	  String token
-	  String username
-	  List<ProfileInfoRequest> request
-	  TimeZone timezone
+ProfileFilterService.getProfileExportDetails()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+
+  String token
+  String username
+  List<ProfileInfoRequest> request
+  TimeZone timezone
 	 
-	Outputs:
-	  List<SubjectDetails> subjects
+Outputs:
+"""""""	  
+
+  List<SubjectDetails> subjects
 	  
-	getProfileDetails()
-	  Inputs:
-	    String token
-		String username
-		List<ProfileInfoRequest> request
-		const EXPORT
-		Timezone timezone
+getProfileDetails()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  String token
+  String username
+  List<ProfileInfoRequest> request
+  const EXPORT
+  Timezone timezone
 	    
-      Outputs:
-	    List<SubjectDetails> subjects
+Outputs:
+"""""""	    
+  List<SubjectDetails> subjects
 	
-  TblShaSubjetService.getSubjectDetails()
-    Inputs:
-	  List<SubjectDetails> contactDetails
-	  List<SubjectDetails> exportDetails
+TblShaSubjetService.getSubjectDetails()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  List<SubjectDetails> contactDetails
+  List<SubjectDetails> exportDetails
 	
-	Outputs:
-	  List<SubjectDetails> subjects
+Outputs:
+"""""""	
+  List<SubjectDetails> subjects
 	  
-	SubjectDetails.getAccess()
-	  Inputs:
-	  
-	  Outputs:
-	    String access
+
+SubjectDetails.getAccess()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  n/a
+ 
+Outputs
+"""""""
+  String access
 		
-    SubjectDetails.setExportAccess()
-	  Inputs:
-	    String exportsetting
+		
+SubjectDetails.setExportAccess()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+String exportsetting
 		
 	  Outputs:
 	
-	SubjectDetails.setAge()
-	  Inputs:
-	    String age
+
+SubjectDetails.setAge()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""	  
+String age
 		
-	  Outputs:
+Outputs:
 	
-	SubjectDetails.setProfileType()
-	  Inputs:
-	    String type
+SubjectDetails.setProfileType()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  String type
 		
-	  Outputs:
-	  
-	SubjectDetails.getProfileType()
-	  Inputs:
-	  
-	  Outputs:
-	    String profileType [Myself, Child, Parent, *, **]
-	  
+Outputs:
+"""""""	  
+	
+	
+SubjectDetails.getProfileType()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+
+This function
+
+Inputs
+""""""
+  n/a
+ 
+Outputs
+"""""""	  
+String profileType [*e.g.*, Myself, Child, Parent, etc)
+
+
+
 **Source files:**
   
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SubjectController.java
@@ -673,6 +825,43 @@ getExportData()
   
 Search Survey Data
 ~~~~~~~~~~~~~~~~~~
+
+Checks what role the data seeker has...
+
+.. _Method SD-XX:
+
+**Method SD-XX:**
+
+     **getAccountAuthorities**
+	
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/permission/AuthorityManager.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/access/AuthorityManager.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/permission/AccountAuthorities.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPortalAdminMapping.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPortalAdminMappingDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblPeerAccount  
+  * dbPPMS_D.tblPortalAdminMapping
+
+.. Attention:: Ascertain why this is only called when a user wishes to search survey data (but not when the user wishes to search participant data).  Verify whether this is correct, omitted in the prior function, or unnecessary in this one.
+
+
 
 .. _Export data:
 
