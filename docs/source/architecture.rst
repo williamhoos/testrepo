@@ -858,7 +858,112 @@ Checks what role the data seeker has...
 **Method SD-XX:**
 
      **getAccountAuthorities**
+
+**Inputs**::	 
 	
+**Outputs**::
+
+An example is provided below of a data element that is returned from the foregoing method call::
+
+  {  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":{  
+      "permissions":{  
+         "EXPORT_SURVEY_RESPONSES":true,
+         "PORTAL_CODE":true,
+         "THEME_AND_LANDING_PAGE":true,
+         "VIEW_CONTACT_INFORMATION":true,
+         "PROXY_AGENT":true,
+         "SURVEYS":true,
+         "DOWNLOAD_CONTACT_INFORMATION":true,
+         "NOTHING_ALLOWED":false,
+         "EDIT_ORGANIZATION_INFORMATION":true,
+         "VIEW_AGGREGATE_DATA":true,
+         "GUIDES":true,
+         "REFERRAL_CODES":true,
+         "VIEW_INDIVIDUAL_DATA":true,
+         "EDIT_INDIVIDUAL_DATA":true,
+         "GENERAL_SETTINGS":true,
+         "DELETE_PORTAL":true
+      },
+      "role":X,
+      "portalRole":Y
+   }
+  }
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  AuthorityManager.getAccountPermissionMap()
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * Integer myPermissions
+  * Array<Authorities> authorities
+  
+**Outputs**
+
+  * Map<Authorities, boolean> map
+  
+SD-XX:  AuthorityManager.getAllPermissions()
+""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * n/a
+  
+**Outputs**
+
+  * Integer permission
+
+SD-XX:  PeerAccount.getFkIDUserRole()
+"""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * n/a
+  
+**Outputs**
+
+  * Integer role
+  
+SD-XX:  PortalService.getAllPortals()
+"""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * n/a
+
+**Outputs**
+
+  * TblLandingPages portal
+
+SD-XX:  PortalService.listAccountPortals()
+""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * Integer peerAccountId
+
+**Outputs**
+
+  * TblLandingPages portal
+
+SD-XX:  PeerAccount.getIdpeerAccount()
+""""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * n/a
+
+**Outputs**
+
+  * Integer peerAccountId
+  
 **Source files:**
   
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
@@ -873,11 +978,21 @@ Checks what role the data seeker has...
   
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/permission/AccountAuthorities.java
   
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/permission/Authorities.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/access/Authorities.java
+  
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPortalAdminMapping.java
   
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPortalAdminMappingDao.java
 
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPortalAdminMappingDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPeerAccount.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPeerAccountDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPeerAccountDaoImpl.java
 
 **Database tables:**
   
@@ -886,7 +1001,221 @@ Checks what role the data seeker has...
 
 .. Attention:: Ascertain why this is only called when a user wishes to search survey data (but not when the user wishes to search participant data).  Verify whether this is correct, omitted in the prior function, or unnecessary in this one.
 
+.. _Method SD-XX:
 
+**Method SD-XX:**
+
+     **dashBoardApi.php**
+
+**Inputs**::	 
+
+An example is provided below of the JSON data that is sent to the foregoing method call::
+
+  {  
+   "instrument_chart":true,
+   "survey_id":[  
+      44
+   ],
+   "from_date":"2015-12-10",
+   "to_date":"2016-10-18",
+   "portal_id":"692",
+   "token":"feyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsiNGMxY2UwZGUtZWM2Ni00Nzg4LWFlZTQtYjhmYzQ0YTRmY2NlIl0sImlzcyI6Imh0dHBzOlwvXC9jb25uZWN0LnByaXZhdGVhY2Nlc3MuY29tXC8iLCJleHAiOjE0NzY4MzUzMTcsImlhdCI6MTQ3NjgwNjUxNywianRpIjoiYWNiMzEyOGEtZGY3MC00YmFiLWFlMTUtN2JkNzhjZTUwODdiIn0.omPLZTxs4r8TOPvpZVpRfjfxKDB8ONqISWl4AP2AwsV2OV57TMbYlcc89P2QdnfTLaG7FyymnCrUWiiBEXlc8LSBnIgfTerf6xkYp0nRiR40S6-2IHk9AJ70lQ2sEaCXUkoYF5pKlONNNg6oLUET8mfmR4rp0B_Rhj-4YbjTuR",
+   "filter_fks":[  
+
+   ]
+  }
+
+**Outputs**::
+
+	{  
+	   "message":"success",
+	   "isSuccess":true,
+	   "data":{  
+		  "pie":{  
+			 "isData":false
+		  },
+		  "instrument_count":4,
+		  "question_count":85,
+		  "chart_height":260,
+		  "users_instrument_info":[  
+			 {  
+				"all_users":0,
+				"completed_users":0,
+				"percent_users":0
+			 },
+			 {  
+				"all_users":0,
+				"completed_users":0,
+				"percent_users":0
+			 },
+			 {  
+				"all_users":0,
+				"completed_users":0,
+				"percent_users":0
+			 },
+			 {  
+				"all_users":0,
+				"completed_users":0,
+				"percent_users":0
+			 }
+		  ],
+		  "asked_qcounts":[  
+			 0,
+			 0,
+			 0,
+			 0
+		  ],
+		  "actual_qcounts":[  
+			 55,
+			 14,
+			 5,
+			 11
+		  ],
+		  "groups":[  
+			 "\\\"Test\\\" Questions##2265####0",
+			 "Instrument rich text 14 pt##1884####0",
+			 "Job Status##670####0",
+			 "Insurance##723####0"
+		  ],
+		  "groupId":[  
+			 2265,
+			 1884,
+			 670,
+			 723
+		  ]
+	   }
+	}
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  parentDashboard()
+"""""""""""""""""""""""""
+
+**Inputs**
+
+  * Array<Object> request
+  * String mode
+  * String oauthServerURL
+  
+**Outputs**
+
+  * Object returnData
+
+SD-XX-01:  getPortalSurveys()
+"""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * Integer portalId
+  
+**Outputs**
+
+  * Object surveyData
+
+SD-XX-02:  getFilterForeignKeys()
+"""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * Array foreignKeys
+  * String token
+  * String oauthServerUrl
+  
+**Outputs**
+
+  * Array filteredForeignKeys
+
+SD-XX-02-01:  PAPermissions.filterForeignKeys()
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * Array foreignKeys
+  * String permission [discover, contact, export]
+  
+**Outputs**
+
+  * Array filteredForeignKeys
+
+**Source files:**
+
+  cron/dashBoardAPI.php
+  includes/functions.php
+  admin/classes/PAPermissions.php
+  
+**Database tables:**
+
+  * peer_surveys_published.users
+  * peer_surveys_published.survey_sections
+  * peer_surveys_published.segment
+  * peer_surveys_published.group
+  * peer_surveys_published.question_choices
+  * peer_surveys_published.questions
+  * peer_surveys_published.data
+  * peer_surveys_published.completed_instruments
+  * peer_surveys_published.assign_survey
+  
+**Method SD-XX:**
+
+     **dashBoardApi.php**
+
+**Inputs**::	 
+
+**Outputs**::	 
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  getrsrequestdetail()
+""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * Integer accountId
+  * Authentication auth
+  
+**Outputs**
+
+  * APIResponse response
+
+SD-XX-01:  ContactService.getStudyTrialList()
+"""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * Integer accountId
+  * Authentication auth
+  
+**Outputs**
+
+  * List<TblStudyTrial> trials
+
+SD-XX-01-01:  RsProfileInfo.getStudyTrialList()
+"""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**
+
+  * Integer accountId
+  * Authentication auth
+  
+**Outputs**
+
+  * List<TblStudyTrial> trials
+
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/ProfileInfoController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/ContactService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/ContactServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/RsProfileInfo.java
+  
+**Database tables:**
 
 .. _Export data:
 
