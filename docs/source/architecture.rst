@@ -65,10 +65,9 @@ Upon logging into PEER as an administrative user or researcher, the :ref:`Admin-
 
 .. _Method AH-01:
 
-**Method AH-01:**
+AH-01: getAllPortals
+^^^^^^^^^^^^^^^^^^^^
 
-     **getAllPortals**
-	
 **Source files:**
   
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
@@ -117,18 +116,18 @@ The following methods and corresponding function calls (SD-01 and SD-XX) are inv
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Methods+SD-01+-+05.png
      :alt: Administrative Screen for Searching PEER Data 
 
+.. _Search registry data:
 
 Search Registry Data
 --------------------
 
-Clicking on the Search Registry Data menum item invokes three API calls and corresponding method calls, SD-01 to SD-03, as follows: 
+Clicking on the Search Registry Data menu item shown above invokes three API calls and corresponding method calls, SD-01 to SD-03, as follows: 
 
 .. _Method SD-01:
 
-**Method SD-01:**
+SD-01:  getrsrequestdetail
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-     **getrsrequestdetail**
-	
 **Source files:**
   
   OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/ProfileInfoController.java
@@ -142,9 +141,8 @@ Clicking on the Search Registry Data menum item invokes three API calls and corr
 
 .. _Method SD-02:
 
-**Method SD-02:**
-
-     **getAllPortals**
+SD-02:  getAllPortals
+^^^^^^^^^^^^^^^^^^^^^
 
 **Source files:**
   
@@ -161,11 +159,10 @@ Clicking on the Search Registry Data menum item invokes three API calls and corr
 
 .. _Method SD-03:
 
-**Method SD-03:**
+SD-03:  dashBoardAPI.php
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once a PEER portal is selected by use of the pulldown menu in the Search Survey Data screen Calls this to get a list of surveys for the selected portal
-
-     **dashBoardAPI.php**
 	
 **Source files:**
   
@@ -185,9 +182,8 @@ Once a PEER portal is selected by use of the pulldown menu in the Search Survey 
 
 .. _Method SD-04:
 
-**Method SD-04:**
-
-     **getProfileDetails**
+SD-04:  getProfileDetails
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Inputs**::	 
 	
@@ -200,13 +196,13 @@ Once a PEER portal is selected by use of the pulldown menu in the Search Survey 
 
 **Outputs:**
   
-An example is provided below of one data element that is returned from the foregoing method call::
+An example is provided below of one (of n) data elements that is returned from the foregoing method call::
   
    {  
     "status":"success",
     "message":"success",
     "isSuccess":true,
-    "count":XX,
+    "count":###
     "data":[  
        {  
           "foreignKey":"########",
@@ -246,8 +242,8 @@ An example is provided below of one data element that is returned from the foreg
 
 **Function Calls:**
   
-**SD-05:**  ProfileDetailsRequest.getForeignkeys()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SD-05:  ProfileDetailsRequest.getForeignkeys()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This function extracts any foreign keys that the administrator provides as part of his or her query. This list will constrain the results to focus only on these individual participants
     
@@ -260,8 +256,8 @@ Outputs
   List <String> foreignkeys
 	
 
-**SD-06:** ProfileDetailsRequest.getAccessToken() 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+SD-06: ProfileDetailsRequest.getAccessToken() 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
 
 This function
 
@@ -273,8 +269,8 @@ Outputs
 """""""
 	  String token
 	
-  QU-03 OIDCAuthenticationToken.getAccessTokenValue()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+SD-07: OIDCAuthenticationToken.getAccessTokenValue()
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
 
 This function
 
