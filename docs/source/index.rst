@@ -30,6 +30,8 @@ As an integral part of this effort, a number of potential development activities
 
    overview
    architecture
+   search_data
+   export_data
    participant
    sign_up
    sign_in
