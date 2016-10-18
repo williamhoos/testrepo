@@ -1267,7 +1267,85 @@ As shown, the portal administration section of the PEER admin contains twelve co
 Dashboard Messages
 ------------------
 
+.. _Method SD-XX:
 
+**Method XX:**
+
+  **getAccountAuthorities**
+
+.. Note:: This method call is the same as the method call described in the previous section for Search Survey Data.  Please refer to that method call for further details.
+
+**Method SD-XX:**
+
+     **dashBoardApi.php**
+
+**Inputs**::	 
+
+An example is provided below of the JSON data that is sent to the foregoing method call::
+
+{  
+   "get_participant_messages":true,
+   "portal_id":"692",
+   "message_id":[  
+      41,
+      42,
+      43,
+      128,
+      129,
+      133,
+      155,
+      213
+   ],
+   "filter_fks":[  
+
+   ]
+}
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+
+{  
+   "message":"success",
+   "isSuccess":true,
+   "data":[  
+
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  apiPortalMessages()
+"""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Object request
+
+**Outputs**::
+
+  * Array messages
+
+**Source files:**
+  
+  cron/dashBoardAPI.php
+  includes/functions.php
+  
+**Database tables:**
+  
+  * peer_surveys_published.participant_messages
+  * peer_surveys_published.assign_messages
+  * peer_surveys_published.admins
+  
+.. _Method SD-XX:
+
+**Method XX:**
+
+  **getProfileDetails**
+
+.. Note:: This method call is the same as the method call described in the previous section for Search Registry Data in method SD-04.  Please refer to that method call for further details.
 
 
 .. _Export Data:
