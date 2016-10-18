@@ -66,7 +66,7 @@ Upon logging into PEER as an administrative user or researcher, the :ref:`Admin-
 .. _Method AH-01:
 
 AH-01: getAllPortals
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 **Source files:**
   
@@ -240,106 +240,118 @@ An example is provided below of one (of n) data elements that is returned from t
    }
 
 
-**Function Calls:**
-  
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
 SD-05:  ProfileDetailsRequest.getForeignkeys()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""""""
 
 This function extracts any foreign keys that the administrator provides as part of his or her query. This list will constrain the results to focus only on these individual participants
     
-Inputs
-""""""
-  n/a
+**Inputs**
+
+  n/a 
  
-Outputs
-"""""""
+**Outputs**
+
   List <String> foreignkeys
 	
 
 SD-06: ProfileDetailsRequest.getAccessToken() 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+"""""""""""""""""""""""""""""""""""""""""""""    
 
-This function
+This function retrieves the access token for the individual making the inquiry from their profile details.  The token is unique to the individual *and* unique for each session of the individual's login.
 
-Inputs
-""""""
+**Inputs**
+
   n/a
  
-Outputs
-"""""""
-	  String token
+**Outputs**
+
+  String token
 	
 SD-07: OIDCAuthenticationToken.getAccessTokenValue()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+""""""""""""""""""""""""""""""""""""""""""""""""""""    
 
-This function
+This function also retrieves an access token for the data seeker from the OpenID authentication.  
 
-Inputs
-""""""
+**Inputs**
+
   n/a
  
-Outputs
-"""""""
-	  String token
+**Outputs**
+
+  String token
+
+.. Attention:: It appears from the JAVA code that the OpenID token issued in SD-07 over-writes the token that is received in SD-06.  As part of the code clean-up, we should verify this is done for a meaningful purpose, and not as an accident or a redundant step in the process.
 	
-  ProfileDetailsRequest.getUserAccountId()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+SD-08:  ProfileDetailsRequest.getUserAccountId()
+""""""""""""""""""""""""""""""""""""""""""""""""  
 
-This function
+This function pulls the (internal) user account IDs from all of the user profiles for the portal to which the selected survey pertains, and passes this or these values as an input to other functions, including SD-09.
 
-Inputs
-""""""
+**Inputs**
+
   n/a
  
-Outputs
-"""""""
-	  Integer userAccountId
-	
+**Outputs**
 
-UserAccountService.findUserAccountById()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
-
-This function
-
-Inputs
-""""""
-  TblUserAccount useraccount
   Integer userAccountId
+	
+
+SD-09:  UserAccountService.findUserAccountById()
+"""""""""""""""""""""""""""""""""""""""""""""""" 
+
+This function retrieves all of the user account data from the database for each userAccountId that was returned by SD-08.
+
+**Inputs**
+
+ * TblUserAccount useraccount
+ * Integer userAccountId
 	  
-Outputs
-"""""""
+**Outputs**
+
  TblUserAccount useraccount
   
 
-TblUserAccountDao.findById()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+SD-10:  TblUserAccountDao.findById()
+""""""""""""""""""""""""""""""""""""  
 
-This function
+.. _User account object model:
 
-Inputs
-""""""
+.. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Object+Model+(user_account).png
+     :width: 250px
+     :align: right
+     :alt: userAccount object model 
 
-  TblUserAccount useraccount
-  Integer userAccountId
+The function in SD-10 also appears to retrieve all of the user account data from the database, but simply employing a different service.  A copy of the data values that are returned in the data model used by JAVA appears in the image at right
+
+**Inputs**
+
+ * TblUserAccount useraccount
+ * Integer userAccountId
 		
-Outputs
-"""""""
+**Outputs**
 
-  TblUserAccount
-	
+  TblUserAccount  
 
-TblUserAccount.getIsActive()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
 
-This function
+.. Attention:: It appears from the JAVA code that the function call in SD-10 is requesting the same data as the function call in SD-08 and SD-09.  As part of the code clean-up, we should verify this is done for a meaningful purpose, and not as an accident or a redundant step in the process.  
 
-Inputs
-""""""
+SD-11:  TblUserAccount.getIsActive()
+""""""""""""""""""""""""""""""""""""    
+
+This function checks to see whether the account is active or not.  PEER does not contain a function to "inactivate a user account" and so it is likely that new accounts are treated as "inactive" until the user has fully completed the confirmation step by returning the token contained in the confirmation email message that is sent to him or her immediately after accepting the EULA.  
+
+.. Attention:: As part of the data integrity work, we need to verify that the foregoing interpretation is correct with respect to inactive accounts, and/or correct this desciption accordingly.
+
+**Inputs**
+
   n/a
  
-Outputs
-"""""""
-  Boolean
+**Outputs**
+
+  Boolean (Y/N)
 	
 TblUserAccount.getLoginName()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
