@@ -1,4 +1,4 @@
-.. _Architecture top:
+.. _Architecture :
 
 Architecture
 ############
@@ -47,7 +47,7 @@ The administration component of PEER is used by properly authorized and authenti
 
 As illustrated above, the administrative component of PEER is comprised of the five functional areas shown in green in the above illustration. These include:
 
-  * Query data 
+  * Search data 
   * Export data 
   * Super admin functions
   * Account management
@@ -59,7 +59,7 @@ In order to assist future developers wishing to extend and/or modify PEER's feat
 
 
 Administative home
-==================
+******************
 
 Upon logging into PEER as an administrative user or researcher, the :ref:`Admin-related APIs` calls the following method, which in turn retrieves a list of the portals to which the administrator has access.  This populates the "My Portals" sub-menu with a list of these portals from which the user may select the portal of interest.
 
@@ -109,7 +109,14 @@ Search inquiries are presently initiated from the Search Data menu, which is loc
 
 .. Note:: One of the roadmap items for PEER that it would be desireable to enable before opening the PEER code to the open source community is cross-portal search.  A search UI has been developed and all of the foundational elements are in place to enable this, but the budget for the implementation of this feature has not existed. 
 
-The following methods and corresponding function calls (SD-01 and SD-XX) are invoked when an authorized user clicks on the View Results button on the Search Data page illustrated below.
+For additional information regarding the methods and corresponding function calls that are used in searching data and related functions, see *Searching data in PEER*.  
+
+
+As described in the high-level overview of PEER's :ref:`Architecture`, any authorized PEER user (*i.e.*, any authenticated persons with the proper administrative and/or researcher privileges, and PEER participants respecting his or her own data) is able to initiate search queries respecting PEER data.  
+
+Whereas individual participants are supported in searching their responses from the My data section of the PEER portal; all administrative and researcher search queries are initiated from the Search Data menu item located on the PEER for Research administrative dashboard. As illustrated below, clicking on Search Registry Data button on the main menu opens the Search Data page.
+
+when an authorized user clicks on the View Results button on the Search Data page illustrated below.
 
 .. _Search data illustration:
 
@@ -238,7 +245,6 @@ An example is provided below of one (of n) data elements that is returned from t
 	  ...
      ]
    }
-
 
 Related Function Calls
 ^^^^^^^^^^^^^^^^^^^^^^
