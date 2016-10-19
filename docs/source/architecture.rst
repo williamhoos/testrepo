@@ -18,26 +18,28 @@ The overall architecture of the PEER application is portayed in the following il
 
 .. _PEER Architecture:
 
-PEER Architecture (Visualization)
----------------------------------
+PEER Architecture
+-----------------
 
-At the highest level, PEER is comprised of two components (represented by the purple boxes in the following illustration), one that comprises all of its administrative functions, and a second for participant portals.
+At the highest level, PEER is comprised of two components (represented by the purple boxes in the following visualization), one that comprises all of the application's administrative backend functions, and a second for consumer-facing participant portals.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/PEER+High-Level+Architecture.png
      :alt: High-Level PEER Architecture Illustration  
 
-
-The foregoing components are complemented by the services that PEER acquires via API from Private Access, which are summarized in the followig illustration.  
-
 .. _PA Architecture:
 
-Private Access Services (Visualization)
----------------------------------------
+Private Access Services
+-----------------------
 
-These services consist of two components, one (referred to as PA Connect) provides identity, authentication and single sign-on rights for PEER users; and the second (called PrivacyLayer) provides privacy directives that are set by institutional data holders and/or individual participants respecting who can access their information and for what purposes.  These two components, and their respective functions are acquired by PEER through secure API calls to Private Access, and are portrayed in the following diagram:
+The foregoing components are complemented by services that PEER acquires via secure API from Private Access.  Generally speaking, these outsourced services consist of two components. 
+
+The first - referred to as *PA Connect* - consists of identity, authentication, single sign-on rights, and role-based access controls  for all PEER users.  And the second - called *PrivacyLayer* - provides privacy directives that may be set by institutional data holders and/or individual participants respecting who can access their information and for what purposes, and a number of related functions.  
+
+These two components, and their respective functions are represented in the following visualization: 
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Private+Access+High-Level+Architecture.png
      :alt: High-Level Private Access Services Illustration  
+
 
 Primary databases
 =================
