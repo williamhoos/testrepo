@@ -20,7 +20,7 @@ Membership levels
 .. csv-table:: a title
    :header: "name", "firstname", "age"
    :widths: 20, 20, 10
-   :align: "left", "center", "right"
+
 
    "Smith", "John", 40
    "Smith", "John, Junior", 20
@@ -51,7 +51,7 @@ STOP
 
    
    
-.. tabularcolumns:: |l|c|l|r|c|c|   
+.. tabularcolumns:: |left|center|left|right|ceneter|center|   
 +--------------------------------------------+----------+------------+--------------+------------+--------------+
 |                                            |          | Individual | Organization | Service    | Participant  |
 | Benefits                                   | Director | Member     | Member       | Provider   | (non-funding)|
