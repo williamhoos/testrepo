@@ -27,7 +27,7 @@ Membership levels
 
 
 .. csv-table:: a title
-   :header: "Benefits", "Director", "| Individual | Member", "| Organization | Member"
+   :header: "Benefits", "Director", " Individual | Member", "Organization | Member"
    :widths: 50, 25, 12, 12
 
    
