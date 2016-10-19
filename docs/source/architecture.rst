@@ -134,6 +134,13 @@ Export data
 Super-admin functions
 ---------------------
 
+This component allows authenticated users with special permissions to manage the PEER system not available to portal administrators.  This includes:
+
+  * Add Organization
+  * Update Organization Information
+  * Edit application-wide content (coming soon)
+  * Create PEER administrator accounts
+  * Create Private Access administrator accounts
 
 Account management
 ------------------
