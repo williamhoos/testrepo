@@ -17,11 +17,11 @@ Membership levels
 =================
 
 .. csv-table:: a title
-   :header: "name", "firstname", "age"
-   :widths: 20, 20, 10
+   :header: "Benefits", "Director", "Individual Member", "Organization Member", "Service Provider", "Participant (non-funding)
+   :widths: 50, 12, 12, 12, 12, 12
 
-   "Smith", "John", 40
-   "Smith", "John, Junior", 20
+   "Participation on governance committee", "x", , , ,  
+   "All participant voting", "x", "x" , "x", "x" , "x"  
 
 
 .. tabularcolumns:: |l|c|l|p|c|c|   
