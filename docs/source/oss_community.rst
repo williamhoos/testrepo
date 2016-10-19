@@ -43,7 +43,7 @@ STOP HERE
   :header: "Benefits", "Director", "Individual Member", "Organization Member", "Service Provider", "Participant (non-funding)
    :widths: 50, 12, 12, 12, 12, 12
 
-   "Participation on governance committee", "x", , , ,  
+   "Participation on governance committee", "x", " ", " ", " ", " "  
    "All participant voting", "x", "x" , "x", "x" , "x"  
    
 STOP
