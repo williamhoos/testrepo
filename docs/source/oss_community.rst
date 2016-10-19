@@ -23,7 +23,7 @@ Membership levels
 
 
    "Smith", "John", 40
-   "Smith", "John, Junior", 20
+   "Smith", "John Sr", 20
 
 
 .. csv-table:: a title
