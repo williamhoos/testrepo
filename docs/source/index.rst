@@ -32,6 +32,7 @@ As an integral part of this effort, a number of potential development activities
    architecture
    search_data
    export_data
+   temp
    participant
    sign_up
    sign_in
