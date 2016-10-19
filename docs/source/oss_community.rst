@@ -15,8 +15,8 @@ Joining the PEER OSS community
 
 Membership levels
 =================
+.. tabularcolumns:: |L|C|C|
 
-.. tabularcolumns:: column spec |l|c|c|
 .. csv-table:: a title
    :header: "name", "firstname", "age"
    :widths: 20, 20, 10
