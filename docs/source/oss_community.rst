@@ -16,8 +16,15 @@ Joining the PEER OSS community
 Membership levels
 =================
 
-.. tabularcolumns:: |l|c|c|c|c|c|
-   
+.. csv-table:: a title
+   :header: "name", "firstname", "age"
+   :widths: 20, 20, 10
+
+   "Smith", "John", 40
+   "Smith", "John, Junior", 20
+
+
+.. tabularcolumns:: |l|c|l|p|c|c|   
 +--------------------------------------------+----------+------------+--------------+------------+--------------+
 |                                            |          | Individual | Organization | Service    | Participant  |
 | Benefits                                   | Director | Member     | Member       | Provider   | (non-funding)|
