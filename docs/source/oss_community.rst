@@ -51,7 +51,7 @@ STOP
 
    
    
-.. tabularcolumns:: |l|c|l|p|c|c|   
+.. tabularcolumns:: |l|c|l|r|c|c|   
 +--------------------------------------------+----------+------------+--------------+------------+--------------+
 |                                            |          | Individual | Organization | Service    | Participant  |
 | Benefits                                   | Director | Member     | Member       | Provider   | (non-funding)|
