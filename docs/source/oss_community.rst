@@ -18,6 +18,7 @@ Membership levels
 
 .. tabularcolumns:: column spec |l|c|c|
 .. csv-table:: a title
+   :align: l, c, c
    :header: "name", "firstname", "age"
    :widths: 20, 20, 10
 
@@ -25,7 +26,7 @@ Membership levels
    "Smith", "John", 40
    "Smith", "John, Junior", 20
 
-.. tabularcolumns:: column spec |l|c|c|
+
 .. csv-table:: a title
    :header: "Benefits", "Director", "Individual Member", "Organization Member"
    :widths: 50, 25, 12, 12
