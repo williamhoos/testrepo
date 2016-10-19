@@ -16,6 +16,8 @@ Joining the PEER OSS community
 Membership levels
 =================
 
+.. tabularcolumns:: |l|c|c|c|c|c|
+   
 +--------------------------------------------+----------+------------+--------------+------------+--------------+
 |                                            |          | Individual | Organization | Service    | Participant  |
 | Benefits                                   | Director | Member     | Member       | Provider   | (non-funding)|
