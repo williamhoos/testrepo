@@ -18,7 +18,7 @@ Membership levels
 .. csv-table:: a title
    :header: "name", "firstname", "age"
    :widths: 20, 20, 10
-   :align: L, C, C
+   :align: l, l, c
 
    "Smith", "John", 40
    "Smith", "John, Junior", 20
@@ -26,7 +26,7 @@ Membership levels
 .. csv-table:: a title
    :header: "Benefits", "Director", "Individual Member"
    :widths: 50, 12, 12
-   :align: L, C, C
+   :align: l, l, c
    
    "Participation on governance committee", "x"," " 
    "All participant voting", "x", "x" 
