@@ -18,7 +18,7 @@ Membership levels
 
 .. tabularcolumns:: column spec |l|c|c|
 .. csv-table:: a title
-   :align: "left", "center", "right"
+   :align : "left", "center", "right"
    :header: "name", "firstname", "age"
    :widths: 20, 20, 10
 
