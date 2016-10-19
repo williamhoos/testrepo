@@ -28,7 +28,7 @@ Membership levels
 .. tabularcolumns:: column spec |l|c|c|
 .. csv-table:: a title
    :header: "Benefits", "Director", "Individual Member"
-   :widths: 50, 12, 12
+   :widths: 50, 25, 12
 
    
    "Participation on governance committee", "x"," " 
