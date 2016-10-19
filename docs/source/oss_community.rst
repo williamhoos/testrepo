@@ -28,6 +28,11 @@ Membership levels
    
    "Participation on governance committee", "x"," " 
    "All participant voting", "x", "x" 
+
+
+STOP HERE
+=========
+
    
    
   :header: "Benefits", "Director", "Individual Member", "Organization Member", "Service Provider", "Participant (non-funding)
@@ -35,6 +40,10 @@ Membership levels
 
    "Participation on governance committee", "x", , , ,  
    "All participant voting", "x", "x" , "x", "x" , "x"  
+   
+STOP
+====
+
    
    
 .. tabularcolumns:: |l|c|l|p|c|c|   
