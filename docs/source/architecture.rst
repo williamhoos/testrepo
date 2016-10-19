@@ -3,25 +3,23 @@
 Architecture
 ************
 
-This section of the document focuses on the overall architecture of PEER, beginning from a macro level and extending to the depth of the methods, source files and database tables that are presently being used by the application.  
+This section describes the overall architecture of PEER, beginning from a macro level and providing links to other documentation sections that identify the method calls, source files and database tables that are presently being used by the application. A more detailed discussion - including an articulation of the function calls, and listing the inputs and/or outputs based on each method - is provided for those functions that directly handle account data, profile data and/or actual survey response data. 
 
-.. Note:: In the interest of time, the present documentation generally does not include function calls, nor list the inputs and outputs based on each method.  Future enhancement to the technical documentation should consider adding this inventory.  
-
-This descriptions that follow generally focus on the PEER open source code, and include (for reference purposes) information respecting the resources that are provided through API calls to PA Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access for inclusion in Genetic Alliance's SaaS-based version of PEER.
+These descriptions generally focus on the PEER open source code and services that are provided through API calls to PA Connect and PrivacyLayer, both of which are independent services licensed by Genetic Alliance from Private Access for inclusion in Genetic Alliance's SaaS-based version of PEER.
 
 .. _General orientation:
 
 General orientation
 ===================
 
-The overall architecture of the PEER application is portayed in the following illustrations:
+The overall architecture of the PEER application is portayed in the following two visualizations:
 
 .. _PEER Architecture:
 
 PEER Architecture
 -----------------
 
-At the highest level, PEER is comprised of two components (represented by the purple boxes in the following visualization), one that comprises all of the application's administrative backend functions, and a second for consumer-facing participant portals.
+At the highest level, PEER is comprised of two major components (each represented by a purple box in the following diagram). The one on the left - referred to as *Admin* - incorporates all of the application's backend functions for administrative users.  And the one on the right - called *Portal* - summarizes the features of PEER's consumer-facing participant portals.
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/PEER+High-Level+Architecture.png
      :alt: High-Level PEER Architecture Illustration  
@@ -31,11 +29,11 @@ At the highest level, PEER is comprised of two components (represented by the pu
 Private Access Services
 -----------------------
 
-The foregoing components are complemented by services that PEER acquires via secure API from Private Access.  Generally speaking, these outsourced services consist of two components. 
+The foregoing components are complemented by services that PEER acquires via secure API calls to Private Access.  These outsourced services consist of two components. 
 
-The first - referred to as *PA Connect* - consists of identity, authentication, single sign-on rights, and role-based access controls  for all PEER users.  And the second - called *PrivacyLayer* - provides privacy directives that may be set by institutional data holders and/or individual participants respecting who can access their information and for what purposes, and a number of related functions.  
+The first - referred to as *PA Connect* - consists of identity, authentication, single sign-on, and role-based access controls for all PEER users.  And the second - called *PrivacyLayer* - provides privacy directives that may be set by institutional data holders and/or individual participants respecting who can access their information and for what purposes, and a number of related functions.  
 
-These two components, and their respective functions are represented in the following visualization: 
+These components, and their respective functions are represented in the following visualization: 
 
 .. image:: https://s3.amazonaws.com/peer-downloads/images/TechDocs/Private+Access+High-Level+Architecture.png
      :alt: High-Level Private Access Services Illustration  
@@ -51,8 +49,9 @@ At the present time, PEER functions from four primary databases:
  * **dbPPMS** - contains (for the production environment) the administrative components of PEER, as well as Private Access' Privacy Preferences Management System (or PPMS)
  * **dbPPMS_D** - contains (for the beta environment) the administrative components of PEER, as well as the PPMS
 
-.. Attention:: As part of migrating the PEER source code to open source, the PEER and Private Access components will be divided into separate databases so that the data tables that are exclusively used by PEER will be physically separated from the data tables that are used by the Private Access service.  At the conclusion of this work, we anticipate that the dbPPMS and dbPPMS_D will be used exclusively by Private Access (and not included in the OSS), and a third database for the administrative components of PEER and the API calls to Private Access will be reflected in the top level architecture.
+The documentation contains a section that focuses on the most important data tables used by PEER. 
 
+.. Attention:: As part of migrating the PEER software to open source, the PEER and Private Access components will be divided into separate databases so that the data tables that are exclusively used by PEER will be physically separated from the data tables that are used by the Private Access service.  At the conclusion of this work, we anticipate that the dbPPMS and dbPPMS_D will be used exclusively by Private Access (and not included in the OSS code base), and a third database for the administrative components of PEER and the API calls to Private Access will be reflected in the top level database architecture.
 
 
 .. _PEER Admin:
@@ -64,7 +63,7 @@ The administration component of PEER is used by properly authorized and authenti
 
 As illustrated above, the administrative component of PEER is comprised of the five functional areas shown in green in the above illustration. These include:
 
-  * Search data 
+  * :ref:`Search data` 
   * Export data 
   * Super admin functions
   * Account management
