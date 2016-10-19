@@ -142,6 +142,843 @@ This component allows authenticated users with special permissions to manage the
   * Create PEER administrator accounts
   * Create Private Access administrator accounts
 
+Add Organization
+""""""""""""""""
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+  **getAllOrganizationName**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":XX,
+   "data":[  
+      {  
+         "idorganization":1,
+         "tblShaOrganizationType":null,
+         "name":"ORGANIZATION_NAME",
+         "nameS":null,
+         "address1":null,
+         "address2":null,
+         "address3":null,
+         "city":null,
+         "state":null,
+         "postalCode":null,
+         "country":null,
+         "phone1":null,
+         "phone2":null,
+         "fax1":null,
+         "fax2":null,
+         "email":null,
+         "contactName":null,
+         "dateCreated":null,
+         "createdBy":null,
+         "dateUpdated":null,
+         "updatedBy":null,
+         "urlOrganization":null,
+         "urlResearchProtocol":null,
+         "moreInfo":null,
+         "poaContactName":null,
+         "officeHrs":null,
+         "logoImageName":null,
+         "ordinal":null,
+         "selfPDSearchPreference":null,
+         "selfPDExportPreference":null,
+         "selfPDContactPreference":null,
+         "tblShaParentOrganizations":[  
+
+         ],
+         "tblShaOrganizationPreference":[  
+
+         ],
+         "tblShaOrganizationPrivacyDirective":[  
+
+         ],
+         "seekerGroup":null
+      }
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  ShaOrganizationService.getAllOrganizationName()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves all organizations in the system.  This list of organizations is used to populate the autocomplete list.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblShaOrganization> organizationData
+
+SD-XX-01:  TblShaOrganizationDao.getAllOrganizationName()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves all organizations in the system.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblShaOrganization> organizationData
+
+SD-XX-02:  TblShaOrganization.getIdorganization()
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+Retrieve the internal ID of an organization.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * Integer organizationId
+
+SD-XX-03:  TblShaOrganization.setIdorganization()
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+Set the internal ID of an organization in the object model.
+
+**Inputs**::
+  
+  * Integer organizationId
+
+**Outputs**::
+
+  * n/a
+
+SD-XX-04:  AESCryptoManager.decrypt()
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+Decrypt an encrypted string.
+
+**Inputs**::
+  
+  * String encryptedString
+
+**Outputs**::
+
+  * String decryptedString
+
+SD-XX-05:  TblShaOrganization.setName()
+"""""""""""""""""""""""""""""""""""""""
+
+Set the name property of the TblShaOrganization object model.
+
+**Inputs**::
+  
+  * String name
+
+**Outputs**::
+
+  * n/a  
+  
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/ShaOrganizationController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/ShaOrganizationService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/ShaOrganizationServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaOrganization.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaOrganizationDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblShaOrganizationDaoImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/util/AESCryptoManager.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblShaOrganization
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+  **getSeekerGroupNames**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":4,
+   "data":[  
+      {  
+         "idseekerGroup":1,
+         "seekerGroupName":"Advocacy & Support Groups",
+         "dateCreated":"05/07/2013"
+      },
+      {  
+         "idseekerGroup":2,
+         "seekerGroupName":"Medical Researchers",
+         "dateCreated":"05/07/2013"
+      },
+      {  
+         "idseekerGroup":3,
+         "seekerGroupName":"Data Analysis",
+         "dateCreated":"05/07/2013"
+      },
+      {  
+         "idseekerGroup":4,
+         "seekerGroupName":"Specialized Data Sets",
+         "dateCreated":"03/08/2013"
+      }
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  SeekerGroupService.getSeekerGroup()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves all record seekers in the system.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblSeekerGroup> seekerGroups
+
+SD-XX-01:  SeekerGroupDao.getSeekerGroup()()
+""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves all record seekers in the system.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblSeekerGroup> seekerGroups
+  
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerGroupController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/SeekerGroupService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/SeekerGroupServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblSeekerGroupDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblSeekerGroupDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblSeekerGroup
+  
+.. _Method SD-XX:
+
+**Method XX:**
+
+  **getAllSeekerTemplates**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":XX,
+   "data":[  
+      {  
+         "idseekerTemplate":3,
+         "seekerDisplayName":"All Researchers",
+         "fkIdrecordSeekerType":-200,
+         "fkIdseeker":0,
+         "fkIdrecordHandlerType":-100,
+         "ordinal":0,
+         "isDefault":false,
+         "dateCreated":"06/10/2014",
+         "dateUpdated":"06/10/2014",
+         "tblWidgetPrivacyDirectives":null
+      },
+      {  
+         "idseekerTemplate":31,
+         "seekerDisplayName":"United Mitochondrial Disease Foundation (UMDF)",
+         "fkIdrecordSeekerType":-400,
+         "fkIdrecordHandler":-200,
+         "fkIdorganization":11,
+         "fkIdseeker":1,
+         "fkIdrecordHandlerType":-200,
+         "ordinal":3,
+         "moreInfo":"The United Mitochondrial Disease Foundation (UMDF) is a non-profit organization serving to promote research and education for the diagnosis, treatment, and cure of mitochondrial disorders and to provide support to affected individuals and families.",
+         "contactEmail":"CONTACT_EMAIL",
+         "parentDirective":"",
+         "isDefault":false,
+         "dateCreated":"07/15/2014",
+         "dateUpdated":"10/12/2016",
+         "tblWidgetPrivacyDirectives":null
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  TblPlseekerTemplateService.getAllSeekerTemplate()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves all record seekers templates in the system.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblPlseekerTemplate> seekerTemplates
+
+SD-XX-01:  TblPlseekerTemplateDao.getAllSeekerTemplate()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves all record seekers templates from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblPlseekerTemplate> seekerTemplates
+  
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerTemplateController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblPlseekerTemplateService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblPlseekerTemplateServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlseekerTemplateDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblPlseekerTemplate
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+  **getDefaultSeekerTemplatesWithOrdinal**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":X,
+   "data":[  
+      {  
+         "ordinal":15,
+         "seekerDisplayName":"Researchers addressing your condition",
+         "idseekerTemplate":37,
+         "moreInfo":"PEER (the registry platform that\u2019s used by this project, the Platform for Engaging Everyone Responsibly) has a system that matches participants with researchers studying their condition. The \u201CResearchers addressing your condition\u201D setting lets you decide whether or not to include your information in this system, and share data with researchers studying your condition. All researchers invited to join the platform come with research projects or protocols reviewed by an oversight committee called an institutional review board (IRB). The IRB oversight protects participants by making sure studies follow proper ethics guidelines."
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  TblPlseekerTemplateService.getDefaultSeekerTemplatesWithOrdinal()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the default seeker template from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<Map<String, Object>> seekerTemplates
+
+SD-XX-01:  TblPlseekerTemplateDao.getDefaultSeekerTemplates()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the default privacy directives from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  *  List<TblPlseekerTemplate> seekerTemplates
+
+SD-XX-02:  TblPlseekerTemplate.getIdseekerTemplate()
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  *  Integer seekerTemplateId
+
+SD-XX-03:  TblPlseekerTemplate.getSeekerDisplayName()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  *  String seekerTemplateName
+
+SD-XX-04:  TblPlseekerTemplate.getOrdinal()
+"""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  *  Integer ordinal
+
+SD-XX-05:  TblPlseekerTemplate.getMoreInfo()
+""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  *  String moreInfo
+
+  
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerTemplateController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblPlseekerTemplateService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblPlseekerTemplateServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPlseekerTemplate.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlseekerTemplateDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblPLSeekerTemplate
+  
+.. _Method SD-XX:
+
+**Method XX:**
+
+  **getNewlyFoundPDSeekerTemplate**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":X,
+   "data":[  
+      {  
+         "ordinal":15,
+         "seekerDisplayName":"Researchers addressing your condition",
+         "idseekerTemplate":37,
+         "moreInfo":"PEER (the registry platform that\u2019s used by this project, the Platform for Engaging Everyone Responsibly) has a system that matches participants with researchers studying their condition. The \u201CResearchers addressing your condition\u201D setting lets you decide whether or not to include your information in this system, and share data with researchers studying your condition. All researchers invited to join the platform come with research projects or protocols reviewed by an oversight committee called an institutional review board (IRB). The IRB oversight protects participants by making sure studies follow proper ethics guidelines."
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  TblPlseekerTemplateService.getNewlyFoundPDSeekerTemplate()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the default seeker template from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * TblPlseekerTemplate seekerTemplate
+
+SD-XX-01:  TblPlseekerTemplateDao.findbyname()
+""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the default privacy directives from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblPlseekerTemplate> directives
+
+  
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerTemplateController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblPlseekerTemplateService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblPlseekerTemplateServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPlseekerTemplate.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlseekerTemplateDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblPLSeekerTemplate
+  
+Update Organization Information
+"""""""""""""""""""""""""""""""
+
+Update existing organization information such as organization contact, privacy directives and default privcay settings.  Please refer to the section "Add Organization" for method and function calls as they are the same for updating an existing organization.
+
+Create PEER administrator accounts
+""""""""""""""""""""""""""""""""""
+
+Invite a user to become a PEER administrator.
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the list of PEER administrator accounts from the database.
+
+  **getUsers**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":11,
+   "data":[  
+      {  
+         "firstName":"FIRSTNAME",
+         "lastName":"LASTNAME",
+         "email":"EMAIL",
+         "userAccountId":XXX,
+         "invitedUserId":null,
+         "peerAccountId":YYY,
+         "role":5,
+         "roleName":"ROLE_PEER_ADMIN",
+         "status":"Accepted",
+         "freshAccount":false
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  UserAccountService.getUsers()
+"""""""""""""""""""""""""""""""""""""
+
+This function retrieves the list of PEER administration users from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<PortalUsers> userAccounts
+
+SD-XX-01:  InvitedUsersDao.getAdminList()
+"""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the list of PEER administration users from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<InvitedUsers> userAccounts
+
+SD-XX-02:  PeerAccountDao.getAdminList()
+""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the list of PEER administration users from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<InvitedUsers> userAccounts 
+  
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PrivateAccessController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/UserAccountService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/UserAccountServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/InvitedUsersDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/InvitedUsersDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPeerAccountDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPeerAccountDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.invited_users
+  * dbPPMS_D.tblPeerAccount
+  
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the list of PEER administrator accounts from the database.
+
+  **inviteUser**
+
+**Inputs**::	 
+
+An example is provided below of the JSON data that is sent to the foregoing method call::
+
+{  
+   "firstName":"FIRSTNAME",
+   "lastName":"LASTNAME",
+   "email":"EMAIL",
+   "userRoleId":X
+}
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":null
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  UserAccountService.inviteUser()
+"""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the list of PEER administration users from the database.
+
+**Inputs**::
+  
+  * InviteNewPortalUserRequest inviteRequst
+  * String base
+
+**Outputs**::
+
+  * n/a
+
+SD-XX-01:  InviteNewPortalUserRequest.getUserRoleId()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the ID of the user role.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * Integer userRoleId
+
+SD-XX-03:  InviteNewPortalUserRequest.getFirstName()
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the first name of the invited user.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * String firstName
+
+SD-XX-04:  InviteNewPortalUserRequest.getLastName()
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the last name of the invited user.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * String lastName
+
+SD-XX-05:  InviteNewPortalUserRequest.getEmail()
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the email of the invited user.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * String email
+
+SD-XX-06:  TblUserAccountDao.findByEmail()
+""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the user account from the database using the email address.
+
+**Inputs**::
+  
+  * String emailHash
+
+**Outputs**::
+
+  * TblUserAccount accountData
+
+SD-XX-07:  TblUserAccountDao.findByEmailAndRole()
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the user account from the database using the email address and role of the user.
+
+**Inputs**::
+  
+  * String email
+  * Integer role
+
+**Outputs**::
+
+  * InvitedUsers account
+
+SD-XX-08:  sendInviteSuccessMail()
+""""""""""""""""""""""""""""""""""
+
+This function generates the invitation email.
+
+**Inputs**::
+  
+  * String email
+  * String language
+  * String link
+  * String role
+
+**Outputs**::
+
+  * n/a
+
+SD-XX-09:  amazonSendMailService.sendMail()
+"""""""""""""""""""""""""""""""""""""""""""
+
+This function sends the invitation email to the recipient
+
+**Inputs**::
+  
+  * PrivateAccessEmail emailMessage
+
+**Outputs**::
+
+  * n/a
+ 
+**Source files:**
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PrivateAccessController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/UserAccountService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/UserAccountServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/InviteNewPortalUserRequest.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblUserAccountDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblUserAccountDaoImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-mails/src/main/java/com/privateaccess/mail/PrivateAccessEmail.java
+
+**Database tables:**
+  
+  * dbPPMS_D.user_account
+
+Create Private Access administrator accounts
+""""""""""""""""""""""""""""""""""""""""""""
+
+Please refer to the section "Create PEER administrator accounts" above as the same methods and function calls are made with the role of Private Access Administrator.
+
 Account management
 ------------------
 
