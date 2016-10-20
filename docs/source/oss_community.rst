@@ -122,6 +122,7 @@ Annual subscription costs (in cash or contributed services) are based on organiz
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
 
 |   * In-kind contributions may include services and contribution of code upgrades to the master branch of the PEER software that have been purchased from a service provider.  In-kind contributions are valued at cost in the year incurred or expended, and credit against the next annual membership payment for that entity or individual.
+|
 
   :**Indv**: Individual contributor  
   :**Educ/HC**: Educational or academic institution, or a non-profit healthcare institution such as a hospital or medical center  
