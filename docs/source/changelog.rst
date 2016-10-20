@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2016-10-20
+~~~~~~~~~~
+
+* As of 4pm today, the portions highlighted in red in the `PEER architecture diagram <https://s3.amazonaws.com/peer-downloads/images/TechDocs/Status+Update+as+of+2016-1020.png>`_ have been reviewed and documented.
+
 2016-10-19
 ~~~~~~~~~~
 
