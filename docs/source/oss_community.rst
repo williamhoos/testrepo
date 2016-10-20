@@ -1,7 +1,7 @@
-Membership
-**********
+Membership (DRAFT)
+******************
 
-
+**The following sections are for internal discussion purposes only.**
 
 Joining the PEER OSS community
 ==============================
@@ -70,6 +70,7 @@ Annual membership costs (in cash or contributed services) are based on organizat
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
 | Service Provider|    n/a |  2,500* |  2,500* |  5,000 | 2,500* | 10,000 | 25,000|
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
+
 |   * In-kind contributions may include services and contribution of code upgrades to the master branch of the PEER software that have been purchased from a service provider.  In-kind contributions are valued at cost in the year incurred or expended, and credit against the next annual membership payment for that entity or individual.
 
 |   **Indv** = Individual contributor
