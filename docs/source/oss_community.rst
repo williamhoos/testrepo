@@ -36,16 +36,16 @@ The following table sets for the benefits available to PEER OSS community member
 +-------------------------------------------------+----+----+----+----+----+
 | Access to common data instruments               | x  | x  | x  |    |    |   
 +-------------------------------------------------+----+----+----+----+----+
-| Marketing visibility                            | x  | x  | x  | x  | x  |  
+| Marketing visibility                            | x  | x  | x  | x  |    |  
 +-------------------------------------------------+----+----+----+----+----+
-| All member voting                               | x  | x  | x  | x  | x  |
+| All member voting                               | x  | x  | x  | x  |    |
 +-------------------------------------------------+----+----+----+----+----+
 | All participant voting                          | x  | x  | x  | x  | x  | 
 +-------------------------------------------------+----+----+----+----+----+
 | Participate in e-mails and teleconferences      | x  | x  | x  | x  | x  |   
 +-------------------------------------------------+----+----+----+----+----+
 
-|   **CD** = Community Director
+|   **CD** = Director
 |   **IM** = Individual Member
 |   **AG** = Advocacy or support group
 |   **SP** = Service provider
