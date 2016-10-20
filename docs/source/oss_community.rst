@@ -101,6 +101,15 @@ The following table sets for the benefits available to PEER OSS community member
     :column-wrapping: true true 
     :column-dividers: none double none
     
+ ======== ===========================================================
+  **CD**  Director                                                     
+  **IM**  Individual Member                                            
+  **AG**  Advocacy or support group                                    
+  **SP**  Service provider                                             
+  **PU**  Participant User (non-paying member of the OSS community)    
+ ======== ===========================================================
+
+    
 +--------+-------------------------------------------------------------+
 | **CD** |Director                                                     |
 +--------+-------------------------------------------------------------+
