@@ -45,6 +45,6 @@ As an integral part of this effort, a number of potential development activities
    researcher
    license
    faqs
-   os_community
+   oss_community
    glossary
    changelog
