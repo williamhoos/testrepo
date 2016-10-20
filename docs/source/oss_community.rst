@@ -134,7 +134,7 @@ Annual subscription costs (in cash or contributed services) are based on organiz
   
   
 
-.. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache foundation <http://www.apache.org/foundation/`_, `Linux Foundation <https://www.linuxfoundation.org/members/join>`_. 
+.. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache foundation <http://www.apache.org/foundation/`_ and `Linux Foundation <https://www.linuxfoundation.org/members/join>`_. 
 
 
 
