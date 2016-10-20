@@ -4,7 +4,7 @@ Changelog
 2016-10-20
 ~~~~~~~~~~
 
-* As of 4pm today, the portions highlighted in red in the `PEER architecture diagram <https://s3.amazonaws.com/peer-downloads/images/TechDocs/Status+Update+as+of+2016-1020.png>`_ have been reviewed and documented.
+* As of 4pm today, the portions highlighted in red in the `PEER architecture diagram <https://s3.amazonaws.com/peer-downloads/images/TechDocs/Status+Update+as+of+2016-1020.png>`_ have been reviewed and documented.  As indicated by the Contents description, the amount of information being documented requires an overhaul to the original outline.  We anticipate this to be completed by Friday evening, along with most of the remaining aspects of the Admin side of PEER.
 
 2016-10-19
 ~~~~~~~~~~
