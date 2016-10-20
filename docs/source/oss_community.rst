@@ -125,7 +125,7 @@ Annual subscription costs (in cash or contributed services) are based on organiz
 |
 
   :**Indv**: Individual contributor  
-  :**Educ/HC**: Educational or academic institution, or a non-profit healthcare institution such as a hospital or medical center.  |   
+  :**Educ/HC**: Educational or academic institution, or a non-profit healthcare institution such as a hospital or medical center  
   :**NP Org**: Non-profit support organization  
   :**Govt**: Governmental body or agency 
   :**Small**: Companies with under 100 employees
@@ -133,22 +133,6 @@ Annual subscription costs (in cash or contributed services) are based on organiz
   :**Large**: Companies with over 2500 employees 
   
   
-+-------------+---------------------------------------------------------------+
-| **Indv**    | Individual contributor                                        |
-+-------------+---------------------------------------------------------------+
-| **Educ/HC** | Educational or academic institution, or a non-profit          |
-|             | healthcare institution such as a hospital or medical center.  |   
-+-------------+---------------------------------------------------------------+
-| **NP Org**  | Non-profit support organization                               |
-+-------------+---------------------------------------------------------------+
-| **Govt**    | Governmental body or agency                                   |
-+-------------+---------------------------------------------------------------+
-| **Small**   | Companies with under 100 employees                            |
-+-------------+---------------------------------------------------------------+
-| **Medium**  | Companies with 101 - 2500 employees                           |
-+-------------+---------------------------------------------------------------+
-| **Large**   | Companies with over 2500 employees                            |
-+-------------+---------------------------------------------------------------+
 
 .. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache foundation <http://www.apache.org/foundation/`_, `Linux Foundation <https://www.linuxfoundation.org/members/join>`_. 
 
