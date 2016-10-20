@@ -13,8 +13,8 @@ We've heard expressed a number of reasons for this avowed interest in open sourc
 This initiative represents an outgrowth of all of these expressions of interest for the PEER software to be migrated from closed to open source software.
 
 
-Contibuting to the PEER OSS community
-=====================================
+Contibuting to make PEER OSS
+============================
 
 Although Genetic Alliance owns the PEER software and all related trade and service marks, names and URLs, and hosts a public-facing instance of PEER that it offers under a software-as-a-service (SaaS) style offering for groups who simply wish to create and maintain a registry based on the most up-to-date version of the production system built from the master branch of the source code, the PEER OSS initiative functions as a separate, self-supported initiative supported by those organizations and donors who see the inherent value in the source code for PEER being available under an open-source software license.  Funds that are contributed to Genetic Alliance as one time gifts, grants and/or annual membership fees that are earmarked as being for the express purpose of supporting the PEER OSS initiative are not comingled with any other revenues.
 
@@ -132,10 +132,8 @@ Annual subscription costs (in cash or contributed services) are based on organiz
   :**Medium**: Companies with 101 - 2500 employees  
   :**Large**: Companies with over 2500 employees 
   
-  
 
-.. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache foundation <http://www.apache.org/foundation/`_ and `Linux Foundation <https://www.linuxfoundation.org/members/join>`_. 
-
+.. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache foundation <http://www.apache.org/foundation/`_ and `Linux Foundation  <https://www.linuxfoundation.org/members/join>`_ 
 
 
 Further information
