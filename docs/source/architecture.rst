@@ -983,6 +983,288 @@ Account management
 ------------------
 
 
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the account information from the database for the logged in user.
+
+  **getAccountDetails**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":{  
+      "userAccountId":XX,
+      "shaAccountId":0,
+      "loginName":"LOGINNAME",
+      "password":"PASSWORD",
+      "loginNameS":"LOGINNAMEHASH",
+      "dateCreated":"08/01/2014",
+      "dateUpdated":"08/01/2014",
+      "createdBy":null,
+      "updatedBy":null,
+      "siteKeyName":"a",
+      "firstName":"FIRSTNAME",
+      "lastName":"LASTNAME",
+      "middleName":null,
+      "suffix":null,
+      "email":"EMAIL",
+      "emailS":"EMAILHASH",
+      "dob":null,
+      "homePhone":"",
+      "cellPhone":"CELLNUMBER",
+      "address1":"ADDRESS1",
+      "address2":"ADDRESS2",
+      "address3":"ADDRESS3",
+      "city":"CITY",
+      "state":"STATE",
+      "postalCode":"ZIPCODE",
+      "country":"COUNTRY",
+      "fax1":"FAX1",
+      "fax2":"FAX2",
+      "firstNameS":"FIRSTNAMEHASH",
+      "lastNameS":"LASTNAMEHASH",
+      "dOBS":"DATEOFBIRTHHASH",
+      "stateS":"STATE",
+      "postalCodeS":"ZIPCODEHASH",
+      "showContent":null,
+      "compareFeature":null,
+      "latitude":null,
+      "longitude":null,
+      "isIndividualAccount":true,
+      "isResearcherAccount":true,
+      "isLegalRights":true,
+      "affiliatedOrganization":"",
+      "linkToBio":"LINKURL",
+      "userOrganizationId":0,
+      "isNotBelongToOrganization":true,
+      "isBelongToNotListedOrganization":false,
+      "userRoleId":XX,
+      "isActive":true,
+      "encrypted":true
+   }
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  AdminAccountService.getuserAccountById()
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves the account information for the logged in user based on the accountId
+
+**Inputs**::
+  
+  * Integer accountId
+
+**Outputs**::
+
+  * UserAccount userAccount
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/AdminAccountController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/AdminAccountService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/AdminAccountServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/AdminAccountDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/AdminAccountDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/util/AESCryptoManager.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.user_account
+  
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the list of countries from the database.
+
+  **getCountries**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":null,
+   "message":null,
+   "isSuccess":true,
+   "count":236,
+   "data":[  
+      {  
+         "idcountry":1,
+         "text":"United States of America",
+         "code":"USA",
+         "isActive":true,
+         "isDefault":false,
+         "ordinal":null,
+         "dateCreated":"05/15/2013",
+         "createdBy":null,
+         "dateUpdated":"05/15/2013",
+         "updatedBy":null,
+         "latitude":"38",
+         "longitude":"-97",
+         "tblCountryMls":null
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  AdminAccountService.getuserAccountById()
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer accountId
+
+**Outputs**::
+
+  * UserAccount userAccount
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/AdminAccountController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblShaCountryService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblShaCountryServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblShaCountry.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblShaCountryDao.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblShaCountry
+  
+**Method XX:**
+
+Update the account information.
+
+  **updateAccountDetails**
+
+**Inputs**::	 
+
+An example is provided below of the JSON data that is sent to the foregoing method call::
+
+{  
+  "userAccountId":XX,
+  "shaAccountId":0,
+  "loginName":"LOGINNAME",
+  "password":"PASSWORD",
+  "loginNameS":"LOGINNAMEHASH",
+  "dateCreated":"08/01/2014",
+  "dateUpdated":"08/01/2014",
+  "createdBy":null,
+  "updatedBy":null,
+  "siteKeyName":"a",
+  "firstName":"FIRSTNAME",
+  "lastName":"LASTNAME",
+  "middleName":null,
+  "suffix":null,
+  "email":"EMAIL",
+  "emailS":"EMAILHASH",
+  "dob":null,
+  "homePhone":"",
+  "cellPhone":"CELLNUMBER",
+  "address1":"ADDRESS1",
+  "address2":"ADDRESS2",
+  "address3":"ADDRESS3",
+  "city":"CITY",
+  "state":"STATE",
+  "postalCode":"ZIPCODE",
+  "country":"COUNTRY",
+  "fax1":"FAX1",
+  "fax2":"FAX2",
+  "firstNameS":"FIRSTNAMEHASH",
+  "lastNameS":"LASTNAMEHASH",
+  "dOBS":"DATEOFBIRTHHASH",
+  "stateS":"STATE",
+  "postalCodeS":"ZIPCODEHASH",
+  "showContent":null,
+  "compareFeature":null,
+  "latitude":null,
+  "longitude":null,
+  "isIndividualAccount":true,
+  "isResearcherAccount":true,
+  "isLegalRights":true,
+  "affiliatedOrganization":"",
+  "linkToBio":"LINKURL",
+  "userOrganizationId":0,
+  "isNotBelongToOrganization":true,
+  "isBelongToNotListedOrganization":false,
+  "userRoleId":XX,
+  "isActive":true,
+  "encrypted":true
+}
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":null
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  AdminAccountService.save()
+""""""""""""""""""""""""""""""""""
+
+Save the updated account information to the database.
+
+**Inputs**::
+  
+  * UserAccount accountData
+
+**Outputs**::
+
+  * n/a
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/AdminAccountController.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblShaCountryService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblShaCountryServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/AdminAccountDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/AdminAccountDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/util/AESCryptoManager.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.user_account
+
+
 Portal management
 -----------------
 
