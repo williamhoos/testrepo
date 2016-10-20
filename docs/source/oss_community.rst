@@ -57,7 +57,8 @@ Member costs
 Annual membership costs (in cash or contributed services) are based on organizational type and size. 
 
 .. htmlonly::
-.. tabularcolumns:: |l|r|r|r|r|r|r|r|r|
+ .. tabularcolumns:: column spec
+    |l|r|r|r|r|r|r|r|r|
 
 +------------------+---------+---------+---------+---------+---------+---------+---------+---------+
 | Membership Level |  Indv   |  Educ   |  Govt   |  NP Org |  Small  |  Medium | Large   | Global  | 
