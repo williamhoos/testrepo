@@ -15,11 +15,12 @@ Joining the PEER OSS community
 
 Membership levels
 =================
-.. tabularcolumns:: |L|C|C|C|C|C|
+
+The following table sets for the benefits available to PEER OSS community members
    
 +-------------------------------------------------+----+----+----+----+----+
 | Benefits                                        | CD | IM | AG | SP | PU |
-+=================================================+====+====+====+==+======+
++=================================================+====+====+====+====+====+
 | Participation on OSS governance committee       | x  |    |    |    |    | 
 +-------------------------------------------------+----+----+----+----+----+
 | Vote on developmental priorities in             |    |    |    |    |    |          
@@ -27,7 +28,7 @@ Membership levels
 +-------------------------------------------------+----+----+----+----+----+
 | Strategic leadership                            | x  |    |    |    |    |          
 +-------------------------------------------------+----+----+----+----+----+
-| Access to assurance programs                    | x  | x  |    |    |    |  
+| Access to assurance programs                    | x  | x  |    | x  |    |  
 +-------------------------------------------------+----+----+----+----+----+
 | Access to common data instruments               | x  | x  | x  |    |    |   
 +-------------------------------------------------+----+----+----+----+----+
