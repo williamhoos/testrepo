@@ -6,7 +6,7 @@ Membership (DRAFT)
 Why Open Source PEER?
 =====================
 
-We begin by acknowledging that as PEER's reach has grown over the past few years, we've received a significant level of interest in using PEER if the underlying software were to be available via open sources.  While this interest has been expressed most often by academic, non-profit, and governmental user groups and prospective sponsros, we've also heard this from several very large corporations and international agencies.  
+We begin by acknowledging that as PEER's reach has grown over the past few years, we've received a considerable number of inquiries about adopting PEER that are predicated on the underlying software being available via open source.  While this interest has been expressed most often by academic, non-profit, and governmental user groups and prospective sponsros, we've also heard this from several very large corporations and international agencies.  
 
 We've heard expressed a number of reasons for this avowed interest in open source, ranging from groups that perceive open source software as being better aligned with the fundamental beliefs about distributed control that underpin PEER itself; to others who feel that by the source code being open, it will enable much more rapid innovation; and yet others who feel that by the code being open, it will provide a more accountable and stable basis for assuring that PEER remains accessible to all interested collaborators no matter what may happen to any one group in the future.  Whatever the reason - and we are certain that they are many and varied - we hope this portends a very active and committed community of interest including sponsors, users and software developers.
 
@@ -123,7 +123,6 @@ Annual subscription costs (in cash or contributed services) are based on organiz
 
 |   * In-kind contributions may include services and contribution of code upgrades to the master branch of the PEER software that have been purchased from a service provider.  In-kind contributions are valued at cost in the year incurred or expended, and credit against the next annual membership payment for that entity or individual.
 |
-
   :**Indv**: Individual contributor  
   :**Educ/HC**: Educational or academic institution, or a non-profit healthcare institution such as a hospital or medical center  
   :**NP Org**: Non-profit support organization  
@@ -133,7 +132,7 @@ Annual subscription costs (in cash or contributed services) are based on organiz
   :**Large**: Companies with over 2500 employees 
   
 
-.. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache foundation <http://www.apache.org/foundation/`_ and `Linux Foundation  <https://www.linuxfoundation.org/members/join>`_ 
+.. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache Foundation <http://www.apache.org/foundation/`_ and `Linux Foundation  <https://www.linuxfoundation.org/members/join>`_ 
 
 
 Further information
