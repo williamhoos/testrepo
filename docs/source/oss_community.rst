@@ -95,7 +95,7 @@ The following table sets for the benefits available to PEER OSS community member
 | Participate in e-mails and teleconferences      | x  | x  | x  | x  | x  |   
 +-------------------------------------------------+----+----+----+----+----+
 
-.. tabularcolumns:: |c|p{20cm}|
+.. tabularcolumns:: |c|p{10cm}|
 
 +--------+-------------------------------------------------------------+
 | **CD** |Director                                                     |
@@ -133,7 +133,7 @@ Annual subscription costs (in cash or contributed services) are based on organiz
 +-------------+---------------------------------------------------------------+
 | **Indv**    | Individual contributor                                        |
 +-------------+---------------------------------------------------------------+
-| **Educ/HC** | Educational or academic institution, or a non-profit          |
+| **Educ/HC** | Educational or academic institution, or a non-profit          |
 |             | healthcare institution such as a hospital or medical center.  |   
 +-------------+---------------------------------------------------------------+
 | **NP Org**  | Non-profit support organization                               |
