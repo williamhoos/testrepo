@@ -62,7 +62,7 @@ Annual membership costs (in cash or contributed services) are based on organizat
 .. tabularcolumns:: column spec |l|r|r|r|r|r|r|r|r|
 
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
-| Membership Level|  Indv  |  Educ   | NP Org  |  Govt  |  Small | Medium | Large | 
+| Membership Level|  Indv  | Educ/HC | NP Org  |  Govt  |  Small | Medium | Large | 
 +=================+========+=========+=========+========+========+========+=======+
 | Director        |10,000* | 10,000* | 10,000* | 10,000 | 10,000*| 25,000 | 50,000|
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
@@ -70,9 +70,10 @@ Annual membership costs (in cash or contributed services) are based on organizat
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
 | Service Provider|    n/a |  2,500* |  2,500* |  5,000 | 2,500* | 10,000 | 25,000|
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
+|   * In-kind contributions may include services and contribution of code upgrades to the master branch of the PEER software that have been purchased from a service provider.  In-kind contributions are valued at cost in the year incurred or expended, and credit against the next annual membership payment for that entity or individual.
 
 |   **Indv** = Individual contributor
-|   **Educ** = Educational or academic institution
+|   **Educ/HC** = Educational or academic institution, or a non profilt healthcare institution such as a hospital or medical center. For profit health care organizations are treated as businesses, and assessed based on their employee size.
 |   **NP Org** = Non-profit support organization
 |   **Govt** = Governmental body or agency
 |   **Small companies** = Under 100 employees
