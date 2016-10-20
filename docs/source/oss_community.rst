@@ -76,7 +76,7 @@ Annual membership costs (in cash or contributed services) are based on organizat
    *  Educ = Educational or academic institution
    *  Govt = Governmental body or agency
    *  NP Org = Non-profit support organization
-   *  Small = Company (under 100 employees)
-   *  Medium = Company (101 - 1000 employees)
-   *  Large = Company (1001 - 25000 employees)
-   *  Global = Company (over 25000 employees)
+   *  Small companies = Under 100 employees
+   *  Medium = 101 - 1000 employees
+   *  Large = 1001 - 25000 employees
+   *  Global = Over 25000 employees
