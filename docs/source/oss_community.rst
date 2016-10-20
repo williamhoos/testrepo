@@ -19,6 +19,7 @@ Membership levels
 The following table sets for the benefits available to PEER OSS community members
 
 .. htmlonly::
+
 .. tabularcolumns:: |l|c|c|c|c|c|
 
 +-------------------------------------------------+----+----+----+----+----+
@@ -26,7 +27,7 @@ The following table sets for the benefits available to PEER OSS community member
 +=================================================+====+====+====+====+====+
 | Participation on OSS governance committee       | x  |    |    |    |    | 
 +-------------------------------------------------+----+----+----+----+----+
-| Vote on developmental priorities in             |    |    |    |    |    |          
+| Vote on priorities in                           |    |    |    |    |    |          
 | community-sponsored initiatives                 | x  |    |    |    |    |  
 +-------------------------------------------------+----+----+----+----+----+
 | Strategic leadership                            | x  |    |    |    |    |          
@@ -57,7 +58,8 @@ Member costs
 Annual membership costs (in cash or contributed services) are based on organizational type and size. 
 
 .. htmlonly::
- .. tabularcolumns:: column spec |l|r|r|r|r|r|r|r|r|
+
+.. tabularcolumns:: column spec |l|r|r|r|r|r|r|r|r|
 
 +------------------+---------+---------+---------+---------+---------+---------+---------+---------+
 | Membership Level |  Indv   |  Educ   |  Govt   |  NP Org |  Small  |  Medium | Large   | Global  | 
