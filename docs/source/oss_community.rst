@@ -1,7 +1,7 @@
 Membership (DRAFT)
 ******************
 
-**The following sections are for internal discussion purposes only.**
+.. note:: **The following sections are for internal discussion purposes only.**
 
 Joining the PEER OSS community
 ==============================
