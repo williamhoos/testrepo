@@ -69,11 +69,14 @@ Annual membership costs (in cash or contributed services) are based on organizat
 | Service Provider |    n/a  |  2,500* |  5,000  |  2,500* |  2,500* |  5,000  | 10,000  | 25,000  |
 +------------------+---------+---------+---------+---------+---------+---------+---------+---------+
 
-|    Indv = Individual contributor
-|    Educ = Educational or academic institution
-|    Govt = Governmental body or agency
-|    NP Org = Non-profit support organization
-|    Small = Company (under 100 employees)
-|    Medium = Company (101 - 1000 employees)
-|    Large = Company (1001 - 25000 employees)
-|    Global = Company (over 25000 employees)
+.. hlist::
+   :columns: 3
+
+   *  Indv = Individual contributor
+   *  Educ = Educational or academic institution
+   *  Govt = Governmental body or agency
+   *  NP Org = Non-profit support organization
+   *  Small = Company (under 100 employees)
+   *  Medium = Company (101 - 1000 employees)
+   *  Large = Company (1001 - 25000 employees)
+   *  Global = Company (over 25000 employees)
