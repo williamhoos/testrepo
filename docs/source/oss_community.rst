@@ -15,68 +15,33 @@ Joining the PEER OSS community
 
 Membership levels
 =================
-.. tabularcolumns:: |L|C|C|
-
-.. csv-table:: a title
-   :header: "name", "firstname", "age"
-   :widths: 20, 20, 10
-
-
-   "Smith", "John", 40
-   "Smith", "John very very very long", 20
-
-
-.. csv-table:: a title
-   :header: "Benefits", "Director", " Individual | Member", "Organization | Member"
-   :widths: 50, 25, 12, 12
-
+.. tabularcolumns:: |L|C|C|C|C|C|
    
-   "Participation on governance committee", "x"," ", " " 
-   "All participant voting", "x", "x", "x"
-
-
-STOP HERE
-=========
-
-   
-   
-  :header: "Benefits", "Director", "Individual Member", "Organization Member", "Service Provider", "Participant (non-funding)
-   :widths: 50, 12, 12, 12, 12, 12
-
-   "Participation on governance committee", "x", " ", " ", " ", " "  
-   "All participant voting", "x", "x" , "x", "x" , "x"  
-   
-STOP
-====
-
-   
-   
-.. tabularcolumns:: |left|center|left|right|ceneter|center|   
-+--------------------------------------------+----+----+----+----+----+
-| Benefits                                   | CD | IM | AG | SP | PU |
-+============================================+====+====+====+==+======+
-| Participation on OSS governance committee  | x  |    |    |    |    | 
-+--------------------------------------------+----+----+----+----+----+
-| Strategic leadership /priority setting     | x  |    |    |    |    |          
-+--------------------------------------------+----+----+----+----+----+
-| Access to assurance programs               | x  | x  |    |    |    |  
-+--------------------------------------------+----+----+----+----+----+
-| Access to international liasons            | x  | x  | x  |    |    |   
-+--------------------------------------------+----+----+----+----+----+
-| Marketing visibility                       | x  | x  | x  | x  | x  |  
-+--------------------------------------------+----+----+----+----+----+
-| All member voting                          | x  | x  | x  | x  | x  |
-+--------------------------------------------+----+----+----+----+----+
-| All participant voting                     | x  | x  | x  | x  | x  | 
-+--------------------------------------------+----+----+----+----+----+
-| Participate (e-mail and teleconferences)   | x  | x  | x  | x  | x  |   
-+--------------------------------------------+----+----+----+----+----+
++-------------------------------------------------+----+----+----+----+----+
+| Benefits                                        | CD | IM | AG | SP | PU |
++=================================================+====+====+====+==+======+
+| Participation on OSS governance committee       | `x`|    |    |    |    | 
++-------------------------------------------------+----+----+----+----+----+
+| Strategic leadership /priority setting          | x  |    |    |    |    |          
++-------------------------------------------------+----+----+----+----+----+
+| Access to assurance programs                    | x  | x  |    |    |    |  
++-------------------------------------------------+----+----+----+----+----+
+| Access to international liasons                 | x  | x  | x  |    |    |   
++-------------------------------------------------+----+----+----+----+----+
+| Marketing visibility                            | x  | x  | x  | x  | x  |  
++-------------------------------------------------+----+----+----+----+----+
+| All member voting                               | x  | x  | x  | x  | x  |
++-------------------------------------------------+----+----+----+----+----+
+| All participant voting                          | x  | x  | x  | x  | x  | 
++-------------------------------------------------+----+----+----+----+----+
+| Participate in e-mails and teleconferences      | x  | x  | x  | x  | x  |   
++-------------------------------------------------+----+----+----+----+----+
 
 CD = Community Director
 IM = Individual Member
-AG = Advocacy or supprot group
+AG = Advocacy or support group
 SP = Service provider
-PU = Participant User (non-paying membr of the OSS community.
+PU = Participant User (non-paying member of the OSS community)
 
 
 Kantera initiative memberships and subscriber structures
