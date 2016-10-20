@@ -16,6 +16,8 @@ The overall architecture of the PEER application is portayed in the following tw
 
 .. _PEER Architecture:
 
+.. Attention:: Missing "Create Portal" yellow box under "Portal Management"
+
 PEER Architecture
 -----------------
 
@@ -1156,7 +1158,9 @@ SD-XX:  AdminAccountService.getuserAccountById()
 **Database tables:**
   
   * dbPPMS_D.tblShaCountry
-  
+
+.. _Method SD-XX:
+
 **Method XX:**
 
 Update the account information.
@@ -1268,6 +1272,1611 @@ Save the updated account information to the database.
 Portal management
 -----------------
 
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves all record seekers from the database.
+
+  **getAllSeekerTemplates**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":XX,
+   "data":[  
+      {  
+         "idseekerTemplate":XX,
+         "seekerDisplayName":"DISPLAYNAME",
+         "fkIdrecordSeekerType":-400,
+         "fkIdrecordHandler":-200,
+         "fkIdorganization":11,
+         "fkIdseeker":1,
+         "fkIdrecordHandlerType":-200,
+         "ordinal":3,
+         "moreInfo":"DESCRIPTION_TEXT",
+         "contactEmail":"CONTACTEMAIL",
+         "parentDirective":"",
+         "isDefault":false,
+         "dateCreated":"07/15/2014",
+         "dateUpdated":"10/11/2016",
+         "tblWidgetPrivacyDirectives":null
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  TblPlseekerTemplateService.getAllSeekerTemplate()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Retrieves all record seekers from the database.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblPlseekerTemplate> seekerTemplates
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerTemplateController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblPlseekerTemplateService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblPlseekerTemplateServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPlseekerTemplate.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlseekerTemplateDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblPLSeekerTemplate
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Insert new portal data into the database.
+
+  **savePortal**
+
+**Inputs**::	 
+
+{  
+   "landingPageName":"PORTAL_NAME",
+   "landingPageUrl":"LANDINGPAGEURL",
+   "demoLandingPageUrl":"DEMOPAGEURL",
+   "createdBy":"XX",
+   "isActive":true,
+   "tblWidgetPrivacyDirectives":[  
+      {  
+         "createdBy":"XX",
+         "isActive":true,
+         "isPrimary":false,
+         "dateCreated":"",
+         "privacyDirectiveOrder":1,
+         "tblPlseekerTemplate":{  
+            "idseekerTemplate":137,
+            "seekerDisplayName":"PRIVACY_DIRECTIVE_NAME",
+            "fkIdrecordSeekerType":-400,
+            "fkIdrecordHandler":-200,
+            "fkIdorganization":129,
+            "fkIdseeker":1,
+            "fkIdrecordHandlerType":-200,
+            "ordinal":3,
+            "moreInfo":"PRIVACY_DIRECTIVE_DESCRIPTION",
+            "contactEmail":"EMAIL",
+            "parentDirective":"",
+            "isDefault":false,
+            "dateCreated":"08/05/2015",
+            "dateUpdated":"08/05/2015",
+            "tblWidgetPrivacyDirectives":null
+         },
+         "tblWidgetPrivacyDirectiveType":{  
+            "idTblWidgetPrivacyDirectiveType":-100
+         }
+      },
+	  ...
+   ],
+   "allowInstitutionalPD":false,
+   "nickName":"Joey Test 2",
+   "tblLandingPagesDefaultPrivacyDirectives":[  
+      {  
+         "fkIDSeekerTemplate":37
+      },
+      {  
+         "fkIDSeekerTemplate":38
+      },
+      {  
+         "fkIDSeekerTemplate":44
+      },
+      {  
+         "fkIDSeekerTemplate":78
+      }
+   ],
+   "defaultProxyAuthorizationImageName":null
+}
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":XXX
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  PortalService.getPortalDetails()
+""""""""""""""""""""""""""""""""""""""""
+
+Retrieve portal information from the database.
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * TblLandingPages portalDetails
+
+SD-XX:  TblLandingPages.getTblWidgetPrivacyDirectives()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Retrieve portal privacy directives from the database for a specific portal.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * Set<TblWidgetPrivacyDirective> privacyDirectives
+
+SD-XX:  TblLandingPages.getTblLandingPagesDefaultPrivacyDirectives()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Retrieve the default portal privacy directives from the database for a specific portal.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * Set<TblLandingPagesDefaultPrivacyDirectives> defaultDirectives
+
+SD-XX:  PortalService.deletePortalDefaultPD()
+"""""""""""""""""""""""""""""""""""""""""""""
+
+Delete default portal privacy directives from the database.
+
+**Inputs**::
+  
+  * Set<TblLandingPagesDefaultPrivacyDirectives> privacyDirectives
+
+**Outputs**::
+
+  * n/a
+
+SD-XX:  PortalAdminMappingService.addAccountPortal()
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Add user account to this portal access.
+
+**Inputs**::
+  
+  * Integer accountId
+  * Integer landingPageId
+
+**Outputs**::
+
+  * n/a
+
+SD-XX:  WidgetPrivacyDirectiveService.saveWidgetPrivacyDirectives()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Add user account to this portal access.
+
+**Inputs**::
+  
+  * Set<TblWidgetPrivacyDirective> privacyDirectives
+
+**Outputs**::
+
+  * n/a
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPagesDefaultPrivacyDirectives.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalAdminMappingService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalAdminMappingServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetPrivacyDirectiveService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetPrivacyDirectiveServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetPrivacyDirective.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetPrivacyDirectiveDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetPrivacyDirectiveDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblLandingPages
+  * dbPPMS_D.tblLandingPagesDefaultPrivacyDirectives
+  * dbPPMS_D.tblWidgetPrivacyDirective
+  
+Dashboard Messages
+^^^^^^^^^^^^^^^^^^
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the portal information from the database given the portalId.
+
+  **getWidgetInfoByPortalId**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":{  
+      "portalIds":{  
+         "portalDateCreated":"2016-10-20 15:14:34.0",
+         "portalName":"PORTAL_NAME",
+         "liveWidgetId":"LIVE_WIDGET_ID",
+         "demoWidgetId":"DEMO_WIDGET_ID"
+      }
+   }
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  WidgetInfoService.getWidgetInfoDetails()
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * TblWidgetInfo portalDetails
+
+SD-XX:  WidgetDemoService.getWidgetDemoIDByLiveWidgetId()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * Integer portalId
+
+  
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/WidgetInfoController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetInfoService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetInfoServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetInfo.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetInfoDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetInfoDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetDemoService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetDemoServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetDemo.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetDemoDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetDemoDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblWidgetInfo
+  * dbPPMS_D.tblWidgetDemo
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the portal information from the database.
+
+  **getPortal**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  PortalService.getPortalDetails()
+""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * TblLandingPages portalInfo
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetPrivacyDirective.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetPrivacyDirectiveDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetPrivacyDirectiveDaoImpl.java
+
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblLandingPages
+  * dbPPMS_D.tblWidgetPrivacyDirective
+  
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the list of messages for a given portal.
+
+  **assignMessages.php**
+
+**Inputs**::	 
+
+  * String survey_messages
+  * Integer demoPortalId
+  * Integer livePortalId
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "message":"success",
+   "isSuccess":true,
+   "data":[  
+      {  
+         "event":"EVENT_TYPE",
+         "message_name":"MESSAGE_NAME",
+         "id":"XX",
+         "message_id":"MESSAGE_ID",
+         "trigger":"TRIGGER",
+         "status":"STATUS",
+         "is_deleted":"X",
+         "is_default":"X",
+         "trigger_code":"TRIGGER_CODE",
+         "event_code":"EVENT_CODE",
+         "survey_id":"X",
+         "is_auto_dismissed":"X"
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  showMessages()
+""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Object request
+
+**Outputs**::
+
+  * JSON messages
+
+**Source files:**
+
+  admin/assignMessages.php
+  includes/functions.php
+  
+**Database tables:**
+  
+  * peer_surveys_published.assign_messages
+  * peer_surveys_published.triggers
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the list of messages for a given portal.
+
+  **assignMessages.php**
+
+**Inputs**::	 
+
+  * String survey_messages
+  * String messageCmd [show_messages, add_messages, change_status, delete_message, get_message]
+  * String message_name
+  * String message
+  * String message_he_living
+  * String message_he_deceased
+  * String message_she_living
+  * String message_she_deceased
+  * Integer suppressVariant
+  * Integer suppressVariant_he_living
+  * Integer suppressVariant_he_deceased
+  * Integer suppressVariant_she_living
+  * Integer suppressVariant_she_deceased
+  * Integer is_default
+  * Integer message_id
+  * Integer messageAutoDismiss
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "message":"success",
+   "isSuccess":true,
+   "data":true
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  saveMessage()
+"""""""""""""""""""""
+
+**Inputs**::
+  
+  * Object request
+
+**Outputs**::
+
+  * JSON status
+  
+**Source files:**
+
+  admin/assignMessages.php
+  includes/functions.php
+  
+**Database tables:**
+  
+  * peer_surveys_published.assign_messages
+
+Features
+^^^^^^^^
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the feature information from the database.
+
+  **getFeatureDetails**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":{  
+      "idFeature":1,
+      "featureName":"FEATURE_NAME",
+      "featureImageURL":"IMAGE_URL",
+      "featureVideoURL":"VIDEO_URL",
+      "dateCreated":"DATE_CREATED",
+      "dateUpdated":"DATE_UPDATED"
+   }
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  FeatureService.getFeatureDetails()
+""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer featureId
+
+**Outputs**::
+
+  * TblFeature userAccount
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/FeatureController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/FeatureService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/FeatureServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeature.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblFeatureDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblFeatureDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblFeature
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Update the feature infomation.
+
+  **updateFeatureDetails**
+
+**Inputs**::	 
+
+{  
+   "idFeature":XX,
+   "featureName":"FEATURE_NAME",
+   "featureImageURL":"IMAGE_URL",
+   "featureVideoURL":"VIDEO_URL"
+}
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":1
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  featureService.updateFeature()
+""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * TblFeature featureInfo
+
+**Outputs**::
+
+  * TblFeature featureInfo
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/FeatureController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/FeatureService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/FeatureServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeature.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblFeatureDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblFeatureDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblFeature
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Get the features for this portal.
+
+  **listFeatures**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":126,
+   "data":[  
+      {  
+         "idFeature":XX,
+         "featureName":"FEATURE_NAME",
+         "featureImageURL":"IMAGE_URL",
+         "featureVideoURL":"VIDEO_URL",
+         "dateCreated":"DATE_CREATED",
+         "dateUpdated":"DATE_UPDATED"
+      },
+	  ...
+   ]
+}
+
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  FeatureService.listFeatures()
+"""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblFeature> features
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/FeatureController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/FeatureService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/FeatureServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblFeature.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblFeatureDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblFeatureDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblFeature
+
+Guides
+^^^^^^  
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the list of guildes from the database for this portal.
+
+  **getPortalGuides**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":{  
+      "guide3":X,
+      "guide2":X,
+      "guide1":X
+   }
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  WidgetInfoService.getWidgetInfoGuides()
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * Map<String, Integer> guideInfo
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetInfoService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetInfoServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetInfo.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetInfoDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetInfoDaoImpl.java
+
+**Database tables:**
+  
+  * dbPPMS_D.tblWidgetInfo
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieve guide information for a specific guide.
+
+  **getGuide**
+
+**Inputs**::	 
+
+**Outputs**::
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  GuideService.getPeerGuideByID()
+"""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer guideId
+
+**Outputs**::
+
+  * TblPlguide guideInfo
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PeerGuideController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PeerGuideService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PeerGuideServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPlguide.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlguideDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlguideDaoImpl.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblPLGuide
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Save guide information for a specific guide.
+
+  **saveGuide**
+
+**Inputs**::	 
+
+**Outputs**::
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  GuideService.save()
+"""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * TblPlguide guideInfo
+
+**Outputs**::
+
+  * n/a
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PeerGuideController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PeerGuideService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PeerGuideServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblPlguide.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlguideDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlguideDaoImpl.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblPLGuide
+  
+Referral Codes
+^^^^^^^^^^^^^^
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the portal information for a specific portal.
+
+  **getWidgetInfoByPortalId**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":{  
+      "portalIds":{  
+         "portalDateCreated":"TIMESTAMP",
+         "portalName":"PORTAL_NAME",
+         "liveWidgetId":"LIVE_PORTAL_ID",
+         "demoWidgetId":"DEMO_PORTAL_ID"
+      }
+   }
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  WidgetInfoService.getWidgetInfoDetails()
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer accountId
+
+**Outputs**::
+
+  * UserAccount userAccount
+
+SD-XX:  WidgetDemoService.getWidgetDemoIDByLiveWidgetId()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * Integer portalId
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/WidgetInfoController.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetInfoService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetInfoServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetInfo.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetInfoDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetInfoDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetDemoService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetDemoServiceImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetDemo.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetDemoDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetDemoDaoImpl.java
+ 
+**Database tables:**
+  
+  * dbPPMS_D.tblWidgetInfo
+  * dbPPMS_D.tblWidgetDemo
+  
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the list of referral codes for a specific portal.
+
+  **listRefralCode**
+
+**Inputs**::	 
+
+  * Boolean isUsed
+  * Integer landingPageId
+  
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":X,
+   "data":[  
+      {  
+         "idrefferalCode":XXX,
+         "tblSiteName":null,
+         "tblPeerAccount":null,
+         "tblLandingPages":null,
+         "refferalCode":"test",
+         "refferalCodeDesc":"DESCRIPTION",
+         "isUsed":false,
+         "dateCreated":"DATE_CREATED",
+         "dateUpdated":"DATE_UPDATED",
+         "startRange":"XX",
+         "endRange":"XX",
+         "isRange":true,
+         "isPreSignInCode":false,
+         "preSignInCode":null,
+         "isPreSignUpCode":false,
+         "preSignUpCode":null,
+         "tblRefferalCodePrivacyDirectives":null,
+         "tblRefferalCodeSurvey":null,
+         "firstUsedDate":null,
+         "lastUsedDate":null,
+         "totalNumberOfUses":0
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  RefferalCodesService.getRefferalCodeByStatus()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Boolean isUsed
+  * Integer landingPageId
+
+**Outputs**::
+
+  * List<TblRefferalCode> referalCodes
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/RefferalCodesController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/RefferalCodesService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/RefferalCodesServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblRefferalCode.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblRefferalCodeDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblRefferalCodeDaoImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblRefferalCodePrivacyDirective.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblRefferalCode
+  * dbPPMS_D.tblRefferalCodePrivacyDirective
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Save a referral code for a specific portal.
+
+  **saveRefralCode**
+
+**Inputs**::	 
+
+An example is provided below of the JSON data that is sent to the foregoing method call::
+
+{  
+   "refferalCode":"CODE",
+   "refferalCodeDesc":"DESCRIPTION",
+   "isRange":[true,false],
+   "startRange":"XX",
+   "endRange":"XX",
+   "tblLandingPages":{  
+      "idlandingPage":"XX"
+   },
+   "isPreSignInCode":[true,false],
+   "isPreSignUpCode":[true,false],
+   "tblRefferalCodePrivacyDirectives":[  
+
+   ],
+   "tblRefferalCodeSurvey":[  
+
+   ]
+}
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":null
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  RefferalCodesService.saveOrUpdate()
+"""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * TblRefferalCode referralCodeInfo
+
+**Outputs**::
+
+  * n/a
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/RefferalCodesController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/RefferalCodesService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/RefferalCodesServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblRefferalCode.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblRefferalCodeDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblRefferalCodeDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblRefferalCodePrivacyDirective.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblRefferalCode
+  * dbPPMS_D.tblRefferalCodePrivacyDirective
+
+Remove Portal
+^^^^^^^^^^^^^
+  
+.. _Method SD-XX:
+
+**Method XX:**
+
+Remove a portal from the database.
+
+  **removePortal**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":null
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  PortalService.removePortal()
+""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * n/a
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblLandingPages
+
+General Settings
+^^^^^^^^^^^^^^^^
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the list of privacy directives for a specific portal.
+
+  **getAllSeekerTemplates**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":XX,
+   "data":[  
+      {  
+         "idseekerTemplate":XX,
+         "seekerDisplayName":"United Mitochondrial Disease Foundation (UMDF)",
+         "fkIdrecordSeekerType":XX,
+         "fkIdrecordHandler":XX,
+         "fkIdorganization":XX,
+         "fkIdseeker":XX,
+         "fkIdrecordHandlerType":XX,
+         "ordinal":XX,
+         "moreInfo":"The United Mitochondrial Disease Foundation (UMDF) is a non-profit organization serving to promote research and education for the diagnosis, treatment, and cure of mitochondrial disorders and to provide support to affected individuals and families.",
+         "contactEmail":"CONTACT_EMAIL",
+         "parentDirective":"",
+         "isDefault":false,
+         "dateCreated":"DATE_CREATED",
+         "dateUpdated":"DATE_UPDATED",
+         "tblWidgetPrivacyDirectives":null
+      },
+	  ...
+   ]
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  TblPlseekerTemplateService.getAllSeekerTemplate()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+This function retrieves all record seekers templates in the system.
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * List<TblPlseekerTemplate> seekerTemplates
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/SeekerTemplateController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/TblPlseekerTemplateService.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/TblPlseekerTemplateServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblPlseekerTemplateDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblPlseekerTemplateDaoImpl.java
+
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblPlseekerTemplate
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Retrieves the portal information for a specific portal.
+
+  **getPortal**
+
+**Inputs**::	 
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":X,
+   "data":{  
+      "idlandingPage":XX,
+      "landingPageName":"PORTAL_NAME",
+      "landingPageUrl":"PORTAL_URL",
+      "isActive":true,
+      "dateCreated":"DATE_CREATED",
+      "dateUpdated":"DATE_UPDATED",
+      "createdBy":XX,
+      "demoLandingPageUrl":"DEMO_URL",
+      "nickName":"NICKNAME",
+      "isProxyEnabled":true,
+      "isFemaleProfileImage":false,
+      "isMaleProfileImage":false,
+      "customRequiredStatementDocumentName":null,
+      "femaleProfileImageName":null,
+      "maleProfileImageName":null,
+      "canRequestHealthDoc":false,
+      "allowInstitutionalPD":true,
+      "canAccessPrivacyPreferences":false,
+      "isPrivacySettingBannerSet":true,
+      "isContactBannerSet":true,
+      "lastDateUpdatedForPreferences":"PREFERENCE_DATE_UPDATED",
+      "lastDateUpdatedAuthorizeAccount":"AUTH_DATE_UPDATED",
+      "lastDateUpdatedHealthDocuments":"DOC_DATE_UPDATED",
+      "isDefaultProxyAuthorizationImage":false,
+      "defaultProxyAuthorizationImageName":null,
+      "tblWidgetPrivacyDirectives":[  
+         {  
+            "idwidgetPrivacyDirective":XXX,
+            "tblPlseekerTemplate":{  
+               "idseekerTemplate":XXX,
+               "seekerDisplayName":"SEEKER_NAME",
+               "fkIdrecordSeekerType":XXX,
+               "fkIdrecordHandler":-XXX,
+               "fkIdorganization":XXX,
+               "fkIdseeker":XXX,
+               "fkIdrecordHandlerType":XXX,
+               "ordinal":XXX,
+               "moreInfo":"DESCRIPTION",
+               "contactEmail":"EMAIL",
+               "parentDirective":"",
+               "isDefault":false,
+               "dateCreated":"DATE_CREATED",
+               "dateUpdated":"DATE_UPDATED",
+               "tblWidgetPrivacyDirectives":null
+            },
+            "isActive":true,
+            "dateCreated":"DATE_CREATED",
+            "createdBy":XXX,
+            "isPrimary":false,
+            "privacyDirectiveOrder":XXX,
+            "tblWidgetPrivacyDirectiveType":{  
+               "idTblWidgetPrivacyDirectiveType":XXX,
+               "text":"DESCRIPTION"
+            }
+         },
+		 ...
+      ],
+      "tblPortalAdminMappings":null,
+      "tblLandingPagesRecommendedOrganizations":null,
+      "tblLandingPagesDefaultPrivacyDirectives":[  
+         {  
+            "idLandingPagesDefaultPrivacyDirectives":XXX,
+            "fkIDSeekerTemplate":XXX
+         },
+		 ...
+      ],
+      "customRequiredStatementEnabled":false
+   }
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  PortalService.getPortalDetails()
+""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * TblLandingPages portalInfo
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPagesDefaultPrivacyDirectives.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
+  
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblLandingPages
+  * dbPPMS_D.tblLandingPagesDefaultPrivacyDirectives
+
+.. _Method SD-XX:
+
+**Method XX:**
+
+Save portal settings for a specific portal.
+
+  **savePortal**
+
+**Inputs**::	 
+
+An example is provided below of the JSON data that is sent to the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":X,
+   "data":{  
+      "idlandingPage":XX,
+      "landingPageName":"PORTAL_NAME",
+      "landingPageUrl":"PORTAL_URL",
+      "isActive":true,
+      "dateCreated":"DATE_CREATED",
+      "dateUpdated":"DATE_UPDATED",
+      "createdBy":XX,
+      "demoLandingPageUrl":"DEMO_URL",
+      "nickName":"NICKNAME",
+      "isProxyEnabled":true,
+      "isFemaleProfileImage":false,
+      "isMaleProfileImage":false,
+      "customRequiredStatementDocumentName":null,
+      "femaleProfileImageName":null,
+      "maleProfileImageName":null,
+      "canRequestHealthDoc":false,
+      "allowInstitutionalPD":true,
+      "canAccessPrivacyPreferences":false,
+      "isPrivacySettingBannerSet":true,
+      "isContactBannerSet":true,
+      "lastDateUpdatedForPreferences":"PREFERENCE_DATE_UPDATED",
+      "lastDateUpdatedAuthorizeAccount":"AUTH_DATE_UPDATED",
+      "lastDateUpdatedHealthDocuments":"DOC_DATE_UPDATED",
+      "isDefaultProxyAuthorizationImage":false,
+      "defaultProxyAuthorizationImageName":null,
+      "tblWidgetPrivacyDirectives":[  
+         {  
+            "idwidgetPrivacyDirective":XXX,
+            "tblPlseekerTemplate":{  
+               "idseekerTemplate":XXX,
+               "seekerDisplayName":"SEEKER_NAME",
+               "fkIdrecordSeekerType":XXX,
+               "fkIdrecordHandler":-XXX,
+               "fkIdorganization":XXX,
+               "fkIdseeker":XXX,
+               "fkIdrecordHandlerType":XXX,
+               "ordinal":XXX,
+               "moreInfo":"DESCRIPTION",
+               "contactEmail":"EMAIL",
+               "parentDirective":"",
+               "isDefault":false,
+               "dateCreated":"DATE_CREATED",
+               "dateUpdated":"DATE_UPDATED",
+               "tblWidgetPrivacyDirectives":null
+            },
+            "isActive":true,
+            "dateCreated":"DATE_CREATED",
+            "createdBy":XXX,
+            "isPrimary":false,
+            "privacyDirectiveOrder":XXX,
+            "tblWidgetPrivacyDirectiveType":{  
+               "idTblWidgetPrivacyDirectiveType":XXX,
+               "text":"DESCRIPTION"
+            }
+         },
+		 ...
+      ],
+      "tblPortalAdminMappings":null,
+      "tblLandingPagesRecommendedOrganizations":null,
+      "tblLandingPagesDefaultPrivacyDirectives":[  
+         {  
+            "idLandingPagesDefaultPrivacyDirectives":XXX,
+            "fkIDSeekerTemplate":XXX
+         },
+		 ...
+      ],
+      "customRequiredStatementEnabled":false
+   }
+}
+
+**Outputs**::
+
+An example is provided below of the JSON data that is received from the foregoing method call::
+
+{  
+   "status":"success",
+   "message":"success",
+   "isSuccess":true,
+   "count":1,
+   "data":XXX
+}
+
+Related Function Calls
+^^^^^^^^^^^^^^^^^^^^^^
+
+SD-XX:  PortalService.getPortalDetails()
+""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Integer portalId
+
+**Outputs**::
+
+  * TblLandingPages portalData
+
+SD-XX:  PortalService.getTblWidgetPrivacyDirectives()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * Set<TblWidgetPrivacyDirective> privacyDirectives
+
+SD-XX:  WidgetPrivacyDirectiveService.deleteWidgetPrivacyDirectives()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Set<TblWidgetPrivacyDirective> privacyDirectives
+
+**Outputs**::
+
+  * n/a
+
+SD-XX:  PortalService.getTblLandingPagesDefaultPrivacyDirectives()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * Set<TblLandingPagesDefaultPrivacyDirectives> privacyDirectives
+
+SD-XX:  PortalService.deletePortalDefaultPD()
+"""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Set<TblLandingPagesDefaultPrivacyDirectives> privacyDirectives
+
+**Outputs**::
+
+  * n/a
+
+SD-XX:  TblLandingPages.getTblWidgetPrivacyDirectives()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * n/a
+
+**Outputs**::
+
+  * Set<TblWidgetPrivacyDirective> privacyDirectives
+
+SD-XX:  WidgetPrivacyDirectiveService.saveWidgetPrivacyDirectives()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**Inputs**::
+  
+  * Set<TblWidgetPrivacyDirective> privacyDirectives
+
+**Outputs**::
+
+  * n/a
+
+**Source files:**
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/controller/PortalsController.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/PortalService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/PortalServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPages.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblLandingPagesDao.java
+  
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblLandingPagesDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/WidgetPrivacyDirectiveService.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/service/impl/WidgetPrivacyDirectiveServiceImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblWidgetPrivacyDirective.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/TblWidgetPrivacyDirectiveDao.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/dao/impl/TblWidgetPrivacyDirectiveDaoImpl.java
+
+  OpenID/trunk/private-access-server/private-access-adminportal/src/main/java/com/privateaccess/adminportal/models/TblLandingPagesDefaultPrivacyDirectives.java
+  
+**Database tables:**
+  
+  * dbPPMS_D.tblLandingPages
+  * dbPPMS_D.tblLandingPagesDefaultPrivacyDirectives
+  * dbPPMS_D.tblWidgetPrivacyDirective
+  
+Recommended Organizations
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 .. _PA connect:
