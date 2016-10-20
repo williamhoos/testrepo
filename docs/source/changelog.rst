@@ -4,9 +4,8 @@ Changelog
 2016-10-19
 ~~~~~~~~~~
 
-* Continued extensive work on identifying and reporting methods calls for search and re-connecting to the  red.  
-* Began work on a drat of the programmatic solicitation for locating and viewing  users built around the ide o
-.. _Architecture :
+* Continued extensive work on identifying and reporting methods calls and other details for other sections in the PEER architecture
+* Added a section focused on community :ref:`membership` and fees
 
 2016-10-18
 ~~~~~~~~~~
