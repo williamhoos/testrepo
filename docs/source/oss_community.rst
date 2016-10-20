@@ -132,7 +132,7 @@ Annual subscription costs (in cash or contributed services) are based on organiz
   :**Large**: Companies with over 2500 employees 
   
 
-.. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache Foundation <http://www.apache.org/foundation/`_ and `Linux Foundation  <https://www.linuxfoundation.org/members/join>`_ 
+.. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache Foundation <http://www.apache.org/foundation/>`_ and `Linux Foundation  <https://www.linuxfoundation.org/members/join>`_ 
 
 
 Further information
