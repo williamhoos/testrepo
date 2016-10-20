@@ -22,8 +22,8 @@ Membership levels
 +=================================================+====+====+====+==+======+
 | Participation on OSS governance committee       | x  |    |    |    |    | 
 +-------------------------------------------------+----+----+----+----+----+
-||Vote on developmental priorities in             |    |    |    |    |    |          
-||community-sponsored initiatives                 | x  |    |    |    |    |  
+| Vote on developmental priorities in             |    |    |    |    |    |          
+| community-sponsored initiatives                 | x  |    |    |    |    |  
 +-------------------------------------------------+----+----+----+----+----+
 | Strategic leadership                            | x  |    |    |    |    |          
 +-------------------------------------------------+----+----+----+----+----+
