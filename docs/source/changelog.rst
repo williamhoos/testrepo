@@ -1,11 +1,24 @@
 Changelog
 =========
 
+2016-10-19
+~~~~~~~~~~
+
+* Continued extensive work on identifying and reporting methods calls for search and re-connecting to the  red.  
+* Began work on a drat of the programmatic solicitation for locating and viewing  users built around the ide o
+.. _Architecture :
+
+2016-10-18
+~~~~~~~~~~
+
+* Began to move major portions of the :ref:`Architecture` discussion in to new sections, including sections addressing :ref:`Search` and :ref:`export` into the documents
+* Making good progress on moving horizontally acfross the other fields and corresponding FDA.
+
+
 2016-10-17 
 ~~~~~~~~~~
 
-* Revised order of presentation :ref:`Architecture top` description to follow the order of the visual graphics.
-
+* Revised order of presentation :ref:`Architecture` description to follow the order of the visual graphics.
 
 2016-10-15
 ~~~~~~~~~~
