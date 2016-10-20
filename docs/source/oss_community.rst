@@ -64,7 +64,7 @@ Annual membership costs (in cash or contributed services) are based on organizat
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
 | Membership Level|  Indv  |  Educ   | NP Org  |  Govt  |  Small | Medium | Large | 
 +=================+========+=========+=========+========+========+========+=======+
-| Director        | 10,000 | 10,000* | 10,000* | 10,000 | 10,000*| 25,000 | 50,000|
+| Director        |10,000* | 10,000* | 10,000* | 10,000 | 10,000*| 25,000 | 50,000|
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
 | Member          |   100* |    250* |    500* |    500 |   500* |  1,000 | 10,000|
 +-----------------+--------+---------+---------+--------+--------+--------+-------+
@@ -73,8 +73,8 @@ Annual membership costs (in cash or contributed services) are based on organizat
 
 |   **Indv** = Individual contributor
 |   **Educ** = Educational or academic institution
-|   **Govt** = Governmental body or agency
 |   **NP Org** = Non-profit support organization
+|   **Govt** = Governmental body or agency
 |   **Small companies** = Under 100 employees
 |   **Medium** = 101 - 2500 employees
 |   **Large** = Over 2500 employees
