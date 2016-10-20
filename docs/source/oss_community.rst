@@ -41,11 +41,11 @@ The following table sets for the benefits available to PEER OSS community member
 | Participate in e-mails and teleconferences      | x  | x  | x  | x  | x  |   
 +-------------------------------------------------+----+----+----+----+----+
 
-| CD = Community Director
-| IM = Individual Member
-| AG = Advocacy or support group
-| SP = Service provider
-| PU = Participant User (non-paying member of the OSS community)
+|   CD = Community Director
+|   IM = Individual Member
+|   AG = Advocacy or support group
+|   SP = Service provider
+|   PU = Participant User (non-paying member of the OSS community)
 
 
 Kantera initiative memberships and subscriber structures
