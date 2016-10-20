@@ -95,8 +95,12 @@ The following table sets for the benefits available to PEER OSS community member
 | Participate in e-mails and teleconferences      | x  | x  | x  | x  | x  |   
 +-------------------------------------------------+----+----+----+----+----+
 
-
-.. rst-class:: plain 
+.. table:: Optional Caption
+    :widths: 3 2 1
+    :column-alignment: center left
+    :column-wrapping: true true 
+    :column-dividers: none double none
+    
 +--------+-------------------------------------------------------------+
 | **CD** |Director                                                     |
 +--------+-------------------------------------------------------------+
