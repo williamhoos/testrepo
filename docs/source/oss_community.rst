@@ -95,17 +95,19 @@ The following table sets for the benefits available to PEER OSS community member
 | Participate in e-mails and teleconferences      | x  | x  | x  | x  | x  |   
 +-------------------------------------------------+----+----+----+----+----+
 
-+---+--------+-------------------------------------------------------------+
-|   | **CD** |= Director                                                   |
-+---+--------+-------------------------------------------------------------+
-|   | **IM** |= Individual Member                                          |
-+---+--------+-------------------------------------------------------------+
-|   | **AG** |= Advocacy or support group                                  |
-+---+--------+-------------------------------------------------------------+
-|   | **SP** |= Service provider                                           |
-+---+--------+-------------------------------------------------------------+
-|   | **PU** | = Participant User (non-paying member of the OSS community) |
-+---+--------+-------------------------------------------------------------+
+.. tabularcolumns:: |c|p{20cm}|
+
++--------+-------------------------------------------------------------+
+| **CD** |Director                                                     |
++--------+-------------------------------------------------------------+
+| **IM** |Individual Member                                            |
++--------+-------------------------------------------------------------+
+| **AG** |Advocacy or support group                                    |
++--------+-------------------------------------------------------------+
+| **SP** |Service provider                                             |
++--------+-------------------------------------------------------------+
+| **PU** |Participant User (non-paying member of the OSS community)    |
++--------+-------------------------------------------------------------+
 
 Membership costs 
 ================
@@ -128,22 +130,22 @@ Annual subscription costs (in cash or contributed services) are based on organiz
 
 |   * In-kind contributions may include services and contribution of code upgrades to the master branch of the PEER software that have been purchased from a service provider.  In-kind contributions are valued at cost in the year incurred or expended, and credit against the next annual membership payment for that entity or individual.
 
-+---+------------+---------------------------------------------------------------+
-|   |**Indv**    | Individual contributor                                        |
-+---+------------+---------------------------------------------------------------+
-|   |**Educ/HC** | Educational or academic institution, or a non-profit          |
-|   |            | healthcare institution such as a hospital or medical center.  |   
-+---+------------+---------------------------------------------------------------+
-|   |**NP Org**  | Non-profit support organization                               |
-+---+------------+---------------------------------------------------------------+
-|   |**Govt**    | Governmental body or agency                                   |
-+---+------------+---------------------------------------------------------------+
-|   |**Small**   | Companies with under 100 employees                            |
-+---+------------+---------------------------------------------------------------+
-|   |**Medium**  | Companies with 101 - 2500 employees                           |
-+---+------------+---------------------------------------------------------------+
-|   |**Large**   | Companies with over 2500 employees                            |
-+---+------------+---------------------------------------------------------------+
++-------------+---------------------------------------------------------------+
+| **Indv**    | Individual contributor                                        |
++-------------+---------------------------------------------------------------+
+| **Educ/HC** | Educational or academic institution, or a non-profit          |
+|             | healthcare institution such as a hospital or medical center.  |   
++-------------+---------------------------------------------------------------+
+| **NP Org**  | Non-profit support organization                               |
++-------------+---------------------------------------------------------------+
+| **Govt**    | Governmental body or agency                                   |
++-------------+---------------------------------------------------------------+
+| **Small**   | Companies with under 100 employees                            |
++-------------+---------------------------------------------------------------+
+| **Medium**  | Companies with 101 - 2500 employees                           |
++-------------+---------------------------------------------------------------+
+| **Large**   | Companies with over 2500 employees                            |
++-------------+---------------------------------------------------------------+
 
 .. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache foundation <http://www.apache.org/foundation/`_, `Linux Foundation <https://www.linuxfoundation.org/members/join>`_. 
 
