@@ -45,11 +45,11 @@ The following table sets for the benefits available to PEER OSS community member
 | Participate in e-mails and teleconferences      | x  | x  | x  | x  | x  |   
 +-------------------------------------------------+----+----+----+----+----+
 
-|   CD = Community Director
-|   IM = Individual Member
-|   AG = Advocacy or support group
-|   SP = Service provider
-|   PU = Participant User (non-paying member of the OSS community)
+|   **CD** = Community Director
+|   **IM** = Individual Member
+|   **AG** = Advocacy or support group
+|   **SP** = Service provider
+|   **PU** = Participant User (non-paying member of the OSS community)
 
 
 Member costs 
@@ -71,12 +71,11 @@ Annual membership costs (in cash or contributed services) are based on organizat
 | Service Provider |    n/a  |  2,500* |  5,000  |  2,500* |  2,500* |  5,000  | 10,000  | 25,000  |
 +------------------+---------+---------+---------+---------+---------+---------+---------+---------+
 
-
-|   Indv = Individual contributor
-|   Educ = Educational or academic institution
-|   Govt = Governmental body or agency
-|   NP Org = Non-profit support organization
-|   Small companies = Under 100 employees
-|   Medium = 101 - 1000 employees
-|   Large = 1001 - 25000 employees
-|   Global = Over 25000 employees
+|   **Indv** = Individual contributor
+|   **Educ** = Educational or academic institution
+|   **Govt** = Governmental body or agency
+|   **NP Org** = Non-profit support organization
+|   **Small companies** = Under 100 employees
+|   **Medium** = 101 - 1000 employees
+|   **Large** = 1001 - 25000 employees
+|   **Global** = Over 25000 employees
