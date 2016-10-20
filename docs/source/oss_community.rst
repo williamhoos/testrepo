@@ -70,7 +70,7 @@ Annual membership costs (in cash or contributed services) are based on organizat
 +------------------+---------+---------+---------+---------+---------+---------+---------+---------+
 
 .. hlist::
-   :columns: 3
+   :columns: 2
 
    *  Indv = Individual contributor
    *  Educ = Educational or academic institution
