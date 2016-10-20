@@ -20,9 +20,12 @@ Membership levels
 +-------------------------------------------------+----+----+----+----+----+
 | Benefits                                        | CD | IM | AG | SP | PU |
 +=================================================+====+====+====+==+======+
-| Participation on OSS governance committee       | `x`|    |    |    |    | 
+| Participation on OSS governance committee       | x  |    |    |    |    | 
 +-------------------------------------------------+----+----+----+----+----+
-| Strategic leadership /priority setting          | x  |    |    |    |    |          
+||Vote on developmental priorities in             |    |    |    |    |    |          
+||community-sponsored initiatives                 | x  |    |    |    |    |  
++-------------------------------------------------+----+----+----+----+----+
+| Strategic leadership                            | x  |    |    |    |    |          
 +-------------------------------------------------+----+----+----+----+----+
 | Access to assurance programs                    | x  | x  |    |    |    |  
 +-------------------------------------------------+----+----+----+----+----+
