@@ -47,4 +47,5 @@ As an integral part of this effort, a number of potential development activities
    faqs
    oss_community
    glossary
+   sphinx
    changelog
