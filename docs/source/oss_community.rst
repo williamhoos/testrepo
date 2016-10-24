@@ -14,27 +14,12 @@ Open Source ensures that community PEER was created to serve can drive evolution
 
 The decision to move the PEER code into open source is consciously designed to help ensure high quality software that is stable, sustainable and robust in features, but to dramatically accelerate its broadest possible adoption and use.
 
-
-What's Next?
-============================
-
-During 2016, the three activities to which all membership fees that are collected are being expended are:
-
-|   1.  Auditing, scrubbing and documenting the PEER source code as a prepatory activity to migrating it to the open source repository 
-|   
-|   2.  Establishing the governance and licensing structure necessary to formalize the open source grant by Genetic Alliance
-|   
-|   3.  Salaries and costs for the staff that are required to handle the administrtive and support duties for the code reposity
-|   
-Genetic Alliance plans to convene all Directors and Members in early 2017 to review the success of the foregoing activities and to establish the PEER OSS initiative priorities for 2017.
-
-
 Joining the PEER OSS community
 ==============================
 
-Genetic Alliance has created Membership Levels for organizations will support the core team that will drive the open source ommunity and infrastructure for operating the PEER SaaS platform.  
-
 PEER software code will be controlled by the open source community.  However, the installation and running of the PEER platform will be Software as a Service (SaaS) where any organization can establish a customized registry "portal" to serve their disease or consituents.
+
+Genetic Alliance has created Membership Levels for organizations will support the core team that will drive the open source community and infrastructure for operating the PEER SaaS platform.  
 
 
 What an amazing opportunity!
@@ -121,6 +106,20 @@ Annual subscription costs (in cash or contributed services) are based on organiz
   
 
 .. Note::  Another approach that appears popular by some of the better known OSS initiatives is through Platinum, Gold, Sliver, Bronze level sponsorhips.  See for example `Apache Foundation <http://www.apache.org/foundation/>`_ and `Linux Foundation  <https://www.linuxfoundation.org/members/join>`_ 
+
+
+What's Next?
+============================
+
+During 2016, the three activities to which all membership fees that are collected are being expended are:
+
+|   1.  Auditing, scrubbing and documenting the PEER source code as a prepatory activity to migrating it to the open source repository 
+|   
+|   2.  Establishing the governance and licensing structure necessary to formalize the open source grant by Genetic Alliance
+|   
+|   3.  Salaries and costs for the staff that are required to handle the administrtive and support duties for the code reposity
+|   
+Genetic Alliance plans to convene all Directors and Members in early 2017 to review the success of the foregoing activities and to establish the PEER OSS initiative priorities for 2017.
 
 
 Further information
